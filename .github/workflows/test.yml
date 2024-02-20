@@ -19,7 +19,7 @@ jobs:
         os: [ubuntu-latest, macOS-latest, windows-latest]
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Move test app to cwd
         run: |
           mv ./__tests__/data/pyproject.toml .
@@ -34,7 +34,7 @@ jobs:
   test-this-action-no-install-dependency:
     runs-on: 'ubuntu-latest'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Setup Poetry env
         uses: ./
         with:
@@ -45,7 +45,7 @@ jobs:
   test-this-action-no-dependency-cache:
     runs-on: 'ubuntu-latest'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Move test app to cwd
         run: |
           mv ./__tests__/data/pyproject.toml .
@@ -61,7 +61,7 @@ jobs:
   test-this-action-old-poetry-version:
     runs-on: 'ubuntu-latest'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Move test app to cwd
         run: |
           mv ./__tests__/data/pyproject.toml .
@@ -76,7 +76,7 @@ jobs:
   test-this-action-input-in-project:
     runs-on: 'ubuntu-latest'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Move test app to cwd
         run: |
           mv ./__tests__/data/pyproject.toml .
@@ -92,7 +92,7 @@ jobs:
   test-this-action-input--only-root:
     runs-on: 'ubuntu-latest'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Move test app to cwd
         run: |
           mv ./__tests__/data/pyproject.toml .
@@ -108,7 +108,7 @@ jobs:
   test-this-action-input--add-args:
     runs-on: 'ubuntu-latest'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Move test app to cwd
         run: |
           mv ./__tests__/data/pyproject.toml .
@@ -124,7 +124,7 @@ jobs:
   test-this-action-additional-key:
     runs-on: 'ubuntu-latest'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Move test app to cwd
         run: |
           mv ./__tests__/data/pyproject.toml .
