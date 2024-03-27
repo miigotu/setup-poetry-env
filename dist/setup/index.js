@@ -81094,7 +81094,7 @@ var IS_WINDOWS = process.platform === "win32";
 var IS_LINUX = process.platform === "linux";
 var IS_MAC = process.platform === "darwin";
 function setInput(name, value) {
-  process.env[`INPUT_${name.replace(/[- ]/g, "_").toUpperCase()}`] = value;
+  process.env[`INPUT_${name.replace(/ /g, "_").toUpperCase()}`] = value;
 }
 
 // src/poetry/restore.ts
@@ -82688,11 +82688,11 @@ function overrideInput(inputs, hackPath) {
   setInput("architecture", inputs.architecture);
   setInput("cache", inputs.cache);
   setInput("cache-dependency-path", cacheDependencyPath);
-  setInput("check-latest", inputs.checkLatest.toLowerCase() == "true");
-  setInput("update-environment", inputs.updateEnvironment.toLowerCase() == "true");
+  setInput("check-latest", inputs.checkLatest == "true");
+  setInput("update-environment", inputs.updateEnvironment == "true");
   setInput("version", inputs.version);
   setInput("version-file", inputs.versionFile);
-  setInput("allow-prereleases", inputs.allowPrereleases.toLowerCase() == "true");
+  setInput("allow-prereleases", inputs.allowPrereleases == "true");
 }
 async function hackActionSetupPython(option, inputs, additionalCacheKey) {
   const hackDependencyPath = await createHackDependencyFile(
