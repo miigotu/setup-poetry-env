@@ -41,6 +41,7 @@ async function run(): Promise<void> {
         updateEnvironment: core.getInput("python-update-environment"),
         version: core.getInput("python-version"),
         versionFile: core.getInput("python-version-file"),
+        allowPrereleases: core.getInput("python-allow-prereleases"),
       }
     );
 
