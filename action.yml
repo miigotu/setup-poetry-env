@@ -35,18 +35,18 @@ inputs:
       'Wrapper around `cache-dependency-path` input of actions/setup-python.'
   python-check-latest:
     description: 'Wrapper around `check-latest` input of actions/setup-python.'
-    default: false
+    default: 'false'
   python-update-environment:
     description: |
       'Wrapper around `update-environment` input of actions/setup-python.'
-    default: true
+    default: 'true'
   python-version:
     description: 'Wrapper around `version` input of actions/setup-python.'
   python-version-file:
     description: 'Wrapper around `version-file` input of actions/setup-python.'
   python-allow-prereleases:
     description: 'Wrapper around `allow-prereleases` input of actions/setup-python.'
-    default: false
+    default: 'false'
   
   # Wrapper around `poetry config` command.
   poetry-cache-dir:
