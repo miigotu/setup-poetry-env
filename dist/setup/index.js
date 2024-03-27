@@ -32,26 +32,6 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   mod
 ));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
-var __async = (__this, __arguments, generator) => {
-  return new Promise((resolve, reject) => {
-    var fulfilled = (value) => {
-      try {
-        step(generator.next(value));
-      } catch (e) {
-        reject(e);
-      }
-    };
-    var rejected = (value) => {
-      try {
-        step(generator.throw(value));
-      } catch (e) {
-        reject(e);
-      }
-    };
-    var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
-    step((generator = generator.apply(__this, __arguments)).next());
-  });
-};
 
 // node_modules/@actions/core/lib/utils.js
 var require_utils = __commonJS({
@@ -957,46 +937,46 @@ var require_errors = __commonJS({
         this.code = "UND_ERR";
       }
     };
-    var ConnectTimeoutError = class extends UndiciError {
+    var ConnectTimeoutError = class _ConnectTimeoutError extends UndiciError {
       constructor(message) {
         super(message);
-        Error.captureStackTrace(this, ConnectTimeoutError);
+        Error.captureStackTrace(this, _ConnectTimeoutError);
         this.name = "ConnectTimeoutError";
         this.message = message || "Connect Timeout Error";
         this.code = "UND_ERR_CONNECT_TIMEOUT";
       }
     };
-    var HeadersTimeoutError = class extends UndiciError {
+    var HeadersTimeoutError = class _HeadersTimeoutError extends UndiciError {
       constructor(message) {
         super(message);
-        Error.captureStackTrace(this, HeadersTimeoutError);
+        Error.captureStackTrace(this, _HeadersTimeoutError);
         this.name = "HeadersTimeoutError";
         this.message = message || "Headers Timeout Error";
         this.code = "UND_ERR_HEADERS_TIMEOUT";
       }
     };
-    var HeadersOverflowError = class extends UndiciError {
+    var HeadersOverflowError = class _HeadersOverflowError extends UndiciError {
       constructor(message) {
         super(message);
-        Error.captureStackTrace(this, HeadersOverflowError);
+        Error.captureStackTrace(this, _HeadersOverflowError);
         this.name = "HeadersOverflowError";
         this.message = message || "Headers Overflow Error";
         this.code = "UND_ERR_HEADERS_OVERFLOW";
       }
     };
-    var BodyTimeoutError = class extends UndiciError {
+    var BodyTimeoutError = class _BodyTimeoutError extends UndiciError {
       constructor(message) {
         super(message);
-        Error.captureStackTrace(this, BodyTimeoutError);
+        Error.captureStackTrace(this, _BodyTimeoutError);
         this.name = "BodyTimeoutError";
         this.message = message || "Body Timeout Error";
         this.code = "UND_ERR_BODY_TIMEOUT";
       }
     };
-    var ResponseStatusCodeError = class extends UndiciError {
+    var ResponseStatusCodeError = class _ResponseStatusCodeError extends UndiciError {
       constructor(message, statusCode, headers, body) {
         super(message);
-        Error.captureStackTrace(this, ResponseStatusCodeError);
+        Error.captureStackTrace(this, _ResponseStatusCodeError);
         this.name = "ResponseStatusCodeError";
         this.message = message || "Response Status Code Error";
         this.code = "UND_ERR_RESPONSE_STATUS_CODE";
@@ -1006,92 +986,92 @@ var require_errors = __commonJS({
         this.headers = headers;
       }
     };
-    var InvalidArgumentError = class extends UndiciError {
+    var InvalidArgumentError = class _InvalidArgumentError extends UndiciError {
       constructor(message) {
         super(message);
-        Error.captureStackTrace(this, InvalidArgumentError);
+        Error.captureStackTrace(this, _InvalidArgumentError);
         this.name = "InvalidArgumentError";
         this.message = message || "Invalid Argument Error";
         this.code = "UND_ERR_INVALID_ARG";
       }
     };
-    var InvalidReturnValueError = class extends UndiciError {
+    var InvalidReturnValueError = class _InvalidReturnValueError extends UndiciError {
       constructor(message) {
         super(message);
-        Error.captureStackTrace(this, InvalidReturnValueError);
+        Error.captureStackTrace(this, _InvalidReturnValueError);
         this.name = "InvalidReturnValueError";
         this.message = message || "Invalid Return Value Error";
         this.code = "UND_ERR_INVALID_RETURN_VALUE";
       }
     };
-    var RequestAbortedError = class extends UndiciError {
+    var RequestAbortedError = class _RequestAbortedError extends UndiciError {
       constructor(message) {
         super(message);
-        Error.captureStackTrace(this, RequestAbortedError);
+        Error.captureStackTrace(this, _RequestAbortedError);
         this.name = "AbortError";
         this.message = message || "Request aborted";
         this.code = "UND_ERR_ABORTED";
       }
     };
-    var InformationalError = class extends UndiciError {
+    var InformationalError = class _InformationalError extends UndiciError {
       constructor(message) {
         super(message);
-        Error.captureStackTrace(this, InformationalError);
+        Error.captureStackTrace(this, _InformationalError);
         this.name = "InformationalError";
         this.message = message || "Request information";
         this.code = "UND_ERR_INFO";
       }
     };
-    var RequestContentLengthMismatchError = class extends UndiciError {
+    var RequestContentLengthMismatchError = class _RequestContentLengthMismatchError extends UndiciError {
       constructor(message) {
         super(message);
-        Error.captureStackTrace(this, RequestContentLengthMismatchError);
+        Error.captureStackTrace(this, _RequestContentLengthMismatchError);
         this.name = "RequestContentLengthMismatchError";
         this.message = message || "Request body length does not match content-length header";
         this.code = "UND_ERR_REQ_CONTENT_LENGTH_MISMATCH";
       }
     };
-    var ResponseContentLengthMismatchError = class extends UndiciError {
+    var ResponseContentLengthMismatchError = class _ResponseContentLengthMismatchError extends UndiciError {
       constructor(message) {
         super(message);
-        Error.captureStackTrace(this, ResponseContentLengthMismatchError);
+        Error.captureStackTrace(this, _ResponseContentLengthMismatchError);
         this.name = "ResponseContentLengthMismatchError";
         this.message = message || "Response body length does not match content-length header";
         this.code = "UND_ERR_RES_CONTENT_LENGTH_MISMATCH";
       }
     };
-    var ClientDestroyedError = class extends UndiciError {
+    var ClientDestroyedError = class _ClientDestroyedError extends UndiciError {
       constructor(message) {
         super(message);
-        Error.captureStackTrace(this, ClientDestroyedError);
+        Error.captureStackTrace(this, _ClientDestroyedError);
         this.name = "ClientDestroyedError";
         this.message = message || "The client is destroyed";
         this.code = "UND_ERR_DESTROYED";
       }
     };
-    var ClientClosedError = class extends UndiciError {
+    var ClientClosedError = class _ClientClosedError extends UndiciError {
       constructor(message) {
         super(message);
-        Error.captureStackTrace(this, ClientClosedError);
+        Error.captureStackTrace(this, _ClientClosedError);
         this.name = "ClientClosedError";
         this.message = message || "The client is closed";
         this.code = "UND_ERR_CLOSED";
       }
     };
-    var SocketError = class extends UndiciError {
+    var SocketError = class _SocketError extends UndiciError {
       constructor(message, socket) {
         super(message);
-        Error.captureStackTrace(this, SocketError);
+        Error.captureStackTrace(this, _SocketError);
         this.name = "SocketError";
         this.message = message || "Socket error";
         this.code = "UND_ERR_SOCKET";
         this.socket = socket;
       }
     };
-    var NotSupportedError = class extends UndiciError {
+    var NotSupportedError = class _NotSupportedError extends UndiciError {
       constructor(message) {
         super(message);
-        Error.captureStackTrace(this, NotSupportedError);
+        Error.captureStackTrace(this, _NotSupportedError);
         this.name = "NotSupportedError";
         this.message = message || "Not supported error";
         this.code = "UND_ERR_NOT_SUPPORTED";
@@ -1106,28 +1086,28 @@ var require_errors = __commonJS({
         this.code = "UND_ERR_BPL_MISSING_UPSTREAM";
       }
     };
-    var HTTPParserError = class extends Error {
+    var HTTPParserError = class _HTTPParserError extends Error {
       constructor(message, code, data) {
         super(message);
-        Error.captureStackTrace(this, HTTPParserError);
+        Error.captureStackTrace(this, _HTTPParserError);
         this.name = "HTTPParserError";
         this.code = code ? `HPE_${code}` : void 0;
         this.data = data ? data.toString() : void 0;
       }
     };
-    var ResponseExceededMaxSizeError = class extends UndiciError {
+    var ResponseExceededMaxSizeError = class _ResponseExceededMaxSizeError extends UndiciError {
       constructor(message) {
         super(message);
-        Error.captureStackTrace(this, ResponseExceededMaxSizeError);
+        Error.captureStackTrace(this, _ResponseExceededMaxSizeError);
         this.name = "ResponseExceededMaxSizeError";
         this.message = message || "Response content exceeded max size";
         this.code = "UND_ERR_RES_EXCEEDED_MAX_SIZE";
       }
     };
-    var RequestRetryError = class extends UndiciError {
+    var RequestRetryError = class _RequestRetryError extends UndiciError {
       constructor(message, code, { headers, data }) {
         super(message);
-        Error.captureStackTrace(this, RequestRetryError);
+        Error.captureStackTrace(this, _RequestRetryError);
         this.name = "RequestRetryError";
         this.message = message || "Request retry error";
         this.code = "UND_ERR_REQ_RETRY";
@@ -5097,7 +5077,7 @@ var require_file = __commonJS({
     var { parseMIMEType, serializeAMimeType } = require_dataURL();
     var { kEnumerableProperty } = require_util();
     var encoder = new TextEncoder();
-    var File = class extends Blob2 {
+    var File = class _File extends Blob2 {
       constructor(fileBits, fileName, options = {}) {
         webidl.argumentLengthCheck(arguments, 2, { header: "File constructor" });
         fileBits = webidl.converters["sequence<BlobPart>"](fileBits);
@@ -5125,19 +5105,19 @@ var require_file = __commonJS({
         };
       }
       get name() {
-        webidl.brandCheck(this, File);
+        webidl.brandCheck(this, _File);
         return this[kState].name;
       }
       get lastModified() {
-        webidl.brandCheck(this, File);
+        webidl.brandCheck(this, _File);
         return this[kState].lastModified;
       }
       get type() {
-        webidl.brandCheck(this, File);
+        webidl.brandCheck(this, _File);
         return this[kState].type;
       }
     };
-    var FileLike = class {
+    var FileLike = class _FileLike {
       constructor(blobLike, fileName, options = {}) {
         const n = fileName;
         const t = options.type;
@@ -5150,35 +5130,35 @@ var require_file = __commonJS({
         };
       }
       stream(...args) {
-        webidl.brandCheck(this, FileLike);
+        webidl.brandCheck(this, _FileLike);
         return this[kState].blobLike.stream(...args);
       }
       arrayBuffer(...args) {
-        webidl.brandCheck(this, FileLike);
+        webidl.brandCheck(this, _FileLike);
         return this[kState].blobLike.arrayBuffer(...args);
       }
       slice(...args) {
-        webidl.brandCheck(this, FileLike);
+        webidl.brandCheck(this, _FileLike);
         return this[kState].blobLike.slice(...args);
       }
       text(...args) {
-        webidl.brandCheck(this, FileLike);
+        webidl.brandCheck(this, _FileLike);
         return this[kState].blobLike.text(...args);
       }
       get size() {
-        webidl.brandCheck(this, FileLike);
+        webidl.brandCheck(this, _FileLike);
         return this[kState].blobLike.size;
       }
       get type() {
-        webidl.brandCheck(this, FileLike);
+        webidl.brandCheck(this, _FileLike);
         return this[kState].blobLike.type;
       }
       get name() {
-        webidl.brandCheck(this, FileLike);
+        webidl.brandCheck(this, _FileLike);
         return this[kState].name;
       }
       get lastModified() {
-        webidl.brandCheck(this, FileLike);
+        webidl.brandCheck(this, _FileLike);
         return this[kState].lastModified;
       }
       get [Symbol.toStringTag]() {
@@ -5281,7 +5261,7 @@ var require_formdata = __commonJS({
     var { webidl } = require_webidl();
     var { Blob: Blob2, File: NativeFile } = require("buffer");
     var File = NativeFile ?? UndiciFile;
-    var FormData = class {
+    var FormData = class _FormData {
       constructor(form) {
         if (form !== void 0) {
           throw webidl.errors.conversionFailed({
@@ -5293,7 +5273,7 @@ var require_formdata = __commonJS({
         this[kState] = [];
       }
       append(name, value, filename = void 0) {
-        webidl.brandCheck(this, FormData);
+        webidl.brandCheck(this, _FormData);
         webidl.argumentLengthCheck(arguments, 2, { header: "FormData.append" });
         if (arguments.length === 3 && !isBlobLike(value)) {
           throw new TypeError(
@@ -5307,13 +5287,13 @@ var require_formdata = __commonJS({
         this[kState].push(entry);
       }
       delete(name) {
-        webidl.brandCheck(this, FormData);
+        webidl.brandCheck(this, _FormData);
         webidl.argumentLengthCheck(arguments, 1, { header: "FormData.delete" });
         name = webidl.converters.USVString(name);
         this[kState] = this[kState].filter((entry) => entry.name !== name);
       }
       get(name) {
-        webidl.brandCheck(this, FormData);
+        webidl.brandCheck(this, _FormData);
         webidl.argumentLengthCheck(arguments, 1, { header: "FormData.get" });
         name = webidl.converters.USVString(name);
         const idx = this[kState].findIndex((entry) => entry.name === name);
@@ -5323,19 +5303,19 @@ var require_formdata = __commonJS({
         return this[kState][idx].value;
       }
       getAll(name) {
-        webidl.brandCheck(this, FormData);
+        webidl.brandCheck(this, _FormData);
         webidl.argumentLengthCheck(arguments, 1, { header: "FormData.getAll" });
         name = webidl.converters.USVString(name);
         return this[kState].filter((entry) => entry.name === name).map((entry) => entry.value);
       }
       has(name) {
-        webidl.brandCheck(this, FormData);
+        webidl.brandCheck(this, _FormData);
         webidl.argumentLengthCheck(arguments, 1, { header: "FormData.has" });
         name = webidl.converters.USVString(name);
         return this[kState].findIndex((entry) => entry.name === name) !== -1;
       }
       set(name, value, filename = void 0) {
-        webidl.brandCheck(this, FormData);
+        webidl.brandCheck(this, _FormData);
         webidl.argumentLengthCheck(arguments, 2, { header: "FormData.set" });
         if (arguments.length === 3 && !isBlobLike(value)) {
           throw new TypeError(
@@ -5358,7 +5338,7 @@ var require_formdata = __commonJS({
         }
       }
       entries() {
-        webidl.brandCheck(this, FormData);
+        webidl.brandCheck(this, _FormData);
         return makeIterator(
           () => this[kState].map((pair) => [pair.name, pair.value]),
           "FormData",
@@ -5366,7 +5346,7 @@ var require_formdata = __commonJS({
         );
       }
       keys() {
-        webidl.brandCheck(this, FormData);
+        webidl.brandCheck(this, _FormData);
         return makeIterator(
           () => this[kState].map((pair) => [pair.name, pair.value]),
           "FormData",
@@ -5374,7 +5354,7 @@ var require_formdata = __commonJS({
         );
       }
       values() {
-        webidl.brandCheck(this, FormData);
+        webidl.brandCheck(this, _FormData);
         return makeIterator(
           () => this[kState].map((pair) => [pair.name, pair.value]),
           "FormData",
@@ -5386,7 +5366,7 @@ var require_formdata = __commonJS({
        * @param {unknown} thisArg
        */
       forEach(callbackFn, thisArg = globalThis) {
-        webidl.brandCheck(this, FormData);
+        webidl.brandCheck(this, _FormData);
         webidl.argumentLengthCheck(arguments, 1, { header: "FormData.forEach" });
         if (typeof callbackFn !== "function") {
           throw new TypeError(
@@ -5832,7 +5812,7 @@ var require_request = __commonJS({
       channels.trailers = { hasSubscribers: false };
       channels.error = { hasSubscribers: false };
     }
-    var Request = class {
+    var Request = class _Request {
       constructor(origin, {
         path: path13,
         method,
@@ -6066,12 +6046,12 @@ var require_request = __commonJS({
         return this;
       }
       static [kHTTP1BuildRequest](origin, opts, handler) {
-        return new Request(origin, opts, handler);
+        return new _Request(origin, opts, handler);
       }
       static [kHTTP2BuildRequest](origin, opts, handler) {
         const headers = opts.headers;
         opts = { ...opts, headers: null };
-        const request = new Request(origin, opts, handler);
+        const request = new _Request(origin, opts, handler);
         request.headers = {};
         if (Array.isArray(headers)) {
           if (headers.length % 2 !== 0) {
@@ -10432,10 +10412,10 @@ var require_mock_errors = __commonJS({
   "node_modules/undici/lib/mock/mock-errors.js"(exports2, module2) {
     "use strict";
     var { UndiciError } = require_errors();
-    var MockNotMatchedError = class extends UndiciError {
+    var MockNotMatchedError = class _MockNotMatchedError extends UndiciError {
       constructor(message) {
         super(message);
-        Error.captureStackTrace(this, MockNotMatchedError);
+        Error.captureStackTrace(this, _MockNotMatchedError);
         this.name = "MockNotMatchedError";
         this.message = message || "The request does not match any registered mock dispatches";
         this.code = "UND_MOCK_ERR_MOCK_NOT_MATCHED";
@@ -11395,7 +11375,7 @@ var require_RetryHandler = __commonJS({
       const diff = new Date(retryAfter).getTime() - current;
       return diff;
     }
-    var RetryHandler = class {
+    var RetryHandler = class _RetryHandler {
       constructor(opts, handlers) {
         const { retryOptions, ...dispatchOpts } = opts;
         const {
@@ -11417,7 +11397,7 @@ var require_RetryHandler = __commonJS({
         this.abort = null;
         this.aborted = false;
         this.retryOpts = {
-          retry: retryFn ?? RetryHandler[kRetryHandlerDefaultRetry],
+          retry: retryFn ?? _RetryHandler[kRetryHandlerDefaultRetry],
           retryAfter: retryAfter ?? true,
           maxTimeout: maxTimeout ?? 30 * 1e3,
           // 30s,
@@ -11789,11 +11769,11 @@ var require_headers = __commonJS({
       }
       return headers[kHeadersList].append(name, value);
     }
-    var HeadersList = class {
+    var HeadersList = class _HeadersList {
       /** @type {[string, string][]|null} */
       cookies = null;
       constructor(init) {
-        if (init instanceof HeadersList) {
+        if (init instanceof _HeadersList) {
           this[kHeadersMap] = new Map(init[kHeadersMap]);
           this[kHeadersSortedMap] = init[kHeadersSortedMap];
           this.cookies = init.cookies === null ? null : [...init.cookies];
@@ -11869,7 +11849,7 @@ var require_headers = __commonJS({
         return headers;
       }
     };
-    var Headers = class {
+    var Headers = class _Headers {
       constructor(init = void 0) {
         if (init === kConstruct) {
           return;
@@ -11883,7 +11863,7 @@ var require_headers = __commonJS({
       }
       // https://fetch.spec.whatwg.org/#dom-headers-append
       append(name, value) {
-        webidl.brandCheck(this, Headers);
+        webidl.brandCheck(this, _Headers);
         webidl.argumentLengthCheck(arguments, 2, { header: "Headers.append" });
         name = webidl.converters.ByteString(name);
         value = webidl.converters.ByteString(value);
@@ -11891,7 +11871,7 @@ var require_headers = __commonJS({
       }
       // https://fetch.spec.whatwg.org/#dom-headers-delete
       delete(name) {
-        webidl.brandCheck(this, Headers);
+        webidl.brandCheck(this, _Headers);
         webidl.argumentLengthCheck(arguments, 1, { header: "Headers.delete" });
         name = webidl.converters.ByteString(name);
         if (!isValidHeaderName(name)) {
@@ -11912,7 +11892,7 @@ var require_headers = __commonJS({
       }
       // https://fetch.spec.whatwg.org/#dom-headers-get
       get(name) {
-        webidl.brandCheck(this, Headers);
+        webidl.brandCheck(this, _Headers);
         webidl.argumentLengthCheck(arguments, 1, { header: "Headers.get" });
         name = webidl.converters.ByteString(name);
         if (!isValidHeaderName(name)) {
@@ -11926,7 +11906,7 @@ var require_headers = __commonJS({
       }
       // https://fetch.spec.whatwg.org/#dom-headers-has
       has(name) {
-        webidl.brandCheck(this, Headers);
+        webidl.brandCheck(this, _Headers);
         webidl.argumentLengthCheck(arguments, 1, { header: "Headers.has" });
         name = webidl.converters.ByteString(name);
         if (!isValidHeaderName(name)) {
@@ -11940,7 +11920,7 @@ var require_headers = __commonJS({
       }
       // https://fetch.spec.whatwg.org/#dom-headers-set
       set(name, value) {
-        webidl.brandCheck(this, Headers);
+        webidl.brandCheck(this, _Headers);
         webidl.argumentLengthCheck(arguments, 2, { header: "Headers.set" });
         name = webidl.converters.ByteString(name);
         value = webidl.converters.ByteString(value);
@@ -11966,7 +11946,7 @@ var require_headers = __commonJS({
       }
       // https://fetch.spec.whatwg.org/#dom-headers-getsetcookie
       getSetCookie() {
-        webidl.brandCheck(this, Headers);
+        webidl.brandCheck(this, _Headers);
         const list = this[kHeadersList].cookies;
         if (list) {
           return [...list];
@@ -11996,7 +11976,7 @@ var require_headers = __commonJS({
         return headers;
       }
       keys() {
-        webidl.brandCheck(this, Headers);
+        webidl.brandCheck(this, _Headers);
         if (this[kGuard] === "immutable") {
           const value = this[kHeadersSortedMap];
           return makeIterator(
@@ -12012,7 +11992,7 @@ var require_headers = __commonJS({
         );
       }
       values() {
-        webidl.brandCheck(this, Headers);
+        webidl.brandCheck(this, _Headers);
         if (this[kGuard] === "immutable") {
           const value = this[kHeadersSortedMap];
           return makeIterator(
@@ -12028,7 +12008,7 @@ var require_headers = __commonJS({
         );
       }
       entries() {
-        webidl.brandCheck(this, Headers);
+        webidl.brandCheck(this, _Headers);
         if (this[kGuard] === "immutable") {
           const value = this[kHeadersSortedMap];
           return makeIterator(
@@ -12048,7 +12028,7 @@ var require_headers = __commonJS({
        * @param {unknown} thisArg
        */
       forEach(callbackFn, thisArg = globalThis) {
-        webidl.brandCheck(this, Headers);
+        webidl.brandCheck(this, _Headers);
         webidl.argumentLengthCheck(arguments, 1, { header: "Headers.forEach" });
         if (typeof callbackFn !== "function") {
           throw new TypeError(
@@ -12060,7 +12040,7 @@ var require_headers = __commonJS({
         }
       }
       [Symbol.for("nodejs.util.inspect.custom")]() {
-        webidl.brandCheck(this, Headers);
+        webidl.brandCheck(this, _Headers);
         return this[kHeadersList];
       }
     };
@@ -12135,11 +12115,11 @@ var require_response = __commonJS({
     var { types } = require("util");
     var ReadableStream = globalThis.ReadableStream || require("stream/web").ReadableStream;
     var textEncoder = new TextEncoder("utf-8");
-    var Response = class {
+    var Response = class _Response {
       // Creates network error Response.
       static error() {
         const relevantRealm = { settingsObject: {} };
-        const responseObject = new Response();
+        const responseObject = new _Response();
         responseObject[kState] = makeNetworkError();
         responseObject[kRealm] = relevantRealm;
         responseObject[kHeaders][kHeadersList] = responseObject[kState].headersList;
@@ -12158,7 +12138,7 @@ var require_response = __commonJS({
         );
         const body = extractBody(bytes);
         const relevantRealm = { settingsObject: {} };
-        const responseObject = new Response();
+        const responseObject = new _Response();
         responseObject[kRealm] = relevantRealm;
         responseObject[kHeaders][kGuard] = "response";
         responseObject[kHeaders][kRealm] = relevantRealm;
@@ -12182,7 +12162,7 @@ var require_response = __commonJS({
         if (!redirectStatusSet.has(status)) {
           throw new RangeError("Invalid status code " + status);
         }
-        const responseObject = new Response();
+        const responseObject = new _Response();
         responseObject[kRealm] = relevantRealm;
         responseObject[kHeaders][kGuard] = "immutable";
         responseObject[kHeaders][kRealm] = relevantRealm;
@@ -12212,12 +12192,12 @@ var require_response = __commonJS({
       }
       // Returns response’s type, e.g., "cors".
       get type() {
-        webidl.brandCheck(this, Response);
+        webidl.brandCheck(this, _Response);
         return this[kState].type;
       }
       // Returns response’s URL, if it has one; otherwise the empty string.
       get url() {
-        webidl.brandCheck(this, Response);
+        webidl.brandCheck(this, _Response);
         const urlList = this[kState].urlList;
         const url = urlList[urlList.length - 1] ?? null;
         if (url === null) {
@@ -12227,40 +12207,40 @@ var require_response = __commonJS({
       }
       // Returns whether response was obtained through a redirect.
       get redirected() {
-        webidl.brandCheck(this, Response);
+        webidl.brandCheck(this, _Response);
         return this[kState].urlList.length > 1;
       }
       // Returns response’s status.
       get status() {
-        webidl.brandCheck(this, Response);
+        webidl.brandCheck(this, _Response);
         return this[kState].status;
       }
       // Returns whether response’s status is an ok status.
       get ok() {
-        webidl.brandCheck(this, Response);
+        webidl.brandCheck(this, _Response);
         return this[kState].status >= 200 && this[kState].status <= 299;
       }
       // Returns response’s status message.
       get statusText() {
-        webidl.brandCheck(this, Response);
+        webidl.brandCheck(this, _Response);
         return this[kState].statusText;
       }
       // Returns response’s headers as Headers.
       get headers() {
-        webidl.brandCheck(this, Response);
+        webidl.brandCheck(this, _Response);
         return this[kHeaders];
       }
       get body() {
-        webidl.brandCheck(this, Response);
+        webidl.brandCheck(this, _Response);
         return this[kState].body ? this[kState].body.stream : null;
       }
       get bodyUsed() {
-        webidl.brandCheck(this, Response);
+        webidl.brandCheck(this, _Response);
         return !!this[kState].body && util.isDisturbed(this[kState].body.stream);
       }
       // Returns a clone of response.
       clone() {
-        webidl.brandCheck(this, Response);
+        webidl.brandCheck(this, _Response);
         if (this.bodyUsed || this.body && this.body.locked) {
           throw webidl.errors.exception({
             header: "Response.clone",
@@ -12268,7 +12248,7 @@ var require_response = __commonJS({
           });
         }
         const clonedResponse = cloneResponse(this[kState]);
-        const clonedResponseObject = new Response();
+        const clonedResponseObject = new _Response();
         clonedResponseObject[kState] = clonedResponse;
         clonedResponseObject[kRealm] = this[kRealm];
         clonedResponseObject[kHeaders][kHeadersList] = clonedResponse.headersList;
@@ -12520,7 +12500,7 @@ var require_request2 = __commonJS({
     var requestFinalizer = new FinalizationRegistry(({ signal, abort }) => {
       signal.removeEventListener("abort", abort);
     });
-    var Request = class {
+    var Request = class _Request {
       // https://fetch.spec.whatwg.org/#dom-request
       constructor(input, init = {}) {
         if (input === kConstruct) {
@@ -12557,7 +12537,7 @@ var require_request2 = __commonJS({
           request = makeRequest({ urlList: [parsedURL] });
           fallbackMode = "cors";
         } else {
-          assert(input instanceof Request);
+          assert(input instanceof _Request);
           request = input[kState];
           signal = input[kSignal];
         }
@@ -12756,7 +12736,7 @@ var require_request2 = __commonJS({
             fillHeaders(this[kHeaders], headers);
           }
         }
-        const inputBody = input instanceof Request ? input[kState].body : null;
+        const inputBody = input instanceof _Request ? input[kState].body : null;
         if ((init.body != null || inputBody != null) && (request.method === "GET" || request.method === "HEAD")) {
           throw new TypeError("Request with GET/HEAD method cannot have body.");
         }
@@ -12805,25 +12785,25 @@ var require_request2 = __commonJS({
       }
       // Returns request’s HTTP method, which is "GET" by default.
       get method() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         return this[kState].method;
       }
       // Returns the URL of request as a string.
       get url() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         return URLSerializer(this[kState].url);
       }
       // Returns a Headers object consisting of the headers associated with request.
       // Note that headers added in the network layer by the user agent will not
       // be accounted for in this object, e.g., the "Host" header.
       get headers() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         return this[kHeaders];
       }
       // Returns the kind of resource requested by request, e.g., "document"
       // or "script".
       get destination() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         return this[kState].destination;
       }
       // Returns the referrer of request. Its value can be a same-origin URL if
@@ -12832,7 +12812,7 @@ var require_request2 = __commonJS({
       // during fetching to determine the value of the `Referer` header of the
       // request being made.
       get referrer() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         if (this[kState].referrer === "no-referrer") {
           return "";
         }
@@ -12845,14 +12825,14 @@ var require_request2 = __commonJS({
       // This is used during fetching to compute the value of the request’s
       // referrer.
       get referrerPolicy() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         return this[kState].referrerPolicy;
       }
       // Returns the mode associated with request, which is a string indicating
       // whether the request will use CORS, or will be restricted to same-origin
       // URLs.
       get mode() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         return this[kState].mode;
       }
       // Returns the credentials mode associated with request,
@@ -12865,7 +12845,7 @@ var require_request2 = __commonJS({
       // which is a string indicating how the request will
       // interact with the browser’s cache when fetching.
       get cache() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         return this[kState].cache;
       }
       // Returns the redirect mode associated with request,
@@ -12873,61 +12853,61 @@ var require_request2 = __commonJS({
       // request will be handled during fetching. A request
       // will follow redirects by default.
       get redirect() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         return this[kState].redirect;
       }
       // Returns request’s subresource integrity metadata, which is a
       // cryptographic hash of the resource being fetched. Its value
       // consists of multiple hashes separated by whitespace. [SRI]
       get integrity() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         return this[kState].integrity;
       }
       // Returns a boolean indicating whether or not request can outlive the
       // global in which it was created.
       get keepalive() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         return this[kState].keepalive;
       }
       // Returns a boolean indicating whether or not request is for a reload
       // navigation.
       get isReloadNavigation() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         return this[kState].reloadNavigation;
       }
       // Returns a boolean indicating whether or not request is for a history
       // navigation (a.k.a. back-foward navigation).
       get isHistoryNavigation() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         return this[kState].historyNavigation;
       }
       // Returns the signal associated with request, which is an AbortSignal
       // object indicating whether or not request has been aborted, and its
       // abort event handler.
       get signal() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         return this[kSignal];
       }
       get body() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         return this[kState].body ? this[kState].body.stream : null;
       }
       get bodyUsed() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         return !!this[kState].body && util.isDisturbed(this[kState].body.stream);
       }
       get duplex() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         return "half";
       }
       // Returns a clone of request.
       clone() {
-        webidl.brandCheck(this, Request);
+        webidl.brandCheck(this, _Request);
         if (this.bodyUsed || this.body?.locked) {
           throw new TypeError("unusable");
         }
         const clonedRequest = cloneRequest(this[kState]);
-        const clonedRequestObject = new Request(kConstruct);
+        const clonedRequestObject = new _Request(kConstruct);
         clonedRequestObject[kState] = clonedRequest;
         clonedRequestObject[kRealm] = this[kRealm];
         clonedRequestObject[kHeaders] = new Headers(kConstruct);
@@ -14178,7 +14158,7 @@ var require_progressevent = __commonJS({
     "use strict";
     var { webidl } = require_webidl();
     var kState = Symbol("ProgressEvent state");
-    var ProgressEvent = class extends Event {
+    var ProgressEvent = class _ProgressEvent extends Event {
       constructor(type, eventInitDict = {}) {
         type = webidl.converters.DOMString(type);
         eventInitDict = webidl.converters.ProgressEventInit(eventInitDict ?? {});
@@ -14190,15 +14170,15 @@ var require_progressevent = __commonJS({
         };
       }
       get lengthComputable() {
-        webidl.brandCheck(this, ProgressEvent);
+        webidl.brandCheck(this, _ProgressEvent);
         return this[kState].lengthComputable;
       }
       get loaded() {
-        webidl.brandCheck(this, ProgressEvent);
+        webidl.brandCheck(this, _ProgressEvent);
         return this[kState].loaded;
       }
       get total() {
-        webidl.brandCheck(this, ProgressEvent);
+        webidl.brandCheck(this, _ProgressEvent);
         return this[kState].total;
       }
     };
@@ -14730,7 +14710,7 @@ var require_filereader = __commonJS({
     } = require_symbols3();
     var { webidl } = require_webidl();
     var { kEnumerableProperty } = require_util();
-    var FileReader = class extends EventTarget {
+    var FileReader = class _FileReader extends EventTarget {
       constructor() {
         super();
         this[kState] = "empty";
@@ -14750,7 +14730,7 @@ var require_filereader = __commonJS({
        * @param {import('buffer').Blob} blob
        */
       readAsArrayBuffer(blob) {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         webidl.argumentLengthCheck(arguments, 1, { header: "FileReader.readAsArrayBuffer" });
         blob = webidl.converters.Blob(blob, { strict: false });
         readOperation(this, blob, "ArrayBuffer");
@@ -14760,7 +14740,7 @@ var require_filereader = __commonJS({
        * @param {import('buffer').Blob} blob
        */
       readAsBinaryString(blob) {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         webidl.argumentLengthCheck(arguments, 1, { header: "FileReader.readAsBinaryString" });
         blob = webidl.converters.Blob(blob, { strict: false });
         readOperation(this, blob, "BinaryString");
@@ -14771,7 +14751,7 @@ var require_filereader = __commonJS({
        * @param {string?} encoding
        */
       readAsText(blob, encoding = void 0) {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         webidl.argumentLengthCheck(arguments, 1, { header: "FileReader.readAsText" });
         blob = webidl.converters.Blob(blob, { strict: false });
         if (encoding !== void 0) {
@@ -14784,7 +14764,7 @@ var require_filereader = __commonJS({
        * @param {import('buffer').Blob} blob
        */
       readAsDataURL(blob) {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         webidl.argumentLengthCheck(arguments, 1, { header: "FileReader.readAsDataURL" });
         blob = webidl.converters.Blob(blob, { strict: false });
         readOperation(this, blob, "DataURL");
@@ -14811,7 +14791,7 @@ var require_filereader = __commonJS({
        * @see https://w3c.github.io/FileAPI/#dom-filereader-readystate
        */
       get readyState() {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         switch (this[kState]) {
           case "empty":
             return this.EMPTY;
@@ -14825,22 +14805,22 @@ var require_filereader = __commonJS({
        * @see https://w3c.github.io/FileAPI/#dom-filereader-result
        */
       get result() {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         return this[kResult];
       }
       /**
        * @see https://w3c.github.io/FileAPI/#dom-filereader-error
        */
       get error() {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         return this[kError];
       }
       get onloadend() {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         return this[kEvents].loadend;
       }
       set onloadend(fn) {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         if (this[kEvents].loadend) {
           this.removeEventListener("loadend", this[kEvents].loadend);
         }
@@ -14852,11 +14832,11 @@ var require_filereader = __commonJS({
         }
       }
       get onerror() {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         return this[kEvents].error;
       }
       set onerror(fn) {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         if (this[kEvents].error) {
           this.removeEventListener("error", this[kEvents].error);
         }
@@ -14868,11 +14848,11 @@ var require_filereader = __commonJS({
         }
       }
       get onloadstart() {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         return this[kEvents].loadstart;
       }
       set onloadstart(fn) {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         if (this[kEvents].loadstart) {
           this.removeEventListener("loadstart", this[kEvents].loadstart);
         }
@@ -14884,11 +14864,11 @@ var require_filereader = __commonJS({
         }
       }
       get onprogress() {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         return this[kEvents].progress;
       }
       set onprogress(fn) {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         if (this[kEvents].progress) {
           this.removeEventListener("progress", this[kEvents].progress);
         }
@@ -14900,11 +14880,11 @@ var require_filereader = __commonJS({
         }
       }
       get onload() {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         return this[kEvents].load;
       }
       set onload(fn) {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         if (this[kEvents].load) {
           this.removeEventListener("load", this[kEvents].load);
         }
@@ -14916,11 +14896,11 @@ var require_filereader = __commonJS({
         }
       }
       get onabort() {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         return this[kEvents].abort;
       }
       set onabort(fn) {
-        webidl.brandCheck(this, FileReader);
+        webidl.brandCheck(this, _FileReader);
         if (this[kEvents].abort) {
           this.removeEventListener("abort", this[kEvents].abort);
         }
@@ -15030,7 +15010,7 @@ var require_cache = __commonJS({
     var { urlIsHttpHttpsScheme, createDeferredPromise, readAllBytes } = require_util2();
     var assert = require("assert");
     var { getGlobalDispatcher } = require_global2();
-    var Cache = class {
+    var Cache = class _Cache {
       /**
        * @see https://w3c.github.io/ServiceWorker/#dfn-relevant-request-response-list
        * @type {requestResponseList}
@@ -15043,7 +15023,7 @@ var require_cache = __commonJS({
         this.#relevantRequestResponseList = arguments[1];
       }
       async match(request, options = {}) {
-        webidl.brandCheck(this, Cache);
+        webidl.brandCheck(this, _Cache);
         webidl.argumentLengthCheck(arguments, 1, { header: "Cache.match" });
         request = webidl.converters.RequestInfo(request);
         options = webidl.converters.CacheQueryOptions(options);
@@ -15054,7 +15034,7 @@ var require_cache = __commonJS({
         return p[0];
       }
       async matchAll(request = void 0, options = {}) {
-        webidl.brandCheck(this, Cache);
+        webidl.brandCheck(this, _Cache);
         if (request !== void 0)
           request = webidl.converters.RequestInfo(request);
         options = webidl.converters.CacheQueryOptions(options);
@@ -15093,7 +15073,7 @@ var require_cache = __commonJS({
         return Object.freeze(responseList);
       }
       async add(request) {
-        webidl.brandCheck(this, Cache);
+        webidl.brandCheck(this, _Cache);
         webidl.argumentLengthCheck(arguments, 1, { header: "Cache.add" });
         request = webidl.converters.RequestInfo(request);
         const requests = [request];
@@ -15101,7 +15081,7 @@ var require_cache = __commonJS({
         return await responseArrayPromise;
       }
       async addAll(requests) {
-        webidl.brandCheck(this, Cache);
+        webidl.brandCheck(this, _Cache);
         webidl.argumentLengthCheck(arguments, 1, { header: "Cache.addAll" });
         requests = webidl.converters["sequence<RequestInfo>"](requests);
         const responsePromises = [];
@@ -15199,7 +15179,7 @@ var require_cache = __commonJS({
         return cacheJobPromise.promise;
       }
       async put(request, response) {
-        webidl.brandCheck(this, Cache);
+        webidl.brandCheck(this, _Cache);
         webidl.argumentLengthCheck(arguments, 2, { header: "Cache.put" });
         request = webidl.converters.RequestInfo(request);
         response = webidl.converters.Response(response);
@@ -15279,7 +15259,7 @@ var require_cache = __commonJS({
         return cacheJobPromise.promise;
       }
       async delete(request, options = {}) {
-        webidl.brandCheck(this, Cache);
+        webidl.brandCheck(this, _Cache);
         webidl.argumentLengthCheck(arguments, 1, { header: "Cache.delete" });
         request = webidl.converters.RequestInfo(request);
         options = webidl.converters.CacheQueryOptions(options);
@@ -15324,7 +15304,7 @@ var require_cache = __commonJS({
        * @returns {readonly Request[]}
        */
       async keys(request = void 0, options = {}) {
-        webidl.brandCheck(this, Cache);
+        webidl.brandCheck(this, _Cache);
         if (request !== void 0)
           request = webidl.converters.RequestInfo(request);
         options = webidl.converters.CacheQueryOptions(options);
@@ -15556,7 +15536,7 @@ var require_cachestorage = __commonJS({
     var { Cache } = require_cache();
     var { webidl } = require_webidl();
     var { kEnumerableProperty } = require_util();
-    var CacheStorage = class {
+    var CacheStorage = class _CacheStorage {
       /**
        * @see https://w3c.github.io/ServiceWorker/#dfn-relevant-name-to-cache-map
        * @type {Map<string, import('./cache').requestResponseList}
@@ -15568,7 +15548,7 @@ var require_cachestorage = __commonJS({
         }
       }
       async match(request, options = {}) {
-        webidl.brandCheck(this, CacheStorage);
+        webidl.brandCheck(this, _CacheStorage);
         webidl.argumentLengthCheck(arguments, 1, { header: "CacheStorage.match" });
         request = webidl.converters.RequestInfo(request);
         options = webidl.converters.MultiCacheQueryOptions(options);
@@ -15594,7 +15574,7 @@ var require_cachestorage = __commonJS({
        * @returns {Promise<boolean>}
        */
       async has(cacheName) {
-        webidl.brandCheck(this, CacheStorage);
+        webidl.brandCheck(this, _CacheStorage);
         webidl.argumentLengthCheck(arguments, 1, { header: "CacheStorage.has" });
         cacheName = webidl.converters.DOMString(cacheName);
         return this.#caches.has(cacheName);
@@ -15605,7 +15585,7 @@ var require_cachestorage = __commonJS({
        * @returns {Promise<Cache>}
        */
       async open(cacheName) {
-        webidl.brandCheck(this, CacheStorage);
+        webidl.brandCheck(this, _CacheStorage);
         webidl.argumentLengthCheck(arguments, 1, { header: "CacheStorage.open" });
         cacheName = webidl.converters.DOMString(cacheName);
         if (this.#caches.has(cacheName)) {
@@ -15622,7 +15602,7 @@ var require_cachestorage = __commonJS({
        * @returns {Promise<boolean>}
        */
       async delete(cacheName) {
-        webidl.brandCheck(this, CacheStorage);
+        webidl.brandCheck(this, _CacheStorage);
         webidl.argumentLengthCheck(arguments, 1, { header: "CacheStorage.delete" });
         cacheName = webidl.converters.DOMString(cacheName);
         return this.#caches.delete(cacheName);
@@ -15632,7 +15612,7 @@ var require_cachestorage = __commonJS({
        * @returns {string[]}
        */
       async keys() {
-        webidl.brandCheck(this, CacheStorage);
+        webidl.brandCheck(this, _CacheStorage);
         const keys = this.#caches.keys();
         return [...keys];
       }
@@ -16162,7 +16142,7 @@ var require_events = __commonJS({
     var { webidl } = require_webidl();
     var { kEnumerableProperty } = require_util();
     var { MessagePort } = require("worker_threads");
-    var MessageEvent = class extends Event {
+    var MessageEvent = class _MessageEvent extends Event {
       #eventInit;
       constructor(type, eventInitDict = {}) {
         webidl.argumentLengthCheck(arguments, 1, { header: "MessageEvent constructor" });
@@ -16172,32 +16152,32 @@ var require_events = __commonJS({
         this.#eventInit = eventInitDict;
       }
       get data() {
-        webidl.brandCheck(this, MessageEvent);
+        webidl.brandCheck(this, _MessageEvent);
         return this.#eventInit.data;
       }
       get origin() {
-        webidl.brandCheck(this, MessageEvent);
+        webidl.brandCheck(this, _MessageEvent);
         return this.#eventInit.origin;
       }
       get lastEventId() {
-        webidl.brandCheck(this, MessageEvent);
+        webidl.brandCheck(this, _MessageEvent);
         return this.#eventInit.lastEventId;
       }
       get source() {
-        webidl.brandCheck(this, MessageEvent);
+        webidl.brandCheck(this, _MessageEvent);
         return this.#eventInit.source;
       }
       get ports() {
-        webidl.brandCheck(this, MessageEvent);
+        webidl.brandCheck(this, _MessageEvent);
         if (!Object.isFrozen(this.#eventInit.ports)) {
           Object.freeze(this.#eventInit.ports);
         }
         return this.#eventInit.ports;
       }
       initMessageEvent(type, bubbles = false, cancelable = false, data = null, origin = "", lastEventId = "", source = null, ports = []) {
-        webidl.brandCheck(this, MessageEvent);
+        webidl.brandCheck(this, _MessageEvent);
         webidl.argumentLengthCheck(arguments, 1, { header: "MessageEvent.initMessageEvent" });
-        return new MessageEvent(type, {
+        return new _MessageEvent(type, {
           bubbles,
           cancelable,
           data,
@@ -16208,7 +16188,7 @@ var require_events = __commonJS({
         });
       }
     };
-    var CloseEvent = class extends Event {
+    var CloseEvent = class _CloseEvent extends Event {
       #eventInit;
       constructor(type, eventInitDict = {}) {
         webidl.argumentLengthCheck(arguments, 1, { header: "CloseEvent constructor" });
@@ -16218,19 +16198,19 @@ var require_events = __commonJS({
         this.#eventInit = eventInitDict;
       }
       get wasClean() {
-        webidl.brandCheck(this, CloseEvent);
+        webidl.brandCheck(this, _CloseEvent);
         return this.#eventInit.wasClean;
       }
       get code() {
-        webidl.brandCheck(this, CloseEvent);
+        webidl.brandCheck(this, _CloseEvent);
         return this.#eventInit.code;
       }
       get reason() {
-        webidl.brandCheck(this, CloseEvent);
+        webidl.brandCheck(this, _CloseEvent);
         return this.#eventInit.reason;
       }
     };
-    var ErrorEvent = class extends Event {
+    var ErrorEvent = class _ErrorEvent extends Event {
       #eventInit;
       constructor(type, eventInitDict) {
         webidl.argumentLengthCheck(arguments, 1, { header: "ErrorEvent constructor" });
@@ -16240,23 +16220,23 @@ var require_events = __commonJS({
         this.#eventInit = eventInitDict;
       }
       get message() {
-        webidl.brandCheck(this, ErrorEvent);
+        webidl.brandCheck(this, _ErrorEvent);
         return this.#eventInit.message;
       }
       get filename() {
-        webidl.brandCheck(this, ErrorEvent);
+        webidl.brandCheck(this, _ErrorEvent);
         return this.#eventInit.filename;
       }
       get lineno() {
-        webidl.brandCheck(this, ErrorEvent);
+        webidl.brandCheck(this, _ErrorEvent);
         return this.#eventInit.lineno;
       }
       get colno() {
-        webidl.brandCheck(this, ErrorEvent);
+        webidl.brandCheck(this, _ErrorEvent);
         return this.#eventInit.colno;
       }
       get error() {
-        webidl.brandCheck(this, ErrorEvent);
+        webidl.brandCheck(this, _ErrorEvent);
         return this.#eventInit.error;
       }
     };
@@ -16955,7 +16935,7 @@ var require_websocket = __commonJS({
     var { getGlobalDispatcher } = require_global2();
     var { types } = require("util");
     var experimentalWarned = false;
-    var WebSocket = class extends EventTarget {
+    var WebSocket = class _WebSocket extends EventTarget {
       #events = {
         open: null,
         error: null,
@@ -17019,7 +16999,7 @@ var require_websocket = __commonJS({
           (response) => this.#onConnectionEstablished(response),
           options
         );
-        this[kReadyState] = WebSocket.CONNECTING;
+        this[kReadyState] = _WebSocket.CONNECTING;
         this[kBinaryType] = "blob";
       }
       /**
@@ -17028,7 +17008,7 @@ var require_websocket = __commonJS({
        * @param {string|undefined} reason
        */
       close(code = void 0, reason = void 0) {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         if (code !== void 0) {
           code = webidl.converters["unsigned short"](code, { clamp: true });
         }
@@ -17050,10 +17030,10 @@ var require_websocket = __commonJS({
             );
           }
         }
-        if (this[kReadyState] === WebSocket.CLOSING || this[kReadyState] === WebSocket.CLOSED) {
+        if (this[kReadyState] === _WebSocket.CLOSING || this[kReadyState] === _WebSocket.CLOSED) {
         } else if (!isEstablished(this)) {
           failWebsocketConnection(this, "Connection was closed before it was established.");
-          this[kReadyState] = WebSocket.CLOSING;
+          this[kReadyState] = _WebSocket.CLOSING;
         } else if (!isClosing(this)) {
           const frame = new WebsocketFrameSend();
           if (code !== void 0 && reason === void 0) {
@@ -17074,7 +17054,7 @@ var require_websocket = __commonJS({
           });
           this[kReadyState] = states.CLOSING;
         } else {
-          this[kReadyState] = WebSocket.CLOSING;
+          this[kReadyState] = _WebSocket.CLOSING;
         }
       }
       /**
@@ -17082,10 +17062,10 @@ var require_websocket = __commonJS({
        * @param {NodeJS.TypedArray|ArrayBuffer|Blob|string} data
        */
       send(data) {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         webidl.argumentLengthCheck(arguments, 1, { header: "WebSocket.send" });
         data = webidl.converters.WebSocketSendData(data);
-        if (this[kReadyState] === WebSocket.CONNECTING) {
+        if (this[kReadyState] === _WebSocket.CONNECTING) {
           throw new DOMException2("Sent before connected.", "InvalidStateError");
         }
         if (!isEstablished(this) || isClosing(this)) {
@@ -17130,31 +17110,31 @@ var require_websocket = __commonJS({
         }
       }
       get readyState() {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         return this[kReadyState];
       }
       get bufferedAmount() {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         return this.#bufferedAmount;
       }
       get url() {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         return URLSerializer(this[kWebSocketURL]);
       }
       get extensions() {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         return this.#extensions;
       }
       get protocol() {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         return this.#protocol;
       }
       get onopen() {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         return this.#events.open;
       }
       set onopen(fn) {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         if (this.#events.open) {
           this.removeEventListener("open", this.#events.open);
         }
@@ -17166,11 +17146,11 @@ var require_websocket = __commonJS({
         }
       }
       get onerror() {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         return this.#events.error;
       }
       set onerror(fn) {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         if (this.#events.error) {
           this.removeEventListener("error", this.#events.error);
         }
@@ -17182,11 +17162,11 @@ var require_websocket = __commonJS({
         }
       }
       get onclose() {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         return this.#events.close;
       }
       set onclose(fn) {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         if (this.#events.close) {
           this.removeEventListener("close", this.#events.close);
         }
@@ -17198,11 +17178,11 @@ var require_websocket = __commonJS({
         }
       }
       get onmessage() {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         return this.#events.message;
       }
       set onmessage(fn) {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         if (this.#events.message) {
           this.removeEventListener("message", this.#events.message);
         }
@@ -17214,11 +17194,11 @@ var require_websocket = __commonJS({
         }
       }
       get binaryType() {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         return this[kBinaryType];
       }
       set binaryType(type) {
-        webidl.brandCheck(this, WebSocket);
+        webidl.brandCheck(this, _WebSocket);
         if (type !== "blob" && type !== "arraybuffer") {
           this[kBinaryType] = "blob";
         } else {
@@ -17602,12 +17582,12 @@ var require_lib = __commonJS({
     var RetryableHttpVerbs = ["OPTIONS", "GET", "DELETE", "HEAD"];
     var ExponentialBackoffCeiling = 10;
     var ExponentialBackoffTimeSlice = 5;
-    var HttpClientError = class extends Error {
+    var HttpClientError = class _HttpClientError extends Error {
       constructor(message, statusCode) {
         super(message);
         this.name = "HttpClientError";
         this.statusCode = statusCode;
-        Object.setPrototypeOf(this, HttpClientError.prototype);
+        Object.setPrototypeOf(this, _HttpClientError.prototype);
       }
     };
     exports2.HttpClientError = HttpClientError;
@@ -17648,7 +17628,7 @@ var require_lib = __commonJS({
       return parsedUrl.protocol === "https:";
     }
     exports2.isHttps = isHttps;
-    var HttpClient3 = class {
+    var HttpClient4 = class {
       constructor(userAgent, handlers, requestOptions) {
         this._ignoreSslError = false;
         this._allowRedirects = true;
@@ -17969,7 +17949,7 @@ var require_lib = __commonJS({
         if (this._keepAlive && useProxy) {
           agent = this._proxyAgent;
         }
-        if (this._keepAlive && !useProxy) {
+        if (!useProxy) {
           agent = this._agent;
         }
         if (agent) {
@@ -17998,13 +17978,10 @@ var require_lib = __commonJS({
           agent = tunnelAgent(agentOptions);
           this._proxyAgent = agent;
         }
-        if (this._keepAlive && !agent) {
+        if (!agent) {
           const options = { keepAlive: this._keepAlive, maxSockets };
           agent = usingSsl ? new https.Agent(options) : new http.Agent(options);
           this._agent = agent;
-        }
-        if (!agent) {
-          agent = usingSsl ? https.globalAgent : http.globalAgent;
         }
         if (usingSsl && this._ignoreSslError) {
           agent.options = Object.assign(agent.options || {}, {
@@ -18095,7 +18072,7 @@ var require_lib = __commonJS({
         });
       }
     };
-    exports2.HttpClient = HttpClient3;
+    exports2.HttpClient = HttpClient4;
     var lowercaseKeys = (obj) => Object.keys(obj).reduce((c, k) => (c[k.toLowerCase()] = obj[k], c), {});
   }
 });
@@ -18240,13 +18217,13 @@ var require_oidc_utils = __commonJS({
     var http_client_1 = require_lib();
     var auth_1 = require_auth();
     var core_1 = require_core();
-    var OidcClient = class {
+    var OidcClient = class _OidcClient {
       static createHttpClient(allowRetry = true, maxRetry = 10) {
         const requestOptions = {
           allowRetries: allowRetry,
           maxRetries: maxRetry
         };
-        return new http_client_1.HttpClient("actions/oidc-client", [new auth_1.BearerCredentialHandler(OidcClient.getRequestToken())], requestOptions);
+        return new http_client_1.HttpClient("actions/oidc-client", [new auth_1.BearerCredentialHandler(_OidcClient.getRequestToken())], requestOptions);
       }
       static getRequestToken() {
         const token = process.env["ACTIONS_ID_TOKEN_REQUEST_TOKEN"];
@@ -18265,13 +18242,13 @@ var require_oidc_utils = __commonJS({
       static getCall(id_token_url) {
         var _a;
         return __awaiter2(this, void 0, void 0, function* () {
-          const httpclient = OidcClient.createHttpClient();
+          const httpclient = _OidcClient.createHttpClient();
           const res = yield httpclient.getJson(id_token_url).catch((error2) => {
             throw new Error(`Failed to get ID Token. 
  
         Error Code : ${error2.statusCode}
  
-        Error Message: ${error2.result.message}`);
+        Error Message: ${error2.message}`);
           });
           const id_token = (_a = res.result) === null || _a === void 0 ? void 0 : _a.value;
           if (!id_token) {
@@ -18283,13 +18260,13 @@ var require_oidc_utils = __commonJS({
       static getIDToken(audience) {
         return __awaiter2(this, void 0, void 0, function* () {
           try {
-            let id_token_url = OidcClient.getIDTokenUrl();
+            let id_token_url = _OidcClient.getIDTokenUrl();
             if (audience) {
               const encodedAudience = encodeURIComponent(audience);
               id_token_url = `${id_token_url}&audience=${encodedAudience}`;
             }
             core_1.debug(`ID token url is ${id_token_url}`);
-            const id_token = yield OidcClient.getCall(id_token_url);
+            const id_token = yield _OidcClient.getCall(id_token_url);
             core_1.setSecret(id_token);
             return id_token;
           } catch (error2) {
@@ -19730,7 +19707,7 @@ var require_toolrunner = __commonJS({
       return args;
     }
     exports2.argStringToArray = argStringToArray;
-    var ExecState = class extends events.EventEmitter {
+    var ExecState = class _ExecState extends events.EventEmitter {
       constructor(options, toolPath) {
         super();
         this.processClosed = false;
@@ -19757,7 +19734,7 @@ var require_toolrunner = __commonJS({
         if (this.processClosed) {
           this._setResult();
         } else if (this.processExited) {
-          this.timeout = timers_1.setTimeout(ExecState.HandleTimeout, this.delay, this);
+          this.timeout = timers_1.setTimeout(_ExecState.HandleTimeout, this.delay, this);
         }
       }
       _debug(message) {
@@ -21170,7 +21147,7 @@ var require_internal_pattern = __commonJS({
     var internal_match_kind_1 = require_internal_match_kind();
     var internal_path_1 = require_internal_path();
     var IS_WINDOWS3 = process.platform === "win32";
-    var Pattern = class {
+    var Pattern = class _Pattern {
       constructor(patternOrNegate, isImplicitPattern = false, segments, homedir2) {
         this.negate = false;
         let pattern;
@@ -21179,7 +21156,7 @@ var require_internal_pattern = __commonJS({
         } else {
           segments = segments || [];
           assert_1.default(segments.length, `Parameter 'segments' must not empty`);
-          const root = Pattern.getLiteral(segments[0]);
+          const root = _Pattern.getLiteral(segments[0]);
           assert_1.default(root && pathHelper.hasAbsoluteRoot(root), `Parameter 'segments' first element must be a root path`);
           pattern = new internal_path_1.Path(segments).toString().trim();
           if (patternOrNegate) {
@@ -21190,14 +21167,14 @@ var require_internal_pattern = __commonJS({
           this.negate = !this.negate;
           pattern = pattern.substr(1).trim();
         }
-        pattern = Pattern.fixupPattern(pattern, homedir2);
+        pattern = _Pattern.fixupPattern(pattern, homedir2);
         this.segments = new internal_path_1.Path(pattern).segments;
         this.trailingSeparator = pathHelper.normalizeSeparators(pattern).endsWith(path13.sep);
         pattern = pathHelper.safeTrimTrailingSeparator(pattern);
         let foundGlob = false;
-        const searchSegments = this.segments.map((x) => Pattern.getLiteral(x)).filter((x) => !foundGlob && !(foundGlob = x === ""));
+        const searchSegments = this.segments.map((x) => _Pattern.getLiteral(x)).filter((x) => !foundGlob && !(foundGlob = x === ""));
         this.searchPath = new internal_path_1.Path(searchSegments).toString();
-        this.rootRegExp = new RegExp(Pattern.regExpEscape(searchSegments[0]), IS_WINDOWS3 ? "i" : "");
+        this.rootRegExp = new RegExp(_Pattern.regExpEscape(searchSegments[0]), IS_WINDOWS3 ? "i" : "");
         this.isImplicitPattern = isImplicitPattern;
         const minimatchOptions = {
           dot: true,
@@ -21248,31 +21225,31 @@ var require_internal_pattern = __commonJS({
        */
       static fixupPattern(pattern, homedir2) {
         assert_1.default(pattern, "pattern cannot be empty");
-        const literalSegments = new internal_path_1.Path(pattern).segments.map((x) => Pattern.getLiteral(x));
+        const literalSegments = new internal_path_1.Path(pattern).segments.map((x) => _Pattern.getLiteral(x));
         assert_1.default(literalSegments.every((x, i) => (x !== "." || i === 0) && x !== ".."), `Invalid pattern '${pattern}'. Relative pathing '.' and '..' is not allowed.`);
         assert_1.default(!pathHelper.hasRoot(pattern) || literalSegments[0], `Invalid pattern '${pattern}'. Root segment must not contain globs.`);
         pattern = pathHelper.normalizeSeparators(pattern);
         if (pattern === "." || pattern.startsWith(`.${path13.sep}`)) {
-          pattern = Pattern.globEscape(process.cwd()) + pattern.substr(1);
+          pattern = _Pattern.globEscape(process.cwd()) + pattern.substr(1);
         } else if (pattern === "~" || pattern.startsWith(`~${path13.sep}`)) {
           homedir2 = homedir2 || os7.homedir();
           assert_1.default(homedir2, "Unable to determine HOME directory");
           assert_1.default(pathHelper.hasAbsoluteRoot(homedir2), `Expected HOME directory to be a rooted path. Actual '${homedir2}'`);
-          pattern = Pattern.globEscape(homedir2) + pattern.substr(1);
+          pattern = _Pattern.globEscape(homedir2) + pattern.substr(1);
         } else if (IS_WINDOWS3 && (pattern.match(/^[A-Z]:$/i) || pattern.match(/^[A-Z]:[^\\]/i))) {
           let root = pathHelper.ensureAbsoluteRoot("C:\\dummy-root", pattern.substr(0, 2));
           if (pattern.length > 2 && !root.endsWith("\\")) {
             root += "\\";
           }
-          pattern = Pattern.globEscape(root) + pattern.substr(2);
+          pattern = _Pattern.globEscape(root) + pattern.substr(2);
         } else if (IS_WINDOWS3 && (pattern === "\\" || pattern.match(/^\\[^\\]/))) {
           let root = pathHelper.ensureAbsoluteRoot("C:\\dummy-root", "\\");
           if (!root.endsWith("\\")) {
             root += "\\";
           }
-          pattern = Pattern.globEscape(root) + pattern.substr(1);
+          pattern = _Pattern.globEscape(root) + pattern.substr(1);
         } else {
-          pattern = pathHelper.ensureAbsoluteRoot(Pattern.globEscape(process.cwd()), pattern);
+          pattern = pathHelper.ensureAbsoluteRoot(_Pattern.globEscape(process.cwd()), pattern);
         }
         return pathHelper.normalizeSeparators(pattern);
       }
@@ -21476,7 +21453,7 @@ var require_internal_globber = __commonJS({
     var internal_pattern_1 = require_internal_pattern();
     var internal_search_state_1 = require_internal_search_state();
     var IS_WINDOWS3 = process.platform === "win32";
-    var DefaultGlobber = class {
+    var DefaultGlobber = class _DefaultGlobber {
       constructor(options) {
         this.patterns = [];
         this.searchPaths = [];
@@ -21540,7 +21517,7 @@ var require_internal_globber = __commonJS({
               continue;
             }
             const stats = yield __await2(
-              DefaultGlobber.stat(item, options, traversalChain)
+              _DefaultGlobber.stat(item, options, traversalChain)
               // Broken symlink, or symlink cycle detected, or no longer exists
             );
             if (!stats) {
@@ -21566,7 +21543,7 @@ var require_internal_globber = __commonJS({
        */
       static create(patterns, options) {
         return __awaiter2(this, void 0, void 0, function* () {
-          const result = new DefaultGlobber(options);
+          const result = new _DefaultGlobber(options);
           if (IS_WINDOWS3) {
             patterns = patterns.replace(/\r\n/g, "\n");
             patterns = patterns.replace(/\r/g, "\n");
@@ -21684,19 +21661,35 @@ var require_semver = __commonJS({
     var MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER || /* istanbul ignore next */
     9007199254740991;
     var MAX_SAFE_COMPONENT_LENGTH = 16;
+    var MAX_SAFE_BUILD_LENGTH = MAX_LENGTH - 6;
     var re = exports2.re = [];
+    var safeRe = exports2.safeRe = [];
     var src = exports2.src = [];
     var t = exports2.tokens = {};
     var R = 0;
     function tok(n) {
       t[n] = R++;
     }
+    var LETTERDASHNUMBER = "[a-zA-Z0-9-]";
+    var safeRegexReplacements = [
+      ["\\s", 1],
+      ["\\d", MAX_LENGTH],
+      [LETTERDASHNUMBER, MAX_SAFE_BUILD_LENGTH]
+    ];
+    function makeSafeRe(value) {
+      for (var i2 = 0; i2 < safeRegexReplacements.length; i2++) {
+        var token = safeRegexReplacements[i2][0];
+        var max = safeRegexReplacements[i2][1];
+        value = value.split(token + "*").join(token + "{0," + max + "}").split(token + "+").join(token + "{1," + max + "}");
+      }
+      return value;
+    }
     tok("NUMERICIDENTIFIER");
     src[t.NUMERICIDENTIFIER] = "0|[1-9]\\d*";
     tok("NUMERICIDENTIFIERLOOSE");
-    src[t.NUMERICIDENTIFIERLOOSE] = "[0-9]+";
+    src[t.NUMERICIDENTIFIERLOOSE] = "\\d+";
     tok("NONNUMERICIDENTIFIER");
-    src[t.NONNUMERICIDENTIFIER] = "\\d*[a-zA-Z-][a-zA-Z0-9-]*";
+    src[t.NONNUMERICIDENTIFIER] = "\\d*[a-zA-Z-]" + LETTERDASHNUMBER + "*";
     tok("MAINVERSION");
     src[t.MAINVERSION] = "(" + src[t.NUMERICIDENTIFIER] + ")\\.(" + src[t.NUMERICIDENTIFIER] + ")\\.(" + src[t.NUMERICIDENTIFIER] + ")";
     tok("MAINVERSIONLOOSE");
@@ -21710,7 +21703,7 @@ var require_semver = __commonJS({
     tok("PRERELEASELOOSE");
     src[t.PRERELEASELOOSE] = "(?:-?(" + src[t.PRERELEASEIDENTIFIERLOOSE] + "(?:\\." + src[t.PRERELEASEIDENTIFIERLOOSE] + ")*))";
     tok("BUILDIDENTIFIER");
-    src[t.BUILDIDENTIFIER] = "[0-9A-Za-z-]+";
+    src[t.BUILDIDENTIFIER] = LETTERDASHNUMBER + "+";
     tok("BUILD");
     src[t.BUILD] = "(?:\\+(" + src[t.BUILDIDENTIFIER] + "(?:\\." + src[t.BUILDIDENTIFIER] + ")*))";
     tok("FULL");
@@ -21739,11 +21732,13 @@ var require_semver = __commonJS({
     src[t.COERCE] = "(^|[^\\d])(\\d{1," + MAX_SAFE_COMPONENT_LENGTH + "})(?:\\.(\\d{1," + MAX_SAFE_COMPONENT_LENGTH + "}))?(?:\\.(\\d{1," + MAX_SAFE_COMPONENT_LENGTH + "}))?(?:$|[^\\d])";
     tok("COERCERTL");
     re[t.COERCERTL] = new RegExp(src[t.COERCE], "g");
+    safeRe[t.COERCERTL] = new RegExp(makeSafeRe(src[t.COERCE]), "g");
     tok("LONETILDE");
     src[t.LONETILDE] = "(?:~>?)";
     tok("TILDETRIM");
     src[t.TILDETRIM] = "(\\s*)" + src[t.LONETILDE] + "\\s+";
     re[t.TILDETRIM] = new RegExp(src[t.TILDETRIM], "g");
+    safeRe[t.TILDETRIM] = new RegExp(makeSafeRe(src[t.TILDETRIM]), "g");
     var tildeTrimReplace = "$1~";
     tok("TILDE");
     src[t.TILDE] = "^" + src[t.LONETILDE] + src[t.XRANGEPLAIN] + "$";
@@ -21754,6 +21749,7 @@ var require_semver = __commonJS({
     tok("CARETTRIM");
     src[t.CARETTRIM] = "(\\s*)" + src[t.LONECARET] + "\\s+";
     re[t.CARETTRIM] = new RegExp(src[t.CARETTRIM], "g");
+    safeRe[t.CARETTRIM] = new RegExp(makeSafeRe(src[t.CARETTRIM]), "g");
     var caretTrimReplace = "$1^";
     tok("CARET");
     src[t.CARET] = "^" + src[t.LONECARET] + src[t.XRANGEPLAIN] + "$";
@@ -21766,6 +21762,7 @@ var require_semver = __commonJS({
     tok("COMPARATORTRIM");
     src[t.COMPARATORTRIM] = "(\\s*)" + src[t.GTLT] + "\\s*(" + src[t.LOOSEPLAIN] + "|" + src[t.XRANGEPLAIN] + ")";
     re[t.COMPARATORTRIM] = new RegExp(src[t.COMPARATORTRIM], "g");
+    safeRe[t.COMPARATORTRIM] = new RegExp(makeSafeRe(src[t.COMPARATORTRIM]), "g");
     var comparatorTrimReplace = "$1$2$3";
     tok("HYPHENRANGE");
     src[t.HYPHENRANGE] = "^\\s*(" + src[t.XRANGEPLAIN] + ")\\s+-\\s+(" + src[t.XRANGEPLAIN] + ")\\s*$";
@@ -21777,6 +21774,7 @@ var require_semver = __commonJS({
       debug10(i, src[i]);
       if (!re[i]) {
         re[i] = new RegExp(src[i]);
+        safeRe[i] = new RegExp(makeSafeRe(src[i]));
       }
     }
     var i;
@@ -21797,7 +21795,7 @@ var require_semver = __commonJS({
       if (version3.length > MAX_LENGTH) {
         return null;
       }
-      var r = options.loose ? re[t.LOOSE] : re[t.FULL];
+      var r = options.loose ? safeRe[t.LOOSE] : safeRe[t.FULL];
       if (!r.test(version3)) {
         return null;
       }
@@ -21843,7 +21841,7 @@ var require_semver = __commonJS({
       debug10("SemVer", version3, options);
       this.options = options;
       this.loose = !!options.loose;
-      var m = version3.trim().match(options.loose ? re[t.LOOSE] : re[t.FULL]);
+      var m = version3.trim().match(options.loose ? safeRe[t.LOOSE] : safeRe[t.FULL]);
       if (!m) {
         throw new TypeError("Invalid Version: " + version3);
       }
@@ -22195,6 +22193,7 @@ var require_semver = __commonJS({
       if (!(this instanceof Comparator)) {
         return new Comparator(comp, options);
       }
+      comp = comp.trim().split(/\s+/).join(" ");
       debug10("comparator", comp, options);
       this.options = options;
       this.loose = !!options.loose;
@@ -22208,7 +22207,7 @@ var require_semver = __commonJS({
     }
     var ANY = {};
     Comparator.prototype.parse = function(comp) {
-      var r = this.options.loose ? re[t.COMPARATORLOOSE] : re[t.COMPARATOR];
+      var r = this.options.loose ? safeRe[t.COMPARATORLOOSE] : safeRe[t.COMPARATOR];
       var m = comp.match(r);
       if (!m) {
         throw new TypeError("Invalid comparator: " + comp);
@@ -22296,14 +22295,14 @@ var require_semver = __commonJS({
       this.options = options;
       this.loose = !!options.loose;
       this.includePrerelease = !!options.includePrerelease;
-      this.raw = range;
-      this.set = range.split(/\s*\|\|\s*/).map(function(range2) {
+      this.raw = range.trim().split(/\s+/).join(" ");
+      this.set = this.raw.split("||").map(function(range2) {
         return this.parseRange(range2.trim());
       }, this).filter(function(c) {
         return c.length;
       });
       if (!this.set.length) {
-        throw new TypeError("Invalid SemVer Range: " + range);
+        throw new TypeError("Invalid SemVer Range: " + this.raw);
       }
       this.format();
     }
@@ -22318,16 +22317,15 @@ var require_semver = __commonJS({
     };
     Range.prototype.parseRange = function(range) {
       var loose = this.options.loose;
-      range = range.trim();
-      var hr = loose ? re[t.HYPHENRANGELOOSE] : re[t.HYPHENRANGE];
+      var hr = loose ? safeRe[t.HYPHENRANGELOOSE] : safeRe[t.HYPHENRANGE];
       range = range.replace(hr, hyphenReplace);
       debug10("hyphen replace", range);
-      range = range.replace(re[t.COMPARATORTRIM], comparatorTrimReplace);
-      debug10("comparator trim", range, re[t.COMPARATORTRIM]);
-      range = range.replace(re[t.TILDETRIM], tildeTrimReplace);
-      range = range.replace(re[t.CARETTRIM], caretTrimReplace);
+      range = range.replace(safeRe[t.COMPARATORTRIM], comparatorTrimReplace);
+      debug10("comparator trim", range, safeRe[t.COMPARATORTRIM]);
+      range = range.replace(safeRe[t.TILDETRIM], tildeTrimReplace);
+      range = range.replace(safeRe[t.CARETTRIM], caretTrimReplace);
       range = range.split(/\s+/).join(" ");
-      var compRe = loose ? re[t.COMPARATORLOOSE] : re[t.COMPARATOR];
+      var compRe = loose ? safeRe[t.COMPARATORLOOSE] : safeRe[t.COMPARATOR];
       var set = range.split(" ").map(function(comp) {
         return parseComparator(comp, this.options);
       }, this).join(" ").split(/\s+/);
@@ -22396,7 +22394,7 @@ var require_semver = __commonJS({
       }).join(" ");
     }
     function replaceTilde(comp, options) {
-      var r = options.loose ? re[t.TILDELOOSE] : re[t.TILDE];
+      var r = options.loose ? safeRe[t.TILDELOOSE] : safeRe[t.TILDE];
       return comp.replace(r, function(_, M, m, p, pr) {
         debug10("tilde", comp, _, M, m, p, pr);
         var ret;
@@ -22423,7 +22421,7 @@ var require_semver = __commonJS({
     }
     function replaceCaret(comp, options) {
       debug10("caret", comp, options);
-      var r = options.loose ? re[t.CARETLOOSE] : re[t.CARET];
+      var r = options.loose ? safeRe[t.CARETLOOSE] : safeRe[t.CARET];
       return comp.replace(r, function(_, M, m, p, pr) {
         debug10("caret", comp, _, M, m, p, pr);
         var ret;
@@ -22472,7 +22470,7 @@ var require_semver = __commonJS({
     }
     function replaceXRange(comp, options) {
       comp = comp.trim();
-      var r = options.loose ? re[t.XRANGELOOSE] : re[t.XRANGE];
+      var r = options.loose ? safeRe[t.XRANGELOOSE] : safeRe[t.XRANGE];
       return comp.replace(r, function(ret, gtlt, M, m, p, pr) {
         debug10("xRange", comp, ret, gtlt, M, m, p, pr);
         var xM = isX(M);
@@ -22524,7 +22522,7 @@ var require_semver = __commonJS({
     }
     function replaceStars(comp, options) {
       debug10("replaceStars", comp, options);
-      return comp.trim().replace(re[t.STAR], "");
+      return comp.trim().replace(safeRe[t.STAR], "");
     }
     function hyphenReplace($0, from, fM, fm, fp, fpr, fb, to, tM, tm, tp, tpr, tb) {
       if (isX(fM)) {
@@ -22774,16 +22772,16 @@ var require_semver = __commonJS({
       options = options || {};
       var match = null;
       if (!options.rtl) {
-        match = version3.match(re[t.COERCE]);
+        match = version3.match(safeRe[t.COERCE]);
       } else {
         var next;
-        while ((next = re[t.COERCERTL].exec(version3)) && (!match || match.index + match[0].length !== version3.length)) {
+        while ((next = safeRe[t.COERCERTL].exec(version3)) && (!match || match.index + match[0].length !== version3.length)) {
           if (!match || next.index + next[0].length !== match.index + match[0].length) {
             match = next;
           }
-          re[t.COERCERTL].lastIndex = next.index + next[1].length + next[2].length;
+          safeRe[t.COERCERTL].lastIndex = next.index + next[1].length + next[2].length;
         }
-        re[t.COERCERTL].lastIndex = -1;
+        safeRe[t.COERCERTL].lastIndex = -1;
       }
       if (match === null) {
         return null;
@@ -22952,20 +22950,30 @@ var require_constants5 = __commonJS({
   "node_modules/@actions/cache/lib/internal/constants.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.ManifestFilename = exports2.TarFilename = exports2.SystemTarPathOnWindows = exports2.GnuTarPathOnWindows = exports2.SocketTimeout = exports2.DefaultRetryDelay = exports2.DefaultRetryAttempts = exports2.ArchiveToolType = exports2.CompressionMethod = exports2.CacheFilename = void 0;
     var CacheFilename;
     (function(CacheFilename2) {
       CacheFilename2["Gzip"] = "cache.tgz";
       CacheFilename2["Zstd"] = "cache.tzst";
-    })(CacheFilename = exports2.CacheFilename || (exports2.CacheFilename = {}));
+    })(CacheFilename || (exports2.CacheFilename = CacheFilename = {}));
     var CompressionMethod;
     (function(CompressionMethod2) {
       CompressionMethod2["Gzip"] = "gzip";
       CompressionMethod2["ZstdWithoutLong"] = "zstd-without-long";
       CompressionMethod2["Zstd"] = "zstd";
-    })(CompressionMethod = exports2.CompressionMethod || (exports2.CompressionMethod = {}));
+    })(CompressionMethod || (exports2.CompressionMethod = CompressionMethod = {}));
+    var ArchiveToolType;
+    (function(ArchiveToolType2) {
+      ArchiveToolType2["GNU"] = "gnu";
+      ArchiveToolType2["BSD"] = "bsd";
+    })(ArchiveToolType || (exports2.ArchiveToolType = ArchiveToolType = {}));
     exports2.DefaultRetryAttempts = 2;
     exports2.DefaultRetryDelay = 5e3;
     exports2.SocketTimeout = 5e3;
+    exports2.GnuTarPathOnWindows = `${process.env["PROGRAMFILES"]}\\Git\\usr\\bin\\tar.exe`;
+    exports2.SystemTarPathOnWindows = `${process.env["SYSTEMDRIVE"]}\\Windows\\System32\\tar.exe`;
+    exports2.TarFilename = "cache.tar";
+    exports2.ManifestFilename = "manifest.txt";
   }
 });
 
@@ -22973,6 +22981,38 @@ var require_constants5 = __commonJS({
 var require_cacheUtils = __commonJS({
   "node_modules/@actions/cache/lib/internal/cacheUtils.js"(exports2) {
     "use strict";
+    var __createBinding2 = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+      if (k2 === void 0)
+        k2 = k;
+      var desc = Object.getOwnPropertyDescriptor(m, k);
+      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+        desc = { enumerable: true, get: function() {
+          return m[k];
+        } };
+      }
+      Object.defineProperty(o, k2, desc);
+    } : function(o, m, k, k2) {
+      if (k2 === void 0)
+        k2 = k;
+      o[k2] = m[k];
+    });
+    var __setModuleDefault2 = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+      Object.defineProperty(o, "default", { enumerable: true, value: v });
+    } : function(o, v) {
+      o["default"] = v;
+    });
+    var __importStar2 = exports2 && exports2.__importStar || function(mod) {
+      if (mod && mod.__esModule)
+        return mod;
+      var result = {};
+      if (mod != null) {
+        for (var k in mod)
+          if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
+            __createBinding2(result, mod, k);
+      }
+      __setModuleDefault2(result, mod);
+      return result;
+    };
     var __awaiter2 = exports2 && exports2.__awaiter || function(thisArg, _arguments, P, generator) {
       function adopt(value) {
         return value instanceof P ? value : new P(function(resolve) {
@@ -23020,19 +23060,8 @@ var require_cacheUtils = __commonJS({
         }, reject);
       }
     };
-    var __importStar2 = exports2 && exports2.__importStar || function(mod) {
-      if (mod && mod.__esModule)
-        return mod;
-      var result = {};
-      if (mod != null) {
-        for (var k in mod)
-          if (Object.hasOwnProperty.call(mod, k))
-            result[k] = mod[k];
-      }
-      result["default"] = mod;
-      return result;
-    };
     Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.isGhes = exports2.assertDefined = exports2.getGnuTarPathOnWindows = exports2.getCacheFileName = exports2.getCompressionMethod = exports2.unlinkFile = exports2.resolvePaths = exports2.getArchiveFileSizeInBytes = exports2.createTempDirectory = void 0;
     var core17 = __importStar2(require_core());
     var exec17 = __importStar2(require_exec());
     var glob4 = __importStar2(require_glob());
@@ -23060,7 +23089,7 @@ var require_cacheUtils = __commonJS({
           }
           tempDirectory = path13.join(baseLocation, "actions", "temp");
         }
-        const dest = path13.join(tempDirectory, uuid_1.v4());
+        const dest = path13.join(tempDirectory, (0, uuid_1.v4)());
         yield io4.mkdirP(dest);
         return dest;
       });
@@ -23071,17 +23100,19 @@ var require_cacheUtils = __commonJS({
     }
     exports2.getArchiveFileSizeInBytes = getArchiveFileSizeInBytes;
     function resolvePaths(patterns) {
-      var e_1, _a;
-      var _b;
+      var _a, e_1, _b, _c;
+      var _d;
       return __awaiter2(this, void 0, void 0, function* () {
         const paths = [];
-        const workspace = (_b = process.env["GITHUB_WORKSPACE"]) !== null && _b !== void 0 ? _b : process.cwd();
+        const workspace = (_d = process.env["GITHUB_WORKSPACE"]) !== null && _d !== void 0 ? _d : process.cwd();
         const globber = yield glob4.create(patterns.join("\n"), {
           implicitDescendants: false
         });
         try {
-          for (var _c = __asyncValues2(globber.globGenerator()), _d; _d = yield _c.next(), !_d.done; ) {
-            const file = _d.value;
+          for (var _e = true, _f = __asyncValues2(globber.globGenerator()), _g; _g = yield _f.next(), _a = _g.done, !_a; _e = true) {
+            _c = _g.value;
+            _e = false;
+            const file = _c;
             const relativeFile = path13.relative(workspace, file).replace(new RegExp(`\\${path13.sep}`, "g"), "/");
             core17.debug(`Matched: ${relativeFile}`);
             if (relativeFile === "") {
@@ -23094,8 +23125,8 @@ var require_cacheUtils = __commonJS({
           e_1 = { error: e_1_1 };
         } finally {
           try {
-            if (_d && !_d.done && (_a = _c.return))
-              yield _a.call(_c);
+            if (!_e && !_a && (_b = _f.return))
+              yield _b.call(_f);
           } finally {
             if (e_1)
               throw e_1.error;
@@ -23111,12 +23142,13 @@ var require_cacheUtils = __commonJS({
       });
     }
     exports2.unlinkFile = unlinkFile;
-    function getVersion(app) {
+    function getVersion(app, additionalArgs = []) {
       return __awaiter2(this, void 0, void 0, function* () {
-        core17.debug(`Checking ${app} --version`);
         let versionOutput = "";
+        additionalArgs.push("--version");
+        core17.debug(`Checking ${app} ${additionalArgs.join(" ")}`);
         try {
-          yield exec17.exec(`${app} --version`, [], {
+          yield exec17.exec(`${app}`, additionalArgs, {
             ignoreReturnCode: true,
             silent: true,
             listeners: {
@@ -23134,17 +23166,13 @@ var require_cacheUtils = __commonJS({
     }
     function getCompressionMethod() {
       return __awaiter2(this, void 0, void 0, function* () {
-        if (process.platform === "win32" && !(yield isGnuTarInstalled())) {
-          return constants_1.CompressionMethod.Gzip;
-        }
-        const versionOutput = yield getVersion("zstd");
+        const versionOutput = yield getVersion("zstd", ["--quiet"]);
         const version3 = semver7.clean(versionOutput);
-        if (!versionOutput.toLowerCase().includes("zstd command line interface")) {
+        core17.debug(`zstd version: ${version3}`);
+        if (versionOutput === "") {
           return constants_1.CompressionMethod.Gzip;
-        } else if (!version3 || semver7.lt(version3, "v1.3.2")) {
-          return constants_1.CompressionMethod.ZstdWithoutLong;
         } else {
-          return constants_1.CompressionMethod.Zstd;
+          return constants_1.CompressionMethod.ZstdWithoutLong;
         }
       });
     }
@@ -23153,13 +23181,16 @@ var require_cacheUtils = __commonJS({
       return compressionMethod === constants_1.CompressionMethod.Gzip ? constants_1.CacheFilename.Gzip : constants_1.CacheFilename.Zstd;
     }
     exports2.getCacheFileName = getCacheFileName;
-    function isGnuTarInstalled() {
+    function getGnuTarPathOnWindows() {
       return __awaiter2(this, void 0, void 0, function* () {
+        if (fs7.existsSync(constants_1.GnuTarPathOnWindows)) {
+          return constants_1.GnuTarPathOnWindows;
+        }
         const versionOutput = yield getVersion("tar");
-        return versionOutput.toLowerCase().includes("gnu tar");
+        return versionOutput.toLowerCase().includes("gnu tar") ? io4.which("tar") : "";
       });
     }
-    exports2.isGnuTarInstalled = isGnuTarInstalled;
+    exports2.getGnuTarPathOnWindows = getGnuTarPathOnWindows;
     function assertDefined(name, value) {
       if (value === void 0) {
         throw Error(`Expected ${name} but value was undefiend`);
@@ -23169,7 +23200,10 @@ var require_cacheUtils = __commonJS({
     exports2.assertDefined = assertDefined;
     function isGhes2() {
       const ghUrl = new URL(process.env["GITHUB_SERVER_URL"] || "https://github.com");
-      return ghUrl.hostname.toUpperCase() !== "GITHUB.COM";
+      const hostname = ghUrl.hostname.trimEnd().toUpperCase();
+      const isGitHubHost = hostname === "GITHUB.COM";
+      const isGheHost = hostname.endsWith(".GHE.COM") || hostname.endsWith(".GHE.LOCALHOST");
+      return !isGitHubHost && !isGheHost;
     }
     exports2.isGhes = isGhes2;
   }
@@ -27829,7 +27863,7 @@ var require_builder = __commonJS({
           } else {
             rootName = this.options.rootName;
           }
-          render = function(_this) {
+          render = /* @__PURE__ */ function(_this) {
             return function(element, obj) {
               var attr, child, entry, index, key, value;
               if (typeof obj !== "object") {
@@ -29520,7 +29554,7 @@ var require_parser = __commonJS({
             xmlns: this.options.xmlns
           });
           this.saxParser.errThrown = false;
-          this.saxParser.onerror = function(_this) {
+          this.saxParser.onerror = /* @__PURE__ */ function(_this) {
             return function(error2) {
               _this.saxParser.resume();
               if (!_this.saxParser.errThrown) {
@@ -29529,7 +29563,7 @@ var require_parser = __commonJS({
               }
             };
           }(this);
-          this.saxParser.onend = function(_this) {
+          this.saxParser.onend = /* @__PURE__ */ function(_this) {
             return function() {
               if (!_this.saxParser.ended) {
                 _this.saxParser.ended = true;
@@ -29543,10 +29577,10 @@ var require_parser = __commonJS({
           stack = [];
           attrkey = this.options.attrkey;
           charkey = this.options.charkey;
-          this.saxParser.onopentag = function(_this) {
+          this.saxParser.onopentag = /* @__PURE__ */ function(_this) {
             return function(node) {
               var key, newValue, obj, processedKey, ref;
-              obj = {};
+              obj = /* @__PURE__ */ Object.create(null);
               obj[charkey] = "";
               if (!_this.options.ignoreAttrs) {
                 ref = node.attributes;
@@ -29554,7 +29588,7 @@ var require_parser = __commonJS({
                   if (!hasProp.call(ref, key))
                     continue;
                   if (!(attrkey in obj) && !_this.options.mergeAttrs) {
-                    obj[attrkey] = {};
+                    obj[attrkey] = /* @__PURE__ */ Object.create(null);
                   }
                   newValue = _this.options.attrValueProcessors ? processItem(_this.options.attrValueProcessors, node.attributes[key], key) : node.attributes[key];
                   processedKey = _this.options.attrNameProcessors ? processItem(_this.options.attrNameProcessors, key) : key;
@@ -29575,7 +29609,7 @@ var require_parser = __commonJS({
               return stack.push(obj);
             };
           }(this);
-          this.saxParser.onclosetag = function(_this) {
+          this.saxParser.onclosetag = /* @__PURE__ */ function(_this) {
             return function() {
               var cdata, emptyStr, key, node, nodeName, obj, objClone, old, s, xpath;
               obj = stack.pop();
@@ -29604,7 +29638,11 @@ var require_parser = __commonJS({
                 }
               }
               if (isEmpty(obj)) {
-                obj = _this.options.emptyTag !== "" ? _this.options.emptyTag : emptyStr;
+                if (typeof _this.options.emptyTag === "function") {
+                  obj = _this.options.emptyTag();
+                } else {
+                  obj = _this.options.emptyTag !== "" ? _this.options.emptyTag : emptyStr;
+                }
               }
               if (_this.options.validator != null) {
                 xpath = "/" + function() {
@@ -29628,7 +29666,7 @@ var require_parser = __commonJS({
               }
               if (_this.options.explicitChildren && !_this.options.mergeAttrs && typeof obj === "object") {
                 if (!_this.options.preserveChildrenOrder) {
-                  node = {};
+                  node = /* @__PURE__ */ Object.create(null);
                   if (_this.options.attrkey in obj) {
                     node[_this.options.attrkey] = obj[_this.options.attrkey];
                     delete obj[_this.options.attrkey];
@@ -29643,7 +29681,7 @@ var require_parser = __commonJS({
                   obj = node;
                 } else if (s) {
                   s[_this.options.childkey] = s[_this.options.childkey] || [];
-                  objClone = {};
+                  objClone = /* @__PURE__ */ Object.create(null);
                   for (key in obj) {
                     if (!hasProp.call(obj, key))
                       continue;
@@ -29661,7 +29699,7 @@ var require_parser = __commonJS({
               } else {
                 if (_this.options.explicitRoot) {
                   old = obj;
-                  obj = {};
+                  obj = /* @__PURE__ */ Object.create(null);
                   obj[nodeName] = old;
                 }
                 _this.resultObject = obj;
@@ -29670,7 +29708,7 @@ var require_parser = __commonJS({
               }
             };
           }(this);
-          ontext = function(_this) {
+          ontext = /* @__PURE__ */ function(_this) {
             return function(text) {
               var charChild, s;
               s = stack[stack.length - 1];
@@ -29692,7 +29730,7 @@ var require_parser = __commonJS({
             };
           }(this);
           this.saxParser.ontext = ontext;
-          return this.saxParser.oncdata = function(_this) {
+          return this.saxParser.oncdata = /* @__PURE__ */ function(_this) {
             return function(text) {
               var s;
               s = ontext(text);
@@ -29738,7 +29776,7 @@ var require_parser = __commonJS({
           }
         };
         Parser.prototype.parseStringPromise = function(str) {
-          return new Promise(function(_this) {
+          return new Promise(/* @__PURE__ */ function(_this) {
             return function(resolve, reject) {
               return _this.parseString(str, function(err, value) {
                 if (err) {
@@ -29821,147 +29859,18 @@ var require_xml2js = __commonJS({
   }
 });
 
-// node_modules/@azure/abort-controller/dist/index.js
+// node_modules/@azure/core-util/node_modules/@azure/abort-controller/dist/index.js
 var require_dist = __commonJS({
-  "node_modules/@azure/abort-controller/dist/index.js"(exports2) {
+  "node_modules/@azure/core-util/node_modules/@azure/abort-controller/dist/index.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
-    var listenersMap = /* @__PURE__ */ new WeakMap();
-    var abortedMap = /* @__PURE__ */ new WeakMap();
-    var AbortSignal2 = class {
-      constructor() {
-        this.onabort = null;
-        listenersMap.set(this, []);
-        abortedMap.set(this, false);
-      }
-      /**
-       * Status of whether aborted or not.
-       *
-       * @readonly
-       */
-      get aborted() {
-        if (!abortedMap.has(this)) {
-          throw new TypeError("Expected `this` to be an instance of AbortSignal.");
-        }
-        return abortedMap.get(this);
-      }
-      /**
-       * Creates a new AbortSignal instance that will never be aborted.
-       *
-       * @readonly
-       */
-      static get none() {
-        return new AbortSignal2();
-      }
-      /**
-       * Added new "abort" event listener, only support "abort" event.
-       *
-       * @param _type - Only support "abort" event
-       * @param listener - The listener to be added
-       */
-      addEventListener(_type2, listener) {
-        if (!listenersMap.has(this)) {
-          throw new TypeError("Expected `this` to be an instance of AbortSignal.");
-        }
-        const listeners = listenersMap.get(this);
-        listeners.push(listener);
-      }
-      /**
-       * Remove "abort" event listener, only support "abort" event.
-       *
-       * @param _type - Only support "abort" event
-       * @param listener - The listener to be removed
-       */
-      removeEventListener(_type2, listener) {
-        if (!listenersMap.has(this)) {
-          throw new TypeError("Expected `this` to be an instance of AbortSignal.");
-        }
-        const listeners = listenersMap.get(this);
-        const index = listeners.indexOf(listener);
-        if (index > -1) {
-          listeners.splice(index, 1);
-        }
-      }
-      /**
-       * Dispatches a synthetic event to the AbortSignal.
-       */
-      dispatchEvent(_event) {
-        throw new Error("This is a stub dispatchEvent implementation that should not be used.  It only exists for type-checking purposes.");
-      }
-    };
-    function abortSignal(signal) {
-      if (signal.aborted) {
-        return;
-      }
-      if (signal.onabort) {
-        signal.onabort.call(signal);
-      }
-      const listeners = listenersMap.get(signal);
-      if (listeners) {
-        listeners.slice().forEach((listener) => {
-          listener.call(signal, { type: "abort" });
-        });
-      }
-      abortedMap.set(signal, true);
-    }
     var AbortError = class extends Error {
       constructor(message) {
         super(message);
         this.name = "AbortError";
       }
     };
-    var AbortController2 = class {
-      // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-      constructor(parentSignals) {
-        this._signal = new AbortSignal2();
-        if (!parentSignals) {
-          return;
-        }
-        if (!Array.isArray(parentSignals)) {
-          parentSignals = arguments;
-        }
-        for (const parentSignal of parentSignals) {
-          if (parentSignal.aborted) {
-            this.abort();
-          } else {
-            parentSignal.addEventListener("abort", () => {
-              this.abort();
-            });
-          }
-        }
-      }
-      /**
-       * The AbortSignal associated with this controller that will signal aborted
-       * when the abort method is called on this controller.
-       *
-       * @readonly
-       */
-      get signal() {
-        return this._signal;
-      }
-      /**
-       * Signal that any operations passed this controller's associated abort signal
-       * to cancel any remaining work and throw an `AbortError`.
-       */
-      abort() {
-        abortSignal(this._signal);
-      }
-      /**
-       * Creates a new AbortSignal instance that will abort after the provided ms.
-       * @param ms - Elapsed time in milliseconds to trigger an abort.
-       */
-      static timeout(ms) {
-        const signal = new AbortSignal2();
-        const timer = setTimeout(abortSignal, ms, signal);
-        if (typeof timer.unref === "function") {
-          timer.unref();
-        }
-        return signal;
-      }
-    };
-    exports2.AbortController = AbortController2;
     exports2.AbortError = AbortError;
-    exports2.AbortSignal = AbortSignal2;
   }
 });
 
@@ -29972,57 +29881,62 @@ var require_dist2 = __commonJS({
     Object.defineProperty(exports2, "__esModule", { value: true });
     var abortController = require_dist();
     var crypto7 = require("crypto");
-    var _a;
-    var isNode = typeof process !== "undefined" && Boolean(process.version) && Boolean((_a = process.versions) === null || _a === void 0 ? void 0 : _a.node);
-    function isDefined(thing) {
-      return typeof thing !== "undefined" && thing !== null;
-    }
-    function isObjectWithProperties(thing, properties) {
-      if (!isDefined(thing) || typeof thing !== "object") {
-        return false;
-      }
-      for (const property of properties) {
-        if (!objectHasProperty(thing, property)) {
-          return false;
-        }
-      }
-      return true;
-    }
-    function objectHasProperty(thing, property) {
-      return isDefined(thing) && typeof thing === "object" && property in thing;
-    }
-    var StandardAbortMessage = "The operation was aborted.";
-    function delay(timeInMs, options) {
+    function createAbortablePromise(buildPromise, options) {
+      const { cleanupBeforeAbort, abortSignal, abortErrorMsg } = options !== null && options !== void 0 ? options : {};
       return new Promise((resolve, reject) => {
-        let timer = void 0;
-        let onAborted = void 0;
-        const rejectOnAbort = () => {
-          var _a2;
-          return reject(new abortController.AbortError((_a2 = options === null || options === void 0 ? void 0 : options.abortErrorMsg) !== null && _a2 !== void 0 ? _a2 : StandardAbortMessage));
-        };
-        const removeListeners = () => {
-          if ((options === null || options === void 0 ? void 0 : options.abortSignal) && onAborted) {
-            options.abortSignal.removeEventListener("abort", onAborted);
-          }
-        };
-        onAborted = () => {
-          if (isDefined(timer)) {
-            clearTimeout(timer);
-          }
+        function rejectOnAbort() {
+          reject(new abortController.AbortError(abortErrorMsg !== null && abortErrorMsg !== void 0 ? abortErrorMsg : "The operation was aborted."));
+        }
+        function removeListeners() {
+          abortSignal === null || abortSignal === void 0 ? void 0 : abortSignal.removeEventListener("abort", onAbort);
+        }
+        function onAbort() {
+          cleanupBeforeAbort === null || cleanupBeforeAbort === void 0 ? void 0 : cleanupBeforeAbort();
           removeListeners();
-          return rejectOnAbort();
-        };
-        if ((options === null || options === void 0 ? void 0 : options.abortSignal) && options.abortSignal.aborted) {
+          rejectOnAbort();
+        }
+        if (abortSignal === null || abortSignal === void 0 ? void 0 : abortSignal.aborted) {
           return rejectOnAbort();
         }
-        timer = setTimeout(() => {
-          removeListeners();
-          resolve();
-        }, timeInMs);
-        if (options === null || options === void 0 ? void 0 : options.abortSignal) {
-          options.abortSignal.addEventListener("abort", onAborted);
+        try {
+          buildPromise((x) => {
+            removeListeners();
+            resolve(x);
+          }, (x) => {
+            removeListeners();
+            reject(x);
+          });
+        } catch (err) {
+          reject(err);
         }
+        abortSignal === null || abortSignal === void 0 ? void 0 : abortSignal.addEventListener("abort", onAbort);
       });
+    }
+    var StandardAbortMessage = "The delay was aborted.";
+    function delay(timeInMs, options) {
+      let token;
+      const { abortSignal, abortErrorMsg } = options !== null && options !== void 0 ? options : {};
+      return createAbortablePromise((resolve) => {
+        token = setTimeout(resolve, timeInMs);
+      }, {
+        cleanupBeforeAbort: () => clearTimeout(token),
+        abortSignal,
+        abortErrorMsg: abortErrorMsg !== null && abortErrorMsg !== void 0 ? abortErrorMsg : StandardAbortMessage
+      });
+    }
+    async function cancelablePromiseRace(abortablePromiseBuilders, options) {
+      var _a2, _b2;
+      const aborter = new AbortController();
+      function abortHandler() {
+        aborter.abort();
+      }
+      (_a2 = options === null || options === void 0 ? void 0 : options.abortSignal) === null || _a2 === void 0 ? void 0 : _a2.addEventListener("abort", abortHandler);
+      try {
+        return await Promise.race(abortablePromiseBuilders.map((p) => p({ abortSignal: aborter.signal })));
+      } finally {
+        aborter.abort();
+        (_b2 = options === null || options === void 0 ? void 0 : options.abortSignal) === null || _b2 === void 0 ? void 0 : _b2.removeEventListener("abort", abortHandler);
+      }
     }
     function getRandomIntegerInclusive(min, max) {
       min = Math.ceil(min);
@@ -30065,17 +29979,86 @@ var require_dist2 = __commonJS({
     async function computeSha256Hash(content, encoding) {
       return crypto7.createHash("sha256").update(content).digest(encoding);
     }
+    function isDefined(thing) {
+      return typeof thing !== "undefined" && thing !== null;
+    }
+    function isObjectWithProperties(thing, properties) {
+      if (!isDefined(thing) || typeof thing !== "object") {
+        return false;
+      }
+      for (const property of properties) {
+        if (!objectHasProperty(thing, property)) {
+          return false;
+        }
+      }
+      return true;
+    }
+    function objectHasProperty(thing, property) {
+      return isDefined(thing) && typeof thing === "object" && property in thing;
+    }
+    function generateUUID() {
+      let uuid = "";
+      for (let i = 0; i < 32; i++) {
+        const randomNumber = Math.floor(Math.random() * 16);
+        if (i === 12) {
+          uuid += "4";
+        } else if (i === 16) {
+          uuid += randomNumber & 3 | 8;
+        } else {
+          uuid += randomNumber.toString(16);
+        }
+        if (i === 7 || i === 11 || i === 15 || i === 19) {
+          uuid += "-";
+        }
+      }
+      return uuid;
+    }
+    var _a$1;
+    var uuidFunction = typeof ((_a$1 = globalThis === null || globalThis === void 0 ? void 0 : globalThis.crypto) === null || _a$1 === void 0 ? void 0 : _a$1.randomUUID) === "function" ? globalThis.crypto.randomUUID.bind(globalThis.crypto) : crypto7.randomUUID;
+    if (!uuidFunction) {
+      uuidFunction = generateUUID;
+    }
+    function randomUUID() {
+      return uuidFunction();
+    }
+    var _a;
+    var _b;
+    var _c;
+    var _d;
+    var isBrowser = typeof window !== "undefined" && typeof window.document !== "undefined";
+    var isWebWorker = typeof self === "object" && typeof (self === null || self === void 0 ? void 0 : self.importScripts) === "function" && (((_a = self.constructor) === null || _a === void 0 ? void 0 : _a.name) === "DedicatedWorkerGlobalScope" || ((_b = self.constructor) === null || _b === void 0 ? void 0 : _b.name) === "ServiceWorkerGlobalScope" || ((_c = self.constructor) === null || _c === void 0 ? void 0 : _c.name) === "SharedWorkerGlobalScope");
+    var isDeno = typeof Deno !== "undefined" && typeof Deno.version !== "undefined" && typeof Deno.version.deno !== "undefined";
+    var isNode = typeof process !== "undefined" && Boolean(process.version) && Boolean((_d = process.versions) === null || _d === void 0 ? void 0 : _d.node) && // Deno thought it was a good idea to spoof process.versions.node, see https://deno.land/std@0.177.0/node/process.ts?s=versions
+    !isDeno;
+    var isBun = typeof Bun !== "undefined" && typeof Bun.version !== "undefined";
+    var isReactNative = typeof navigator !== "undefined" && (navigator === null || navigator === void 0 ? void 0 : navigator.product) === "ReactNative";
+    function uint8ArrayToString(bytes, format) {
+      return Buffer.from(bytes).toString(format);
+    }
+    function stringToUint8Array(value, format) {
+      return Buffer.from(value, format);
+    }
+    exports2.cancelablePromiseRace = cancelablePromiseRace;
     exports2.computeSha256Hash = computeSha256Hash;
     exports2.computeSha256Hmac = computeSha256Hmac;
+    exports2.createAbortablePromise = createAbortablePromise;
     exports2.delay = delay;
     exports2.getErrorMessage = getErrorMessage;
     exports2.getRandomIntegerInclusive = getRandomIntegerInclusive;
+    exports2.isBrowser = isBrowser;
+    exports2.isBun = isBun;
     exports2.isDefined = isDefined;
+    exports2.isDeno = isDeno;
     exports2.isError = isError;
     exports2.isNode = isNode;
     exports2.isObject = isObject;
     exports2.isObjectWithProperties = isObjectWithProperties;
+    exports2.isReactNative = isReactNative;
+    exports2.isWebWorker = isWebWorker;
     exports2.objectHasProperty = objectHasProperty;
+    exports2.randomUUID = randomUUID;
+    exports2.stringToUint8Array = stringToUint8Array;
+    exports2.uint8ArrayToString = uint8ArrayToString;
   }
 });
 
@@ -30084,13 +30067,14 @@ var require_dist3 = __commonJS({
   "node_modules/@azure/logger/dist/index.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
-    function _interopDefault(ex) {
-      return ex && typeof ex === "object" && "default" in ex ? ex["default"] : ex;
-    }
-    var util = _interopDefault(require("util"));
     var os7 = require("os");
+    var util = require("util");
+    function _interopDefaultLegacy(e) {
+      return e && typeof e === "object" && "default" in e ? e : { "default": e };
+    }
+    var util__default = /* @__PURE__ */ _interopDefaultLegacy(util);
     function log(message, ...args) {
-      process.stderr.write(`${util.format(message, ...args)}${os7.EOL}`);
+      process.stderr.write(`${util__default["default"].format(message, ...args)}${os7.EOL}`);
     }
     var debugEnvVariable = typeof process !== "undefined" && process.env && process.env.DEBUG || void 0;
     var enabledString;
@@ -30147,14 +30131,14 @@ var require_dist3 = __commonJS({
       return result;
     }
     function createDebugger(namespace) {
-      const newDebugger = Object.assign(debug10, {
+      const newDebugger = Object.assign(debug11, {
         enabled: enabled(namespace),
         destroy,
         log: debugObj.log,
         namespace,
         extend
       });
-      function debug10(...args) {
+      function debug11(...args) {
         if (!newDebugger.enabled) {
           return;
         }
@@ -30179,12 +30163,13 @@ var require_dist3 = __commonJS({
       newDebugger.log = this.log;
       return newDebugger;
     }
+    var debug10 = debugObj;
     var registeredLoggers = /* @__PURE__ */ new Set();
     var logLevelFromEnv = typeof process !== "undefined" && process.env && process.env.AZURE_LOG_LEVEL || void 0;
     var azureLogLevel;
-    var AzureLogger = debugObj("azure");
+    var AzureLogger = debug10("azure");
     AzureLogger.log = (...args) => {
-      debugObj.log(...args);
+      debug10.log(...args);
     };
     var AZURE_LOG_LEVELS = ["verbose", "info", "warning", "error"];
     if (logLevelFromEnv) {
@@ -30205,7 +30190,7 @@ var require_dist3 = __commonJS({
           enabledNamespaces2.push(logger.namespace);
         }
       }
-      debugObj.enable(enabledNamespaces2.join(","));
+      debug10.enable(enabledNamespaces2.join(","));
     }
     function getLogLevel() {
       return azureLogLevel;
@@ -30237,18 +30222,14 @@ var require_dist3 = __commonJS({
       });
       patchLogMethod(parent, logger);
       if (shouldEnable(logger)) {
-        const enabledNamespaces2 = debugObj.disable();
-        debugObj.enable(enabledNamespaces2 + "," + logger.namespace);
+        const enabledNamespaces2 = debug10.disable();
+        debug10.enable(enabledNamespaces2 + "," + logger.namespace);
       }
       registeredLoggers.add(logger);
       return logger;
     }
     function shouldEnable(logger) {
-      if (azureLogLevel && levelMap[logger.level] <= levelMap[azureLogLevel]) {
-        return true;
-      } else {
-        return false;
-      }
+      return Boolean(azureLogLevel && levelMap[logger.level] <= levelMap[azureLogLevel]);
     }
     function isAzureLogLevel(logLevel) {
       return AZURE_LOG_LEVELS.includes(logLevel);
@@ -30410,11834 +30391,147 @@ var require_dist4 = __commonJS({
   }
 });
 
-// node_modules/punycode/punycode.js
-var require_punycode = __commonJS({
-  "node_modules/punycode/punycode.js"(exports2, module2) {
+// node_modules/@azure/abort-controller/dist/index.js
+var require_dist5 = __commonJS({
+  "node_modules/@azure/abort-controller/dist/index.js"(exports2) {
     "use strict";
-    var maxInt = 2147483647;
-    var base = 36;
-    var tMin = 1;
-    var tMax = 26;
-    var skew = 38;
-    var damp = 700;
-    var initialBias = 72;
-    var initialN = 128;
-    var delimiter = "-";
-    var regexPunycode = /^xn--/;
-    var regexNonASCII = /[^\0-\x7E]/;
-    var regexSeparators = /[\x2E\u3002\uFF0E\uFF61]/g;
-    var errors = {
-      "overflow": "Overflow: input needs wider integers to process",
-      "not-basic": "Illegal input >= 0x80 (not a basic code point)",
-      "invalid-input": "Invalid input"
-    };
-    var baseMinusTMin = base - tMin;
-    var floor = Math.floor;
-    var stringFromCharCode = String.fromCharCode;
-    function error2(type) {
-      throw new RangeError(errors[type]);
-    }
-    function map(array, fn) {
-      const result = [];
-      let length = array.length;
-      while (length--) {
-        result[length] = fn(array[length]);
-      }
-      return result;
-    }
-    function mapDomain(string, fn) {
-      const parts = string.split("@");
-      let result = "";
-      if (parts.length > 1) {
-        result = parts[0] + "@";
-        string = parts[1];
-      }
-      string = string.replace(regexSeparators, ".");
-      const labels = string.split(".");
-      const encoded = map(labels, fn).join(".");
-      return result + encoded;
-    }
-    function ucs2decode(string) {
-      const output = [];
-      let counter = 0;
-      const length = string.length;
-      while (counter < length) {
-        const value = string.charCodeAt(counter++);
-        if (value >= 55296 && value <= 56319 && counter < length) {
-          const extra = string.charCodeAt(counter++);
-          if ((extra & 64512) == 56320) {
-            output.push(((value & 1023) << 10) + (extra & 1023) + 65536);
-          } else {
-            output.push(value);
-            counter--;
-          }
-        } else {
-          output.push(value);
-        }
-      }
-      return output;
-    }
-    var ucs2encode = (array) => String.fromCodePoint(...array);
-    var basicToDigit = function(codePoint) {
-      if (codePoint - 48 < 10) {
-        return codePoint - 22;
-      }
-      if (codePoint - 65 < 26) {
-        return codePoint - 65;
-      }
-      if (codePoint - 97 < 26) {
-        return codePoint - 97;
-      }
-      return base;
-    };
-    var digitToBasic = function(digit, flag) {
-      return digit + 22 + 75 * (digit < 26) - ((flag != 0) << 5);
-    };
-    var adapt = function(delta, numPoints, firstTime) {
-      let k = 0;
-      delta = firstTime ? floor(delta / damp) : delta >> 1;
-      delta += floor(delta / numPoints);
-      for (; delta > baseMinusTMin * tMax >> 1; k += base) {
-        delta = floor(delta / baseMinusTMin);
-      }
-      return floor(k + (baseMinusTMin + 1) * delta / (delta + skew));
-    };
-    var decode = function(input) {
-      const output = [];
-      const inputLength = input.length;
-      let i = 0;
-      let n = initialN;
-      let bias = initialBias;
-      let basic = input.lastIndexOf(delimiter);
-      if (basic < 0) {
-        basic = 0;
-      }
-      for (let j = 0; j < basic; ++j) {
-        if (input.charCodeAt(j) >= 128) {
-          error2("not-basic");
-        }
-        output.push(input.charCodeAt(j));
-      }
-      for (let index = basic > 0 ? basic + 1 : 0; index < inputLength; ) {
-        let oldi = i;
-        for (let w = 1, k = base; ; k += base) {
-          if (index >= inputLength) {
-            error2("invalid-input");
-          }
-          const digit = basicToDigit(input.charCodeAt(index++));
-          if (digit >= base || digit > floor((maxInt - i) / w)) {
-            error2("overflow");
-          }
-          i += digit * w;
-          const t = k <= bias ? tMin : k >= bias + tMax ? tMax : k - bias;
-          if (digit < t) {
-            break;
-          }
-          const baseMinusT = base - t;
-          if (w > floor(maxInt / baseMinusT)) {
-            error2("overflow");
-          }
-          w *= baseMinusT;
-        }
-        const out = output.length + 1;
-        bias = adapt(i - oldi, out, oldi == 0);
-        if (floor(i / out) > maxInt - n) {
-          error2("overflow");
-        }
-        n += floor(i / out);
-        i %= out;
-        output.splice(i++, 0, n);
-      }
-      return String.fromCodePoint(...output);
-    };
-    var encode = function(input) {
-      const output = [];
-      input = ucs2decode(input);
-      let inputLength = input.length;
-      let n = initialN;
-      let delta = 0;
-      let bias = initialBias;
-      for (const currentValue of input) {
-        if (currentValue < 128) {
-          output.push(stringFromCharCode(currentValue));
-        }
-      }
-      let basicLength = output.length;
-      let handledCPCount = basicLength;
-      if (basicLength) {
-        output.push(delimiter);
-      }
-      while (handledCPCount < inputLength) {
-        let m = maxInt;
-        for (const currentValue of input) {
-          if (currentValue >= n && currentValue < m) {
-            m = currentValue;
-          }
-        }
-        const handledCPCountPlusOne = handledCPCount + 1;
-        if (m - n > floor((maxInt - delta) / handledCPCountPlusOne)) {
-          error2("overflow");
-        }
-        delta += (m - n) * handledCPCountPlusOne;
-        n = m;
-        for (const currentValue of input) {
-          if (currentValue < n && ++delta > maxInt) {
-            error2("overflow");
-          }
-          if (currentValue == n) {
-            let q = delta;
-            for (let k = base; ; k += base) {
-              const t = k <= bias ? tMin : k >= bias + tMax ? tMax : k - bias;
-              if (q < t) {
-                break;
-              }
-              const qMinusT = q - t;
-              const baseMinusT = base - t;
-              output.push(
-                stringFromCharCode(digitToBasic(t + qMinusT % baseMinusT, 0))
-              );
-              q = floor(qMinusT / baseMinusT);
-            }
-            output.push(stringFromCharCode(digitToBasic(q, 0)));
-            bias = adapt(delta, handledCPCountPlusOne, handledCPCount == basicLength);
-            delta = 0;
-            ++handledCPCount;
-          }
-        }
-        ++delta;
-        ++n;
-      }
-      return output.join("");
-    };
-    var toUnicode = function(input) {
-      return mapDomain(input, function(string) {
-        return regexPunycode.test(string) ? decode(string.slice(4).toLowerCase()) : string;
-      });
-    };
-    var toASCII = function(input) {
-      return mapDomain(input, function(string) {
-        return regexNonASCII.test(string) ? "xn--" + encode(string) : string;
-      });
-    };
-    var punycode = {
-      /**
-       * A string representing the current Punycode.js version number.
-       * @memberOf punycode
-       * @type String
-       */
-      "version": "2.1.0",
-      /**
-       * An object of methods to convert from JavaScript's internal character
-       * representation (UCS-2) to Unicode code points, and back.
-       * @see <https://mathiasbynens.be/notes/javascript-encoding>
-       * @memberOf punycode
-       * @type Object
-       */
-      "ucs2": {
-        "decode": ucs2decode,
-        "encode": ucs2encode
-      },
-      "decode": decode,
-      "encode": encode,
-      "toASCII": toASCII,
-      "toUnicode": toUnicode
-    };
-    module2.exports = punycode;
-  }
-});
-
-// node_modules/requires-port/index.js
-var require_requires_port = __commonJS({
-  "node_modules/requires-port/index.js"(exports2, module2) {
-    "use strict";
-    module2.exports = function required(port, protocol) {
-      protocol = protocol.split(":")[0];
-      port = +port;
-      if (!port)
-        return false;
-      switch (protocol) {
-        case "http":
-        case "ws":
-          return port !== 80;
-        case "https":
-        case "wss":
-          return port !== 443;
-        case "ftp":
-          return port !== 21;
-        case "gopher":
-          return port !== 70;
-        case "file":
-          return false;
-      }
-      return port !== 0;
-    };
-  }
-});
-
-// node_modules/querystringify/index.js
-var require_querystringify = __commonJS({
-  "node_modules/querystringify/index.js"(exports2) {
-    "use strict";
-    var has = Object.prototype.hasOwnProperty;
-    var undef;
-    function decode(input) {
-      try {
-        return decodeURIComponent(input.replace(/\+/g, " "));
-      } catch (e) {
-        return null;
-      }
-    }
-    function encode(input) {
-      try {
-        return encodeURIComponent(input);
-      } catch (e) {
-        return null;
-      }
-    }
-    function querystring(query) {
-      var parser = /([^=?#&]+)=?([^&]*)/g, result = {}, part;
-      while (part = parser.exec(query)) {
-        var key = decode(part[1]), value = decode(part[2]);
-        if (key === null || value === null || key in result)
-          continue;
-        result[key] = value;
-      }
-      return result;
-    }
-    function querystringify(obj, prefix) {
-      prefix = prefix || "";
-      var pairs = [], value, key;
-      if ("string" !== typeof prefix)
-        prefix = "?";
-      for (key in obj) {
-        if (has.call(obj, key)) {
-          value = obj[key];
-          if (!value && (value === null || value === undef || isNaN(value))) {
-            value = "";
-          }
-          key = encode(key);
-          value = encode(value);
-          if (key === null || value === null)
-            continue;
-          pairs.push(key + "=" + value);
-        }
-      }
-      return pairs.length ? prefix + pairs.join("&") : "";
-    }
-    exports2.stringify = querystringify;
-    exports2.parse = querystring;
-  }
-});
-
-// node_modules/url-parse/index.js
-var require_url_parse = __commonJS({
-  "node_modules/url-parse/index.js"(exports2, module2) {
-    "use strict";
-    var required = require_requires_port();
-    var qs = require_querystringify();
-    var controlOrWhitespace = /^[\x00-\x20\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+/;
-    var CRHTLF = /[\n\r\t]/g;
-    var slashes = /^[A-Za-z][A-Za-z0-9+-.]*:\/\//;
-    var port = /:\d+$/;
-    var protocolre = /^([a-z][a-z0-9.+-]*:)?(\/\/)?([\\/]+)?([\S\s]*)/i;
-    var windowsDriveLetter = /^[a-zA-Z]:/;
-    function trimLeft(str) {
-      return (str ? str : "").toString().replace(controlOrWhitespace, "");
-    }
-    var rules = [
-      ["#", "hash"],
-      // Extract from the back.
-      ["?", "query"],
-      // Extract from the back.
-      function sanitize(address, url) {
-        return isSpecial(url.protocol) ? address.replace(/\\/g, "/") : address;
-      },
-      ["/", "pathname"],
-      // Extract from the back.
-      ["@", "auth", 1],
-      // Extract from the front.
-      [NaN, "host", void 0, 1, 1],
-      // Set left over value.
-      [/:(\d*)$/, "port", void 0, 1],
-      // RegExp the back.
-      [NaN, "hostname", void 0, 1, 1]
-      // Set left over.
-    ];
-    var ignore = { hash: 1, query: 1 };
-    function lolcation(loc) {
-      var globalVar;
-      if (typeof window !== "undefined")
-        globalVar = window;
-      else if (typeof global !== "undefined")
-        globalVar = global;
-      else if (typeof self !== "undefined")
-        globalVar = self;
-      else
-        globalVar = {};
-      var location = globalVar.location || {};
-      loc = loc || location;
-      var finaldestination = {}, type = typeof loc, key;
-      if ("blob:" === loc.protocol) {
-        finaldestination = new Url(unescape(loc.pathname), {});
-      } else if ("string" === type) {
-        finaldestination = new Url(loc, {});
-        for (key in ignore)
-          delete finaldestination[key];
-      } else if ("object" === type) {
-        for (key in loc) {
-          if (key in ignore)
-            continue;
-          finaldestination[key] = loc[key];
-        }
-        if (finaldestination.slashes === void 0) {
-          finaldestination.slashes = slashes.test(loc.href);
-        }
-      }
-      return finaldestination;
-    }
-    function isSpecial(scheme) {
-      return scheme === "file:" || scheme === "ftp:" || scheme === "http:" || scheme === "https:" || scheme === "ws:" || scheme === "wss:";
-    }
-    function extractProtocol(address, location) {
-      address = trimLeft(address);
-      address = address.replace(CRHTLF, "");
-      location = location || {};
-      var match = protocolre.exec(address);
-      var protocol = match[1] ? match[1].toLowerCase() : "";
-      var forwardSlashes = !!match[2];
-      var otherSlashes = !!match[3];
-      var slashesCount = 0;
-      var rest;
-      if (forwardSlashes) {
-        if (otherSlashes) {
-          rest = match[2] + match[3] + match[4];
-          slashesCount = match[2].length + match[3].length;
-        } else {
-          rest = match[2] + match[4];
-          slashesCount = match[2].length;
-        }
-      } else {
-        if (otherSlashes) {
-          rest = match[3] + match[4];
-          slashesCount = match[3].length;
-        } else {
-          rest = match[4];
-        }
-      }
-      if (protocol === "file:") {
-        if (slashesCount >= 2) {
-          rest = rest.slice(2);
-        }
-      } else if (isSpecial(protocol)) {
-        rest = match[4];
-      } else if (protocol) {
-        if (forwardSlashes) {
-          rest = rest.slice(2);
-        }
-      } else if (slashesCount >= 2 && isSpecial(location.protocol)) {
-        rest = match[4];
-      }
-      return {
-        protocol,
-        slashes: forwardSlashes || isSpecial(protocol),
-        slashesCount,
-        rest
-      };
-    }
-    function resolve(relative, base) {
-      if (relative === "")
-        return base;
-      var path13 = (base || "/").split("/").slice(0, -1).concat(relative.split("/")), i = path13.length, last = path13[i - 1], unshift = false, up = 0;
-      while (i--) {
-        if (path13[i] === ".") {
-          path13.splice(i, 1);
-        } else if (path13[i] === "..") {
-          path13.splice(i, 1);
-          up++;
-        } else if (up) {
-          if (i === 0)
-            unshift = true;
-          path13.splice(i, 1);
-          up--;
-        }
-      }
-      if (unshift)
-        path13.unshift("");
-      if (last === "." || last === "..")
-        path13.push("");
-      return path13.join("/");
-    }
-    function Url(address, location, parser) {
-      address = trimLeft(address);
-      address = address.replace(CRHTLF, "");
-      if (!(this instanceof Url)) {
-        return new Url(address, location, parser);
-      }
-      var relative, extracted, parse4, instruction, index, key, instructions = rules.slice(), type = typeof location, url = this, i = 0;
-      if ("object" !== type && "string" !== type) {
-        parser = location;
-        location = null;
-      }
-      if (parser && "function" !== typeof parser)
-        parser = qs.parse;
-      location = lolcation(location);
-      extracted = extractProtocol(address || "", location);
-      relative = !extracted.protocol && !extracted.slashes;
-      url.slashes = extracted.slashes || relative && location.slashes;
-      url.protocol = extracted.protocol || location.protocol || "";
-      address = extracted.rest;
-      if (extracted.protocol === "file:" && (extracted.slashesCount !== 2 || windowsDriveLetter.test(address)) || !extracted.slashes && (extracted.protocol || extracted.slashesCount < 2 || !isSpecial(url.protocol))) {
-        instructions[3] = [/(.*)/, "pathname"];
-      }
-      for (; i < instructions.length; i++) {
-        instruction = instructions[i];
-        if (typeof instruction === "function") {
-          address = instruction(address, url);
-          continue;
-        }
-        parse4 = instruction[0];
-        key = instruction[1];
-        if (parse4 !== parse4) {
-          url[key] = address;
-        } else if ("string" === typeof parse4) {
-          index = parse4 === "@" ? address.lastIndexOf(parse4) : address.indexOf(parse4);
-          if (~index) {
-            if ("number" === typeof instruction[2]) {
-              url[key] = address.slice(0, index);
-              address = address.slice(index + instruction[2]);
-            } else {
-              url[key] = address.slice(index);
-              address = address.slice(0, index);
-            }
-          }
-        } else if (index = parse4.exec(address)) {
-          url[key] = index[1];
-          address = address.slice(0, index.index);
-        }
-        url[key] = url[key] || (relative && instruction[3] ? location[key] || "" : "");
-        if (instruction[4])
-          url[key] = url[key].toLowerCase();
-      }
-      if (parser)
-        url.query = parser(url.query);
-      if (relative && location.slashes && url.pathname.charAt(0) !== "/" && (url.pathname !== "" || location.pathname !== "")) {
-        url.pathname = resolve(url.pathname, location.pathname);
-      }
-      if (url.pathname.charAt(0) !== "/" && isSpecial(url.protocol)) {
-        url.pathname = "/" + url.pathname;
-      }
-      if (!required(url.port, url.protocol)) {
-        url.host = url.hostname;
-        url.port = "";
-      }
-      url.username = url.password = "";
-      if (url.auth) {
-        index = url.auth.indexOf(":");
-        if (~index) {
-          url.username = url.auth.slice(0, index);
-          url.username = encodeURIComponent(decodeURIComponent(url.username));
-          url.password = url.auth.slice(index + 1);
-          url.password = encodeURIComponent(decodeURIComponent(url.password));
-        } else {
-          url.username = encodeURIComponent(decodeURIComponent(url.auth));
-        }
-        url.auth = url.password ? url.username + ":" + url.password : url.username;
-      }
-      url.origin = url.protocol !== "file:" && isSpecial(url.protocol) && url.host ? url.protocol + "//" + url.host : "null";
-      url.href = url.toString();
-    }
-    function set(part, value, fn) {
-      var url = this;
-      switch (part) {
-        case "query":
-          if ("string" === typeof value && value.length) {
-            value = (fn || qs.parse)(value);
-          }
-          url[part] = value;
-          break;
-        case "port":
-          url[part] = value;
-          if (!required(value, url.protocol)) {
-            url.host = url.hostname;
-            url[part] = "";
-          } else if (value) {
-            url.host = url.hostname + ":" + value;
-          }
-          break;
-        case "hostname":
-          url[part] = value;
-          if (url.port)
-            value += ":" + url.port;
-          url.host = value;
-          break;
-        case "host":
-          url[part] = value;
-          if (port.test(value)) {
-            value = value.split(":");
-            url.port = value.pop();
-            url.hostname = value.join(":");
-          } else {
-            url.hostname = value;
-            url.port = "";
-          }
-          break;
-        case "protocol":
-          url.protocol = value.toLowerCase();
-          url.slashes = !fn;
-          break;
-        case "pathname":
-        case "hash":
-          if (value) {
-            var char = part === "pathname" ? "/" : "#";
-            url[part] = value.charAt(0) !== char ? char + value : value;
-          } else {
-            url[part] = value;
-          }
-          break;
-        case "username":
-        case "password":
-          url[part] = encodeURIComponent(value);
-          break;
-        case "auth":
-          var index = value.indexOf(":");
-          if (~index) {
-            url.username = value.slice(0, index);
-            url.username = encodeURIComponent(decodeURIComponent(url.username));
-            url.password = value.slice(index + 1);
-            url.password = encodeURIComponent(decodeURIComponent(url.password));
-          } else {
-            url.username = encodeURIComponent(decodeURIComponent(value));
-          }
-      }
-      for (var i = 0; i < rules.length; i++) {
-        var ins = rules[i];
-        if (ins[4])
-          url[ins[1]] = url[ins[1]].toLowerCase();
-      }
-      url.auth = url.password ? url.username + ":" + url.password : url.username;
-      url.origin = url.protocol !== "file:" && isSpecial(url.protocol) && url.host ? url.protocol + "//" + url.host : "null";
-      url.href = url.toString();
-      return url;
-    }
-    function toString2(stringify3) {
-      if (!stringify3 || "function" !== typeof stringify3)
-        stringify3 = qs.stringify;
-      var query, url = this, host = url.host, protocol = url.protocol;
-      if (protocol && protocol.charAt(protocol.length - 1) !== ":")
-        protocol += ":";
-      var result = protocol + (url.protocol && url.slashes || isSpecial(url.protocol) ? "//" : "");
-      if (url.username) {
-        result += url.username;
-        if (url.password)
-          result += ":" + url.password;
-        result += "@";
-      } else if (url.password) {
-        result += ":" + url.password;
-        result += "@";
-      } else if (url.protocol !== "file:" && isSpecial(url.protocol) && !host && url.pathname !== "/") {
-        result += "@";
-      }
-      if (host[host.length - 1] === ":" || port.test(url.hostname) && !url.port) {
-        host += ":";
-      }
-      result += host + url.pathname;
-      query = "object" === typeof url.query ? stringify3(url.query) : url.query;
-      if (query)
-        result += "?" !== query.charAt(0) ? "?" + query : query;
-      if (url.hash)
-        result += url.hash;
-      return result;
-    }
-    Url.prototype = { set, toString: toString2 };
-    Url.extractProtocol = extractProtocol;
-    Url.location = lolcation;
-    Url.trimLeft = trimLeft;
-    Url.qs = qs;
-    module2.exports = Url;
-  }
-});
-
-// node_modules/psl/data/rules.json
-var require_rules = __commonJS({
-  "node_modules/psl/data/rules.json"(exports2, module2) {
-    module2.exports = [
-      "ac",
-      "com.ac",
-      "edu.ac",
-      "gov.ac",
-      "net.ac",
-      "mil.ac",
-      "org.ac",
-      "ad",
-      "nom.ad",
-      "ae",
-      "co.ae",
-      "net.ae",
-      "org.ae",
-      "sch.ae",
-      "ac.ae",
-      "gov.ae",
-      "mil.ae",
-      "aero",
-      "accident-investigation.aero",
-      "accident-prevention.aero",
-      "aerobatic.aero",
-      "aeroclub.aero",
-      "aerodrome.aero",
-      "agents.aero",
-      "aircraft.aero",
-      "airline.aero",
-      "airport.aero",
-      "air-surveillance.aero",
-      "airtraffic.aero",
-      "air-traffic-control.aero",
-      "ambulance.aero",
-      "amusement.aero",
-      "association.aero",
-      "author.aero",
-      "ballooning.aero",
-      "broker.aero",
-      "caa.aero",
-      "cargo.aero",
-      "catering.aero",
-      "certification.aero",
-      "championship.aero",
-      "charter.aero",
-      "civilaviation.aero",
-      "club.aero",
-      "conference.aero",
-      "consultant.aero",
-      "consulting.aero",
-      "control.aero",
-      "council.aero",
-      "crew.aero",
-      "design.aero",
-      "dgca.aero",
-      "educator.aero",
-      "emergency.aero",
-      "engine.aero",
-      "engineer.aero",
-      "entertainment.aero",
-      "equipment.aero",
-      "exchange.aero",
-      "express.aero",
-      "federation.aero",
-      "flight.aero",
-      "fuel.aero",
-      "gliding.aero",
-      "government.aero",
-      "groundhandling.aero",
-      "group.aero",
-      "hanggliding.aero",
-      "homebuilt.aero",
-      "insurance.aero",
-      "journal.aero",
-      "journalist.aero",
-      "leasing.aero",
-      "logistics.aero",
-      "magazine.aero",
-      "maintenance.aero",
-      "media.aero",
-      "microlight.aero",
-      "modelling.aero",
-      "navigation.aero",
-      "parachuting.aero",
-      "paragliding.aero",
-      "passenger-association.aero",
-      "pilot.aero",
-      "press.aero",
-      "production.aero",
-      "recreation.aero",
-      "repbody.aero",
-      "res.aero",
-      "research.aero",
-      "rotorcraft.aero",
-      "safety.aero",
-      "scientist.aero",
-      "services.aero",
-      "show.aero",
-      "skydiving.aero",
-      "software.aero",
-      "student.aero",
-      "trader.aero",
-      "trading.aero",
-      "trainer.aero",
-      "union.aero",
-      "workinggroup.aero",
-      "works.aero",
-      "af",
-      "gov.af",
-      "com.af",
-      "org.af",
-      "net.af",
-      "edu.af",
-      "ag",
-      "com.ag",
-      "org.ag",
-      "net.ag",
-      "co.ag",
-      "nom.ag",
-      "ai",
-      "off.ai",
-      "com.ai",
-      "net.ai",
-      "org.ai",
-      "al",
-      "com.al",
-      "edu.al",
-      "gov.al",
-      "mil.al",
-      "net.al",
-      "org.al",
-      "am",
-      "co.am",
-      "com.am",
-      "commune.am",
-      "net.am",
-      "org.am",
-      "ao",
-      "ed.ao",
-      "gv.ao",
-      "og.ao",
-      "co.ao",
-      "pb.ao",
-      "it.ao",
-      "aq",
-      "ar",
-      "bet.ar",
-      "com.ar",
-      "coop.ar",
-      "edu.ar",
-      "gob.ar",
-      "gov.ar",
-      "int.ar",
-      "mil.ar",
-      "musica.ar",
-      "mutual.ar",
-      "net.ar",
-      "org.ar",
-      "senasa.ar",
-      "tur.ar",
-      "arpa",
-      "e164.arpa",
-      "in-addr.arpa",
-      "ip6.arpa",
-      "iris.arpa",
-      "uri.arpa",
-      "urn.arpa",
-      "as",
-      "gov.as",
-      "asia",
-      "at",
-      "ac.at",
-      "co.at",
-      "gv.at",
-      "or.at",
-      "sth.ac.at",
-      "au",
-      "com.au",
-      "net.au",
-      "org.au",
-      "edu.au",
-      "gov.au",
-      "asn.au",
-      "id.au",
-      "info.au",
-      "conf.au",
-      "oz.au",
-      "act.au",
-      "nsw.au",
-      "nt.au",
-      "qld.au",
-      "sa.au",
-      "tas.au",
-      "vic.au",
-      "wa.au",
-      "act.edu.au",
-      "catholic.edu.au",
-      "nsw.edu.au",
-      "nt.edu.au",
-      "qld.edu.au",
-      "sa.edu.au",
-      "tas.edu.au",
-      "vic.edu.au",
-      "wa.edu.au",
-      "qld.gov.au",
-      "sa.gov.au",
-      "tas.gov.au",
-      "vic.gov.au",
-      "wa.gov.au",
-      "schools.nsw.edu.au",
-      "aw",
-      "com.aw",
-      "ax",
-      "az",
-      "com.az",
-      "net.az",
-      "int.az",
-      "gov.az",
-      "org.az",
-      "edu.az",
-      "info.az",
-      "pp.az",
-      "mil.az",
-      "name.az",
-      "pro.az",
-      "biz.az",
-      "ba",
-      "com.ba",
-      "edu.ba",
-      "gov.ba",
-      "mil.ba",
-      "net.ba",
-      "org.ba",
-      "bb",
-      "biz.bb",
-      "co.bb",
-      "com.bb",
-      "edu.bb",
-      "gov.bb",
-      "info.bb",
-      "net.bb",
-      "org.bb",
-      "store.bb",
-      "tv.bb",
-      "*.bd",
-      "be",
-      "ac.be",
-      "bf",
-      "gov.bf",
-      "bg",
-      "a.bg",
-      "b.bg",
-      "c.bg",
-      "d.bg",
-      "e.bg",
-      "f.bg",
-      "g.bg",
-      "h.bg",
-      "i.bg",
-      "j.bg",
-      "k.bg",
-      "l.bg",
-      "m.bg",
-      "n.bg",
-      "o.bg",
-      "p.bg",
-      "q.bg",
-      "r.bg",
-      "s.bg",
-      "t.bg",
-      "u.bg",
-      "v.bg",
-      "w.bg",
-      "x.bg",
-      "y.bg",
-      "z.bg",
-      "0.bg",
-      "1.bg",
-      "2.bg",
-      "3.bg",
-      "4.bg",
-      "5.bg",
-      "6.bg",
-      "7.bg",
-      "8.bg",
-      "9.bg",
-      "bh",
-      "com.bh",
-      "edu.bh",
-      "net.bh",
-      "org.bh",
-      "gov.bh",
-      "bi",
-      "co.bi",
-      "com.bi",
-      "edu.bi",
-      "or.bi",
-      "org.bi",
-      "biz",
-      "bj",
-      "asso.bj",
-      "barreau.bj",
-      "gouv.bj",
-      "bm",
-      "com.bm",
-      "edu.bm",
-      "gov.bm",
-      "net.bm",
-      "org.bm",
-      "bn",
-      "com.bn",
-      "edu.bn",
-      "gov.bn",
-      "net.bn",
-      "org.bn",
-      "bo",
-      "com.bo",
-      "edu.bo",
-      "gob.bo",
-      "int.bo",
-      "org.bo",
-      "net.bo",
-      "mil.bo",
-      "tv.bo",
-      "web.bo",
-      "academia.bo",
-      "agro.bo",
-      "arte.bo",
-      "blog.bo",
-      "bolivia.bo",
-      "ciencia.bo",
-      "cooperativa.bo",
-      "democracia.bo",
-      "deporte.bo",
-      "ecologia.bo",
-      "economia.bo",
-      "empresa.bo",
-      "indigena.bo",
-      "industria.bo",
-      "info.bo",
-      "medicina.bo",
-      "movimiento.bo",
-      "musica.bo",
-      "natural.bo",
-      "nombre.bo",
-      "noticias.bo",
-      "patria.bo",
-      "politica.bo",
-      "profesional.bo",
-      "plurinacional.bo",
-      "pueblo.bo",
-      "revista.bo",
-      "salud.bo",
-      "tecnologia.bo",
-      "tksat.bo",
-      "transporte.bo",
-      "wiki.bo",
-      "br",
-      "9guacu.br",
-      "abc.br",
-      "adm.br",
-      "adv.br",
-      "agr.br",
-      "aju.br",
-      "am.br",
-      "anani.br",
-      "aparecida.br",
-      "app.br",
-      "arq.br",
-      "art.br",
-      "ato.br",
-      "b.br",
-      "barueri.br",
-      "belem.br",
-      "bhz.br",
-      "bib.br",
-      "bio.br",
-      "blog.br",
-      "bmd.br",
-      "boavista.br",
-      "bsb.br",
-      "campinagrande.br",
-      "campinas.br",
-      "caxias.br",
-      "cim.br",
-      "cng.br",
-      "cnt.br",
-      "com.br",
-      "contagem.br",
-      "coop.br",
-      "coz.br",
-      "cri.br",
-      "cuiaba.br",
-      "curitiba.br",
-      "def.br",
-      "des.br",
-      "det.br",
-      "dev.br",
-      "ecn.br",
-      "eco.br",
-      "edu.br",
-      "emp.br",
-      "enf.br",
-      "eng.br",
-      "esp.br",
-      "etc.br",
-      "eti.br",
-      "far.br",
-      "feira.br",
-      "flog.br",
-      "floripa.br",
-      "fm.br",
-      "fnd.br",
-      "fortal.br",
-      "fot.br",
-      "foz.br",
-      "fst.br",
-      "g12.br",
-      "geo.br",
-      "ggf.br",
-      "goiania.br",
-      "gov.br",
-      "ac.gov.br",
-      "al.gov.br",
-      "am.gov.br",
-      "ap.gov.br",
-      "ba.gov.br",
-      "ce.gov.br",
-      "df.gov.br",
-      "es.gov.br",
-      "go.gov.br",
-      "ma.gov.br",
-      "mg.gov.br",
-      "ms.gov.br",
-      "mt.gov.br",
-      "pa.gov.br",
-      "pb.gov.br",
-      "pe.gov.br",
-      "pi.gov.br",
-      "pr.gov.br",
-      "rj.gov.br",
-      "rn.gov.br",
-      "ro.gov.br",
-      "rr.gov.br",
-      "rs.gov.br",
-      "sc.gov.br",
-      "se.gov.br",
-      "sp.gov.br",
-      "to.gov.br",
-      "gru.br",
-      "imb.br",
-      "ind.br",
-      "inf.br",
-      "jab.br",
-      "jampa.br",
-      "jdf.br",
-      "joinville.br",
-      "jor.br",
-      "jus.br",
-      "leg.br",
-      "lel.br",
-      "log.br",
-      "londrina.br",
-      "macapa.br",
-      "maceio.br",
-      "manaus.br",
-      "maringa.br",
-      "mat.br",
-      "med.br",
-      "mil.br",
-      "morena.br",
-      "mp.br",
-      "mus.br",
-      "natal.br",
-      "net.br",
-      "niteroi.br",
-      "*.nom.br",
-      "not.br",
-      "ntr.br",
-      "odo.br",
-      "ong.br",
-      "org.br",
-      "osasco.br",
-      "palmas.br",
-      "poa.br",
-      "ppg.br",
-      "pro.br",
-      "psc.br",
-      "psi.br",
-      "pvh.br",
-      "qsl.br",
-      "radio.br",
-      "rec.br",
-      "recife.br",
-      "rep.br",
-      "ribeirao.br",
-      "rio.br",
-      "riobranco.br",
-      "riopreto.br",
-      "salvador.br",
-      "sampa.br",
-      "santamaria.br",
-      "santoandre.br",
-      "saobernardo.br",
-      "saogonca.br",
-      "seg.br",
-      "sjc.br",
-      "slg.br",
-      "slz.br",
-      "sorocaba.br",
-      "srv.br",
-      "taxi.br",
-      "tc.br",
-      "tec.br",
-      "teo.br",
-      "the.br",
-      "tmp.br",
-      "trd.br",
-      "tur.br",
-      "tv.br",
-      "udi.br",
-      "vet.br",
-      "vix.br",
-      "vlog.br",
-      "wiki.br",
-      "zlg.br",
-      "bs",
-      "com.bs",
-      "net.bs",
-      "org.bs",
-      "edu.bs",
-      "gov.bs",
-      "bt",
-      "com.bt",
-      "edu.bt",
-      "gov.bt",
-      "net.bt",
-      "org.bt",
-      "bv",
-      "bw",
-      "co.bw",
-      "org.bw",
-      "by",
-      "gov.by",
-      "mil.by",
-      "com.by",
-      "of.by",
-      "bz",
-      "com.bz",
-      "net.bz",
-      "org.bz",
-      "edu.bz",
-      "gov.bz",
-      "ca",
-      "ab.ca",
-      "bc.ca",
-      "mb.ca",
-      "nb.ca",
-      "nf.ca",
-      "nl.ca",
-      "ns.ca",
-      "nt.ca",
-      "nu.ca",
-      "on.ca",
-      "pe.ca",
-      "qc.ca",
-      "sk.ca",
-      "yk.ca",
-      "gc.ca",
-      "cat",
-      "cc",
-      "cd",
-      "gov.cd",
-      "cf",
-      "cg",
-      "ch",
-      "ci",
-      "org.ci",
-      "or.ci",
-      "com.ci",
-      "co.ci",
-      "edu.ci",
-      "ed.ci",
-      "ac.ci",
-      "net.ci",
-      "go.ci",
-      "asso.ci",
-      "a\xE9roport.ci",
-      "int.ci",
-      "presse.ci",
-      "md.ci",
-      "gouv.ci",
-      "*.ck",
-      "!www.ck",
-      "cl",
-      "co.cl",
-      "gob.cl",
-      "gov.cl",
-      "mil.cl",
-      "cm",
-      "co.cm",
-      "com.cm",
-      "gov.cm",
-      "net.cm",
-      "cn",
-      "ac.cn",
-      "com.cn",
-      "edu.cn",
-      "gov.cn",
-      "net.cn",
-      "org.cn",
-      "mil.cn",
-      "\u516C\u53F8.cn",
-      "\u7F51\u7EDC.cn",
-      "\u7DB2\u7D61.cn",
-      "ah.cn",
-      "bj.cn",
-      "cq.cn",
-      "fj.cn",
-      "gd.cn",
-      "gs.cn",
-      "gz.cn",
-      "gx.cn",
-      "ha.cn",
-      "hb.cn",
-      "he.cn",
-      "hi.cn",
-      "hl.cn",
-      "hn.cn",
-      "jl.cn",
-      "js.cn",
-      "jx.cn",
-      "ln.cn",
-      "nm.cn",
-      "nx.cn",
-      "qh.cn",
-      "sc.cn",
-      "sd.cn",
-      "sh.cn",
-      "sn.cn",
-      "sx.cn",
-      "tj.cn",
-      "xj.cn",
-      "xz.cn",
-      "yn.cn",
-      "zj.cn",
-      "hk.cn",
-      "mo.cn",
-      "tw.cn",
-      "co",
-      "arts.co",
-      "com.co",
-      "edu.co",
-      "firm.co",
-      "gov.co",
-      "info.co",
-      "int.co",
-      "mil.co",
-      "net.co",
-      "nom.co",
-      "org.co",
-      "rec.co",
-      "web.co",
-      "com",
-      "coop",
-      "cr",
-      "ac.cr",
-      "co.cr",
-      "ed.cr",
-      "fi.cr",
-      "go.cr",
-      "or.cr",
-      "sa.cr",
-      "cu",
-      "com.cu",
-      "edu.cu",
-      "org.cu",
-      "net.cu",
-      "gov.cu",
-      "inf.cu",
-      "cv",
-      "com.cv",
-      "edu.cv",
-      "int.cv",
-      "nome.cv",
-      "org.cv",
-      "cw",
-      "com.cw",
-      "edu.cw",
-      "net.cw",
-      "org.cw",
-      "cx",
-      "gov.cx",
-      "cy",
-      "ac.cy",
-      "biz.cy",
-      "com.cy",
-      "ekloges.cy",
-      "gov.cy",
-      "ltd.cy",
-      "mil.cy",
-      "net.cy",
-      "org.cy",
-      "press.cy",
-      "pro.cy",
-      "tm.cy",
-      "cz",
-      "de",
-      "dj",
-      "dk",
-      "dm",
-      "com.dm",
-      "net.dm",
-      "org.dm",
-      "edu.dm",
-      "gov.dm",
-      "do",
-      "art.do",
-      "com.do",
-      "edu.do",
-      "gob.do",
-      "gov.do",
-      "mil.do",
-      "net.do",
-      "org.do",
-      "sld.do",
-      "web.do",
-      "dz",
-      "art.dz",
-      "asso.dz",
-      "com.dz",
-      "edu.dz",
-      "gov.dz",
-      "org.dz",
-      "net.dz",
-      "pol.dz",
-      "soc.dz",
-      "tm.dz",
-      "ec",
-      "com.ec",
-      "info.ec",
-      "net.ec",
-      "fin.ec",
-      "k12.ec",
-      "med.ec",
-      "pro.ec",
-      "org.ec",
-      "edu.ec",
-      "gov.ec",
-      "gob.ec",
-      "mil.ec",
-      "edu",
-      "ee",
-      "edu.ee",
-      "gov.ee",
-      "riik.ee",
-      "lib.ee",
-      "med.ee",
-      "com.ee",
-      "pri.ee",
-      "aip.ee",
-      "org.ee",
-      "fie.ee",
-      "eg",
-      "com.eg",
-      "edu.eg",
-      "eun.eg",
-      "gov.eg",
-      "mil.eg",
-      "name.eg",
-      "net.eg",
-      "org.eg",
-      "sci.eg",
-      "*.er",
-      "es",
-      "com.es",
-      "nom.es",
-      "org.es",
-      "gob.es",
-      "edu.es",
-      "et",
-      "com.et",
-      "gov.et",
-      "org.et",
-      "edu.et",
-      "biz.et",
-      "name.et",
-      "info.et",
-      "net.et",
-      "eu",
-      "fi",
-      "aland.fi",
-      "fj",
-      "ac.fj",
-      "biz.fj",
-      "com.fj",
-      "gov.fj",
-      "info.fj",
-      "mil.fj",
-      "name.fj",
-      "net.fj",
-      "org.fj",
-      "pro.fj",
-      "*.fk",
-      "com.fm",
-      "edu.fm",
-      "net.fm",
-      "org.fm",
-      "fm",
-      "fo",
-      "fr",
-      "asso.fr",
-      "com.fr",
-      "gouv.fr",
-      "nom.fr",
-      "prd.fr",
-      "tm.fr",
-      "aeroport.fr",
-      "avocat.fr",
-      "avoues.fr",
-      "cci.fr",
-      "chambagri.fr",
-      "chirurgiens-dentistes.fr",
-      "experts-comptables.fr",
-      "geometre-expert.fr",
-      "greta.fr",
-      "huissier-justice.fr",
-      "medecin.fr",
-      "notaires.fr",
-      "pharmacien.fr",
-      "port.fr",
-      "veterinaire.fr",
-      "ga",
-      "gb",
-      "edu.gd",
-      "gov.gd",
-      "gd",
-      "ge",
-      "com.ge",
-      "edu.ge",
-      "gov.ge",
-      "org.ge",
-      "mil.ge",
-      "net.ge",
-      "pvt.ge",
-      "gf",
-      "gg",
-      "co.gg",
-      "net.gg",
-      "org.gg",
-      "gh",
-      "com.gh",
-      "edu.gh",
-      "gov.gh",
-      "org.gh",
-      "mil.gh",
-      "gi",
-      "com.gi",
-      "ltd.gi",
-      "gov.gi",
-      "mod.gi",
-      "edu.gi",
-      "org.gi",
-      "gl",
-      "co.gl",
-      "com.gl",
-      "edu.gl",
-      "net.gl",
-      "org.gl",
-      "gm",
-      "gn",
-      "ac.gn",
-      "com.gn",
-      "edu.gn",
-      "gov.gn",
-      "org.gn",
-      "net.gn",
-      "gov",
-      "gp",
-      "com.gp",
-      "net.gp",
-      "mobi.gp",
-      "edu.gp",
-      "org.gp",
-      "asso.gp",
-      "gq",
-      "gr",
-      "com.gr",
-      "edu.gr",
-      "net.gr",
-      "org.gr",
-      "gov.gr",
-      "gs",
-      "gt",
-      "com.gt",
-      "edu.gt",
-      "gob.gt",
-      "ind.gt",
-      "mil.gt",
-      "net.gt",
-      "org.gt",
-      "gu",
-      "com.gu",
-      "edu.gu",
-      "gov.gu",
-      "guam.gu",
-      "info.gu",
-      "net.gu",
-      "org.gu",
-      "web.gu",
-      "gw",
-      "gy",
-      "co.gy",
-      "com.gy",
-      "edu.gy",
-      "gov.gy",
-      "net.gy",
-      "org.gy",
-      "hk",
-      "com.hk",
-      "edu.hk",
-      "gov.hk",
-      "idv.hk",
-      "net.hk",
-      "org.hk",
-      "\u516C\u53F8.hk",
-      "\u6559\u80B2.hk",
-      "\u654E\u80B2.hk",
-      "\u653F\u5E9C.hk",
-      "\u500B\u4EBA.hk",
-      "\u4E2A\uFFFD\uFFFD.hk",
-      "\u7B87\u4EBA.hk",
-      "\u7DB2\u7EDC.hk",
-      "\u7F51\u7EDC.hk",
-      "\u7EC4\u7E54.hk",
-      "\u7DB2\u7D61.hk",
-      "\u7F51\u7D61.hk",
-      "\u7EC4\u7EC7.hk",
-      "\u7D44\u7E54.hk",
-      "\u7D44\u7EC7.hk",
-      "hm",
-      "hn",
-      "com.hn",
-      "edu.hn",
-      "org.hn",
-      "net.hn",
-      "mil.hn",
-      "gob.hn",
-      "hr",
-      "iz.hr",
-      "from.hr",
-      "name.hr",
-      "com.hr",
-      "ht",
-      "com.ht",
-      "shop.ht",
-      "firm.ht",
-      "info.ht",
-      "adult.ht",
-      "net.ht",
-      "pro.ht",
-      "org.ht",
-      "med.ht",
-      "art.ht",
-      "coop.ht",
-      "pol.ht",
-      "asso.ht",
-      "edu.ht",
-      "rel.ht",
-      "gouv.ht",
-      "perso.ht",
-      "hu",
-      "co.hu",
-      "info.hu",
-      "org.hu",
-      "priv.hu",
-      "sport.hu",
-      "tm.hu",
-      "2000.hu",
-      "agrar.hu",
-      "bolt.hu",
-      "casino.hu",
-      "city.hu",
-      "erotica.hu",
-      "erotika.hu",
-      "film.hu",
-      "forum.hu",
-      "games.hu",
-      "hotel.hu",
-      "ingatlan.hu",
-      "jogasz.hu",
-      "konyvelo.hu",
-      "lakas.hu",
-      "media.hu",
-      "news.hu",
-      "reklam.hu",
-      "sex.hu",
-      "shop.hu",
-      "suli.hu",
-      "szex.hu",
-      "tozsde.hu",
-      "utazas.hu",
-      "video.hu",
-      "id",
-      "ac.id",
-      "biz.id",
-      "co.id",
-      "desa.id",
-      "go.id",
-      "mil.id",
-      "my.id",
-      "net.id",
-      "or.id",
-      "ponpes.id",
-      "sch.id",
-      "web.id",
-      "ie",
-      "gov.ie",
-      "il",
-      "ac.il",
-      "co.il",
-      "gov.il",
-      "idf.il",
-      "k12.il",
-      "muni.il",
-      "net.il",
-      "org.il",
-      "im",
-      "ac.im",
-      "co.im",
-      "com.im",
-      "ltd.co.im",
-      "net.im",
-      "org.im",
-      "plc.co.im",
-      "tt.im",
-      "tv.im",
-      "in",
-      "co.in",
-      "firm.in",
-      "net.in",
-      "org.in",
-      "gen.in",
-      "ind.in",
-      "nic.in",
-      "ac.in",
-      "edu.in",
-      "res.in",
-      "gov.in",
-      "mil.in",
-      "info",
-      "int",
-      "eu.int",
-      "io",
-      "com.io",
-      "iq",
-      "gov.iq",
-      "edu.iq",
-      "mil.iq",
-      "com.iq",
-      "org.iq",
-      "net.iq",
-      "ir",
-      "ac.ir",
-      "co.ir",
-      "gov.ir",
-      "id.ir",
-      "net.ir",
-      "org.ir",
-      "sch.ir",
-      "\u0627\u06CC\u0631\u0627\u0646.ir",
-      "\u0627\u064A\u0631\u0627\u0646.ir",
-      "is",
-      "net.is",
-      "com.is",
-      "edu.is",
-      "gov.is",
-      "org.is",
-      "int.is",
-      "it",
-      "gov.it",
-      "edu.it",
-      "abr.it",
-      "abruzzo.it",
-      "aosta-valley.it",
-      "aostavalley.it",
-      "bas.it",
-      "basilicata.it",
-      "cal.it",
-      "calabria.it",
-      "cam.it",
-      "campania.it",
-      "emilia-romagna.it",
-      "emiliaromagna.it",
-      "emr.it",
-      "friuli-v-giulia.it",
-      "friuli-ve-giulia.it",
-      "friuli-vegiulia.it",
-      "friuli-venezia-giulia.it",
-      "friuli-veneziagiulia.it",
-      "friuli-vgiulia.it",
-      "friuliv-giulia.it",
-      "friulive-giulia.it",
-      "friulivegiulia.it",
-      "friulivenezia-giulia.it",
-      "friuliveneziagiulia.it",
-      "friulivgiulia.it",
-      "fvg.it",
-      "laz.it",
-      "lazio.it",
-      "lig.it",
-      "liguria.it",
-      "lom.it",
-      "lombardia.it",
-      "lombardy.it",
-      "lucania.it",
-      "mar.it",
-      "marche.it",
-      "mol.it",
-      "molise.it",
-      "piedmont.it",
-      "piemonte.it",
-      "pmn.it",
-      "pug.it",
-      "puglia.it",
-      "sar.it",
-      "sardegna.it",
-      "sardinia.it",
-      "sic.it",
-      "sicilia.it",
-      "sicily.it",
-      "taa.it",
-      "tos.it",
-      "toscana.it",
-      "trentin-sud-tirol.it",
-      "trentin-s\xFCd-tirol.it",
-      "trentin-sudtirol.it",
-      "trentin-s\xFCdtirol.it",
-      "trentin-sued-tirol.it",
-      "trentin-suedtirol.it",
-      "trentino-a-adige.it",
-      "trentino-aadige.it",
-      "trentino-alto-adige.it",
-      "trentino-altoadige.it",
-      "trentino-s-tirol.it",
-      "trentino-stirol.it",
-      "trentino-sud-tirol.it",
-      "trentino-s\xFCd-tirol.it",
-      "trentino-sudtirol.it",
-      "trentino-s\xFCdtirol.it",
-      "trentino-sued-tirol.it",
-      "trentino-suedtirol.it",
-      "trentino.it",
-      "trentinoa-adige.it",
-      "trentinoaadige.it",
-      "trentinoalto-adige.it",
-      "trentinoaltoadige.it",
-      "trentinos-tirol.it",
-      "trentinostirol.it",
-      "trentinosud-tirol.it",
-      "trentinos\xFCd-tirol.it",
-      "trentinosudtirol.it",
-      "trentinos\xFCdtirol.it",
-      "trentinosued-tirol.it",
-      "trentinosuedtirol.it",
-      "trentinsud-tirol.it",
-      "trentins\xFCd-tirol.it",
-      "trentinsudtirol.it",
-      "trentins\xFCdtirol.it",
-      "trentinsued-tirol.it",
-      "trentinsuedtirol.it",
-      "tuscany.it",
-      "umb.it",
-      "umbria.it",
-      "val-d-aosta.it",
-      "val-daosta.it",
-      "vald-aosta.it",
-      "valdaosta.it",
-      "valle-aosta.it",
-      "valle-d-aosta.it",
-      "valle-daosta.it",
-      "valleaosta.it",
-      "valled-aosta.it",
-      "valledaosta.it",
-      "vallee-aoste.it",
-      "vall\xE9e-aoste.it",
-      "vallee-d-aoste.it",
-      "vall\xE9e-d-aoste.it",
-      "valleeaoste.it",
-      "vall\xE9eaoste.it",
-      "valleedaoste.it",
-      "vall\xE9edaoste.it",
-      "vao.it",
-      "vda.it",
-      "ven.it",
-      "veneto.it",
-      "ag.it",
-      "agrigento.it",
-      "al.it",
-      "alessandria.it",
-      "alto-adige.it",
-      "altoadige.it",
-      "an.it",
-      "ancona.it",
-      "andria-barletta-trani.it",
-      "andria-trani-barletta.it",
-      "andriabarlettatrani.it",
-      "andriatranibarletta.it",
-      "ao.it",
-      "aosta.it",
-      "aoste.it",
-      "ap.it",
-      "aq.it",
-      "aquila.it",
-      "ar.it",
-      "arezzo.it",
-      "ascoli-piceno.it",
-      "ascolipiceno.it",
-      "asti.it",
-      "at.it",
-      "av.it",
-      "avellino.it",
-      "ba.it",
-      "balsan-sudtirol.it",
-      "balsan-s\xFCdtirol.it",
-      "balsan-suedtirol.it",
-      "balsan.it",
-      "bari.it",
-      "barletta-trani-andria.it",
-      "barlettatraniandria.it",
-      "belluno.it",
-      "benevento.it",
-      "bergamo.it",
-      "bg.it",
-      "bi.it",
-      "biella.it",
-      "bl.it",
-      "bn.it",
-      "bo.it",
-      "bologna.it",
-      "bolzano-altoadige.it",
-      "bolzano.it",
-      "bozen-sudtirol.it",
-      "bozen-s\xFCdtirol.it",
-      "bozen-suedtirol.it",
-      "bozen.it",
-      "br.it",
-      "brescia.it",
-      "brindisi.it",
-      "bs.it",
-      "bt.it",
-      "bulsan-sudtirol.it",
-      "bulsan-s\xFCdtirol.it",
-      "bulsan-suedtirol.it",
-      "bulsan.it",
-      "bz.it",
-      "ca.it",
-      "cagliari.it",
-      "caltanissetta.it",
-      "campidano-medio.it",
-      "campidanomedio.it",
-      "campobasso.it",
-      "carbonia-iglesias.it",
-      "carboniaiglesias.it",
-      "carrara-massa.it",
-      "carraramassa.it",
-      "caserta.it",
-      "catania.it",
-      "catanzaro.it",
-      "cb.it",
-      "ce.it",
-      "cesena-forli.it",
-      "cesena-forl\xEC.it",
-      "cesenaforli.it",
-      "cesenaforl\xEC.it",
-      "ch.it",
-      "chieti.it",
-      "ci.it",
-      "cl.it",
-      "cn.it",
-      "co.it",
-      "como.it",
-      "cosenza.it",
-      "cr.it",
-      "cremona.it",
-      "crotone.it",
-      "cs.it",
-      "ct.it",
-      "cuneo.it",
-      "cz.it",
-      "dell-ogliastra.it",
-      "dellogliastra.it",
-      "en.it",
-      "enna.it",
-      "fc.it",
-      "fe.it",
-      "fermo.it",
-      "ferrara.it",
-      "fg.it",
-      "fi.it",
-      "firenze.it",
-      "florence.it",
-      "fm.it",
-      "foggia.it",
-      "forli-cesena.it",
-      "forl\xEC-cesena.it",
-      "forlicesena.it",
-      "forl\xECcesena.it",
-      "fr.it",
-      "frosinone.it",
-      "ge.it",
-      "genoa.it",
-      "genova.it",
-      "go.it",
-      "gorizia.it",
-      "gr.it",
-      "grosseto.it",
-      "iglesias-carbonia.it",
-      "iglesiascarbonia.it",
-      "im.it",
-      "imperia.it",
-      "is.it",
-      "isernia.it",
-      "kr.it",
-      "la-spezia.it",
-      "laquila.it",
-      "laspezia.it",
-      "latina.it",
-      "lc.it",
-      "le.it",
-      "lecce.it",
-      "lecco.it",
-      "li.it",
-      "livorno.it",
-      "lo.it",
-      "lodi.it",
-      "lt.it",
-      "lu.it",
-      "lucca.it",
-      "macerata.it",
-      "mantova.it",
-      "massa-carrara.it",
-      "massacarrara.it",
-      "matera.it",
-      "mb.it",
-      "mc.it",
-      "me.it",
-      "medio-campidano.it",
-      "mediocampidano.it",
-      "messina.it",
-      "mi.it",
-      "milan.it",
-      "milano.it",
-      "mn.it",
-      "mo.it",
-      "modena.it",
-      "monza-brianza.it",
-      "monza-e-della-brianza.it",
-      "monza.it",
-      "monzabrianza.it",
-      "monzaebrianza.it",
-      "monzaedellabrianza.it",
-      "ms.it",
-      "mt.it",
-      "na.it",
-      "naples.it",
-      "napoli.it",
-      "no.it",
-      "novara.it",
-      "nu.it",
-      "nuoro.it",
-      "og.it",
-      "ogliastra.it",
-      "olbia-tempio.it",
-      "olbiatempio.it",
-      "or.it",
-      "oristano.it",
-      "ot.it",
-      "pa.it",
-      "padova.it",
-      "padua.it",
-      "palermo.it",
-      "parma.it",
-      "pavia.it",
-      "pc.it",
-      "pd.it",
-      "pe.it",
-      "perugia.it",
-      "pesaro-urbino.it",
-      "pesarourbino.it",
-      "pescara.it",
-      "pg.it",
-      "pi.it",
-      "piacenza.it",
-      "pisa.it",
-      "pistoia.it",
-      "pn.it",
-      "po.it",
-      "pordenone.it",
-      "potenza.it",
-      "pr.it",
-      "prato.it",
-      "pt.it",
-      "pu.it",
-      "pv.it",
-      "pz.it",
-      "ra.it",
-      "ragusa.it",
-      "ravenna.it",
-      "rc.it",
-      "re.it",
-      "reggio-calabria.it",
-      "reggio-emilia.it",
-      "reggiocalabria.it",
-      "reggioemilia.it",
-      "rg.it",
-      "ri.it",
-      "rieti.it",
-      "rimini.it",
-      "rm.it",
-      "rn.it",
-      "ro.it",
-      "roma.it",
-      "rome.it",
-      "rovigo.it",
-      "sa.it",
-      "salerno.it",
-      "sassari.it",
-      "savona.it",
-      "si.it",
-      "siena.it",
-      "siracusa.it",
-      "so.it",
-      "sondrio.it",
-      "sp.it",
-      "sr.it",
-      "ss.it",
-      "suedtirol.it",
-      "s\xFCdtirol.it",
-      "sv.it",
-      "ta.it",
-      "taranto.it",
-      "te.it",
-      "tempio-olbia.it",
-      "tempioolbia.it",
-      "teramo.it",
-      "terni.it",
-      "tn.it",
-      "to.it",
-      "torino.it",
-      "tp.it",
-      "tr.it",
-      "trani-andria-barletta.it",
-      "trani-barletta-andria.it",
-      "traniandriabarletta.it",
-      "tranibarlettaandria.it",
-      "trapani.it",
-      "trento.it",
-      "treviso.it",
-      "trieste.it",
-      "ts.it",
-      "turin.it",
-      "tv.it",
-      "ud.it",
-      "udine.it",
-      "urbino-pesaro.it",
-      "urbinopesaro.it",
-      "va.it",
-      "varese.it",
-      "vb.it",
-      "vc.it",
-      "ve.it",
-      "venezia.it",
-      "venice.it",
-      "verbania.it",
-      "vercelli.it",
-      "verona.it",
-      "vi.it",
-      "vibo-valentia.it",
-      "vibovalentia.it",
-      "vicenza.it",
-      "viterbo.it",
-      "vr.it",
-      "vs.it",
-      "vt.it",
-      "vv.it",
-      "je",
-      "co.je",
-      "net.je",
-      "org.je",
-      "*.jm",
-      "jo",
-      "com.jo",
-      "org.jo",
-      "net.jo",
-      "edu.jo",
-      "sch.jo",
-      "gov.jo",
-      "mil.jo",
-      "name.jo",
-      "jobs",
-      "jp",
-      "ac.jp",
-      "ad.jp",
-      "co.jp",
-      "ed.jp",
-      "go.jp",
-      "gr.jp",
-      "lg.jp",
-      "ne.jp",
-      "or.jp",
-      "aichi.jp",
-      "akita.jp",
-      "aomori.jp",
-      "chiba.jp",
-      "ehime.jp",
-      "fukui.jp",
-      "fukuoka.jp",
-      "fukushima.jp",
-      "gifu.jp",
-      "gunma.jp",
-      "hiroshima.jp",
-      "hokkaido.jp",
-      "hyogo.jp",
-      "ibaraki.jp",
-      "ishikawa.jp",
-      "iwate.jp",
-      "kagawa.jp",
-      "kagoshima.jp",
-      "kanagawa.jp",
-      "kochi.jp",
-      "kumamoto.jp",
-      "kyoto.jp",
-      "mie.jp",
-      "miyagi.jp",
-      "miyazaki.jp",
-      "nagano.jp",
-      "nagasaki.jp",
-      "nara.jp",
-      "niigata.jp",
-      "oita.jp",
-      "okayama.jp",
-      "okinawa.jp",
-      "osaka.jp",
-      "saga.jp",
-      "saitama.jp",
-      "shiga.jp",
-      "shimane.jp",
-      "shizuoka.jp",
-      "tochigi.jp",
-      "tokushima.jp",
-      "tokyo.jp",
-      "tottori.jp",
-      "toyama.jp",
-      "wakayama.jp",
-      "yamagata.jp",
-      "yamaguchi.jp",
-      "yamanashi.jp",
-      "\u6803\u6728.jp",
-      "\u611B\u77E5.jp",
-      "\u611B\u5A9B.jp",
-      "\u5175\u5EAB.jp",
-      "\u718A\u672C.jp",
-      "\u8328\u57CE.jp",
-      "\u5317\u6D77\u9053.jp",
-      "\u5343\u8449.jp",
-      "\u548C\u6B4C\u5C71.jp",
-      "\u9577\u5D0E.jp",
-      "\u9577\u91CE.jp",
-      "\u65B0\u6F5F.jp",
-      "\u9752\u68EE.jp",
-      "\u9759\u5CA1.jp",
-      "\u6771\u4EAC.jp",
-      "\u77F3\u5DDD.jp",
-      "\u57FC\u7389.jp",
-      "\u4E09\u91CD.jp",
-      "\u4EAC\u90FD.jp",
-      "\u4F50\u8CC0.jp",
-      "\u5927\u5206.jp",
-      "\u5927\u962A.jp",
-      "\u5948\u826F.jp",
-      "\u5BAE\u57CE.jp",
-      "\u5BAE\u5D0E.jp",
-      "\u5BCC\u5C71.jp",
-      "\u5C71\u53E3.jp",
-      "\u5C71\u5F62.jp",
-      "\u5C71\u68A8.jp",
-      "\u5CA9\u624B.jp",
-      "\u5C90\u961C.jp",
-      "\u5CA1\u5C71.jp",
-      "\u5CF6\u6839.jp",
-      "\u5E83\u5CF6.jp",
-      "\u5FB3\u5CF6.jp",
-      "\u6C96\u7E04.jp",
-      "\u6ECB\u8CC0.jp",
-      "\u795E\u5948\u5DDD.jp",
-      "\u798F\u4E95.jp",
-      "\u798F\u5CA1.jp",
-      "\u798F\u5CF6.jp",
-      "\u79CB\u7530.jp",
-      "\u7FA4\u99AC.jp",
-      "\u9999\u5DDD.jp",
-      "\u9AD8\u77E5.jp",
-      "\u9CE5\u53D6.jp",
-      "\u9E7F\u5150\u5CF6.jp",
-      "*.kawasaki.jp",
-      "*.kitakyushu.jp",
-      "*.kobe.jp",
-      "*.nagoya.jp",
-      "*.sapporo.jp",
-      "*.sendai.jp",
-      "*.yokohama.jp",
-      "!city.kawasaki.jp",
-      "!city.kitakyushu.jp",
-      "!city.kobe.jp",
-      "!city.nagoya.jp",
-      "!city.sapporo.jp",
-      "!city.sendai.jp",
-      "!city.yokohama.jp",
-      "aisai.aichi.jp",
-      "ama.aichi.jp",
-      "anjo.aichi.jp",
-      "asuke.aichi.jp",
-      "chiryu.aichi.jp",
-      "chita.aichi.jp",
-      "fuso.aichi.jp",
-      "gamagori.aichi.jp",
-      "handa.aichi.jp",
-      "hazu.aichi.jp",
-      "hekinan.aichi.jp",
-      "higashiura.aichi.jp",
-      "ichinomiya.aichi.jp",
-      "inazawa.aichi.jp",
-      "inuyama.aichi.jp",
-      "isshiki.aichi.jp",
-      "iwakura.aichi.jp",
-      "kanie.aichi.jp",
-      "kariya.aichi.jp",
-      "kasugai.aichi.jp",
-      "kira.aichi.jp",
-      "kiyosu.aichi.jp",
-      "komaki.aichi.jp",
-      "konan.aichi.jp",
-      "kota.aichi.jp",
-      "mihama.aichi.jp",
-      "miyoshi.aichi.jp",
-      "nishio.aichi.jp",
-      "nisshin.aichi.jp",
-      "obu.aichi.jp",
-      "oguchi.aichi.jp",
-      "oharu.aichi.jp",
-      "okazaki.aichi.jp",
-      "owariasahi.aichi.jp",
-      "seto.aichi.jp",
-      "shikatsu.aichi.jp",
-      "shinshiro.aichi.jp",
-      "shitara.aichi.jp",
-      "tahara.aichi.jp",
-      "takahama.aichi.jp",
-      "tobishima.aichi.jp",
-      "toei.aichi.jp",
-      "togo.aichi.jp",
-      "tokai.aichi.jp",
-      "tokoname.aichi.jp",
-      "toyoake.aichi.jp",
-      "toyohashi.aichi.jp",
-      "toyokawa.aichi.jp",
-      "toyone.aichi.jp",
-      "toyota.aichi.jp",
-      "tsushima.aichi.jp",
-      "yatomi.aichi.jp",
-      "akita.akita.jp",
-      "daisen.akita.jp",
-      "fujisato.akita.jp",
-      "gojome.akita.jp",
-      "hachirogata.akita.jp",
-      "happou.akita.jp",
-      "higashinaruse.akita.jp",
-      "honjo.akita.jp",
-      "honjyo.akita.jp",
-      "ikawa.akita.jp",
-      "kamikoani.akita.jp",
-      "kamioka.akita.jp",
-      "katagami.akita.jp",
-      "kazuno.akita.jp",
-      "kitaakita.akita.jp",
-      "kosaka.akita.jp",
-      "kyowa.akita.jp",
-      "misato.akita.jp",
-      "mitane.akita.jp",
-      "moriyoshi.akita.jp",
-      "nikaho.akita.jp",
-      "noshiro.akita.jp",
-      "odate.akita.jp",
-      "oga.akita.jp",
-      "ogata.akita.jp",
-      "semboku.akita.jp",
-      "yokote.akita.jp",
-      "yurihonjo.akita.jp",
-      "aomori.aomori.jp",
-      "gonohe.aomori.jp",
-      "hachinohe.aomori.jp",
-      "hashikami.aomori.jp",
-      "hiranai.aomori.jp",
-      "hirosaki.aomori.jp",
-      "itayanagi.aomori.jp",
-      "kuroishi.aomori.jp",
-      "misawa.aomori.jp",
-      "mutsu.aomori.jp",
-      "nakadomari.aomori.jp",
-      "noheji.aomori.jp",
-      "oirase.aomori.jp",
-      "owani.aomori.jp",
-      "rokunohe.aomori.jp",
-      "sannohe.aomori.jp",
-      "shichinohe.aomori.jp",
-      "shingo.aomori.jp",
-      "takko.aomori.jp",
-      "towada.aomori.jp",
-      "tsugaru.aomori.jp",
-      "tsuruta.aomori.jp",
-      "abiko.chiba.jp",
-      "asahi.chiba.jp",
-      "chonan.chiba.jp",
-      "chosei.chiba.jp",
-      "choshi.chiba.jp",
-      "chuo.chiba.jp",
-      "funabashi.chiba.jp",
-      "futtsu.chiba.jp",
-      "hanamigawa.chiba.jp",
-      "ichihara.chiba.jp",
-      "ichikawa.chiba.jp",
-      "ichinomiya.chiba.jp",
-      "inzai.chiba.jp",
-      "isumi.chiba.jp",
-      "kamagaya.chiba.jp",
-      "kamogawa.chiba.jp",
-      "kashiwa.chiba.jp",
-      "katori.chiba.jp",
-      "katsuura.chiba.jp",
-      "kimitsu.chiba.jp",
-      "kisarazu.chiba.jp",
-      "kozaki.chiba.jp",
-      "kujukuri.chiba.jp",
-      "kyonan.chiba.jp",
-      "matsudo.chiba.jp",
-      "midori.chiba.jp",
-      "mihama.chiba.jp",
-      "minamiboso.chiba.jp",
-      "mobara.chiba.jp",
-      "mutsuzawa.chiba.jp",
-      "nagara.chiba.jp",
-      "nagareyama.chiba.jp",
-      "narashino.chiba.jp",
-      "narita.chiba.jp",
-      "noda.chiba.jp",
-      "oamishirasato.chiba.jp",
-      "omigawa.chiba.jp",
-      "onjuku.chiba.jp",
-      "otaki.chiba.jp",
-      "sakae.chiba.jp",
-      "sakura.chiba.jp",
-      "shimofusa.chiba.jp",
-      "shirako.chiba.jp",
-      "shiroi.chiba.jp",
-      "shisui.chiba.jp",
-      "sodegaura.chiba.jp",
-      "sosa.chiba.jp",
-      "tako.chiba.jp",
-      "tateyama.chiba.jp",
-      "togane.chiba.jp",
-      "tohnosho.chiba.jp",
-      "tomisato.chiba.jp",
-      "urayasu.chiba.jp",
-      "yachimata.chiba.jp",
-      "yachiyo.chiba.jp",
-      "yokaichiba.chiba.jp",
-      "yokoshibahikari.chiba.jp",
-      "yotsukaido.chiba.jp",
-      "ainan.ehime.jp",
-      "honai.ehime.jp",
-      "ikata.ehime.jp",
-      "imabari.ehime.jp",
-      "iyo.ehime.jp",
-      "kamijima.ehime.jp",
-      "kihoku.ehime.jp",
-      "kumakogen.ehime.jp",
-      "masaki.ehime.jp",
-      "matsuno.ehime.jp",
-      "matsuyama.ehime.jp",
-      "namikata.ehime.jp",
-      "niihama.ehime.jp",
-      "ozu.ehime.jp",
-      "saijo.ehime.jp",
-      "seiyo.ehime.jp",
-      "shikokuchuo.ehime.jp",
-      "tobe.ehime.jp",
-      "toon.ehime.jp",
-      "uchiko.ehime.jp",
-      "uwajima.ehime.jp",
-      "yawatahama.ehime.jp",
-      "echizen.fukui.jp",
-      "eiheiji.fukui.jp",
-      "fukui.fukui.jp",
-      "ikeda.fukui.jp",
-      "katsuyama.fukui.jp",
-      "mihama.fukui.jp",
-      "minamiechizen.fukui.jp",
-      "obama.fukui.jp",
-      "ohi.fukui.jp",
-      "ono.fukui.jp",
-      "sabae.fukui.jp",
-      "sakai.fukui.jp",
-      "takahama.fukui.jp",
-      "tsuruga.fukui.jp",
-      "wakasa.fukui.jp",
-      "ashiya.fukuoka.jp",
-      "buzen.fukuoka.jp",
-      "chikugo.fukuoka.jp",
-      "chikuho.fukuoka.jp",
-      "chikujo.fukuoka.jp",
-      "chikushino.fukuoka.jp",
-      "chikuzen.fukuoka.jp",
-      "chuo.fukuoka.jp",
-      "dazaifu.fukuoka.jp",
-      "fukuchi.fukuoka.jp",
-      "hakata.fukuoka.jp",
-      "higashi.fukuoka.jp",
-      "hirokawa.fukuoka.jp",
-      "hisayama.fukuoka.jp",
-      "iizuka.fukuoka.jp",
-      "inatsuki.fukuoka.jp",
-      "kaho.fukuoka.jp",
-      "kasuga.fukuoka.jp",
-      "kasuya.fukuoka.jp",
-      "kawara.fukuoka.jp",
-      "keisen.fukuoka.jp",
-      "koga.fukuoka.jp",
-      "kurate.fukuoka.jp",
-      "kurogi.fukuoka.jp",
-      "kurume.fukuoka.jp",
-      "minami.fukuoka.jp",
-      "miyako.fukuoka.jp",
-      "miyama.fukuoka.jp",
-      "miyawaka.fukuoka.jp",
-      "mizumaki.fukuoka.jp",
-      "munakata.fukuoka.jp",
-      "nakagawa.fukuoka.jp",
-      "nakama.fukuoka.jp",
-      "nishi.fukuoka.jp",
-      "nogata.fukuoka.jp",
-      "ogori.fukuoka.jp",
-      "okagaki.fukuoka.jp",
-      "okawa.fukuoka.jp",
-      "oki.fukuoka.jp",
-      "omuta.fukuoka.jp",
-      "onga.fukuoka.jp",
-      "onojo.fukuoka.jp",
-      "oto.fukuoka.jp",
-      "saigawa.fukuoka.jp",
-      "sasaguri.fukuoka.jp",
-      "shingu.fukuoka.jp",
-      "shinyoshitomi.fukuoka.jp",
-      "shonai.fukuoka.jp",
-      "soeda.fukuoka.jp",
-      "sue.fukuoka.jp",
-      "tachiarai.fukuoka.jp",
-      "tagawa.fukuoka.jp",
-      "takata.fukuoka.jp",
-      "toho.fukuoka.jp",
-      "toyotsu.fukuoka.jp",
-      "tsuiki.fukuoka.jp",
-      "ukiha.fukuoka.jp",
-      "umi.fukuoka.jp",
-      "usui.fukuoka.jp",
-      "yamada.fukuoka.jp",
-      "yame.fukuoka.jp",
-      "yanagawa.fukuoka.jp",
-      "yukuhashi.fukuoka.jp",
-      "aizubange.fukushima.jp",
-      "aizumisato.fukushima.jp",
-      "aizuwakamatsu.fukushima.jp",
-      "asakawa.fukushima.jp",
-      "bandai.fukushima.jp",
-      "date.fukushima.jp",
-      "fukushima.fukushima.jp",
-      "furudono.fukushima.jp",
-      "futaba.fukushima.jp",
-      "hanawa.fukushima.jp",
-      "higashi.fukushima.jp",
-      "hirata.fukushima.jp",
-      "hirono.fukushima.jp",
-      "iitate.fukushima.jp",
-      "inawashiro.fukushima.jp",
-      "ishikawa.fukushima.jp",
-      "iwaki.fukushima.jp",
-      "izumizaki.fukushima.jp",
-      "kagamiishi.fukushima.jp",
-      "kaneyama.fukushima.jp",
-      "kawamata.fukushima.jp",
-      "kitakata.fukushima.jp",
-      "kitashiobara.fukushima.jp",
-      "koori.fukushima.jp",
-      "koriyama.fukushima.jp",
-      "kunimi.fukushima.jp",
-      "miharu.fukushima.jp",
-      "mishima.fukushima.jp",
-      "namie.fukushima.jp",
-      "nango.fukushima.jp",
-      "nishiaizu.fukushima.jp",
-      "nishigo.fukushima.jp",
-      "okuma.fukushima.jp",
-      "omotego.fukushima.jp",
-      "ono.fukushima.jp",
-      "otama.fukushima.jp",
-      "samegawa.fukushima.jp",
-      "shimogo.fukushima.jp",
-      "shirakawa.fukushima.jp",
-      "showa.fukushima.jp",
-      "soma.fukushima.jp",
-      "sukagawa.fukushima.jp",
-      "taishin.fukushima.jp",
-      "tamakawa.fukushima.jp",
-      "tanagura.fukushima.jp",
-      "tenei.fukushima.jp",
-      "yabuki.fukushima.jp",
-      "yamato.fukushima.jp",
-      "yamatsuri.fukushima.jp",
-      "yanaizu.fukushima.jp",
-      "yugawa.fukushima.jp",
-      "anpachi.gifu.jp",
-      "ena.gifu.jp",
-      "gifu.gifu.jp",
-      "ginan.gifu.jp",
-      "godo.gifu.jp",
-      "gujo.gifu.jp",
-      "hashima.gifu.jp",
-      "hichiso.gifu.jp",
-      "hida.gifu.jp",
-      "higashishirakawa.gifu.jp",
-      "ibigawa.gifu.jp",
-      "ikeda.gifu.jp",
-      "kakamigahara.gifu.jp",
-      "kani.gifu.jp",
-      "kasahara.gifu.jp",
-      "kasamatsu.gifu.jp",
-      "kawaue.gifu.jp",
-      "kitagata.gifu.jp",
-      "mino.gifu.jp",
-      "minokamo.gifu.jp",
-      "mitake.gifu.jp",
-      "mizunami.gifu.jp",
-      "motosu.gifu.jp",
-      "nakatsugawa.gifu.jp",
-      "ogaki.gifu.jp",
-      "sakahogi.gifu.jp",
-      "seki.gifu.jp",
-      "sekigahara.gifu.jp",
-      "shirakawa.gifu.jp",
-      "tajimi.gifu.jp",
-      "takayama.gifu.jp",
-      "tarui.gifu.jp",
-      "toki.gifu.jp",
-      "tomika.gifu.jp",
-      "wanouchi.gifu.jp",
-      "yamagata.gifu.jp",
-      "yaotsu.gifu.jp",
-      "yoro.gifu.jp",
-      "annaka.gunma.jp",
-      "chiyoda.gunma.jp",
-      "fujioka.gunma.jp",
-      "higashiagatsuma.gunma.jp",
-      "isesaki.gunma.jp",
-      "itakura.gunma.jp",
-      "kanna.gunma.jp",
-      "kanra.gunma.jp",
-      "katashina.gunma.jp",
-      "kawaba.gunma.jp",
-      "kiryu.gunma.jp",
-      "kusatsu.gunma.jp",
-      "maebashi.gunma.jp",
-      "meiwa.gunma.jp",
-      "midori.gunma.jp",
-      "minakami.gunma.jp",
-      "naganohara.gunma.jp",
-      "nakanojo.gunma.jp",
-      "nanmoku.gunma.jp",
-      "numata.gunma.jp",
-      "oizumi.gunma.jp",
-      "ora.gunma.jp",
-      "ota.gunma.jp",
-      "shibukawa.gunma.jp",
-      "shimonita.gunma.jp",
-      "shinto.gunma.jp",
-      "showa.gunma.jp",
-      "takasaki.gunma.jp",
-      "takayama.gunma.jp",
-      "tamamura.gunma.jp",
-      "tatebayashi.gunma.jp",
-      "tomioka.gunma.jp",
-      "tsukiyono.gunma.jp",
-      "tsumagoi.gunma.jp",
-      "ueno.gunma.jp",
-      "yoshioka.gunma.jp",
-      "asaminami.hiroshima.jp",
-      "daiwa.hiroshima.jp",
-      "etajima.hiroshima.jp",
-      "fuchu.hiroshima.jp",
-      "fukuyama.hiroshima.jp",
-      "hatsukaichi.hiroshima.jp",
-      "higashihiroshima.hiroshima.jp",
-      "hongo.hiroshima.jp",
-      "jinsekikogen.hiroshima.jp",
-      "kaita.hiroshima.jp",
-      "kui.hiroshima.jp",
-      "kumano.hiroshima.jp",
-      "kure.hiroshima.jp",
-      "mihara.hiroshima.jp",
-      "miyoshi.hiroshima.jp",
-      "naka.hiroshima.jp",
-      "onomichi.hiroshima.jp",
-      "osakikamijima.hiroshima.jp",
-      "otake.hiroshima.jp",
-      "saka.hiroshima.jp",
-      "sera.hiroshima.jp",
-      "seranishi.hiroshima.jp",
-      "shinichi.hiroshima.jp",
-      "shobara.hiroshima.jp",
-      "takehara.hiroshima.jp",
-      "abashiri.hokkaido.jp",
-      "abira.hokkaido.jp",
-      "aibetsu.hokkaido.jp",
-      "akabira.hokkaido.jp",
-      "akkeshi.hokkaido.jp",
-      "asahikawa.hokkaido.jp",
-      "ashibetsu.hokkaido.jp",
-      "ashoro.hokkaido.jp",
-      "assabu.hokkaido.jp",
-      "atsuma.hokkaido.jp",
-      "bibai.hokkaido.jp",
-      "biei.hokkaido.jp",
-      "bifuka.hokkaido.jp",
-      "bihoro.hokkaido.jp",
-      "biratori.hokkaido.jp",
-      "chippubetsu.hokkaido.jp",
-      "chitose.hokkaido.jp",
-      "date.hokkaido.jp",
-      "ebetsu.hokkaido.jp",
-      "embetsu.hokkaido.jp",
-      "eniwa.hokkaido.jp",
-      "erimo.hokkaido.jp",
-      "esan.hokkaido.jp",
-      "esashi.hokkaido.jp",
-      "fukagawa.hokkaido.jp",
-      "fukushima.hokkaido.jp",
-      "furano.hokkaido.jp",
-      "furubira.hokkaido.jp",
-      "haboro.hokkaido.jp",
-      "hakodate.hokkaido.jp",
-      "hamatonbetsu.hokkaido.jp",
-      "hidaka.hokkaido.jp",
-      "higashikagura.hokkaido.jp",
-      "higashikawa.hokkaido.jp",
-      "hiroo.hokkaido.jp",
-      "hokuryu.hokkaido.jp",
-      "hokuto.hokkaido.jp",
-      "honbetsu.hokkaido.jp",
-      "horokanai.hokkaido.jp",
-      "horonobe.hokkaido.jp",
-      "ikeda.hokkaido.jp",
-      "imakane.hokkaido.jp",
-      "ishikari.hokkaido.jp",
-      "iwamizawa.hokkaido.jp",
-      "iwanai.hokkaido.jp",
-      "kamifurano.hokkaido.jp",
-      "kamikawa.hokkaido.jp",
-      "kamishihoro.hokkaido.jp",
-      "kamisunagawa.hokkaido.jp",
-      "kamoenai.hokkaido.jp",
-      "kayabe.hokkaido.jp",
-      "kembuchi.hokkaido.jp",
-      "kikonai.hokkaido.jp",
-      "kimobetsu.hokkaido.jp",
-      "kitahiroshima.hokkaido.jp",
-      "kitami.hokkaido.jp",
-      "kiyosato.hokkaido.jp",
-      "koshimizu.hokkaido.jp",
-      "kunneppu.hokkaido.jp",
-      "kuriyama.hokkaido.jp",
-      "kuromatsunai.hokkaido.jp",
-      "kushiro.hokkaido.jp",
-      "kutchan.hokkaido.jp",
-      "kyowa.hokkaido.jp",
-      "mashike.hokkaido.jp",
-      "matsumae.hokkaido.jp",
-      "mikasa.hokkaido.jp",
-      "minamifurano.hokkaido.jp",
-      "mombetsu.hokkaido.jp",
-      "moseushi.hokkaido.jp",
-      "mukawa.hokkaido.jp",
-      "muroran.hokkaido.jp",
-      "naie.hokkaido.jp",
-      "nakagawa.hokkaido.jp",
-      "nakasatsunai.hokkaido.jp",
-      "nakatombetsu.hokkaido.jp",
-      "nanae.hokkaido.jp",
-      "nanporo.hokkaido.jp",
-      "nayoro.hokkaido.jp",
-      "nemuro.hokkaido.jp",
-      "niikappu.hokkaido.jp",
-      "niki.hokkaido.jp",
-      "nishiokoppe.hokkaido.jp",
-      "noboribetsu.hokkaido.jp",
-      "numata.hokkaido.jp",
-      "obihiro.hokkaido.jp",
-      "obira.hokkaido.jp",
-      "oketo.hokkaido.jp",
-      "okoppe.hokkaido.jp",
-      "otaru.hokkaido.jp",
-      "otobe.hokkaido.jp",
-      "otofuke.hokkaido.jp",
-      "otoineppu.hokkaido.jp",
-      "oumu.hokkaido.jp",
-      "ozora.hokkaido.jp",
-      "pippu.hokkaido.jp",
-      "rankoshi.hokkaido.jp",
-      "rebun.hokkaido.jp",
-      "rikubetsu.hokkaido.jp",
-      "rishiri.hokkaido.jp",
-      "rishirifuji.hokkaido.jp",
-      "saroma.hokkaido.jp",
-      "sarufutsu.hokkaido.jp",
-      "shakotan.hokkaido.jp",
-      "shari.hokkaido.jp",
-      "shibecha.hokkaido.jp",
-      "shibetsu.hokkaido.jp",
-      "shikabe.hokkaido.jp",
-      "shikaoi.hokkaido.jp",
-      "shimamaki.hokkaido.jp",
-      "shimizu.hokkaido.jp",
-      "shimokawa.hokkaido.jp",
-      "shinshinotsu.hokkaido.jp",
-      "shintoku.hokkaido.jp",
-      "shiranuka.hokkaido.jp",
-      "shiraoi.hokkaido.jp",
-      "shiriuchi.hokkaido.jp",
-      "sobetsu.hokkaido.jp",
-      "sunagawa.hokkaido.jp",
-      "taiki.hokkaido.jp",
-      "takasu.hokkaido.jp",
-      "takikawa.hokkaido.jp",
-      "takinoue.hokkaido.jp",
-      "teshikaga.hokkaido.jp",
-      "tobetsu.hokkaido.jp",
-      "tohma.hokkaido.jp",
-      "tomakomai.hokkaido.jp",
-      "tomari.hokkaido.jp",
-      "toya.hokkaido.jp",
-      "toyako.hokkaido.jp",
-      "toyotomi.hokkaido.jp",
-      "toyoura.hokkaido.jp",
-      "tsubetsu.hokkaido.jp",
-      "tsukigata.hokkaido.jp",
-      "urakawa.hokkaido.jp",
-      "urausu.hokkaido.jp",
-      "uryu.hokkaido.jp",
-      "utashinai.hokkaido.jp",
-      "wakkanai.hokkaido.jp",
-      "wassamu.hokkaido.jp",
-      "yakumo.hokkaido.jp",
-      "yoichi.hokkaido.jp",
-      "aioi.hyogo.jp",
-      "akashi.hyogo.jp",
-      "ako.hyogo.jp",
-      "amagasaki.hyogo.jp",
-      "aogaki.hyogo.jp",
-      "asago.hyogo.jp",
-      "ashiya.hyogo.jp",
-      "awaji.hyogo.jp",
-      "fukusaki.hyogo.jp",
-      "goshiki.hyogo.jp",
-      "harima.hyogo.jp",
-      "himeji.hyogo.jp",
-      "ichikawa.hyogo.jp",
-      "inagawa.hyogo.jp",
-      "itami.hyogo.jp",
-      "kakogawa.hyogo.jp",
-      "kamigori.hyogo.jp",
-      "kamikawa.hyogo.jp",
-      "kasai.hyogo.jp",
-      "kasuga.hyogo.jp",
-      "kawanishi.hyogo.jp",
-      "miki.hyogo.jp",
-      "minamiawaji.hyogo.jp",
-      "nishinomiya.hyogo.jp",
-      "nishiwaki.hyogo.jp",
-      "ono.hyogo.jp",
-      "sanda.hyogo.jp",
-      "sannan.hyogo.jp",
-      "sasayama.hyogo.jp",
-      "sayo.hyogo.jp",
-      "shingu.hyogo.jp",
-      "shinonsen.hyogo.jp",
-      "shiso.hyogo.jp",
-      "sumoto.hyogo.jp",
-      "taishi.hyogo.jp",
-      "taka.hyogo.jp",
-      "takarazuka.hyogo.jp",
-      "takasago.hyogo.jp",
-      "takino.hyogo.jp",
-      "tamba.hyogo.jp",
-      "tatsuno.hyogo.jp",
-      "toyooka.hyogo.jp",
-      "yabu.hyogo.jp",
-      "yashiro.hyogo.jp",
-      "yoka.hyogo.jp",
-      "yokawa.hyogo.jp",
-      "ami.ibaraki.jp",
-      "asahi.ibaraki.jp",
-      "bando.ibaraki.jp",
-      "chikusei.ibaraki.jp",
-      "daigo.ibaraki.jp",
-      "fujishiro.ibaraki.jp",
-      "hitachi.ibaraki.jp",
-      "hitachinaka.ibaraki.jp",
-      "hitachiomiya.ibaraki.jp",
-      "hitachiota.ibaraki.jp",
-      "ibaraki.ibaraki.jp",
-      "ina.ibaraki.jp",
-      "inashiki.ibaraki.jp",
-      "itako.ibaraki.jp",
-      "iwama.ibaraki.jp",
-      "joso.ibaraki.jp",
-      "kamisu.ibaraki.jp",
-      "kasama.ibaraki.jp",
-      "kashima.ibaraki.jp",
-      "kasumigaura.ibaraki.jp",
-      "koga.ibaraki.jp",
-      "miho.ibaraki.jp",
-      "mito.ibaraki.jp",
-      "moriya.ibaraki.jp",
-      "naka.ibaraki.jp",
-      "namegata.ibaraki.jp",
-      "oarai.ibaraki.jp",
-      "ogawa.ibaraki.jp",
-      "omitama.ibaraki.jp",
-      "ryugasaki.ibaraki.jp",
-      "sakai.ibaraki.jp",
-      "sakuragawa.ibaraki.jp",
-      "shimodate.ibaraki.jp",
-      "shimotsuma.ibaraki.jp",
-      "shirosato.ibaraki.jp",
-      "sowa.ibaraki.jp",
-      "suifu.ibaraki.jp",
-      "takahagi.ibaraki.jp",
-      "tamatsukuri.ibaraki.jp",
-      "tokai.ibaraki.jp",
-      "tomobe.ibaraki.jp",
-      "tone.ibaraki.jp",
-      "toride.ibaraki.jp",
-      "tsuchiura.ibaraki.jp",
-      "tsukuba.ibaraki.jp",
-      "uchihara.ibaraki.jp",
-      "ushiku.ibaraki.jp",
-      "yachiyo.ibaraki.jp",
-      "yamagata.ibaraki.jp",
-      "yawara.ibaraki.jp",
-      "yuki.ibaraki.jp",
-      "anamizu.ishikawa.jp",
-      "hakui.ishikawa.jp",
-      "hakusan.ishikawa.jp",
-      "kaga.ishikawa.jp",
-      "kahoku.ishikawa.jp",
-      "kanazawa.ishikawa.jp",
-      "kawakita.ishikawa.jp",
-      "komatsu.ishikawa.jp",
-      "nakanoto.ishikawa.jp",
-      "nanao.ishikawa.jp",
-      "nomi.ishikawa.jp",
-      "nonoichi.ishikawa.jp",
-      "noto.ishikawa.jp",
-      "shika.ishikawa.jp",
-      "suzu.ishikawa.jp",
-      "tsubata.ishikawa.jp",
-      "tsurugi.ishikawa.jp",
-      "uchinada.ishikawa.jp",
-      "wajima.ishikawa.jp",
-      "fudai.iwate.jp",
-      "fujisawa.iwate.jp",
-      "hanamaki.iwate.jp",
-      "hiraizumi.iwate.jp",
-      "hirono.iwate.jp",
-      "ichinohe.iwate.jp",
-      "ichinoseki.iwate.jp",
-      "iwaizumi.iwate.jp",
-      "iwate.iwate.jp",
-      "joboji.iwate.jp",
-      "kamaishi.iwate.jp",
-      "kanegasaki.iwate.jp",
-      "karumai.iwate.jp",
-      "kawai.iwate.jp",
-      "kitakami.iwate.jp",
-      "kuji.iwate.jp",
-      "kunohe.iwate.jp",
-      "kuzumaki.iwate.jp",
-      "miyako.iwate.jp",
-      "mizusawa.iwate.jp",
-      "morioka.iwate.jp",
-      "ninohe.iwate.jp",
-      "noda.iwate.jp",
-      "ofunato.iwate.jp",
-      "oshu.iwate.jp",
-      "otsuchi.iwate.jp",
-      "rikuzentakata.iwate.jp",
-      "shiwa.iwate.jp",
-      "shizukuishi.iwate.jp",
-      "sumita.iwate.jp",
-      "tanohata.iwate.jp",
-      "tono.iwate.jp",
-      "yahaba.iwate.jp",
-      "yamada.iwate.jp",
-      "ayagawa.kagawa.jp",
-      "higashikagawa.kagawa.jp",
-      "kanonji.kagawa.jp",
-      "kotohira.kagawa.jp",
-      "manno.kagawa.jp",
-      "marugame.kagawa.jp",
-      "mitoyo.kagawa.jp",
-      "naoshima.kagawa.jp",
-      "sanuki.kagawa.jp",
-      "tadotsu.kagawa.jp",
-      "takamatsu.kagawa.jp",
-      "tonosho.kagawa.jp",
-      "uchinomi.kagawa.jp",
-      "utazu.kagawa.jp",
-      "zentsuji.kagawa.jp",
-      "akune.kagoshima.jp",
-      "amami.kagoshima.jp",
-      "hioki.kagoshima.jp",
-      "isa.kagoshima.jp",
-      "isen.kagoshima.jp",
-      "izumi.kagoshima.jp",
-      "kagoshima.kagoshima.jp",
-      "kanoya.kagoshima.jp",
-      "kawanabe.kagoshima.jp",
-      "kinko.kagoshima.jp",
-      "kouyama.kagoshima.jp",
-      "makurazaki.kagoshima.jp",
-      "matsumoto.kagoshima.jp",
-      "minamitane.kagoshima.jp",
-      "nakatane.kagoshima.jp",
-      "nishinoomote.kagoshima.jp",
-      "satsumasendai.kagoshima.jp",
-      "soo.kagoshima.jp",
-      "tarumizu.kagoshima.jp",
-      "yusui.kagoshima.jp",
-      "aikawa.kanagawa.jp",
-      "atsugi.kanagawa.jp",
-      "ayase.kanagawa.jp",
-      "chigasaki.kanagawa.jp",
-      "ebina.kanagawa.jp",
-      "fujisawa.kanagawa.jp",
-      "hadano.kanagawa.jp",
-      "hakone.kanagawa.jp",
-      "hiratsuka.kanagawa.jp",
-      "isehara.kanagawa.jp",
-      "kaisei.kanagawa.jp",
-      "kamakura.kanagawa.jp",
-      "kiyokawa.kanagawa.jp",
-      "matsuda.kanagawa.jp",
-      "minamiashigara.kanagawa.jp",
-      "miura.kanagawa.jp",
-      "nakai.kanagawa.jp",
-      "ninomiya.kanagawa.jp",
-      "odawara.kanagawa.jp",
-      "oi.kanagawa.jp",
-      "oiso.kanagawa.jp",
-      "sagamihara.kanagawa.jp",
-      "samukawa.kanagawa.jp",
-      "tsukui.kanagawa.jp",
-      "yamakita.kanagawa.jp",
-      "yamato.kanagawa.jp",
-      "yokosuka.kanagawa.jp",
-      "yugawara.kanagawa.jp",
-      "zama.kanagawa.jp",
-      "zushi.kanagawa.jp",
-      "aki.kochi.jp",
-      "geisei.kochi.jp",
-      "hidaka.kochi.jp",
-      "higashitsuno.kochi.jp",
-      "ino.kochi.jp",
-      "kagami.kochi.jp",
-      "kami.kochi.jp",
-      "kitagawa.kochi.jp",
-      "kochi.kochi.jp",
-      "mihara.kochi.jp",
-      "motoyama.kochi.jp",
-      "muroto.kochi.jp",
-      "nahari.kochi.jp",
-      "nakamura.kochi.jp",
-      "nankoku.kochi.jp",
-      "nishitosa.kochi.jp",
-      "niyodogawa.kochi.jp",
-      "ochi.kochi.jp",
-      "okawa.kochi.jp",
-      "otoyo.kochi.jp",
-      "otsuki.kochi.jp",
-      "sakawa.kochi.jp",
-      "sukumo.kochi.jp",
-      "susaki.kochi.jp",
-      "tosa.kochi.jp",
-      "tosashimizu.kochi.jp",
-      "toyo.kochi.jp",
-      "tsuno.kochi.jp",
-      "umaji.kochi.jp",
-      "yasuda.kochi.jp",
-      "yusuhara.kochi.jp",
-      "amakusa.kumamoto.jp",
-      "arao.kumamoto.jp",
-      "aso.kumamoto.jp",
-      "choyo.kumamoto.jp",
-      "gyokuto.kumamoto.jp",
-      "kamiamakusa.kumamoto.jp",
-      "kikuchi.kumamoto.jp",
-      "kumamoto.kumamoto.jp",
-      "mashiki.kumamoto.jp",
-      "mifune.kumamoto.jp",
-      "minamata.kumamoto.jp",
-      "minamioguni.kumamoto.jp",
-      "nagasu.kumamoto.jp",
-      "nishihara.kumamoto.jp",
-      "oguni.kumamoto.jp",
-      "ozu.kumamoto.jp",
-      "sumoto.kumamoto.jp",
-      "takamori.kumamoto.jp",
-      "uki.kumamoto.jp",
-      "uto.kumamoto.jp",
-      "yamaga.kumamoto.jp",
-      "yamato.kumamoto.jp",
-      "yatsushiro.kumamoto.jp",
-      "ayabe.kyoto.jp",
-      "fukuchiyama.kyoto.jp",
-      "higashiyama.kyoto.jp",
-      "ide.kyoto.jp",
-      "ine.kyoto.jp",
-      "joyo.kyoto.jp",
-      "kameoka.kyoto.jp",
-      "kamo.kyoto.jp",
-      "kita.kyoto.jp",
-      "kizu.kyoto.jp",
-      "kumiyama.kyoto.jp",
-      "kyotamba.kyoto.jp",
-      "kyotanabe.kyoto.jp",
-      "kyotango.kyoto.jp",
-      "maizuru.kyoto.jp",
-      "minami.kyoto.jp",
-      "minamiyamashiro.kyoto.jp",
-      "miyazu.kyoto.jp",
-      "muko.kyoto.jp",
-      "nagaokakyo.kyoto.jp",
-      "nakagyo.kyoto.jp",
-      "nantan.kyoto.jp",
-      "oyamazaki.kyoto.jp",
-      "sakyo.kyoto.jp",
-      "seika.kyoto.jp",
-      "tanabe.kyoto.jp",
-      "uji.kyoto.jp",
-      "ujitawara.kyoto.jp",
-      "wazuka.kyoto.jp",
-      "yamashina.kyoto.jp",
-      "yawata.kyoto.jp",
-      "asahi.mie.jp",
-      "inabe.mie.jp",
-      "ise.mie.jp",
-      "kameyama.mie.jp",
-      "kawagoe.mie.jp",
-      "kiho.mie.jp",
-      "kisosaki.mie.jp",
-      "kiwa.mie.jp",
-      "komono.mie.jp",
-      "kumano.mie.jp",
-      "kuwana.mie.jp",
-      "matsusaka.mie.jp",
-      "meiwa.mie.jp",
-      "mihama.mie.jp",
-      "minamiise.mie.jp",
-      "misugi.mie.jp",
-      "miyama.mie.jp",
-      "nabari.mie.jp",
-      "shima.mie.jp",
-      "suzuka.mie.jp",
-      "tado.mie.jp",
-      "taiki.mie.jp",
-      "taki.mie.jp",
-      "tamaki.mie.jp",
-      "toba.mie.jp",
-      "tsu.mie.jp",
-      "udono.mie.jp",
-      "ureshino.mie.jp",
-      "watarai.mie.jp",
-      "yokkaichi.mie.jp",
-      "furukawa.miyagi.jp",
-      "higashimatsushima.miyagi.jp",
-      "ishinomaki.miyagi.jp",
-      "iwanuma.miyagi.jp",
-      "kakuda.miyagi.jp",
-      "kami.miyagi.jp",
-      "kawasaki.miyagi.jp",
-      "marumori.miyagi.jp",
-      "matsushima.miyagi.jp",
-      "minamisanriku.miyagi.jp",
-      "misato.miyagi.jp",
-      "murata.miyagi.jp",
-      "natori.miyagi.jp",
-      "ogawara.miyagi.jp",
-      "ohira.miyagi.jp",
-      "onagawa.miyagi.jp",
-      "osaki.miyagi.jp",
-      "rifu.miyagi.jp",
-      "semine.miyagi.jp",
-      "shibata.miyagi.jp",
-      "shichikashuku.miyagi.jp",
-      "shikama.miyagi.jp",
-      "shiogama.miyagi.jp",
-      "shiroishi.miyagi.jp",
-      "tagajo.miyagi.jp",
-      "taiwa.miyagi.jp",
-      "tome.miyagi.jp",
-      "tomiya.miyagi.jp",
-      "wakuya.miyagi.jp",
-      "watari.miyagi.jp",
-      "yamamoto.miyagi.jp",
-      "zao.miyagi.jp",
-      "aya.miyazaki.jp",
-      "ebino.miyazaki.jp",
-      "gokase.miyazaki.jp",
-      "hyuga.miyazaki.jp",
-      "kadogawa.miyazaki.jp",
-      "kawaminami.miyazaki.jp",
-      "kijo.miyazaki.jp",
-      "kitagawa.miyazaki.jp",
-      "kitakata.miyazaki.jp",
-      "kitaura.miyazaki.jp",
-      "kobayashi.miyazaki.jp",
-      "kunitomi.miyazaki.jp",
-      "kushima.miyazaki.jp",
-      "mimata.miyazaki.jp",
-      "miyakonojo.miyazaki.jp",
-      "miyazaki.miyazaki.jp",
-      "morotsuka.miyazaki.jp",
-      "nichinan.miyazaki.jp",
-      "nishimera.miyazaki.jp",
-      "nobeoka.miyazaki.jp",
-      "saito.miyazaki.jp",
-      "shiiba.miyazaki.jp",
-      "shintomi.miyazaki.jp",
-      "takaharu.miyazaki.jp",
-      "takanabe.miyazaki.jp",
-      "takazaki.miyazaki.jp",
-      "tsuno.miyazaki.jp",
-      "achi.nagano.jp",
-      "agematsu.nagano.jp",
-      "anan.nagano.jp",
-      "aoki.nagano.jp",
-      "asahi.nagano.jp",
-      "azumino.nagano.jp",
-      "chikuhoku.nagano.jp",
-      "chikuma.nagano.jp",
-      "chino.nagano.jp",
-      "fujimi.nagano.jp",
-      "hakuba.nagano.jp",
-      "hara.nagano.jp",
-      "hiraya.nagano.jp",
-      "iida.nagano.jp",
-      "iijima.nagano.jp",
-      "iiyama.nagano.jp",
-      "iizuna.nagano.jp",
-      "ikeda.nagano.jp",
-      "ikusaka.nagano.jp",
-      "ina.nagano.jp",
-      "karuizawa.nagano.jp",
-      "kawakami.nagano.jp",
-      "kiso.nagano.jp",
-      "kisofukushima.nagano.jp",
-      "kitaaiki.nagano.jp",
-      "komagane.nagano.jp",
-      "komoro.nagano.jp",
-      "matsukawa.nagano.jp",
-      "matsumoto.nagano.jp",
-      "miasa.nagano.jp",
-      "minamiaiki.nagano.jp",
-      "minamimaki.nagano.jp",
-      "minamiminowa.nagano.jp",
-      "minowa.nagano.jp",
-      "miyada.nagano.jp",
-      "miyota.nagano.jp",
-      "mochizuki.nagano.jp",
-      "nagano.nagano.jp",
-      "nagawa.nagano.jp",
-      "nagiso.nagano.jp",
-      "nakagawa.nagano.jp",
-      "nakano.nagano.jp",
-      "nozawaonsen.nagano.jp",
-      "obuse.nagano.jp",
-      "ogawa.nagano.jp",
-      "okaya.nagano.jp",
-      "omachi.nagano.jp",
-      "omi.nagano.jp",
-      "ookuwa.nagano.jp",
-      "ooshika.nagano.jp",
-      "otaki.nagano.jp",
-      "otari.nagano.jp",
-      "sakae.nagano.jp",
-      "sakaki.nagano.jp",
-      "saku.nagano.jp",
-      "sakuho.nagano.jp",
-      "shimosuwa.nagano.jp",
-      "shinanomachi.nagano.jp",
-      "shiojiri.nagano.jp",
-      "suwa.nagano.jp",
-      "suzaka.nagano.jp",
-      "takagi.nagano.jp",
-      "takamori.nagano.jp",
-      "takayama.nagano.jp",
-      "tateshina.nagano.jp",
-      "tatsuno.nagano.jp",
-      "togakushi.nagano.jp",
-      "togura.nagano.jp",
-      "tomi.nagano.jp",
-      "ueda.nagano.jp",
-      "wada.nagano.jp",
-      "yamagata.nagano.jp",
-      "yamanouchi.nagano.jp",
-      "yasaka.nagano.jp",
-      "yasuoka.nagano.jp",
-      "chijiwa.nagasaki.jp",
-      "futsu.nagasaki.jp",
-      "goto.nagasaki.jp",
-      "hasami.nagasaki.jp",
-      "hirado.nagasaki.jp",
-      "iki.nagasaki.jp",
-      "isahaya.nagasaki.jp",
-      "kawatana.nagasaki.jp",
-      "kuchinotsu.nagasaki.jp",
-      "matsuura.nagasaki.jp",
-      "nagasaki.nagasaki.jp",
-      "obama.nagasaki.jp",
-      "omura.nagasaki.jp",
-      "oseto.nagasaki.jp",
-      "saikai.nagasaki.jp",
-      "sasebo.nagasaki.jp",
-      "seihi.nagasaki.jp",
-      "shimabara.nagasaki.jp",
-      "shinkamigoto.nagasaki.jp",
-      "togitsu.nagasaki.jp",
-      "tsushima.nagasaki.jp",
-      "unzen.nagasaki.jp",
-      "ando.nara.jp",
-      "gose.nara.jp",
-      "heguri.nara.jp",
-      "higashiyoshino.nara.jp",
-      "ikaruga.nara.jp",
-      "ikoma.nara.jp",
-      "kamikitayama.nara.jp",
-      "kanmaki.nara.jp",
-      "kashiba.nara.jp",
-      "kashihara.nara.jp",
-      "katsuragi.nara.jp",
-      "kawai.nara.jp",
-      "kawakami.nara.jp",
-      "kawanishi.nara.jp",
-      "koryo.nara.jp",
-      "kurotaki.nara.jp",
-      "mitsue.nara.jp",
-      "miyake.nara.jp",
-      "nara.nara.jp",
-      "nosegawa.nara.jp",
-      "oji.nara.jp",
-      "ouda.nara.jp",
-      "oyodo.nara.jp",
-      "sakurai.nara.jp",
-      "sango.nara.jp",
-      "shimoichi.nara.jp",
-      "shimokitayama.nara.jp",
-      "shinjo.nara.jp",
-      "soni.nara.jp",
-      "takatori.nara.jp",
-      "tawaramoto.nara.jp",
-      "tenkawa.nara.jp",
-      "tenri.nara.jp",
-      "uda.nara.jp",
-      "yamatokoriyama.nara.jp",
-      "yamatotakada.nara.jp",
-      "yamazoe.nara.jp",
-      "yoshino.nara.jp",
-      "aga.niigata.jp",
-      "agano.niigata.jp",
-      "gosen.niigata.jp",
-      "itoigawa.niigata.jp",
-      "izumozaki.niigata.jp",
-      "joetsu.niigata.jp",
-      "kamo.niigata.jp",
-      "kariwa.niigata.jp",
-      "kashiwazaki.niigata.jp",
-      "minamiuonuma.niigata.jp",
-      "mitsuke.niigata.jp",
-      "muika.niigata.jp",
-      "murakami.niigata.jp",
-      "myoko.niigata.jp",
-      "nagaoka.niigata.jp",
-      "niigata.niigata.jp",
-      "ojiya.niigata.jp",
-      "omi.niigata.jp",
-      "sado.niigata.jp",
-      "sanjo.niigata.jp",
-      "seiro.niigata.jp",
-      "seirou.niigata.jp",
-      "sekikawa.niigata.jp",
-      "shibata.niigata.jp",
-      "tagami.niigata.jp",
-      "tainai.niigata.jp",
-      "tochio.niigata.jp",
-      "tokamachi.niigata.jp",
-      "tsubame.niigata.jp",
-      "tsunan.niigata.jp",
-      "uonuma.niigata.jp",
-      "yahiko.niigata.jp",
-      "yoita.niigata.jp",
-      "yuzawa.niigata.jp",
-      "beppu.oita.jp",
-      "bungoono.oita.jp",
-      "bungotakada.oita.jp",
-      "hasama.oita.jp",
-      "hiji.oita.jp",
-      "himeshima.oita.jp",
-      "hita.oita.jp",
-      "kamitsue.oita.jp",
-      "kokonoe.oita.jp",
-      "kuju.oita.jp",
-      "kunisaki.oita.jp",
-      "kusu.oita.jp",
-      "oita.oita.jp",
-      "saiki.oita.jp",
-      "taketa.oita.jp",
-      "tsukumi.oita.jp",
-      "usa.oita.jp",
-      "usuki.oita.jp",
-      "yufu.oita.jp",
-      "akaiwa.okayama.jp",
-      "asakuchi.okayama.jp",
-      "bizen.okayama.jp",
-      "hayashima.okayama.jp",
-      "ibara.okayama.jp",
-      "kagamino.okayama.jp",
-      "kasaoka.okayama.jp",
-      "kibichuo.okayama.jp",
-      "kumenan.okayama.jp",
-      "kurashiki.okayama.jp",
-      "maniwa.okayama.jp",
-      "misaki.okayama.jp",
-      "nagi.okayama.jp",
-      "niimi.okayama.jp",
-      "nishiawakura.okayama.jp",
-      "okayama.okayama.jp",
-      "satosho.okayama.jp",
-      "setouchi.okayama.jp",
-      "shinjo.okayama.jp",
-      "shoo.okayama.jp",
-      "soja.okayama.jp",
-      "takahashi.okayama.jp",
-      "tamano.okayama.jp",
-      "tsuyama.okayama.jp",
-      "wake.okayama.jp",
-      "yakage.okayama.jp",
-      "aguni.okinawa.jp",
-      "ginowan.okinawa.jp",
-      "ginoza.okinawa.jp",
-      "gushikami.okinawa.jp",
-      "haebaru.okinawa.jp",
-      "higashi.okinawa.jp",
-      "hirara.okinawa.jp",
-      "iheya.okinawa.jp",
-      "ishigaki.okinawa.jp",
-      "ishikawa.okinawa.jp",
-      "itoman.okinawa.jp",
-      "izena.okinawa.jp",
-      "kadena.okinawa.jp",
-      "kin.okinawa.jp",
-      "kitadaito.okinawa.jp",
-      "kitanakagusuku.okinawa.jp",
-      "kumejima.okinawa.jp",
-      "kunigami.okinawa.jp",
-      "minamidaito.okinawa.jp",
-      "motobu.okinawa.jp",
-      "nago.okinawa.jp",
-      "naha.okinawa.jp",
-      "nakagusuku.okinawa.jp",
-      "nakijin.okinawa.jp",
-      "nanjo.okinawa.jp",
-      "nishihara.okinawa.jp",
-      "ogimi.okinawa.jp",
-      "okinawa.okinawa.jp",
-      "onna.okinawa.jp",
-      "shimoji.okinawa.jp",
-      "taketomi.okinawa.jp",
-      "tarama.okinawa.jp",
-      "tokashiki.okinawa.jp",
-      "tomigusuku.okinawa.jp",
-      "tonaki.okinawa.jp",
-      "urasoe.okinawa.jp",
-      "uruma.okinawa.jp",
-      "yaese.okinawa.jp",
-      "yomitan.okinawa.jp",
-      "yonabaru.okinawa.jp",
-      "yonaguni.okinawa.jp",
-      "zamami.okinawa.jp",
-      "abeno.osaka.jp",
-      "chihayaakasaka.osaka.jp",
-      "chuo.osaka.jp",
-      "daito.osaka.jp",
-      "fujiidera.osaka.jp",
-      "habikino.osaka.jp",
-      "hannan.osaka.jp",
-      "higashiosaka.osaka.jp",
-      "higashisumiyoshi.osaka.jp",
-      "higashiyodogawa.osaka.jp",
-      "hirakata.osaka.jp",
-      "ibaraki.osaka.jp",
-      "ikeda.osaka.jp",
-      "izumi.osaka.jp",
-      "izumiotsu.osaka.jp",
-      "izumisano.osaka.jp",
-      "kadoma.osaka.jp",
-      "kaizuka.osaka.jp",
-      "kanan.osaka.jp",
-      "kashiwara.osaka.jp",
-      "katano.osaka.jp",
-      "kawachinagano.osaka.jp",
-      "kishiwada.osaka.jp",
-      "kita.osaka.jp",
-      "kumatori.osaka.jp",
-      "matsubara.osaka.jp",
-      "minato.osaka.jp",
-      "minoh.osaka.jp",
-      "misaki.osaka.jp",
-      "moriguchi.osaka.jp",
-      "neyagawa.osaka.jp",
-      "nishi.osaka.jp",
-      "nose.osaka.jp",
-      "osakasayama.osaka.jp",
-      "sakai.osaka.jp",
-      "sayama.osaka.jp",
-      "sennan.osaka.jp",
-      "settsu.osaka.jp",
-      "shijonawate.osaka.jp",
-      "shimamoto.osaka.jp",
-      "suita.osaka.jp",
-      "tadaoka.osaka.jp",
-      "taishi.osaka.jp",
-      "tajiri.osaka.jp",
-      "takaishi.osaka.jp",
-      "takatsuki.osaka.jp",
-      "tondabayashi.osaka.jp",
-      "toyonaka.osaka.jp",
-      "toyono.osaka.jp",
-      "yao.osaka.jp",
-      "ariake.saga.jp",
-      "arita.saga.jp",
-      "fukudomi.saga.jp",
-      "genkai.saga.jp",
-      "hamatama.saga.jp",
-      "hizen.saga.jp",
-      "imari.saga.jp",
-      "kamimine.saga.jp",
-      "kanzaki.saga.jp",
-      "karatsu.saga.jp",
-      "kashima.saga.jp",
-      "kitagata.saga.jp",
-      "kitahata.saga.jp",
-      "kiyama.saga.jp",
-      "kouhoku.saga.jp",
-      "kyuragi.saga.jp",
-      "nishiarita.saga.jp",
-      "ogi.saga.jp",
-      "omachi.saga.jp",
-      "ouchi.saga.jp",
-      "saga.saga.jp",
-      "shiroishi.saga.jp",
-      "taku.saga.jp",
-      "tara.saga.jp",
-      "tosu.saga.jp",
-      "yoshinogari.saga.jp",
-      "arakawa.saitama.jp",
-      "asaka.saitama.jp",
-      "chichibu.saitama.jp",
-      "fujimi.saitama.jp",
-      "fujimino.saitama.jp",
-      "fukaya.saitama.jp",
-      "hanno.saitama.jp",
-      "hanyu.saitama.jp",
-      "hasuda.saitama.jp",
-      "hatogaya.saitama.jp",
-      "hatoyama.saitama.jp",
-      "hidaka.saitama.jp",
-      "higashichichibu.saitama.jp",
-      "higashimatsuyama.saitama.jp",
-      "honjo.saitama.jp",
-      "ina.saitama.jp",
-      "iruma.saitama.jp",
-      "iwatsuki.saitama.jp",
-      "kamiizumi.saitama.jp",
-      "kamikawa.saitama.jp",
-      "kamisato.saitama.jp",
-      "kasukabe.saitama.jp",
-      "kawagoe.saitama.jp",
-      "kawaguchi.saitama.jp",
-      "kawajima.saitama.jp",
-      "kazo.saitama.jp",
-      "kitamoto.saitama.jp",
-      "koshigaya.saitama.jp",
-      "kounosu.saitama.jp",
-      "kuki.saitama.jp",
-      "kumagaya.saitama.jp",
-      "matsubushi.saitama.jp",
-      "minano.saitama.jp",
-      "misato.saitama.jp",
-      "miyashiro.saitama.jp",
-      "miyoshi.saitama.jp",
-      "moroyama.saitama.jp",
-      "nagatoro.saitama.jp",
-      "namegawa.saitama.jp",
-      "niiza.saitama.jp",
-      "ogano.saitama.jp",
-      "ogawa.saitama.jp",
-      "ogose.saitama.jp",
-      "okegawa.saitama.jp",
-      "omiya.saitama.jp",
-      "otaki.saitama.jp",
-      "ranzan.saitama.jp",
-      "ryokami.saitama.jp",
-      "saitama.saitama.jp",
-      "sakado.saitama.jp",
-      "satte.saitama.jp",
-      "sayama.saitama.jp",
-      "shiki.saitama.jp",
-      "shiraoka.saitama.jp",
-      "soka.saitama.jp",
-      "sugito.saitama.jp",
-      "toda.saitama.jp",
-      "tokigawa.saitama.jp",
-      "tokorozawa.saitama.jp",
-      "tsurugashima.saitama.jp",
-      "urawa.saitama.jp",
-      "warabi.saitama.jp",
-      "yashio.saitama.jp",
-      "yokoze.saitama.jp",
-      "yono.saitama.jp",
-      "yorii.saitama.jp",
-      "yoshida.saitama.jp",
-      "yoshikawa.saitama.jp",
-      "yoshimi.saitama.jp",
-      "aisho.shiga.jp",
-      "gamo.shiga.jp",
-      "higashiomi.shiga.jp",
-      "hikone.shiga.jp",
-      "koka.shiga.jp",
-      "konan.shiga.jp",
-      "kosei.shiga.jp",
-      "koto.shiga.jp",
-      "kusatsu.shiga.jp",
-      "maibara.shiga.jp",
-      "moriyama.shiga.jp",
-      "nagahama.shiga.jp",
-      "nishiazai.shiga.jp",
-      "notogawa.shiga.jp",
-      "omihachiman.shiga.jp",
-      "otsu.shiga.jp",
-      "ritto.shiga.jp",
-      "ryuoh.shiga.jp",
-      "takashima.shiga.jp",
-      "takatsuki.shiga.jp",
-      "torahime.shiga.jp",
-      "toyosato.shiga.jp",
-      "yasu.shiga.jp",
-      "akagi.shimane.jp",
-      "ama.shimane.jp",
-      "gotsu.shimane.jp",
-      "hamada.shimane.jp",
-      "higashiizumo.shimane.jp",
-      "hikawa.shimane.jp",
-      "hikimi.shimane.jp",
-      "izumo.shimane.jp",
-      "kakinoki.shimane.jp",
-      "masuda.shimane.jp",
-      "matsue.shimane.jp",
-      "misato.shimane.jp",
-      "nishinoshima.shimane.jp",
-      "ohda.shimane.jp",
-      "okinoshima.shimane.jp",
-      "okuizumo.shimane.jp",
-      "shimane.shimane.jp",
-      "tamayu.shimane.jp",
-      "tsuwano.shimane.jp",
-      "unnan.shimane.jp",
-      "yakumo.shimane.jp",
-      "yasugi.shimane.jp",
-      "yatsuka.shimane.jp",
-      "arai.shizuoka.jp",
-      "atami.shizuoka.jp",
-      "fuji.shizuoka.jp",
-      "fujieda.shizuoka.jp",
-      "fujikawa.shizuoka.jp",
-      "fujinomiya.shizuoka.jp",
-      "fukuroi.shizuoka.jp",
-      "gotemba.shizuoka.jp",
-      "haibara.shizuoka.jp",
-      "hamamatsu.shizuoka.jp",
-      "higashiizu.shizuoka.jp",
-      "ito.shizuoka.jp",
-      "iwata.shizuoka.jp",
-      "izu.shizuoka.jp",
-      "izunokuni.shizuoka.jp",
-      "kakegawa.shizuoka.jp",
-      "kannami.shizuoka.jp",
-      "kawanehon.shizuoka.jp",
-      "kawazu.shizuoka.jp",
-      "kikugawa.shizuoka.jp",
-      "kosai.shizuoka.jp",
-      "makinohara.shizuoka.jp",
-      "matsuzaki.shizuoka.jp",
-      "minamiizu.shizuoka.jp",
-      "mishima.shizuoka.jp",
-      "morimachi.shizuoka.jp",
-      "nishiizu.shizuoka.jp",
-      "numazu.shizuoka.jp",
-      "omaezaki.shizuoka.jp",
-      "shimada.shizuoka.jp",
-      "shimizu.shizuoka.jp",
-      "shimoda.shizuoka.jp",
-      "shizuoka.shizuoka.jp",
-      "susono.shizuoka.jp",
-      "yaizu.shizuoka.jp",
-      "yoshida.shizuoka.jp",
-      "ashikaga.tochigi.jp",
-      "bato.tochigi.jp",
-      "haga.tochigi.jp",
-      "ichikai.tochigi.jp",
-      "iwafune.tochigi.jp",
-      "kaminokawa.tochigi.jp",
-      "kanuma.tochigi.jp",
-      "karasuyama.tochigi.jp",
-      "kuroiso.tochigi.jp",
-      "mashiko.tochigi.jp",
-      "mibu.tochigi.jp",
-      "moka.tochigi.jp",
-      "motegi.tochigi.jp",
-      "nasu.tochigi.jp",
-      "nasushiobara.tochigi.jp",
-      "nikko.tochigi.jp",
-      "nishikata.tochigi.jp",
-      "nogi.tochigi.jp",
-      "ohira.tochigi.jp",
-      "ohtawara.tochigi.jp",
-      "oyama.tochigi.jp",
-      "sakura.tochigi.jp",
-      "sano.tochigi.jp",
-      "shimotsuke.tochigi.jp",
-      "shioya.tochigi.jp",
-      "takanezawa.tochigi.jp",
-      "tochigi.tochigi.jp",
-      "tsuga.tochigi.jp",
-      "ujiie.tochigi.jp",
-      "utsunomiya.tochigi.jp",
-      "yaita.tochigi.jp",
-      "aizumi.tokushima.jp",
-      "anan.tokushima.jp",
-      "ichiba.tokushima.jp",
-      "itano.tokushima.jp",
-      "kainan.tokushima.jp",
-      "komatsushima.tokushima.jp",
-      "matsushige.tokushima.jp",
-      "mima.tokushima.jp",
-      "minami.tokushima.jp",
-      "miyoshi.tokushima.jp",
-      "mugi.tokushima.jp",
-      "nakagawa.tokushima.jp",
-      "naruto.tokushima.jp",
-      "sanagochi.tokushima.jp",
-      "shishikui.tokushima.jp",
-      "tokushima.tokushima.jp",
-      "wajiki.tokushima.jp",
-      "adachi.tokyo.jp",
-      "akiruno.tokyo.jp",
-      "akishima.tokyo.jp",
-      "aogashima.tokyo.jp",
-      "arakawa.tokyo.jp",
-      "bunkyo.tokyo.jp",
-      "chiyoda.tokyo.jp",
-      "chofu.tokyo.jp",
-      "chuo.tokyo.jp",
-      "edogawa.tokyo.jp",
-      "fuchu.tokyo.jp",
-      "fussa.tokyo.jp",
-      "hachijo.tokyo.jp",
-      "hachioji.tokyo.jp",
-      "hamura.tokyo.jp",
-      "higashikurume.tokyo.jp",
-      "higashimurayama.tokyo.jp",
-      "higashiyamato.tokyo.jp",
-      "hino.tokyo.jp",
-      "hinode.tokyo.jp",
-      "hinohara.tokyo.jp",
-      "inagi.tokyo.jp",
-      "itabashi.tokyo.jp",
-      "katsushika.tokyo.jp",
-      "kita.tokyo.jp",
-      "kiyose.tokyo.jp",
-      "kodaira.tokyo.jp",
-      "koganei.tokyo.jp",
-      "kokubunji.tokyo.jp",
-      "komae.tokyo.jp",
-      "koto.tokyo.jp",
-      "kouzushima.tokyo.jp",
-      "kunitachi.tokyo.jp",
-      "machida.tokyo.jp",
-      "meguro.tokyo.jp",
-      "minato.tokyo.jp",
-      "mitaka.tokyo.jp",
-      "mizuho.tokyo.jp",
-      "musashimurayama.tokyo.jp",
-      "musashino.tokyo.jp",
-      "nakano.tokyo.jp",
-      "nerima.tokyo.jp",
-      "ogasawara.tokyo.jp",
-      "okutama.tokyo.jp",
-      "ome.tokyo.jp",
-      "oshima.tokyo.jp",
-      "ota.tokyo.jp",
-      "setagaya.tokyo.jp",
-      "shibuya.tokyo.jp",
-      "shinagawa.tokyo.jp",
-      "shinjuku.tokyo.jp",
-      "suginami.tokyo.jp",
-      "sumida.tokyo.jp",
-      "tachikawa.tokyo.jp",
-      "taito.tokyo.jp",
-      "tama.tokyo.jp",
-      "toshima.tokyo.jp",
-      "chizu.tottori.jp",
-      "hino.tottori.jp",
-      "kawahara.tottori.jp",
-      "koge.tottori.jp",
-      "kotoura.tottori.jp",
-      "misasa.tottori.jp",
-      "nanbu.tottori.jp",
-      "nichinan.tottori.jp",
-      "sakaiminato.tottori.jp",
-      "tottori.tottori.jp",
-      "wakasa.tottori.jp",
-      "yazu.tottori.jp",
-      "yonago.tottori.jp",
-      "asahi.toyama.jp",
-      "fuchu.toyama.jp",
-      "fukumitsu.toyama.jp",
-      "funahashi.toyama.jp",
-      "himi.toyama.jp",
-      "imizu.toyama.jp",
-      "inami.toyama.jp",
-      "johana.toyama.jp",
-      "kamiichi.toyama.jp",
-      "kurobe.toyama.jp",
-      "nakaniikawa.toyama.jp",
-      "namerikawa.toyama.jp",
-      "nanto.toyama.jp",
-      "nyuzen.toyama.jp",
-      "oyabe.toyama.jp",
-      "taira.toyama.jp",
-      "takaoka.toyama.jp",
-      "tateyama.toyama.jp",
-      "toga.toyama.jp",
-      "tonami.toyama.jp",
-      "toyama.toyama.jp",
-      "unazuki.toyama.jp",
-      "uozu.toyama.jp",
-      "yamada.toyama.jp",
-      "arida.wakayama.jp",
-      "aridagawa.wakayama.jp",
-      "gobo.wakayama.jp",
-      "hashimoto.wakayama.jp",
-      "hidaka.wakayama.jp",
-      "hirogawa.wakayama.jp",
-      "inami.wakayama.jp",
-      "iwade.wakayama.jp",
-      "kainan.wakayama.jp",
-      "kamitonda.wakayama.jp",
-      "katsuragi.wakayama.jp",
-      "kimino.wakayama.jp",
-      "kinokawa.wakayama.jp",
-      "kitayama.wakayama.jp",
-      "koya.wakayama.jp",
-      "koza.wakayama.jp",
-      "kozagawa.wakayama.jp",
-      "kudoyama.wakayama.jp",
-      "kushimoto.wakayama.jp",
-      "mihama.wakayama.jp",
-      "misato.wakayama.jp",
-      "nachikatsuura.wakayama.jp",
-      "shingu.wakayama.jp",
-      "shirahama.wakayama.jp",
-      "taiji.wakayama.jp",
-      "tanabe.wakayama.jp",
-      "wakayama.wakayama.jp",
-      "yuasa.wakayama.jp",
-      "yura.wakayama.jp",
-      "asahi.yamagata.jp",
-      "funagata.yamagata.jp",
-      "higashine.yamagata.jp",
-      "iide.yamagata.jp",
-      "kahoku.yamagata.jp",
-      "kaminoyama.yamagata.jp",
-      "kaneyama.yamagata.jp",
-      "kawanishi.yamagata.jp",
-      "mamurogawa.yamagata.jp",
-      "mikawa.yamagata.jp",
-      "murayama.yamagata.jp",
-      "nagai.yamagata.jp",
-      "nakayama.yamagata.jp",
-      "nanyo.yamagata.jp",
-      "nishikawa.yamagata.jp",
-      "obanazawa.yamagata.jp",
-      "oe.yamagata.jp",
-      "oguni.yamagata.jp",
-      "ohkura.yamagata.jp",
-      "oishida.yamagata.jp",
-      "sagae.yamagata.jp",
-      "sakata.yamagata.jp",
-      "sakegawa.yamagata.jp",
-      "shinjo.yamagata.jp",
-      "shirataka.yamagata.jp",
-      "shonai.yamagata.jp",
-      "takahata.yamagata.jp",
-      "tendo.yamagata.jp",
-      "tozawa.yamagata.jp",
-      "tsuruoka.yamagata.jp",
-      "yamagata.yamagata.jp",
-      "yamanobe.yamagata.jp",
-      "yonezawa.yamagata.jp",
-      "yuza.yamagata.jp",
-      "abu.yamaguchi.jp",
-      "hagi.yamaguchi.jp",
-      "hikari.yamaguchi.jp",
-      "hofu.yamaguchi.jp",
-      "iwakuni.yamaguchi.jp",
-      "kudamatsu.yamaguchi.jp",
-      "mitou.yamaguchi.jp",
-      "nagato.yamaguchi.jp",
-      "oshima.yamaguchi.jp",
-      "shimonoseki.yamaguchi.jp",
-      "shunan.yamaguchi.jp",
-      "tabuse.yamaguchi.jp",
-      "tokuyama.yamaguchi.jp",
-      "toyota.yamaguchi.jp",
-      "ube.yamaguchi.jp",
-      "yuu.yamaguchi.jp",
-      "chuo.yamanashi.jp",
-      "doshi.yamanashi.jp",
-      "fuefuki.yamanashi.jp",
-      "fujikawa.yamanashi.jp",
-      "fujikawaguchiko.yamanashi.jp",
-      "fujiyoshida.yamanashi.jp",
-      "hayakawa.yamanashi.jp",
-      "hokuto.yamanashi.jp",
-      "ichikawamisato.yamanashi.jp",
-      "kai.yamanashi.jp",
-      "kofu.yamanashi.jp",
-      "koshu.yamanashi.jp",
-      "kosuge.yamanashi.jp",
-      "minami-alps.yamanashi.jp",
-      "minobu.yamanashi.jp",
-      "nakamichi.yamanashi.jp",
-      "nanbu.yamanashi.jp",
-      "narusawa.yamanashi.jp",
-      "nirasaki.yamanashi.jp",
-      "nishikatsura.yamanashi.jp",
-      "oshino.yamanashi.jp",
-      "otsuki.yamanashi.jp",
-      "showa.yamanashi.jp",
-      "tabayama.yamanashi.jp",
-      "tsuru.yamanashi.jp",
-      "uenohara.yamanashi.jp",
-      "yamanakako.yamanashi.jp",
-      "yamanashi.yamanashi.jp",
-      "ke",
-      "ac.ke",
-      "co.ke",
-      "go.ke",
-      "info.ke",
-      "me.ke",
-      "mobi.ke",
-      "ne.ke",
-      "or.ke",
-      "sc.ke",
-      "kg",
-      "org.kg",
-      "net.kg",
-      "com.kg",
-      "edu.kg",
-      "gov.kg",
-      "mil.kg",
-      "*.kh",
-      "ki",
-      "edu.ki",
-      "biz.ki",
-      "net.ki",
-      "org.ki",
-      "gov.ki",
-      "info.ki",
-      "com.ki",
-      "km",
-      "org.km",
-      "nom.km",
-      "gov.km",
-      "prd.km",
-      "tm.km",
-      "edu.km",
-      "mil.km",
-      "ass.km",
-      "com.km",
-      "coop.km",
-      "asso.km",
-      "presse.km",
-      "medecin.km",
-      "notaires.km",
-      "pharmaciens.km",
-      "veterinaire.km",
-      "gouv.km",
-      "kn",
-      "net.kn",
-      "org.kn",
-      "edu.kn",
-      "gov.kn",
-      "kp",
-      "com.kp",
-      "edu.kp",
-      "gov.kp",
-      "org.kp",
-      "rep.kp",
-      "tra.kp",
-      "kr",
-      "ac.kr",
-      "co.kr",
-      "es.kr",
-      "go.kr",
-      "hs.kr",
-      "kg.kr",
-      "mil.kr",
-      "ms.kr",
-      "ne.kr",
-      "or.kr",
-      "pe.kr",
-      "re.kr",
-      "sc.kr",
-      "busan.kr",
-      "chungbuk.kr",
-      "chungnam.kr",
-      "daegu.kr",
-      "daejeon.kr",
-      "gangwon.kr",
-      "gwangju.kr",
-      "gyeongbuk.kr",
-      "gyeonggi.kr",
-      "gyeongnam.kr",
-      "incheon.kr",
-      "jeju.kr",
-      "jeonbuk.kr",
-      "jeonnam.kr",
-      "seoul.kr",
-      "ulsan.kr",
-      "kw",
-      "com.kw",
-      "edu.kw",
-      "emb.kw",
-      "gov.kw",
-      "ind.kw",
-      "net.kw",
-      "org.kw",
-      "ky",
-      "com.ky",
-      "edu.ky",
-      "net.ky",
-      "org.ky",
-      "kz",
-      "org.kz",
-      "edu.kz",
-      "net.kz",
-      "gov.kz",
-      "mil.kz",
-      "com.kz",
-      "la",
-      "int.la",
-      "net.la",
-      "info.la",
-      "edu.la",
-      "gov.la",
-      "per.la",
-      "com.la",
-      "org.la",
-      "lb",
-      "com.lb",
-      "edu.lb",
-      "gov.lb",
-      "net.lb",
-      "org.lb",
-      "lc",
-      "com.lc",
-      "net.lc",
-      "co.lc",
-      "org.lc",
-      "edu.lc",
-      "gov.lc",
-      "li",
-      "lk",
-      "gov.lk",
-      "sch.lk",
-      "net.lk",
-      "int.lk",
-      "com.lk",
-      "org.lk",
-      "edu.lk",
-      "ngo.lk",
-      "soc.lk",
-      "web.lk",
-      "ltd.lk",
-      "assn.lk",
-      "grp.lk",
-      "hotel.lk",
-      "ac.lk",
-      "lr",
-      "com.lr",
-      "edu.lr",
-      "gov.lr",
-      "org.lr",
-      "net.lr",
-      "ls",
-      "ac.ls",
-      "biz.ls",
-      "co.ls",
-      "edu.ls",
-      "gov.ls",
-      "info.ls",
-      "net.ls",
-      "org.ls",
-      "sc.ls",
-      "lt",
-      "gov.lt",
-      "lu",
-      "lv",
-      "com.lv",
-      "edu.lv",
-      "gov.lv",
-      "org.lv",
-      "mil.lv",
-      "id.lv",
-      "net.lv",
-      "asn.lv",
-      "conf.lv",
-      "ly",
-      "com.ly",
-      "net.ly",
-      "gov.ly",
-      "plc.ly",
-      "edu.ly",
-      "sch.ly",
-      "med.ly",
-      "org.ly",
-      "id.ly",
-      "ma",
-      "co.ma",
-      "net.ma",
-      "gov.ma",
-      "org.ma",
-      "ac.ma",
-      "press.ma",
-      "mc",
-      "tm.mc",
-      "asso.mc",
-      "md",
-      "me",
-      "co.me",
-      "net.me",
-      "org.me",
-      "edu.me",
-      "ac.me",
-      "gov.me",
-      "its.me",
-      "priv.me",
-      "mg",
-      "org.mg",
-      "nom.mg",
-      "gov.mg",
-      "prd.mg",
-      "tm.mg",
-      "edu.mg",
-      "mil.mg",
-      "com.mg",
-      "co.mg",
-      "mh",
-      "mil",
-      "mk",
-      "com.mk",
-      "org.mk",
-      "net.mk",
-      "edu.mk",
-      "gov.mk",
-      "inf.mk",
-      "name.mk",
-      "ml",
-      "com.ml",
-      "edu.ml",
-      "gouv.ml",
-      "gov.ml",
-      "net.ml",
-      "org.ml",
-      "presse.ml",
-      "*.mm",
-      "mn",
-      "gov.mn",
-      "edu.mn",
-      "org.mn",
-      "mo",
-      "com.mo",
-      "net.mo",
-      "org.mo",
-      "edu.mo",
-      "gov.mo",
-      "mobi",
-      "mp",
-      "mq",
-      "mr",
-      "gov.mr",
-      "ms",
-      "com.ms",
-      "edu.ms",
-      "gov.ms",
-      "net.ms",
-      "org.ms",
-      "mt",
-      "com.mt",
-      "edu.mt",
-      "net.mt",
-      "org.mt",
-      "mu",
-      "com.mu",
-      "net.mu",
-      "org.mu",
-      "gov.mu",
-      "ac.mu",
-      "co.mu",
-      "or.mu",
-      "museum",
-      "academy.museum",
-      "agriculture.museum",
-      "air.museum",
-      "airguard.museum",
-      "alabama.museum",
-      "alaska.museum",
-      "amber.museum",
-      "ambulance.museum",
-      "american.museum",
-      "americana.museum",
-      "americanantiques.museum",
-      "americanart.museum",
-      "amsterdam.museum",
-      "and.museum",
-      "annefrank.museum",
-      "anthro.museum",
-      "anthropology.museum",
-      "antiques.museum",
-      "aquarium.museum",
-      "arboretum.museum",
-      "archaeological.museum",
-      "archaeology.museum",
-      "architecture.museum",
-      "art.museum",
-      "artanddesign.museum",
-      "artcenter.museum",
-      "artdeco.museum",
-      "arteducation.museum",
-      "artgallery.museum",
-      "arts.museum",
-      "artsandcrafts.museum",
-      "asmatart.museum",
-      "assassination.museum",
-      "assisi.museum",
-      "association.museum",
-      "astronomy.museum",
-      "atlanta.museum",
-      "austin.museum",
-      "australia.museum",
-      "automotive.museum",
-      "aviation.museum",
-      "axis.museum",
-      "badajoz.museum",
-      "baghdad.museum",
-      "bahn.museum",
-      "bale.museum",
-      "baltimore.museum",
-      "barcelona.museum",
-      "baseball.museum",
-      "basel.museum",
-      "baths.museum",
-      "bauern.museum",
-      "beauxarts.museum",
-      "beeldengeluid.museum",
-      "bellevue.museum",
-      "bergbau.museum",
-      "berkeley.museum",
-      "berlin.museum",
-      "bern.museum",
-      "bible.museum",
-      "bilbao.museum",
-      "bill.museum",
-      "birdart.museum",
-      "birthplace.museum",
-      "bonn.museum",
-      "boston.museum",
-      "botanical.museum",
-      "botanicalgarden.museum",
-      "botanicgarden.museum",
-      "botany.museum",
-      "brandywinevalley.museum",
-      "brasil.museum",
-      "bristol.museum",
-      "british.museum",
-      "britishcolumbia.museum",
-      "broadcast.museum",
-      "brunel.museum",
-      "brussel.museum",
-      "brussels.museum",
-      "bruxelles.museum",
-      "building.museum",
-      "burghof.museum",
-      "bus.museum",
-      "bushey.museum",
-      "cadaques.museum",
-      "california.museum",
-      "cambridge.museum",
-      "can.museum",
-      "canada.museum",
-      "capebreton.museum",
-      "carrier.museum",
-      "cartoonart.museum",
-      "casadelamoneda.museum",
-      "castle.museum",
-      "castres.museum",
-      "celtic.museum",
-      "center.museum",
-      "chattanooga.museum",
-      "cheltenham.museum",
-      "chesapeakebay.museum",
-      "chicago.museum",
-      "children.museum",
-      "childrens.museum",
-      "childrensgarden.museum",
-      "chiropractic.museum",
-      "chocolate.museum",
-      "christiansburg.museum",
-      "cincinnati.museum",
-      "cinema.museum",
-      "circus.museum",
-      "civilisation.museum",
-      "civilization.museum",
-      "civilwar.museum",
-      "clinton.museum",
-      "clock.museum",
-      "coal.museum",
-      "coastaldefence.museum",
-      "cody.museum",
-      "coldwar.museum",
-      "collection.museum",
-      "colonialwilliamsburg.museum",
-      "coloradoplateau.museum",
-      "columbia.museum",
-      "columbus.museum",
-      "communication.museum",
-      "communications.museum",
-      "community.museum",
-      "computer.museum",
-      "computerhistory.museum",
-      "comunica\xE7\xF5es.museum",
-      "contemporary.museum",
-      "contemporaryart.museum",
-      "convent.museum",
-      "copenhagen.museum",
-      "corporation.museum",
-      "correios-e-telecomunica\xE7\xF5es.museum",
-      "corvette.museum",
-      "costume.museum",
-      "countryestate.museum",
-      "county.museum",
-      "crafts.museum",
-      "cranbrook.museum",
-      "creation.museum",
-      "cultural.museum",
-      "culturalcenter.museum",
-      "culture.museum",
-      "cyber.museum",
-      "cymru.museum",
-      "dali.museum",
-      "dallas.museum",
-      "database.museum",
-      "ddr.museum",
-      "decorativearts.museum",
-      "delaware.museum",
-      "delmenhorst.museum",
-      "denmark.museum",
-      "depot.museum",
-      "design.museum",
-      "detroit.museum",
-      "dinosaur.museum",
-      "discovery.museum",
-      "dolls.museum",
-      "donostia.museum",
-      "durham.museum",
-      "eastafrica.museum",
-      "eastcoast.museum",
-      "education.museum",
-      "educational.museum",
-      "egyptian.museum",
-      "eisenbahn.museum",
-      "elburg.museum",
-      "elvendrell.museum",
-      "embroidery.museum",
-      "encyclopedic.museum",
-      "england.museum",
-      "entomology.museum",
-      "environment.museum",
-      "environmentalconservation.museum",
-      "epilepsy.museum",
-      "essex.museum",
-      "estate.museum",
-      "ethnology.museum",
-      "exeter.museum",
-      "exhibition.museum",
-      "family.museum",
-      "farm.museum",
-      "farmequipment.museum",
-      "farmers.museum",
-      "farmstead.museum",
-      "field.museum",
-      "figueres.museum",
-      "filatelia.museum",
-      "film.museum",
-      "fineart.museum",
-      "finearts.museum",
-      "finland.museum",
-      "flanders.museum",
-      "florida.museum",
-      "force.museum",
-      "fortmissoula.museum",
-      "fortworth.museum",
-      "foundation.museum",
-      "francaise.museum",
-      "frankfurt.museum",
-      "franziskaner.museum",
-      "freemasonry.museum",
-      "freiburg.museum",
-      "fribourg.museum",
-      "frog.museum",
-      "fundacio.museum",
-      "furniture.museum",
-      "gallery.museum",
-      "garden.museum",
-      "gateway.museum",
-      "geelvinck.museum",
-      "gemological.museum",
-      "geology.museum",
-      "georgia.museum",
-      "giessen.museum",
-      "glas.museum",
-      "glass.museum",
-      "gorge.museum",
-      "grandrapids.museum",
-      "graz.museum",
-      "guernsey.museum",
-      "halloffame.museum",
-      "hamburg.museum",
-      "handson.museum",
-      "harvestcelebration.museum",
-      "hawaii.museum",
-      "health.museum",
-      "heimatunduhren.museum",
-      "hellas.museum",
-      "helsinki.museum",
-      "hembygdsforbund.museum",
-      "heritage.museum",
-      "histoire.museum",
-      "historical.museum",
-      "historicalsociety.museum",
-      "historichouses.museum",
-      "historisch.museum",
-      "historisches.museum",
-      "history.museum",
-      "historyofscience.museum",
-      "horology.museum",
-      "house.museum",
-      "humanities.museum",
-      "illustration.museum",
-      "imageandsound.museum",
-      "indian.museum",
-      "indiana.museum",
-      "indianapolis.museum",
-      "indianmarket.museum",
-      "intelligence.museum",
-      "interactive.museum",
-      "iraq.museum",
-      "iron.museum",
-      "isleofman.museum",
-      "jamison.museum",
-      "jefferson.museum",
-      "jerusalem.museum",
-      "jewelry.museum",
-      "jewish.museum",
-      "jewishart.museum",
-      "jfk.museum",
-      "journalism.museum",
-      "judaica.museum",
-      "judygarland.museum",
-      "juedisches.museum",
-      "juif.museum",
-      "karate.museum",
-      "karikatur.museum",
-      "kids.museum",
-      "koebenhavn.museum",
-      "koeln.museum",
-      "kunst.museum",
-      "kunstsammlung.museum",
-      "kunstunddesign.museum",
-      "labor.museum",
-      "labour.museum",
-      "lajolla.museum",
-      "lancashire.museum",
-      "landes.museum",
-      "lans.museum",
-      "l\xE4ns.museum",
-      "larsson.museum",
-      "lewismiller.museum",
-      "lincoln.museum",
-      "linz.museum",
-      "living.museum",
-      "livinghistory.museum",
-      "localhistory.museum",
-      "london.museum",
-      "losangeles.museum",
-      "louvre.museum",
-      "loyalist.museum",
-      "lucerne.museum",
-      "luxembourg.museum",
-      "luzern.museum",
-      "mad.museum",
-      "madrid.museum",
-      "mallorca.museum",
-      "manchester.museum",
-      "mansion.museum",
-      "mansions.museum",
-      "manx.museum",
-      "marburg.museum",
-      "maritime.museum",
-      "maritimo.museum",
-      "maryland.museum",
-      "marylhurst.museum",
-      "media.museum",
-      "medical.museum",
-      "medizinhistorisches.museum",
-      "meeres.museum",
-      "memorial.museum",
-      "mesaverde.museum",
-      "michigan.museum",
-      "midatlantic.museum",
-      "military.museum",
-      "mill.museum",
-      "miners.museum",
-      "mining.museum",
-      "minnesota.museum",
-      "missile.museum",
-      "missoula.museum",
-      "modern.museum",
-      "moma.museum",
-      "money.museum",
-      "monmouth.museum",
-      "monticello.museum",
-      "montreal.museum",
-      "moscow.museum",
-      "motorcycle.museum",
-      "muenchen.museum",
-      "muenster.museum",
-      "mulhouse.museum",
-      "muncie.museum",
-      "museet.museum",
-      "museumcenter.museum",
-      "museumvereniging.museum",
-      "music.museum",
-      "national.museum",
-      "nationalfirearms.museum",
-      "nationalheritage.museum",
-      "nativeamerican.museum",
-      "naturalhistory.museum",
-      "naturalhistorymuseum.museum",
-      "naturalsciences.museum",
-      "nature.museum",
-      "naturhistorisches.museum",
-      "natuurwetenschappen.museum",
-      "naumburg.museum",
-      "naval.museum",
-      "nebraska.museum",
-      "neues.museum",
-      "newhampshire.museum",
-      "newjersey.museum",
-      "newmexico.museum",
-      "newport.museum",
-      "newspaper.museum",
-      "newyork.museum",
-      "niepce.museum",
-      "norfolk.museum",
-      "north.museum",
-      "nrw.museum",
-      "nyc.museum",
-      "nyny.museum",
-      "oceanographic.museum",
-      "oceanographique.museum",
-      "omaha.museum",
-      "online.museum",
-      "ontario.museum",
-      "openair.museum",
-      "oregon.museum",
-      "oregontrail.museum",
-      "otago.museum",
-      "oxford.museum",
-      "pacific.museum",
-      "paderborn.museum",
-      "palace.museum",
-      "paleo.museum",
-      "palmsprings.museum",
-      "panama.museum",
-      "paris.museum",
-      "pasadena.museum",
-      "pharmacy.museum",
-      "philadelphia.museum",
-      "philadelphiaarea.museum",
-      "philately.museum",
-      "phoenix.museum",
-      "photography.museum",
-      "pilots.museum",
-      "pittsburgh.museum",
-      "planetarium.museum",
-      "plantation.museum",
-      "plants.museum",
-      "plaza.museum",
-      "portal.museum",
-      "portland.museum",
-      "portlligat.museum",
-      "posts-and-telecommunications.museum",
-      "preservation.museum",
-      "presidio.museum",
-      "press.museum",
-      "project.museum",
-      "public.museum",
-      "pubol.museum",
-      "quebec.museum",
-      "railroad.museum",
-      "railway.museum",
-      "research.museum",
-      "resistance.museum",
-      "riodejaneiro.museum",
-      "rochester.museum",
-      "rockart.museum",
-      "roma.museum",
-      "russia.museum",
-      "saintlouis.museum",
-      "salem.museum",
-      "salvadordali.museum",
-      "salzburg.museum",
-      "sandiego.museum",
-      "sanfrancisco.museum",
-      "santabarbara.museum",
-      "santacruz.museum",
-      "santafe.museum",
-      "saskatchewan.museum",
-      "satx.museum",
-      "savannahga.museum",
-      "schlesisches.museum",
-      "schoenbrunn.museum",
-      "schokoladen.museum",
-      "school.museum",
-      "schweiz.museum",
-      "science.museum",
-      "scienceandhistory.museum",
-      "scienceandindustry.museum",
-      "sciencecenter.museum",
-      "sciencecenters.museum",
-      "science-fiction.museum",
-      "sciencehistory.museum",
-      "sciences.museum",
-      "sciencesnaturelles.museum",
-      "scotland.museum",
-      "seaport.museum",
-      "settlement.museum",
-      "settlers.museum",
-      "shell.museum",
-      "sherbrooke.museum",
-      "sibenik.museum",
-      "silk.museum",
-      "ski.museum",
-      "skole.museum",
-      "society.museum",
-      "sologne.museum",
-      "soundandvision.museum",
-      "southcarolina.museum",
-      "southwest.museum",
-      "space.museum",
-      "spy.museum",
-      "square.museum",
-      "stadt.museum",
-      "stalbans.museum",
-      "starnberg.museum",
-      "state.museum",
-      "stateofdelaware.museum",
-      "station.museum",
-      "steam.museum",
-      "steiermark.museum",
-      "stjohn.museum",
-      "stockholm.museum",
-      "stpetersburg.museum",
-      "stuttgart.museum",
-      "suisse.museum",
-      "surgeonshall.museum",
-      "surrey.museum",
-      "svizzera.museum",
-      "sweden.museum",
-      "sydney.museum",
-      "tank.museum",
-      "tcm.museum",
-      "technology.museum",
-      "telekommunikation.museum",
-      "television.museum",
-      "texas.museum",
-      "textile.museum",
-      "theater.museum",
-      "time.museum",
-      "timekeeping.museum",
-      "topology.museum",
-      "torino.museum",
-      "touch.museum",
-      "town.museum",
-      "transport.museum",
-      "tree.museum",
-      "trolley.museum",
-      "trust.museum",
-      "trustee.museum",
-      "uhren.museum",
-      "ulm.museum",
-      "undersea.museum",
-      "university.museum",
-      "usa.museum",
-      "usantiques.museum",
-      "usarts.museum",
-      "uscountryestate.museum",
-      "usculture.museum",
-      "usdecorativearts.museum",
-      "usgarden.museum",
-      "ushistory.museum",
-      "ushuaia.museum",
-      "uslivinghistory.museum",
-      "utah.museum",
-      "uvic.museum",
-      "valley.museum",
-      "vantaa.museum",
-      "versailles.museum",
-      "viking.museum",
-      "village.museum",
-      "virginia.museum",
-      "virtual.museum",
-      "virtuel.museum",
-      "vlaanderen.museum",
-      "volkenkunde.museum",
-      "wales.museum",
-      "wallonie.museum",
-      "war.museum",
-      "washingtondc.museum",
-      "watchandclock.museum",
-      "watch-and-clock.museum",
-      "western.museum",
-      "westfalen.museum",
-      "whaling.museum",
-      "wildlife.museum",
-      "williamsburg.museum",
-      "windmill.museum",
-      "workshop.museum",
-      "york.museum",
-      "yorkshire.museum",
-      "yosemite.museum",
-      "youth.museum",
-      "zoological.museum",
-      "zoology.museum",
-      "\u05D9\u05E8\u05D5\u05E9\u05DC\u05D9\u05DD.museum",
-      "\u0438\u043A\u043E\u043C.museum",
-      "mv",
-      "aero.mv",
-      "biz.mv",
-      "com.mv",
-      "coop.mv",
-      "edu.mv",
-      "gov.mv",
-      "info.mv",
-      "int.mv",
-      "mil.mv",
-      "museum.mv",
-      "name.mv",
-      "net.mv",
-      "org.mv",
-      "pro.mv",
-      "mw",
-      "ac.mw",
-      "biz.mw",
-      "co.mw",
-      "com.mw",
-      "coop.mw",
-      "edu.mw",
-      "gov.mw",
-      "int.mw",
-      "museum.mw",
-      "net.mw",
-      "org.mw",
-      "mx",
-      "com.mx",
-      "org.mx",
-      "gob.mx",
-      "edu.mx",
-      "net.mx",
-      "my",
-      "biz.my",
-      "com.my",
-      "edu.my",
-      "gov.my",
-      "mil.my",
-      "name.my",
-      "net.my",
-      "org.my",
-      "mz",
-      "ac.mz",
-      "adv.mz",
-      "co.mz",
-      "edu.mz",
-      "gov.mz",
-      "mil.mz",
-      "net.mz",
-      "org.mz",
-      "na",
-      "info.na",
-      "pro.na",
-      "name.na",
-      "school.na",
-      "or.na",
-      "dr.na",
-      "us.na",
-      "mx.na",
-      "ca.na",
-      "in.na",
-      "cc.na",
-      "tv.na",
-      "ws.na",
-      "mobi.na",
-      "co.na",
-      "com.na",
-      "org.na",
-      "name",
-      "nc",
-      "asso.nc",
-      "nom.nc",
-      "ne",
-      "net",
-      "nf",
-      "com.nf",
-      "net.nf",
-      "per.nf",
-      "rec.nf",
-      "web.nf",
-      "arts.nf",
-      "firm.nf",
-      "info.nf",
-      "other.nf",
-      "store.nf",
-      "ng",
-      "com.ng",
-      "edu.ng",
-      "gov.ng",
-      "i.ng",
-      "mil.ng",
-      "mobi.ng",
-      "name.ng",
-      "net.ng",
-      "org.ng",
-      "sch.ng",
-      "ni",
-      "ac.ni",
-      "biz.ni",
-      "co.ni",
-      "com.ni",
-      "edu.ni",
-      "gob.ni",
-      "in.ni",
-      "info.ni",
-      "int.ni",
-      "mil.ni",
-      "net.ni",
-      "nom.ni",
-      "org.ni",
-      "web.ni",
-      "nl",
-      "no",
-      "fhs.no",
-      "vgs.no",
-      "fylkesbibl.no",
-      "folkebibl.no",
-      "museum.no",
-      "idrett.no",
-      "priv.no",
-      "mil.no",
-      "stat.no",
-      "dep.no",
-      "kommune.no",
-      "herad.no",
-      "aa.no",
-      "ah.no",
-      "bu.no",
-      "fm.no",
-      "hl.no",
-      "hm.no",
-      "jan-mayen.no",
-      "mr.no",
-      "nl.no",
-      "nt.no",
-      "of.no",
-      "ol.no",
-      "oslo.no",
-      "rl.no",
-      "sf.no",
-      "st.no",
-      "svalbard.no",
-      "tm.no",
-      "tr.no",
-      "va.no",
-      "vf.no",
-      "gs.aa.no",
-      "gs.ah.no",
-      "gs.bu.no",
-      "gs.fm.no",
-      "gs.hl.no",
-      "gs.hm.no",
-      "gs.jan-mayen.no",
-      "gs.mr.no",
-      "gs.nl.no",
-      "gs.nt.no",
-      "gs.of.no",
-      "gs.ol.no",
-      "gs.oslo.no",
-      "gs.rl.no",
-      "gs.sf.no",
-      "gs.st.no",
-      "gs.svalbard.no",
-      "gs.tm.no",
-      "gs.tr.no",
-      "gs.va.no",
-      "gs.vf.no",
-      "akrehamn.no",
-      "\xE5krehamn.no",
-      "algard.no",
-      "\xE5lg\xE5rd.no",
-      "arna.no",
-      "brumunddal.no",
-      "bryne.no",
-      "bronnoysund.no",
-      "br\xF8nn\xF8ysund.no",
-      "drobak.no",
-      "dr\xF8bak.no",
-      "egersund.no",
-      "fetsund.no",
-      "floro.no",
-      "flor\xF8.no",
-      "fredrikstad.no",
-      "hokksund.no",
-      "honefoss.no",
-      "h\xF8nefoss.no",
-      "jessheim.no",
-      "jorpeland.no",
-      "j\xF8rpeland.no",
-      "kirkenes.no",
-      "kopervik.no",
-      "krokstadelva.no",
-      "langevag.no",
-      "langev\xE5g.no",
-      "leirvik.no",
-      "mjondalen.no",
-      "mj\xF8ndalen.no",
-      "mo-i-rana.no",
-      "mosjoen.no",
-      "mosj\xF8en.no",
-      "nesoddtangen.no",
-      "orkanger.no",
-      "osoyro.no",
-      "os\xF8yro.no",
-      "raholt.no",
-      "r\xE5holt.no",
-      "sandnessjoen.no",
-      "sandnessj\xF8en.no",
-      "skedsmokorset.no",
-      "slattum.no",
-      "spjelkavik.no",
-      "stathelle.no",
-      "stavern.no",
-      "stjordalshalsen.no",
-      "stj\xF8rdalshalsen.no",
-      "tananger.no",
-      "tranby.no",
-      "vossevangen.no",
-      "afjord.no",
-      "\xE5fjord.no",
-      "agdenes.no",
-      "al.no",
-      "\xE5l.no",
-      "alesund.no",
-      "\xE5lesund.no",
-      "alstahaug.no",
-      "alta.no",
-      "\xE1lt\xE1.no",
-      "alaheadju.no",
-      "\xE1laheadju.no",
-      "alvdal.no",
-      "amli.no",
-      "\xE5mli.no",
-      "amot.no",
-      "\xE5mot.no",
-      "andebu.no",
-      "andoy.no",
-      "and\xF8y.no",
-      "andasuolo.no",
-      "ardal.no",
-      "\xE5rdal.no",
-      "aremark.no",
-      "arendal.no",
-      "\xE5s.no",
-      "aseral.no",
-      "\xE5seral.no",
-      "asker.no",
-      "askim.no",
-      "askvoll.no",
-      "askoy.no",
-      "ask\xF8y.no",
-      "asnes.no",
-      "\xE5snes.no",
-      "audnedaln.no",
-      "aukra.no",
-      "aure.no",
-      "aurland.no",
-      "aurskog-holand.no",
-      "aurskog-h\xF8land.no",
-      "austevoll.no",
-      "austrheim.no",
-      "averoy.no",
-      "aver\xF8y.no",
-      "balestrand.no",
-      "ballangen.no",
-      "balat.no",
-      "b\xE1l\xE1t.no",
-      "balsfjord.no",
-      "bahccavuotna.no",
-      "b\xE1hccavuotna.no",
-      "bamble.no",
-      "bardu.no",
-      "beardu.no",
-      "beiarn.no",
-      "bajddar.no",
-      "b\xE1jddar.no",
-      "baidar.no",
-      "b\xE1id\xE1r.no",
-      "berg.no",
-      "bergen.no",
-      "berlevag.no",
-      "berlev\xE5g.no",
-      "bearalvahki.no",
-      "bearalv\xE1hki.no",
-      "bindal.no",
-      "birkenes.no",
-      "bjarkoy.no",
-      "bjark\xF8y.no",
-      "bjerkreim.no",
-      "bjugn.no",
-      "bodo.no",
-      "bod\xF8.no",
-      "badaddja.no",
-      "b\xE5d\xE5ddj\xE5.no",
-      "budejju.no",
-      "bokn.no",
-      "bremanger.no",
-      "bronnoy.no",
-      "br\xF8nn\xF8y.no",
-      "bygland.no",
-      "bykle.no",
-      "barum.no",
-      "b\xE6rum.no",
-      "bo.telemark.no",
-      "b\xF8.telemark.no",
-      "bo.nordland.no",
-      "b\xF8.nordland.no",
-      "bievat.no",
-      "biev\xE1t.no",
-      "bomlo.no",
-      "b\xF8mlo.no",
-      "batsfjord.no",
-      "b\xE5tsfjord.no",
-      "bahcavuotna.no",
-      "b\xE1hcavuotna.no",
-      "dovre.no",
-      "drammen.no",
-      "drangedal.no",
-      "dyroy.no",
-      "dyr\xF8y.no",
-      "donna.no",
-      "d\xF8nna.no",
-      "eid.no",
-      "eidfjord.no",
-      "eidsberg.no",
-      "eidskog.no",
-      "eidsvoll.no",
-      "eigersund.no",
-      "elverum.no",
-      "enebakk.no",
-      "engerdal.no",
-      "etne.no",
-      "etnedal.no",
-      "evenes.no",
-      "evenassi.no",
-      "even\xE1\u0161\u0161i.no",
-      "evje-og-hornnes.no",
-      "farsund.no",
-      "fauske.no",
-      "fuossko.no",
-      "fuoisku.no",
-      "fedje.no",
-      "fet.no",
-      "finnoy.no",
-      "finn\xF8y.no",
-      "fitjar.no",
-      "fjaler.no",
-      "fjell.no",
-      "flakstad.no",
-      "flatanger.no",
-      "flekkefjord.no",
-      "flesberg.no",
-      "flora.no",
-      "fla.no",
-      "fl\xE5.no",
-      "folldal.no",
-      "forsand.no",
-      "fosnes.no",
-      "frei.no",
-      "frogn.no",
-      "froland.no",
-      "frosta.no",
-      "frana.no",
-      "fr\xE6na.no",
-      "froya.no",
-      "fr\xF8ya.no",
-      "fusa.no",
-      "fyresdal.no",
-      "forde.no",
-      "f\xF8rde.no",
-      "gamvik.no",
-      "gangaviika.no",
-      "g\xE1\u014Bgaviika.no",
-      "gaular.no",
-      "gausdal.no",
-      "gildeskal.no",
-      "gildesk\xE5l.no",
-      "giske.no",
-      "gjemnes.no",
-      "gjerdrum.no",
-      "gjerstad.no",
-      "gjesdal.no",
-      "gjovik.no",
-      "gj\xF8vik.no",
-      "gloppen.no",
-      "gol.no",
-      "gran.no",
-      "grane.no",
-      "granvin.no",
-      "gratangen.no",
-      "grimstad.no",
-      "grong.no",
-      "kraanghke.no",
-      "kr\xE5anghke.no",
-      "grue.no",
-      "gulen.no",
-      "hadsel.no",
-      "halden.no",
-      "halsa.no",
-      "hamar.no",
-      "hamaroy.no",
-      "habmer.no",
-      "h\xE1bmer.no",
-      "hapmir.no",
-      "h\xE1pmir.no",
-      "hammerfest.no",
-      "hammarfeasta.no",
-      "h\xE1mm\xE1rfeasta.no",
-      "haram.no",
-      "hareid.no",
-      "harstad.no",
-      "hasvik.no",
-      "aknoluokta.no",
-      "\xE1k\u014Boluokta.no",
-      "hattfjelldal.no",
-      "aarborte.no",
-      "haugesund.no",
-      "hemne.no",
-      "hemnes.no",
-      "hemsedal.no",
-      "heroy.more-og-romsdal.no",
-      "her\xF8y.m\xF8re-og-romsdal.no",
-      "heroy.nordland.no",
-      "her\xF8y.nordland.no",
-      "hitra.no",
-      "hjartdal.no",
-      "hjelmeland.no",
-      "hobol.no",
-      "hob\xF8l.no",
-      "hof.no",
-      "hol.no",
-      "hole.no",
-      "holmestrand.no",
-      "holtalen.no",
-      "holt\xE5len.no",
-      "hornindal.no",
-      "horten.no",
-      "hurdal.no",
-      "hurum.no",
-      "hvaler.no",
-      "hyllestad.no",
-      "hagebostad.no",
-      "h\xE6gebostad.no",
-      "hoyanger.no",
-      "h\xF8yanger.no",
-      "hoylandet.no",
-      "h\xF8ylandet.no",
-      "ha.no",
-      "h\xE5.no",
-      "ibestad.no",
-      "inderoy.no",
-      "inder\xF8y.no",
-      "iveland.no",
-      "jevnaker.no",
-      "jondal.no",
-      "jolster.no",
-      "j\xF8lster.no",
-      "karasjok.no",
-      "karasjohka.no",
-      "k\xE1r\xE1\u0161johka.no",
-      "karlsoy.no",
-      "galsa.no",
-      "g\xE1ls\xE1.no",
-      "karmoy.no",
-      "karm\xF8y.no",
-      "kautokeino.no",
-      "guovdageaidnu.no",
-      "klepp.no",
-      "klabu.no",
-      "kl\xE6bu.no",
-      "kongsberg.no",
-      "kongsvinger.no",
-      "kragero.no",
-      "krager\xF8.no",
-      "kristiansand.no",
-      "kristiansund.no",
-      "krodsherad.no",
-      "kr\xF8dsherad.no",
-      "kvalsund.no",
-      "rahkkeravju.no",
-      "r\xE1hkker\xE1vju.no",
-      "kvam.no",
-      "kvinesdal.no",
-      "kvinnherad.no",
-      "kviteseid.no",
-      "kvitsoy.no",
-      "kvits\xF8y.no",
-      "kvafjord.no",
-      "kv\xE6fjord.no",
-      "giehtavuoatna.no",
-      "kvanangen.no",
-      "kv\xE6nangen.no",
-      "navuotna.no",
-      "n\xE1vuotna.no",
-      "kafjord.no",
-      "k\xE5fjord.no",
-      "gaivuotna.no",
-      "g\xE1ivuotna.no",
-      "larvik.no",
-      "lavangen.no",
-      "lavagis.no",
-      "loabat.no",
-      "loab\xE1t.no",
-      "lebesby.no",
-      "davvesiida.no",
-      "leikanger.no",
-      "leirfjord.no",
-      "leka.no",
-      "leksvik.no",
-      "lenvik.no",
-      "leangaviika.no",
-      "lea\u014Bgaviika.no",
-      "lesja.no",
-      "levanger.no",
-      "lier.no",
-      "lierne.no",
-      "lillehammer.no",
-      "lillesand.no",
-      "lindesnes.no",
-      "lindas.no",
-      "lind\xE5s.no",
-      "lom.no",
-      "loppa.no",
-      "lahppi.no",
-      "l\xE1hppi.no",
-      "lund.no",
-      "lunner.no",
-      "luroy.no",
-      "lur\xF8y.no",
-      "luster.no",
-      "lyngdal.no",
-      "lyngen.no",
-      "ivgu.no",
-      "lardal.no",
-      "lerdal.no",
-      "l\xE6rdal.no",
-      "lodingen.no",
-      "l\xF8dingen.no",
-      "lorenskog.no",
-      "l\xF8renskog.no",
-      "loten.no",
-      "l\xF8ten.no",
-      "malvik.no",
-      "masoy.no",
-      "m\xE5s\xF8y.no",
-      "muosat.no",
-      "muos\xE1t.no",
-      "mandal.no",
-      "marker.no",
-      "marnardal.no",
-      "masfjorden.no",
-      "meland.no",
-      "meldal.no",
-      "melhus.no",
-      "meloy.no",
-      "mel\xF8y.no",
-      "meraker.no",
-      "mer\xE5ker.no",
-      "moareke.no",
-      "mo\xE5reke.no",
-      "midsund.no",
-      "midtre-gauldal.no",
-      "modalen.no",
-      "modum.no",
-      "molde.no",
-      "moskenes.no",
-      "moss.no",
-      "mosvik.no",
-      "malselv.no",
-      "m\xE5lselv.no",
-      "malatvuopmi.no",
-      "m\xE1latvuopmi.no",
-      "namdalseid.no",
-      "aejrie.no",
-      "namsos.no",
-      "namsskogan.no",
-      "naamesjevuemie.no",
-      "n\xE5\xE5mesjevuemie.no",
-      "laakesvuemie.no",
-      "nannestad.no",
-      "narvik.no",
-      "narviika.no",
-      "naustdal.no",
-      "nedre-eiker.no",
-      "nes.akershus.no",
-      "nes.buskerud.no",
-      "nesna.no",
-      "nesodden.no",
-      "nesseby.no",
-      "unjarga.no",
-      "unj\xE1rga.no",
-      "nesset.no",
-      "nissedal.no",
-      "nittedal.no",
-      "nord-aurdal.no",
-      "nord-fron.no",
-      "nord-odal.no",
-      "norddal.no",
-      "nordkapp.no",
-      "davvenjarga.no",
-      "davvenj\xE1rga.no",
-      "nordre-land.no",
-      "nordreisa.no",
-      "raisa.no",
-      "r\xE1isa.no",
-      "nore-og-uvdal.no",
-      "notodden.no",
-      "naroy.no",
-      "n\xE6r\xF8y.no",
-      "notteroy.no",
-      "n\xF8tter\xF8y.no",
-      "odda.no",
-      "oksnes.no",
-      "\xF8ksnes.no",
-      "oppdal.no",
-      "oppegard.no",
-      "oppeg\xE5rd.no",
-      "orkdal.no",
-      "orland.no",
-      "\xF8rland.no",
-      "orskog.no",
-      "\xF8rskog.no",
-      "orsta.no",
-      "\xF8rsta.no",
-      "os.hedmark.no",
-      "os.hordaland.no",
-      "osen.no",
-      "osteroy.no",
-      "oster\xF8y.no",
-      "ostre-toten.no",
-      "\xF8stre-toten.no",
-      "overhalla.no",
-      "ovre-eiker.no",
-      "\xF8vre-eiker.no",
-      "oyer.no",
-      "\xF8yer.no",
-      "oygarden.no",
-      "\xF8ygarden.no",
-      "oystre-slidre.no",
-      "\xF8ystre-slidre.no",
-      "porsanger.no",
-      "porsangu.no",
-      "pors\xE1\u014Bgu.no",
-      "porsgrunn.no",
-      "radoy.no",
-      "rad\xF8y.no",
-      "rakkestad.no",
-      "rana.no",
-      "ruovat.no",
-      "randaberg.no",
-      "rauma.no",
-      "rendalen.no",
-      "rennebu.no",
-      "rennesoy.no",
-      "rennes\xF8y.no",
-      "rindal.no",
-      "ringebu.no",
-      "ringerike.no",
-      "ringsaker.no",
-      "rissa.no",
-      "risor.no",
-      "ris\xF8r.no",
-      "roan.no",
-      "rollag.no",
-      "rygge.no",
-      "ralingen.no",
-      "r\xE6lingen.no",
-      "rodoy.no",
-      "r\xF8d\xF8y.no",
-      "romskog.no",
-      "r\xF8mskog.no",
-      "roros.no",
-      "r\xF8ros.no",
-      "rost.no",
-      "r\xF8st.no",
-      "royken.no",
-      "r\xF8yken.no",
-      "royrvik.no",
-      "r\xF8yrvik.no",
-      "rade.no",
-      "r\xE5de.no",
-      "salangen.no",
-      "siellak.no",
-      "saltdal.no",
-      "salat.no",
-      "s\xE1l\xE1t.no",
-      "s\xE1lat.no",
-      "samnanger.no",
-      "sande.more-og-romsdal.no",
-      "sande.m\xF8re-og-romsdal.no",
-      "sande.vestfold.no",
-      "sandefjord.no",
-      "sandnes.no",
-      "sandoy.no",
-      "sand\xF8y.no",
-      "sarpsborg.no",
-      "sauda.no",
-      "sauherad.no",
-      "sel.no",
-      "selbu.no",
-      "selje.no",
-      "seljord.no",
-      "sigdal.no",
-      "siljan.no",
-      "sirdal.no",
-      "skaun.no",
-      "skedsmo.no",
-      "ski.no",
-      "skien.no",
-      "skiptvet.no",
-      "skjervoy.no",
-      "skjerv\xF8y.no",
-      "skierva.no",
-      "skierv\xE1.no",
-      "skjak.no",
-      "skj\xE5k.no",
-      "skodje.no",
-      "skanland.no",
-      "sk\xE5nland.no",
-      "skanit.no",
-      "sk\xE1nit.no",
-      "smola.no",
-      "sm\xF8la.no",
-      "snillfjord.no",
-      "snasa.no",
-      "sn\xE5sa.no",
-      "snoasa.no",
-      "snaase.no",
-      "sn\xE5ase.no",
-      "sogndal.no",
-      "sokndal.no",
-      "sola.no",
-      "solund.no",
-      "songdalen.no",
-      "sortland.no",
-      "spydeberg.no",
-      "stange.no",
-      "stavanger.no",
-      "steigen.no",
-      "steinkjer.no",
-      "stjordal.no",
-      "stj\xF8rdal.no",
-      "stokke.no",
-      "stor-elvdal.no",
-      "stord.no",
-      "stordal.no",
-      "storfjord.no",
-      "omasvuotna.no",
-      "strand.no",
-      "stranda.no",
-      "stryn.no",
-      "sula.no",
-      "suldal.no",
-      "sund.no",
-      "sunndal.no",
-      "surnadal.no",
-      "sveio.no",
-      "svelvik.no",
-      "sykkylven.no",
-      "sogne.no",
-      "s\xF8gne.no",
-      "somna.no",
-      "s\xF8mna.no",
-      "sondre-land.no",
-      "s\xF8ndre-land.no",
-      "sor-aurdal.no",
-      "s\xF8r-aurdal.no",
-      "sor-fron.no",
-      "s\xF8r-fron.no",
-      "sor-odal.no",
-      "s\xF8r-odal.no",
-      "sor-varanger.no",
-      "s\xF8r-varanger.no",
-      "matta-varjjat.no",
-      "m\xE1tta-v\xE1rjjat.no",
-      "sorfold.no",
-      "s\xF8rfold.no",
-      "sorreisa.no",
-      "s\xF8rreisa.no",
-      "sorum.no",
-      "s\xF8rum.no",
-      "tana.no",
-      "deatnu.no",
-      "time.no",
-      "tingvoll.no",
-      "tinn.no",
-      "tjeldsund.no",
-      "dielddanuorri.no",
-      "tjome.no",
-      "tj\xF8me.no",
-      "tokke.no",
-      "tolga.no",
-      "torsken.no",
-      "tranoy.no",
-      "tran\xF8y.no",
-      "tromso.no",
-      "troms\xF8.no",
-      "tromsa.no",
-      "romsa.no",
-      "trondheim.no",
-      "troandin.no",
-      "trysil.no",
-      "trana.no",
-      "tr\xE6na.no",
-      "trogstad.no",
-      "tr\xF8gstad.no",
-      "tvedestrand.no",
-      "tydal.no",
-      "tynset.no",
-      "tysfjord.no",
-      "divtasvuodna.no",
-      "divttasvuotna.no",
-      "tysnes.no",
-      "tysvar.no",
-      "tysv\xE6r.no",
-      "tonsberg.no",
-      "t\xF8nsberg.no",
-      "ullensaker.no",
-      "ullensvang.no",
-      "ulvik.no",
-      "utsira.no",
-      "vadso.no",
-      "vads\xF8.no",
-      "cahcesuolo.no",
-      "\u010D\xE1hcesuolo.no",
-      "vaksdal.no",
-      "valle.no",
-      "vang.no",
-      "vanylven.no",
-      "vardo.no",
-      "vard\xF8.no",
-      "varggat.no",
-      "v\xE1rgg\xE1t.no",
-      "vefsn.no",
-      "vaapste.no",
-      "vega.no",
-      "vegarshei.no",
-      "veg\xE5rshei.no",
-      "vennesla.no",
-      "verdal.no",
-      "verran.no",
-      "vestby.no",
-      "vestnes.no",
-      "vestre-slidre.no",
-      "vestre-toten.no",
-      "vestvagoy.no",
-      "vestv\xE5g\xF8y.no",
-      "vevelstad.no",
-      "vik.no",
-      "vikna.no",
-      "vindafjord.no",
-      "volda.no",
-      "voss.no",
-      "varoy.no",
-      "v\xE6r\xF8y.no",
-      "vagan.no",
-      "v\xE5gan.no",
-      "voagat.no",
-      "vagsoy.no",
-      "v\xE5gs\xF8y.no",
-      "vaga.no",
-      "v\xE5g\xE5.no",
-      "valer.ostfold.no",
-      "v\xE5ler.\xF8stfold.no",
-      "valer.hedmark.no",
-      "v\xE5ler.hedmark.no",
-      "*.np",
-      "nr",
-      "biz.nr",
-      "info.nr",
-      "gov.nr",
-      "edu.nr",
-      "org.nr",
-      "net.nr",
-      "com.nr",
-      "nu",
-      "nz",
-      "ac.nz",
-      "co.nz",
-      "cri.nz",
-      "geek.nz",
-      "gen.nz",
-      "govt.nz",
-      "health.nz",
-      "iwi.nz",
-      "kiwi.nz",
-      "maori.nz",
-      "mil.nz",
-      "m\u0101ori.nz",
-      "net.nz",
-      "org.nz",
-      "parliament.nz",
-      "school.nz",
-      "om",
-      "co.om",
-      "com.om",
-      "edu.om",
-      "gov.om",
-      "med.om",
-      "museum.om",
-      "net.om",
-      "org.om",
-      "pro.om",
-      "onion",
-      "org",
-      "pa",
-      "ac.pa",
-      "gob.pa",
-      "com.pa",
-      "org.pa",
-      "sld.pa",
-      "edu.pa",
-      "net.pa",
-      "ing.pa",
-      "abo.pa",
-      "med.pa",
-      "nom.pa",
-      "pe",
-      "edu.pe",
-      "gob.pe",
-      "nom.pe",
-      "mil.pe",
-      "org.pe",
-      "com.pe",
-      "net.pe",
-      "pf",
-      "com.pf",
-      "org.pf",
-      "edu.pf",
-      "*.pg",
-      "ph",
-      "com.ph",
-      "net.ph",
-      "org.ph",
-      "gov.ph",
-      "edu.ph",
-      "ngo.ph",
-      "mil.ph",
-      "i.ph",
-      "pk",
-      "com.pk",
-      "net.pk",
-      "edu.pk",
-      "org.pk",
-      "fam.pk",
-      "biz.pk",
-      "web.pk",
-      "gov.pk",
-      "gob.pk",
-      "gok.pk",
-      "gon.pk",
-      "gop.pk",
-      "gos.pk",
-      "info.pk",
-      "pl",
-      "com.pl",
-      "net.pl",
-      "org.pl",
-      "aid.pl",
-      "agro.pl",
-      "atm.pl",
-      "auto.pl",
-      "biz.pl",
-      "edu.pl",
-      "gmina.pl",
-      "gsm.pl",
-      "info.pl",
-      "mail.pl",
-      "miasta.pl",
-      "media.pl",
-      "mil.pl",
-      "nieruchomosci.pl",
-      "nom.pl",
-      "pc.pl",
-      "powiat.pl",
-      "priv.pl",
-      "realestate.pl",
-      "rel.pl",
-      "sex.pl",
-      "shop.pl",
-      "sklep.pl",
-      "sos.pl",
-      "szkola.pl",
-      "targi.pl",
-      "tm.pl",
-      "tourism.pl",
-      "travel.pl",
-      "turystyka.pl",
-      "gov.pl",
-      "ap.gov.pl",
-      "ic.gov.pl",
-      "is.gov.pl",
-      "us.gov.pl",
-      "kmpsp.gov.pl",
-      "kppsp.gov.pl",
-      "kwpsp.gov.pl",
-      "psp.gov.pl",
-      "wskr.gov.pl",
-      "kwp.gov.pl",
-      "mw.gov.pl",
-      "ug.gov.pl",
-      "um.gov.pl",
-      "umig.gov.pl",
-      "ugim.gov.pl",
-      "upow.gov.pl",
-      "uw.gov.pl",
-      "starostwo.gov.pl",
-      "pa.gov.pl",
-      "po.gov.pl",
-      "psse.gov.pl",
-      "pup.gov.pl",
-      "rzgw.gov.pl",
-      "sa.gov.pl",
-      "so.gov.pl",
-      "sr.gov.pl",
-      "wsa.gov.pl",
-      "sko.gov.pl",
-      "uzs.gov.pl",
-      "wiih.gov.pl",
-      "winb.gov.pl",
-      "pinb.gov.pl",
-      "wios.gov.pl",
-      "witd.gov.pl",
-      "wzmiuw.gov.pl",
-      "piw.gov.pl",
-      "wiw.gov.pl",
-      "griw.gov.pl",
-      "wif.gov.pl",
-      "oum.gov.pl",
-      "sdn.gov.pl",
-      "zp.gov.pl",
-      "uppo.gov.pl",
-      "mup.gov.pl",
-      "wuoz.gov.pl",
-      "konsulat.gov.pl",
-      "oirm.gov.pl",
-      "augustow.pl",
-      "babia-gora.pl",
-      "bedzin.pl",
-      "beskidy.pl",
-      "bialowieza.pl",
-      "bialystok.pl",
-      "bielawa.pl",
-      "bieszczady.pl",
-      "boleslawiec.pl",
-      "bydgoszcz.pl",
-      "bytom.pl",
-      "cieszyn.pl",
-      "czeladz.pl",
-      "czest.pl",
-      "dlugoleka.pl",
-      "elblag.pl",
-      "elk.pl",
-      "glogow.pl",
-      "gniezno.pl",
-      "gorlice.pl",
-      "grajewo.pl",
-      "ilawa.pl",
-      "jaworzno.pl",
-      "jelenia-gora.pl",
-      "jgora.pl",
-      "kalisz.pl",
-      "kazimierz-dolny.pl",
-      "karpacz.pl",
-      "kartuzy.pl",
-      "kaszuby.pl",
-      "katowice.pl",
-      "kepno.pl",
-      "ketrzyn.pl",
-      "klodzko.pl",
-      "kobierzyce.pl",
-      "kolobrzeg.pl",
-      "konin.pl",
-      "konskowola.pl",
-      "kutno.pl",
-      "lapy.pl",
-      "lebork.pl",
-      "legnica.pl",
-      "lezajsk.pl",
-      "limanowa.pl",
-      "lomza.pl",
-      "lowicz.pl",
-      "lubin.pl",
-      "lukow.pl",
-      "malbork.pl",
-      "malopolska.pl",
-      "mazowsze.pl",
-      "mazury.pl",
-      "mielec.pl",
-      "mielno.pl",
-      "mragowo.pl",
-      "naklo.pl",
-      "nowaruda.pl",
-      "nysa.pl",
-      "olawa.pl",
-      "olecko.pl",
-      "olkusz.pl",
-      "olsztyn.pl",
-      "opoczno.pl",
-      "opole.pl",
-      "ostroda.pl",
-      "ostroleka.pl",
-      "ostrowiec.pl",
-      "ostrowwlkp.pl",
-      "pila.pl",
-      "pisz.pl",
-      "podhale.pl",
-      "podlasie.pl",
-      "polkowice.pl",
-      "pomorze.pl",
-      "pomorskie.pl",
-      "prochowice.pl",
-      "pruszkow.pl",
-      "przeworsk.pl",
-      "pulawy.pl",
-      "radom.pl",
-      "rawa-maz.pl",
-      "rybnik.pl",
-      "rzeszow.pl",
-      "sanok.pl",
-      "sejny.pl",
-      "slask.pl",
-      "slupsk.pl",
-      "sosnowiec.pl",
-      "stalowa-wola.pl",
-      "skoczow.pl",
-      "starachowice.pl",
-      "stargard.pl",
-      "suwalki.pl",
-      "swidnica.pl",
-      "swiebodzin.pl",
-      "swinoujscie.pl",
-      "szczecin.pl",
-      "szczytno.pl",
-      "tarnobrzeg.pl",
-      "tgory.pl",
-      "turek.pl",
-      "tychy.pl",
-      "ustka.pl",
-      "walbrzych.pl",
-      "warmia.pl",
-      "warszawa.pl",
-      "waw.pl",
-      "wegrow.pl",
-      "wielun.pl",
-      "wlocl.pl",
-      "wloclawek.pl",
-      "wodzislaw.pl",
-      "wolomin.pl",
-      "wroclaw.pl",
-      "zachpomor.pl",
-      "zagan.pl",
-      "zarow.pl",
-      "zgora.pl",
-      "zgorzelec.pl",
-      "pm",
-      "pn",
-      "gov.pn",
-      "co.pn",
-      "org.pn",
-      "edu.pn",
-      "net.pn",
-      "post",
-      "pr",
-      "com.pr",
-      "net.pr",
-      "org.pr",
-      "gov.pr",
-      "edu.pr",
-      "isla.pr",
-      "pro.pr",
-      "biz.pr",
-      "info.pr",
-      "name.pr",
-      "est.pr",
-      "prof.pr",
-      "ac.pr",
-      "pro",
-      "aaa.pro",
-      "aca.pro",
-      "acct.pro",
-      "avocat.pro",
-      "bar.pro",
-      "cpa.pro",
-      "eng.pro",
-      "jur.pro",
-      "law.pro",
-      "med.pro",
-      "recht.pro",
-      "ps",
-      "edu.ps",
-      "gov.ps",
-      "sec.ps",
-      "plo.ps",
-      "com.ps",
-      "org.ps",
-      "net.ps",
-      "pt",
-      "net.pt",
-      "gov.pt",
-      "org.pt",
-      "edu.pt",
-      "int.pt",
-      "publ.pt",
-      "com.pt",
-      "nome.pt",
-      "pw",
-      "co.pw",
-      "ne.pw",
-      "or.pw",
-      "ed.pw",
-      "go.pw",
-      "belau.pw",
-      "py",
-      "com.py",
-      "coop.py",
-      "edu.py",
-      "gov.py",
-      "mil.py",
-      "net.py",
-      "org.py",
-      "qa",
-      "com.qa",
-      "edu.qa",
-      "gov.qa",
-      "mil.qa",
-      "name.qa",
-      "net.qa",
-      "org.qa",
-      "sch.qa",
-      "re",
-      "asso.re",
-      "com.re",
-      "nom.re",
-      "ro",
-      "arts.ro",
-      "com.ro",
-      "firm.ro",
-      "info.ro",
-      "nom.ro",
-      "nt.ro",
-      "org.ro",
-      "rec.ro",
-      "store.ro",
-      "tm.ro",
-      "www.ro",
-      "rs",
-      "ac.rs",
-      "co.rs",
-      "edu.rs",
-      "gov.rs",
-      "in.rs",
-      "org.rs",
-      "ru",
-      "rw",
-      "ac.rw",
-      "co.rw",
-      "coop.rw",
-      "gov.rw",
-      "mil.rw",
-      "net.rw",
-      "org.rw",
-      "sa",
-      "com.sa",
-      "net.sa",
-      "org.sa",
-      "gov.sa",
-      "med.sa",
-      "pub.sa",
-      "edu.sa",
-      "sch.sa",
-      "sb",
-      "com.sb",
-      "edu.sb",
-      "gov.sb",
-      "net.sb",
-      "org.sb",
-      "sc",
-      "com.sc",
-      "gov.sc",
-      "net.sc",
-      "org.sc",
-      "edu.sc",
-      "sd",
-      "com.sd",
-      "net.sd",
-      "org.sd",
-      "edu.sd",
-      "med.sd",
-      "tv.sd",
-      "gov.sd",
-      "info.sd",
-      "se",
-      "a.se",
-      "ac.se",
-      "b.se",
-      "bd.se",
-      "brand.se",
-      "c.se",
-      "d.se",
-      "e.se",
-      "f.se",
-      "fh.se",
-      "fhsk.se",
-      "fhv.se",
-      "g.se",
-      "h.se",
-      "i.se",
-      "k.se",
-      "komforb.se",
-      "kommunalforbund.se",
-      "komvux.se",
-      "l.se",
-      "lanbib.se",
-      "m.se",
-      "n.se",
-      "naturbruksgymn.se",
-      "o.se",
-      "org.se",
-      "p.se",
-      "parti.se",
-      "pp.se",
-      "press.se",
-      "r.se",
-      "s.se",
-      "t.se",
-      "tm.se",
-      "u.se",
-      "w.se",
-      "x.se",
-      "y.se",
-      "z.se",
-      "sg",
-      "com.sg",
-      "net.sg",
-      "org.sg",
-      "gov.sg",
-      "edu.sg",
-      "per.sg",
-      "sh",
-      "com.sh",
-      "net.sh",
-      "gov.sh",
-      "org.sh",
-      "mil.sh",
-      "si",
-      "sj",
-      "sk",
-      "sl",
-      "com.sl",
-      "net.sl",
-      "edu.sl",
-      "gov.sl",
-      "org.sl",
-      "sm",
-      "sn",
-      "art.sn",
-      "com.sn",
-      "edu.sn",
-      "gouv.sn",
-      "org.sn",
-      "perso.sn",
-      "univ.sn",
-      "so",
-      "com.so",
-      "edu.so",
-      "gov.so",
-      "me.so",
-      "net.so",
-      "org.so",
-      "sr",
-      "ss",
-      "biz.ss",
-      "com.ss",
-      "edu.ss",
-      "gov.ss",
-      "me.ss",
-      "net.ss",
-      "org.ss",
-      "sch.ss",
-      "st",
-      "co.st",
-      "com.st",
-      "consulado.st",
-      "edu.st",
-      "embaixada.st",
-      "mil.st",
-      "net.st",
-      "org.st",
-      "principe.st",
-      "saotome.st",
-      "store.st",
-      "su",
-      "sv",
-      "com.sv",
-      "edu.sv",
-      "gob.sv",
-      "org.sv",
-      "red.sv",
-      "sx",
-      "gov.sx",
-      "sy",
-      "edu.sy",
-      "gov.sy",
-      "net.sy",
-      "mil.sy",
-      "com.sy",
-      "org.sy",
-      "sz",
-      "co.sz",
-      "ac.sz",
-      "org.sz",
-      "tc",
-      "td",
-      "tel",
-      "tf",
-      "tg",
-      "th",
-      "ac.th",
-      "co.th",
-      "go.th",
-      "in.th",
-      "mi.th",
-      "net.th",
-      "or.th",
-      "tj",
-      "ac.tj",
-      "biz.tj",
-      "co.tj",
-      "com.tj",
-      "edu.tj",
-      "go.tj",
-      "gov.tj",
-      "int.tj",
-      "mil.tj",
-      "name.tj",
-      "net.tj",
-      "nic.tj",
-      "org.tj",
-      "test.tj",
-      "web.tj",
-      "tk",
-      "tl",
-      "gov.tl",
-      "tm",
-      "com.tm",
-      "co.tm",
-      "org.tm",
-      "net.tm",
-      "nom.tm",
-      "gov.tm",
-      "mil.tm",
-      "edu.tm",
-      "tn",
-      "com.tn",
-      "ens.tn",
-      "fin.tn",
-      "gov.tn",
-      "ind.tn",
-      "info.tn",
-      "intl.tn",
-      "mincom.tn",
-      "nat.tn",
-      "net.tn",
-      "org.tn",
-      "perso.tn",
-      "tourism.tn",
-      "to",
-      "com.to",
-      "gov.to",
-      "net.to",
-      "org.to",
-      "edu.to",
-      "mil.to",
-      "tr",
-      "av.tr",
-      "bbs.tr",
-      "bel.tr",
-      "biz.tr",
-      "com.tr",
-      "dr.tr",
-      "edu.tr",
-      "gen.tr",
-      "gov.tr",
-      "info.tr",
-      "mil.tr",
-      "k12.tr",
-      "kep.tr",
-      "name.tr",
-      "net.tr",
-      "org.tr",
-      "pol.tr",
-      "tel.tr",
-      "tsk.tr",
-      "tv.tr",
-      "web.tr",
-      "nc.tr",
-      "gov.nc.tr",
-      "tt",
-      "co.tt",
-      "com.tt",
-      "org.tt",
-      "net.tt",
-      "biz.tt",
-      "info.tt",
-      "pro.tt",
-      "int.tt",
-      "coop.tt",
-      "jobs.tt",
-      "mobi.tt",
-      "travel.tt",
-      "museum.tt",
-      "aero.tt",
-      "name.tt",
-      "gov.tt",
-      "edu.tt",
-      "tv",
-      "tw",
-      "edu.tw",
-      "gov.tw",
-      "mil.tw",
-      "com.tw",
-      "net.tw",
-      "org.tw",
-      "idv.tw",
-      "game.tw",
-      "ebiz.tw",
-      "club.tw",
-      "\u7DB2\u8DEF.tw",
-      "\u7D44\u7E54.tw",
-      "\u5546\u696D.tw",
-      "tz",
-      "ac.tz",
-      "co.tz",
-      "go.tz",
-      "hotel.tz",
-      "info.tz",
-      "me.tz",
-      "mil.tz",
-      "mobi.tz",
-      "ne.tz",
-      "or.tz",
-      "sc.tz",
-      "tv.tz",
-      "ua",
-      "com.ua",
-      "edu.ua",
-      "gov.ua",
-      "in.ua",
-      "net.ua",
-      "org.ua",
-      "cherkassy.ua",
-      "cherkasy.ua",
-      "chernigov.ua",
-      "chernihiv.ua",
-      "chernivtsi.ua",
-      "chernovtsy.ua",
-      "ck.ua",
-      "cn.ua",
-      "cr.ua",
-      "crimea.ua",
-      "cv.ua",
-      "dn.ua",
-      "dnepropetrovsk.ua",
-      "dnipropetrovsk.ua",
-      "donetsk.ua",
-      "dp.ua",
-      "if.ua",
-      "ivano-frankivsk.ua",
-      "kh.ua",
-      "kharkiv.ua",
-      "kharkov.ua",
-      "kherson.ua",
-      "khmelnitskiy.ua",
-      "khmelnytskyi.ua",
-      "kiev.ua",
-      "kirovograd.ua",
-      "km.ua",
-      "kr.ua",
-      "krym.ua",
-      "ks.ua",
-      "kv.ua",
-      "kyiv.ua",
-      "lg.ua",
-      "lt.ua",
-      "lugansk.ua",
-      "lutsk.ua",
-      "lv.ua",
-      "lviv.ua",
-      "mk.ua",
-      "mykolaiv.ua",
-      "nikolaev.ua",
-      "od.ua",
-      "odesa.ua",
-      "odessa.ua",
-      "pl.ua",
-      "poltava.ua",
-      "rivne.ua",
-      "rovno.ua",
-      "rv.ua",
-      "sb.ua",
-      "sebastopol.ua",
-      "sevastopol.ua",
-      "sm.ua",
-      "sumy.ua",
-      "te.ua",
-      "ternopil.ua",
-      "uz.ua",
-      "uzhgorod.ua",
-      "vinnica.ua",
-      "vinnytsia.ua",
-      "vn.ua",
-      "volyn.ua",
-      "yalta.ua",
-      "zaporizhzhe.ua",
-      "zaporizhzhia.ua",
-      "zhitomir.ua",
-      "zhytomyr.ua",
-      "zp.ua",
-      "zt.ua",
-      "ug",
-      "co.ug",
-      "or.ug",
-      "ac.ug",
-      "sc.ug",
-      "go.ug",
-      "ne.ug",
-      "com.ug",
-      "org.ug",
-      "uk",
-      "ac.uk",
-      "co.uk",
-      "gov.uk",
-      "ltd.uk",
-      "me.uk",
-      "net.uk",
-      "nhs.uk",
-      "org.uk",
-      "plc.uk",
-      "police.uk",
-      "*.sch.uk",
-      "us",
-      "dni.us",
-      "fed.us",
-      "isa.us",
-      "kids.us",
-      "nsn.us",
-      "ak.us",
-      "al.us",
-      "ar.us",
-      "as.us",
-      "az.us",
-      "ca.us",
-      "co.us",
-      "ct.us",
-      "dc.us",
-      "de.us",
-      "fl.us",
-      "ga.us",
-      "gu.us",
-      "hi.us",
-      "ia.us",
-      "id.us",
-      "il.us",
-      "in.us",
-      "ks.us",
-      "ky.us",
-      "la.us",
-      "ma.us",
-      "md.us",
-      "me.us",
-      "mi.us",
-      "mn.us",
-      "mo.us",
-      "ms.us",
-      "mt.us",
-      "nc.us",
-      "nd.us",
-      "ne.us",
-      "nh.us",
-      "nj.us",
-      "nm.us",
-      "nv.us",
-      "ny.us",
-      "oh.us",
-      "ok.us",
-      "or.us",
-      "pa.us",
-      "pr.us",
-      "ri.us",
-      "sc.us",
-      "sd.us",
-      "tn.us",
-      "tx.us",
-      "ut.us",
-      "vi.us",
-      "vt.us",
-      "va.us",
-      "wa.us",
-      "wi.us",
-      "wv.us",
-      "wy.us",
-      "k12.ak.us",
-      "k12.al.us",
-      "k12.ar.us",
-      "k12.as.us",
-      "k12.az.us",
-      "k12.ca.us",
-      "k12.co.us",
-      "k12.ct.us",
-      "k12.dc.us",
-      "k12.de.us",
-      "k12.fl.us",
-      "k12.ga.us",
-      "k12.gu.us",
-      "k12.ia.us",
-      "k12.id.us",
-      "k12.il.us",
-      "k12.in.us",
-      "k12.ks.us",
-      "k12.ky.us",
-      "k12.la.us",
-      "k12.ma.us",
-      "k12.md.us",
-      "k12.me.us",
-      "k12.mi.us",
-      "k12.mn.us",
-      "k12.mo.us",
-      "k12.ms.us",
-      "k12.mt.us",
-      "k12.nc.us",
-      "k12.ne.us",
-      "k12.nh.us",
-      "k12.nj.us",
-      "k12.nm.us",
-      "k12.nv.us",
-      "k12.ny.us",
-      "k12.oh.us",
-      "k12.ok.us",
-      "k12.or.us",
-      "k12.pa.us",
-      "k12.pr.us",
-      "k12.sc.us",
-      "k12.tn.us",
-      "k12.tx.us",
-      "k12.ut.us",
-      "k12.vi.us",
-      "k12.vt.us",
-      "k12.va.us",
-      "k12.wa.us",
-      "k12.wi.us",
-      "k12.wy.us",
-      "cc.ak.us",
-      "cc.al.us",
-      "cc.ar.us",
-      "cc.as.us",
-      "cc.az.us",
-      "cc.ca.us",
-      "cc.co.us",
-      "cc.ct.us",
-      "cc.dc.us",
-      "cc.de.us",
-      "cc.fl.us",
-      "cc.ga.us",
-      "cc.gu.us",
-      "cc.hi.us",
-      "cc.ia.us",
-      "cc.id.us",
-      "cc.il.us",
-      "cc.in.us",
-      "cc.ks.us",
-      "cc.ky.us",
-      "cc.la.us",
-      "cc.ma.us",
-      "cc.md.us",
-      "cc.me.us",
-      "cc.mi.us",
-      "cc.mn.us",
-      "cc.mo.us",
-      "cc.ms.us",
-      "cc.mt.us",
-      "cc.nc.us",
-      "cc.nd.us",
-      "cc.ne.us",
-      "cc.nh.us",
-      "cc.nj.us",
-      "cc.nm.us",
-      "cc.nv.us",
-      "cc.ny.us",
-      "cc.oh.us",
-      "cc.ok.us",
-      "cc.or.us",
-      "cc.pa.us",
-      "cc.pr.us",
-      "cc.ri.us",
-      "cc.sc.us",
-      "cc.sd.us",
-      "cc.tn.us",
-      "cc.tx.us",
-      "cc.ut.us",
-      "cc.vi.us",
-      "cc.vt.us",
-      "cc.va.us",
-      "cc.wa.us",
-      "cc.wi.us",
-      "cc.wv.us",
-      "cc.wy.us",
-      "lib.ak.us",
-      "lib.al.us",
-      "lib.ar.us",
-      "lib.as.us",
-      "lib.az.us",
-      "lib.ca.us",
-      "lib.co.us",
-      "lib.ct.us",
-      "lib.dc.us",
-      "lib.fl.us",
-      "lib.ga.us",
-      "lib.gu.us",
-      "lib.hi.us",
-      "lib.ia.us",
-      "lib.id.us",
-      "lib.il.us",
-      "lib.in.us",
-      "lib.ks.us",
-      "lib.ky.us",
-      "lib.la.us",
-      "lib.ma.us",
-      "lib.md.us",
-      "lib.me.us",
-      "lib.mi.us",
-      "lib.mn.us",
-      "lib.mo.us",
-      "lib.ms.us",
-      "lib.mt.us",
-      "lib.nc.us",
-      "lib.nd.us",
-      "lib.ne.us",
-      "lib.nh.us",
-      "lib.nj.us",
-      "lib.nm.us",
-      "lib.nv.us",
-      "lib.ny.us",
-      "lib.oh.us",
-      "lib.ok.us",
-      "lib.or.us",
-      "lib.pa.us",
-      "lib.pr.us",
-      "lib.ri.us",
-      "lib.sc.us",
-      "lib.sd.us",
-      "lib.tn.us",
-      "lib.tx.us",
-      "lib.ut.us",
-      "lib.vi.us",
-      "lib.vt.us",
-      "lib.va.us",
-      "lib.wa.us",
-      "lib.wi.us",
-      "lib.wy.us",
-      "pvt.k12.ma.us",
-      "chtr.k12.ma.us",
-      "paroch.k12.ma.us",
-      "ann-arbor.mi.us",
-      "cog.mi.us",
-      "dst.mi.us",
-      "eaton.mi.us",
-      "gen.mi.us",
-      "mus.mi.us",
-      "tec.mi.us",
-      "washtenaw.mi.us",
-      "uy",
-      "com.uy",
-      "edu.uy",
-      "gub.uy",
-      "mil.uy",
-      "net.uy",
-      "org.uy",
-      "uz",
-      "co.uz",
-      "com.uz",
-      "net.uz",
-      "org.uz",
-      "va",
-      "vc",
-      "com.vc",
-      "net.vc",
-      "org.vc",
-      "gov.vc",
-      "mil.vc",
-      "edu.vc",
-      "ve",
-      "arts.ve",
-      "bib.ve",
-      "co.ve",
-      "com.ve",
-      "e12.ve",
-      "edu.ve",
-      "firm.ve",
-      "gob.ve",
-      "gov.ve",
-      "info.ve",
-      "int.ve",
-      "mil.ve",
-      "net.ve",
-      "nom.ve",
-      "org.ve",
-      "rar.ve",
-      "rec.ve",
-      "store.ve",
-      "tec.ve",
-      "web.ve",
-      "vg",
-      "vi",
-      "co.vi",
-      "com.vi",
-      "k12.vi",
-      "net.vi",
-      "org.vi",
-      "vn",
-      "com.vn",
-      "net.vn",
-      "org.vn",
-      "edu.vn",
-      "gov.vn",
-      "int.vn",
-      "ac.vn",
-      "biz.vn",
-      "info.vn",
-      "name.vn",
-      "pro.vn",
-      "health.vn",
-      "vu",
-      "com.vu",
-      "edu.vu",
-      "net.vu",
-      "org.vu",
-      "wf",
-      "ws",
-      "com.ws",
-      "net.ws",
-      "org.ws",
-      "gov.ws",
-      "edu.ws",
-      "yt",
-      "\u0627\u0645\u0627\u0631\u0627\u062A",
-      "\u0570\u0561\u0575",
-      "\u09AC\u09BE\u0982\u09B2\u09BE",
-      "\u0431\u0433",
-      "\u0627\u0644\u0628\u062D\u0631\u064A\u0646",
-      "\u0431\u0435\u043B",
-      "\u4E2D\u56FD",
-      "\u4E2D\u570B",
-      "\u0627\u0644\u062C\u0632\u0627\u0626\u0631",
-      "\u0645\u0635\u0631",
-      "\u0435\u044E",
-      "\u03B5\u03C5",
-      "\u0645\u0648\u0631\u064A\u062A\u0627\u0646\u064A\u0627",
-      "\u10D2\u10D4",
-      "\u03B5\u03BB",
-      "\u9999\u6E2F",
-      "\u516C\u53F8.\u9999\u6E2F",
-      "\u6559\u80B2.\u9999\u6E2F",
-      "\u653F\u5E9C.\u9999\u6E2F",
-      "\u500B\u4EBA.\u9999\u6E2F",
-      "\u7DB2\u7D61.\u9999\u6E2F",
-      "\u7D44\u7E54.\u9999\u6E2F",
-      "\u0CAD\u0CBE\u0CB0\u0CA4",
-      "\u0B2D\u0B3E\u0B30\u0B24",
-      "\u09AD\u09BE\u09F0\u09A4",
-      "\u092D\u093E\u0930\u0924\u092E\u094D",
-      "\u092D\u093E\u0930\u094B\u0924",
-      "\u0680\u0627\u0631\u062A",
-      "\u0D2D\u0D3E\u0D30\u0D24\u0D02",
-      "\u092D\u093E\u0930\u0924",
-      "\u0628\u0627\u0631\u062A",
-      "\u0628\u06BE\u0627\u0631\u062A",
-      "\u0C2D\u0C3E\u0C30\u0C24\u0C4D",
-      "\u0AAD\u0ABE\u0AB0\u0AA4",
-      "\u0A2D\u0A3E\u0A30\u0A24",
-      "\u09AD\u09BE\u09B0\u09A4",
-      "\u0B87\u0BA8\u0BCD\u0BA4\u0BBF\u0BAF\u0BBE",
-      "\u0627\u06CC\u0631\u0627\u0646",
-      "\u0627\u064A\u0631\u0627\u0646",
-      "\u0639\u0631\u0627\u0642",
-      "\u0627\u0644\u0627\u0631\u062F\u0646",
-      "\uD55C\uAD6D",
-      "\u049B\u0430\u0437",
-      "\u0EA5\u0EB2\u0EA7",
-      "\u0DBD\u0D82\u0D9A\u0DCF",
-      "\u0B87\u0BB2\u0B99\u0BCD\u0B95\u0BC8",
-      "\u0627\u0644\u0645\u063A\u0631\u0628",
-      "\u043C\u043A\u0434",
-      "\u043C\u043E\u043D",
-      "\u6FB3\u9580",
-      "\u6FB3\u95E8",
-      "\u0645\u0644\u064A\u0633\u064A\u0627",
-      "\u0639\u0645\u0627\u0646",
-      "\u067E\u0627\u06A9\u0633\u062A\u0627\u0646",
-      "\u067E\u0627\u0643\u0633\u062A\u0627\u0646",
-      "\u0641\u0644\u0633\u0637\u064A\u0646",
-      "\u0441\u0440\u0431",
-      "\u043F\u0440.\u0441\u0440\u0431",
-      "\u043E\u0440\u0433.\u0441\u0440\u0431",
-      "\u043E\u0431\u0440.\u0441\u0440\u0431",
-      "\u043E\u0434.\u0441\u0440\u0431",
-      "\u0443\u043F\u0440.\u0441\u0440\u0431",
-      "\u0430\u043A.\u0441\u0440\u0431",
-      "\u0440\u0444",
-      "\u0642\u0637\u0631",
-      "\u0627\u0644\u0633\u0639\u0648\u062F\u064A\u0629",
-      "\u0627\u0644\u0633\u0639\u0648\u062F\u06CC\u0629",
-      "\u0627\u0644\u0633\u0639\u0648\u062F\u06CC\u06C3",
-      "\u0627\u0644\u0633\u0639\u0648\u062F\u064A\u0647",
-      "\u0633\u0648\u062F\u0627\u0646",
-      "\u65B0\u52A0\u5761",
-      "\u0B9A\u0BBF\u0B99\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0BC2\u0BB0\u0BCD",
-      "\u0633\u0648\u0631\u064A\u0629",
-      "\u0633\u0648\u0631\u064A\u0627",
-      "\u0E44\u0E17\u0E22",
-      "\u0E28\u0E36\u0E01\u0E29\u0E32.\u0E44\u0E17\u0E22",
-      "\u0E18\u0E38\u0E23\u0E01\u0E34\u0E08.\u0E44\u0E17\u0E22",
-      "\u0E23\u0E31\u0E10\u0E1A\u0E32\u0E25.\u0E44\u0E17\u0E22",
-      "\u0E17\u0E2B\u0E32\u0E23.\u0E44\u0E17\u0E22",
-      "\u0E40\u0E19\u0E47\u0E15.\u0E44\u0E17\u0E22",
-      "\u0E2D\u0E07\u0E04\u0E4C\u0E01\u0E23.\u0E44\u0E17\u0E22",
-      "\u062A\u0648\u0646\u0633",
-      "\u53F0\u7063",
-      "\u53F0\u6E7E",
-      "\u81FA\u7063",
-      "\u0443\u043A\u0440",
-      "\u0627\u0644\u064A\u0645\u0646",
-      "xxx",
-      "ye",
-      "com.ye",
-      "edu.ye",
-      "gov.ye",
-      "net.ye",
-      "mil.ye",
-      "org.ye",
-      "ac.za",
-      "agric.za",
-      "alt.za",
-      "co.za",
-      "edu.za",
-      "gov.za",
-      "grondar.za",
-      "law.za",
-      "mil.za",
-      "net.za",
-      "ngo.za",
-      "nic.za",
-      "nis.za",
-      "nom.za",
-      "org.za",
-      "school.za",
-      "tm.za",
-      "web.za",
-      "zm",
-      "ac.zm",
-      "biz.zm",
-      "co.zm",
-      "com.zm",
-      "edu.zm",
-      "gov.zm",
-      "info.zm",
-      "mil.zm",
-      "net.zm",
-      "org.zm",
-      "sch.zm",
-      "zw",
-      "ac.zw",
-      "co.zw",
-      "gov.zw",
-      "mil.zw",
-      "org.zw",
-      "aaa",
-      "aarp",
-      "abarth",
-      "abb",
-      "abbott",
-      "abbvie",
-      "abc",
-      "able",
-      "abogado",
-      "abudhabi",
-      "academy",
-      "accenture",
-      "accountant",
-      "accountants",
-      "aco",
-      "actor",
-      "adac",
-      "ads",
-      "adult",
-      "aeg",
-      "aetna",
-      "afl",
-      "africa",
-      "agakhan",
-      "agency",
-      "aig",
-      "airbus",
-      "airforce",
-      "airtel",
-      "akdn",
-      "alfaromeo",
-      "alibaba",
-      "alipay",
-      "allfinanz",
-      "allstate",
-      "ally",
-      "alsace",
-      "alstom",
-      "amazon",
-      "americanexpress",
-      "americanfamily",
-      "amex",
-      "amfam",
-      "amica",
-      "amsterdam",
-      "analytics",
-      "android",
-      "anquan",
-      "anz",
-      "aol",
-      "apartments",
-      "app",
-      "apple",
-      "aquarelle",
-      "arab",
-      "aramco",
-      "archi",
-      "army",
-      "art",
-      "arte",
-      "asda",
-      "associates",
-      "athleta",
-      "attorney",
-      "auction",
-      "audi",
-      "audible",
-      "audio",
-      "auspost",
-      "author",
-      "auto",
-      "autos",
-      "avianca",
-      "aws",
-      "axa",
-      "azure",
-      "baby",
-      "baidu",
-      "banamex",
-      "bananarepublic",
-      "band",
-      "bank",
-      "bar",
-      "barcelona",
-      "barclaycard",
-      "barclays",
-      "barefoot",
-      "bargains",
-      "baseball",
-      "basketball",
-      "bauhaus",
-      "bayern",
-      "bbc",
-      "bbt",
-      "bbva",
-      "bcg",
-      "bcn",
-      "beats",
-      "beauty",
-      "beer",
-      "bentley",
-      "berlin",
-      "best",
-      "bestbuy",
-      "bet",
-      "bharti",
-      "bible",
-      "bid",
-      "bike",
-      "bing",
-      "bingo",
-      "bio",
-      "black",
-      "blackfriday",
-      "blockbuster",
-      "blog",
-      "bloomberg",
-      "blue",
-      "bms",
-      "bmw",
-      "bnpparibas",
-      "boats",
-      "boehringer",
-      "bofa",
-      "bom",
-      "bond",
-      "boo",
-      "book",
-      "booking",
-      "bosch",
-      "bostik",
-      "boston",
-      "bot",
-      "boutique",
-      "box",
-      "bradesco",
-      "bridgestone",
-      "broadway",
-      "broker",
-      "brother",
-      "brussels",
-      "bugatti",
-      "build",
-      "builders",
-      "business",
-      "buy",
-      "buzz",
-      "bzh",
-      "cab",
-      "cafe",
-      "cal",
-      "call",
-      "calvinklein",
-      "cam",
-      "camera",
-      "camp",
-      "cancerresearch",
-      "canon",
-      "capetown",
-      "capital",
-      "capitalone",
-      "car",
-      "caravan",
-      "cards",
-      "care",
-      "career",
-      "careers",
-      "cars",
-      "casa",
-      "case",
-      "cash",
-      "casino",
-      "catering",
-      "catholic",
-      "cba",
-      "cbn",
-      "cbre",
-      "cbs",
-      "center",
-      "ceo",
-      "cern",
-      "cfa",
-      "cfd",
-      "chanel",
-      "channel",
-      "charity",
-      "chase",
-      "chat",
-      "cheap",
-      "chintai",
-      "christmas",
-      "chrome",
-      "church",
-      "cipriani",
-      "circle",
-      "cisco",
-      "citadel",
-      "citi",
-      "citic",
-      "city",
-      "cityeats",
-      "claims",
-      "cleaning",
-      "click",
-      "clinic",
-      "clinique",
-      "clothing",
-      "cloud",
-      "club",
-      "clubmed",
-      "coach",
-      "codes",
-      "coffee",
-      "college",
-      "cologne",
-      "comcast",
-      "commbank",
-      "community",
-      "company",
-      "compare",
-      "computer",
-      "comsec",
-      "condos",
-      "construction",
-      "consulting",
-      "contact",
-      "contractors",
-      "cooking",
-      "cookingchannel",
-      "cool",
-      "corsica",
-      "country",
-      "coupon",
-      "coupons",
-      "courses",
-      "cpa",
-      "credit",
-      "creditcard",
-      "creditunion",
-      "cricket",
-      "crown",
-      "crs",
-      "cruise",
-      "cruises",
-      "cuisinella",
-      "cymru",
-      "cyou",
-      "dabur",
-      "dad",
-      "dance",
-      "data",
-      "date",
-      "dating",
-      "datsun",
-      "day",
-      "dclk",
-      "dds",
-      "deal",
-      "dealer",
-      "deals",
-      "degree",
-      "delivery",
-      "dell",
-      "deloitte",
-      "delta",
-      "democrat",
-      "dental",
-      "dentist",
-      "desi",
-      "design",
-      "dev",
-      "dhl",
-      "diamonds",
-      "diet",
-      "digital",
-      "direct",
-      "directory",
-      "discount",
-      "discover",
-      "dish",
-      "diy",
-      "dnp",
-      "docs",
-      "doctor",
-      "dog",
-      "domains",
-      "dot",
-      "download",
-      "drive",
-      "dtv",
-      "dubai",
-      "dunlop",
-      "dupont",
-      "durban",
-      "dvag",
-      "dvr",
-      "earth",
-      "eat",
-      "eco",
-      "edeka",
-      "education",
-      "email",
-      "emerck",
-      "energy",
-      "engineer",
-      "engineering",
-      "enterprises",
-      "epson",
-      "equipment",
-      "ericsson",
-      "erni",
-      "esq",
-      "estate",
-      "etisalat",
-      "eurovision",
-      "eus",
-      "events",
-      "exchange",
-      "expert",
-      "exposed",
-      "express",
-      "extraspace",
-      "fage",
-      "fail",
-      "fairwinds",
-      "faith",
-      "family",
-      "fan",
-      "fans",
-      "farm",
-      "farmers",
-      "fashion",
-      "fast",
-      "fedex",
-      "feedback",
-      "ferrari",
-      "ferrero",
-      "fiat",
-      "fidelity",
-      "fido",
-      "film",
-      "final",
-      "finance",
-      "financial",
-      "fire",
-      "firestone",
-      "firmdale",
-      "fish",
-      "fishing",
-      "fit",
-      "fitness",
-      "flickr",
-      "flights",
-      "flir",
-      "florist",
-      "flowers",
-      "fly",
-      "foo",
-      "food",
-      "foodnetwork",
-      "football",
-      "ford",
-      "forex",
-      "forsale",
-      "forum",
-      "foundation",
-      "fox",
-      "free",
-      "fresenius",
-      "frl",
-      "frogans",
-      "frontdoor",
-      "frontier",
-      "ftr",
-      "fujitsu",
-      "fun",
-      "fund",
-      "furniture",
-      "futbol",
-      "fyi",
-      "gal",
-      "gallery",
-      "gallo",
-      "gallup",
-      "game",
-      "games",
-      "gap",
-      "garden",
-      "gay",
-      "gbiz",
-      "gdn",
-      "gea",
-      "gent",
-      "genting",
-      "george",
-      "ggee",
-      "gift",
-      "gifts",
-      "gives",
-      "giving",
-      "glass",
-      "gle",
-      "global",
-      "globo",
-      "gmail",
-      "gmbh",
-      "gmo",
-      "gmx",
-      "godaddy",
-      "gold",
-      "goldpoint",
-      "golf",
-      "goo",
-      "goodyear",
-      "goog",
-      "google",
-      "gop",
-      "got",
-      "grainger",
-      "graphics",
-      "gratis",
-      "green",
-      "gripe",
-      "grocery",
-      "group",
-      "guardian",
-      "gucci",
-      "guge",
-      "guide",
-      "guitars",
-      "guru",
-      "hair",
-      "hamburg",
-      "hangout",
-      "haus",
-      "hbo",
-      "hdfc",
-      "hdfcbank",
-      "health",
-      "healthcare",
-      "help",
-      "helsinki",
-      "here",
-      "hermes",
-      "hgtv",
-      "hiphop",
-      "hisamitsu",
-      "hitachi",
-      "hiv",
-      "hkt",
-      "hockey",
-      "holdings",
-      "holiday",
-      "homedepot",
-      "homegoods",
-      "homes",
-      "homesense",
-      "honda",
-      "horse",
-      "hospital",
-      "host",
-      "hosting",
-      "hot",
-      "hoteles",
-      "hotels",
-      "hotmail",
-      "house",
-      "how",
-      "hsbc",
-      "hughes",
-      "hyatt",
-      "hyundai",
-      "ibm",
-      "icbc",
-      "ice",
-      "icu",
-      "ieee",
-      "ifm",
-      "ikano",
-      "imamat",
-      "imdb",
-      "immo",
-      "immobilien",
-      "inc",
-      "industries",
-      "infiniti",
-      "ing",
-      "ink",
-      "institute",
-      "insurance",
-      "insure",
-      "international",
-      "intuit",
-      "investments",
-      "ipiranga",
-      "irish",
-      "ismaili",
-      "ist",
-      "istanbul",
-      "itau",
-      "itv",
-      "jaguar",
-      "java",
-      "jcb",
-      "jeep",
-      "jetzt",
-      "jewelry",
-      "jio",
-      "jll",
-      "jmp",
-      "jnj",
-      "joburg",
-      "jot",
-      "joy",
-      "jpmorgan",
-      "jprs",
-      "juegos",
-      "juniper",
-      "kaufen",
-      "kddi",
-      "kerryhotels",
-      "kerrylogistics",
-      "kerryproperties",
-      "kfh",
-      "kia",
-      "kids",
-      "kim",
-      "kinder",
-      "kindle",
-      "kitchen",
-      "kiwi",
-      "koeln",
-      "komatsu",
-      "kosher",
-      "kpmg",
-      "kpn",
-      "krd",
-      "kred",
-      "kuokgroup",
-      "kyoto",
-      "lacaixa",
-      "lamborghini",
-      "lamer",
-      "lancaster",
-      "lancia",
-      "land",
-      "landrover",
-      "lanxess",
-      "lasalle",
-      "lat",
-      "latino",
-      "latrobe",
-      "law",
-      "lawyer",
-      "lds",
-      "lease",
-      "leclerc",
-      "lefrak",
-      "legal",
-      "lego",
-      "lexus",
-      "lgbt",
-      "lidl",
-      "life",
-      "lifeinsurance",
-      "lifestyle",
-      "lighting",
-      "like",
-      "lilly",
-      "limited",
-      "limo",
-      "lincoln",
-      "linde",
-      "link",
-      "lipsy",
-      "live",
-      "living",
-      "llc",
-      "llp",
-      "loan",
-      "loans",
-      "locker",
-      "locus",
-      "loft",
-      "lol",
-      "london",
-      "lotte",
-      "lotto",
-      "love",
-      "lpl",
-      "lplfinancial",
-      "ltd",
-      "ltda",
-      "lundbeck",
-      "luxe",
-      "luxury",
-      "macys",
-      "madrid",
-      "maif",
-      "maison",
-      "makeup",
-      "man",
-      "management",
-      "mango",
-      "map",
-      "market",
-      "marketing",
-      "markets",
-      "marriott",
-      "marshalls",
-      "maserati",
-      "mattel",
-      "mba",
-      "mckinsey",
-      "med",
-      "media",
-      "meet",
-      "melbourne",
-      "meme",
-      "memorial",
-      "men",
-      "menu",
-      "merckmsd",
-      "miami",
-      "microsoft",
-      "mini",
-      "mint",
-      "mit",
-      "mitsubishi",
-      "mlb",
-      "mls",
-      "mma",
-      "mobile",
-      "moda",
-      "moe",
-      "moi",
-      "mom",
-      "monash",
-      "money",
-      "monster",
-      "mormon",
-      "mortgage",
-      "moscow",
-      "moto",
-      "motorcycles",
-      "mov",
-      "movie",
-      "msd",
-      "mtn",
-      "mtr",
-      "music",
-      "mutual",
-      "nab",
-      "nagoya",
-      "natura",
-      "navy",
-      "nba",
-      "nec",
-      "netbank",
-      "netflix",
-      "network",
-      "neustar",
-      "new",
-      "news",
-      "next",
-      "nextdirect",
-      "nexus",
-      "nfl",
-      "ngo",
-      "nhk",
-      "nico",
-      "nike",
-      "nikon",
-      "ninja",
-      "nissan",
-      "nissay",
-      "nokia",
-      "northwesternmutual",
-      "norton",
-      "now",
-      "nowruz",
-      "nowtv",
-      "nra",
-      "nrw",
-      "ntt",
-      "nyc",
-      "obi",
-      "observer",
-      "office",
-      "okinawa",
-      "olayan",
-      "olayangroup",
-      "oldnavy",
-      "ollo",
-      "omega",
-      "one",
-      "ong",
-      "onl",
-      "online",
-      "ooo",
-      "open",
-      "oracle",
-      "orange",
-      "organic",
-      "origins",
-      "osaka",
-      "otsuka",
-      "ott",
-      "ovh",
-      "page",
-      "panasonic",
-      "paris",
-      "pars",
-      "partners",
-      "parts",
-      "party",
-      "passagens",
-      "pay",
-      "pccw",
-      "pet",
-      "pfizer",
-      "pharmacy",
-      "phd",
-      "philips",
-      "phone",
-      "photo",
-      "photography",
-      "photos",
-      "physio",
-      "pics",
-      "pictet",
-      "pictures",
-      "pid",
-      "pin",
-      "ping",
-      "pink",
-      "pioneer",
-      "pizza",
-      "place",
-      "play",
-      "playstation",
-      "plumbing",
-      "plus",
-      "pnc",
-      "pohl",
-      "poker",
-      "politie",
-      "porn",
-      "pramerica",
-      "praxi",
-      "press",
-      "prime",
-      "prod",
-      "productions",
-      "prof",
-      "progressive",
-      "promo",
-      "properties",
-      "property",
-      "protection",
-      "pru",
-      "prudential",
-      "pub",
-      "pwc",
-      "qpon",
-      "quebec",
-      "quest",
-      "racing",
-      "radio",
-      "read",
-      "realestate",
-      "realtor",
-      "realty",
-      "recipes",
-      "red",
-      "redstone",
-      "redumbrella",
-      "rehab",
-      "reise",
-      "reisen",
-      "reit",
-      "reliance",
-      "ren",
-      "rent",
-      "rentals",
-      "repair",
-      "report",
-      "republican",
-      "rest",
-      "restaurant",
-      "review",
-      "reviews",
-      "rexroth",
-      "rich",
-      "richardli",
-      "ricoh",
-      "ril",
-      "rio",
-      "rip",
-      "rocher",
-      "rocks",
-      "rodeo",
-      "rogers",
-      "room",
-      "rsvp",
-      "rugby",
-      "ruhr",
-      "run",
-      "rwe",
-      "ryukyu",
-      "saarland",
-      "safe",
-      "safety",
-      "sakura",
-      "sale",
-      "salon",
-      "samsclub",
-      "samsung",
-      "sandvik",
-      "sandvikcoromant",
-      "sanofi",
-      "sap",
-      "sarl",
-      "sas",
-      "save",
-      "saxo",
-      "sbi",
-      "sbs",
-      "sca",
-      "scb",
-      "schaeffler",
-      "schmidt",
-      "scholarships",
-      "school",
-      "schule",
-      "schwarz",
-      "science",
-      "scot",
-      "search",
-      "seat",
-      "secure",
-      "security",
-      "seek",
-      "select",
-      "sener",
-      "services",
-      "ses",
-      "seven",
-      "sew",
-      "sex",
-      "sexy",
-      "sfr",
-      "shangrila",
-      "sharp",
-      "shaw",
-      "shell",
-      "shia",
-      "shiksha",
-      "shoes",
-      "shop",
-      "shopping",
-      "shouji",
-      "show",
-      "showtime",
-      "silk",
-      "sina",
-      "singles",
-      "site",
-      "ski",
-      "skin",
-      "sky",
-      "skype",
-      "sling",
-      "smart",
-      "smile",
-      "sncf",
-      "soccer",
-      "social",
-      "softbank",
-      "software",
-      "sohu",
-      "solar",
-      "solutions",
-      "song",
-      "sony",
-      "soy",
-      "spa",
-      "space",
-      "sport",
-      "spot",
-      "srl",
-      "stada",
-      "staples",
-      "star",
-      "statebank",
-      "statefarm",
-      "stc",
-      "stcgroup",
-      "stockholm",
-      "storage",
-      "store",
-      "stream",
-      "studio",
-      "study",
-      "style",
-      "sucks",
-      "supplies",
-      "supply",
-      "support",
-      "surf",
-      "surgery",
-      "suzuki",
-      "swatch",
-      "swiss",
-      "sydney",
-      "systems",
-      "tab",
-      "taipei",
-      "talk",
-      "taobao",
-      "target",
-      "tatamotors",
-      "tatar",
-      "tattoo",
-      "tax",
-      "taxi",
-      "tci",
-      "tdk",
-      "team",
-      "tech",
-      "technology",
-      "temasek",
-      "tennis",
-      "teva",
-      "thd",
-      "theater",
-      "theatre",
-      "tiaa",
-      "tickets",
-      "tienda",
-      "tiffany",
-      "tips",
-      "tires",
-      "tirol",
-      "tjmaxx",
-      "tjx",
-      "tkmaxx",
-      "tmall",
-      "today",
-      "tokyo",
-      "tools",
-      "top",
-      "toray",
-      "toshiba",
-      "total",
-      "tours",
-      "town",
-      "toyota",
-      "toys",
-      "trade",
-      "trading",
-      "training",
-      "travel",
-      "travelchannel",
-      "travelers",
-      "travelersinsurance",
-      "trust",
-      "trv",
-      "tube",
-      "tui",
-      "tunes",
-      "tushu",
-      "tvs",
-      "ubank",
-      "ubs",
-      "unicom",
-      "university",
-      "uno",
-      "uol",
-      "ups",
-      "vacations",
-      "vana",
-      "vanguard",
-      "vegas",
-      "ventures",
-      "verisign",
-      "versicherung",
-      "vet",
-      "viajes",
-      "video",
-      "vig",
-      "viking",
-      "villas",
-      "vin",
-      "vip",
-      "virgin",
-      "visa",
-      "vision",
-      "viva",
-      "vivo",
-      "vlaanderen",
-      "vodka",
-      "volkswagen",
-      "volvo",
-      "vote",
-      "voting",
-      "voto",
-      "voyage",
-      "vuelos",
-      "wales",
-      "walmart",
-      "walter",
-      "wang",
-      "wanggou",
-      "watch",
-      "watches",
-      "weather",
-      "weatherchannel",
-      "webcam",
-      "weber",
-      "website",
-      "wedding",
-      "weibo",
-      "weir",
-      "whoswho",
-      "wien",
-      "wiki",
-      "williamhill",
-      "win",
-      "windows",
-      "wine",
-      "winners",
-      "wme",
-      "wolterskluwer",
-      "woodside",
-      "work",
-      "works",
-      "world",
-      "wow",
-      "wtc",
-      "wtf",
-      "xbox",
-      "xerox",
-      "xfinity",
-      "xihuan",
-      "xin",
-      "\u0915\u0949\u092E",
-      "\u30BB\u30FC\u30EB",
-      "\u4F5B\u5C71",
-      "\u6148\u5584",
-      "\u96C6\u56E2",
-      "\u5728\u7EBF",
-      "\u70B9\u770B",
-      "\u0E04\u0E2D\u0E21",
-      "\u516B\u5366",
-      "\u0645\u0648\u0642\u0639",
-      "\u516C\u76CA",
-      "\u516C\u53F8",
-      "\u9999\u683C\u91CC\u62C9",
-      "\u7F51\u7AD9",
-      "\u79FB\u52A8",
-      "\u6211\u7231\u4F60",
-      "\u043C\u043E\u0441\u043A\u0432\u0430",
-      "\u043A\u0430\u0442\u043E\u043B\u0438\u043A",
-      "\u043E\u043D\u043B\u0430\u0439\u043D",
-      "\u0441\u0430\u0439\u0442",
-      "\u8054\u901A",
-      "\u05E7\u05D5\u05DD",
-      "\u65F6\u5C1A",
-      "\u5FAE\u535A",
-      "\u6DE1\u9A6C\u9521",
-      "\u30D5\u30A1\u30C3\u30B7\u30E7\u30F3",
-      "\u043E\u0440\u0433",
-      "\u0928\u0947\u091F",
-      "\u30B9\u30C8\u30A2",
-      "\u30A2\u30DE\u30BE\u30F3",
-      "\uC0BC\uC131",
-      "\u5546\u6807",
-      "\u5546\u5E97",
-      "\u5546\u57CE",
-      "\u0434\u0435\u0442\u0438",
-      "\u30DD\u30A4\u30F3\u30C8",
-      "\u65B0\u95FB",
-      "\u5BB6\u96FB",
-      "\u0643\u0648\u0645",
-      "\u4E2D\u6587\u7F51",
-      "\u4E2D\u4FE1",
-      "\u5A31\u4E50",
-      "\u8C37\u6B4C",
-      "\u96FB\u8A0A\u76C8\u79D1",
-      "\u8D2D\u7269",
-      "\u30AF\u30E9\u30A6\u30C9",
-      "\u901A\u8CA9",
-      "\u7F51\u5E97",
-      "\u0938\u0902\u0917\u0920\u0928",
-      "\u9910\u5385",
-      "\u7F51\u7EDC",
-      "\u043A\u043E\u043C",
-      "\u4E9A\u9A6C\u900A",
-      "\u8BFA\u57FA\u4E9A",
-      "\u98DF\u54C1",
-      "\u98DE\u5229\u6D66",
-      "\u624B\u673A",
-      "\u0627\u0631\u0627\u0645\u0643\u0648",
-      "\u0627\u0644\u0639\u0644\u064A\u0627\u0646",
-      "\u0627\u062A\u0635\u0627\u0644\u0627\u062A",
-      "\u0628\u0627\u0632\u0627\u0631",
-      "\u0627\u0628\u0648\u0638\u0628\u064A",
-      "\u0643\u0627\u062B\u0648\u0644\u064A\u0643",
-      "\u0647\u0645\u0631\u0627\u0647",
-      "\uB2F7\uCEF4",
-      "\u653F\u5E9C",
-      "\u0634\u0628\u0643\u0629",
-      "\u0628\u064A\u062A\u0643",
-      "\u0639\u0631\u0628",
-      "\u673A\u6784",
-      "\u7EC4\u7EC7\u673A\u6784",
-      "\u5065\u5EB7",
-      "\u62DB\u8058",
-      "\u0440\u0443\u0441",
-      "\u5927\u62FF",
-      "\u307F\u3093\u306A",
-      "\u30B0\u30FC\u30B0\u30EB",
-      "\u4E16\u754C",
-      "\u66F8\u7C4D",
-      "\u7F51\u5740",
-      "\uB2F7\uB137",
-      "\u30B3\u30E0",
-      "\u5929\u4E3B\u6559",
-      "\u6E38\u620F",
-      "verm\xF6gensberater",
-      "verm\xF6gensberatung",
-      "\u4F01\u4E1A",
-      "\u4FE1\u606F",
-      "\u5609\u91CC\u5927\u9152\u5E97",
-      "\u5609\u91CC",
-      "\u5E7F\u4E1C",
-      "\u653F\u52A1",
-      "xyz",
-      "yachts",
-      "yahoo",
-      "yamaxun",
-      "yandex",
-      "yodobashi",
-      "yoga",
-      "yokohama",
-      "you",
-      "youtube",
-      "yun",
-      "zappos",
-      "zara",
-      "zero",
-      "zip",
-      "zone",
-      "zuerich",
-      "cc.ua",
-      "inf.ua",
-      "ltd.ua",
-      "611.to",
-      "graphox.us",
-      "*.devcdnaccesso.com",
-      "adobeaemcloud.com",
-      "*.dev.adobeaemcloud.com",
-      "hlx.live",
-      "adobeaemcloud.net",
-      "hlx.page",
-      "hlx3.page",
-      "beep.pl",
-      "airkitapps.com",
-      "airkitapps-au.com",
-      "airkitapps.eu",
-      "aivencloud.com",
-      "barsy.ca",
-      "*.compute.estate",
-      "*.alces.network",
-      "kasserver.com",
-      "altervista.org",
-      "alwaysdata.net",
-      "cloudfront.net",
-      "*.compute.amazonaws.com",
-      "*.compute-1.amazonaws.com",
-      "*.compute.amazonaws.com.cn",
-      "us-east-1.amazonaws.com",
-      "cn-north-1.eb.amazonaws.com.cn",
-      "cn-northwest-1.eb.amazonaws.com.cn",
-      "elasticbeanstalk.com",
-      "ap-northeast-1.elasticbeanstalk.com",
-      "ap-northeast-2.elasticbeanstalk.com",
-      "ap-northeast-3.elasticbeanstalk.com",
-      "ap-south-1.elasticbeanstalk.com",
-      "ap-southeast-1.elasticbeanstalk.com",
-      "ap-southeast-2.elasticbeanstalk.com",
-      "ca-central-1.elasticbeanstalk.com",
-      "eu-central-1.elasticbeanstalk.com",
-      "eu-west-1.elasticbeanstalk.com",
-      "eu-west-2.elasticbeanstalk.com",
-      "eu-west-3.elasticbeanstalk.com",
-      "sa-east-1.elasticbeanstalk.com",
-      "us-east-1.elasticbeanstalk.com",
-      "us-east-2.elasticbeanstalk.com",
-      "us-gov-west-1.elasticbeanstalk.com",
-      "us-west-1.elasticbeanstalk.com",
-      "us-west-2.elasticbeanstalk.com",
-      "*.elb.amazonaws.com",
-      "*.elb.amazonaws.com.cn",
-      "awsglobalaccelerator.com",
-      "s3.amazonaws.com",
-      "s3-ap-northeast-1.amazonaws.com",
-      "s3-ap-northeast-2.amazonaws.com",
-      "s3-ap-south-1.amazonaws.com",
-      "s3-ap-southeast-1.amazonaws.com",
-      "s3-ap-southeast-2.amazonaws.com",
-      "s3-ca-central-1.amazonaws.com",
-      "s3-eu-central-1.amazonaws.com",
-      "s3-eu-west-1.amazonaws.com",
-      "s3-eu-west-2.amazonaws.com",
-      "s3-eu-west-3.amazonaws.com",
-      "s3-external-1.amazonaws.com",
-      "s3-fips-us-gov-west-1.amazonaws.com",
-      "s3-sa-east-1.amazonaws.com",
-      "s3-us-gov-west-1.amazonaws.com",
-      "s3-us-east-2.amazonaws.com",
-      "s3-us-west-1.amazonaws.com",
-      "s3-us-west-2.amazonaws.com",
-      "s3.ap-northeast-2.amazonaws.com",
-      "s3.ap-south-1.amazonaws.com",
-      "s3.cn-north-1.amazonaws.com.cn",
-      "s3.ca-central-1.amazonaws.com",
-      "s3.eu-central-1.amazonaws.com",
-      "s3.eu-west-2.amazonaws.com",
-      "s3.eu-west-3.amazonaws.com",
-      "s3.us-east-2.amazonaws.com",
-      "s3.dualstack.ap-northeast-1.amazonaws.com",
-      "s3.dualstack.ap-northeast-2.amazonaws.com",
-      "s3.dualstack.ap-south-1.amazonaws.com",
-      "s3.dualstack.ap-southeast-1.amazonaws.com",
-      "s3.dualstack.ap-southeast-2.amazonaws.com",
-      "s3.dualstack.ca-central-1.amazonaws.com",
-      "s3.dualstack.eu-central-1.amazonaws.com",
-      "s3.dualstack.eu-west-1.amazonaws.com",
-      "s3.dualstack.eu-west-2.amazonaws.com",
-      "s3.dualstack.eu-west-3.amazonaws.com",
-      "s3.dualstack.sa-east-1.amazonaws.com",
-      "s3.dualstack.us-east-1.amazonaws.com",
-      "s3.dualstack.us-east-2.amazonaws.com",
-      "s3-website-us-east-1.amazonaws.com",
-      "s3-website-us-west-1.amazonaws.com",
-      "s3-website-us-west-2.amazonaws.com",
-      "s3-website-ap-northeast-1.amazonaws.com",
-      "s3-website-ap-southeast-1.amazonaws.com",
-      "s3-website-ap-southeast-2.amazonaws.com",
-      "s3-website-eu-west-1.amazonaws.com",
-      "s3-website-sa-east-1.amazonaws.com",
-      "s3-website.ap-northeast-2.amazonaws.com",
-      "s3-website.ap-south-1.amazonaws.com",
-      "s3-website.ca-central-1.amazonaws.com",
-      "s3-website.eu-central-1.amazonaws.com",
-      "s3-website.eu-west-2.amazonaws.com",
-      "s3-website.eu-west-3.amazonaws.com",
-      "s3-website.us-east-2.amazonaws.com",
-      "t3l3p0rt.net",
-      "tele.amune.org",
-      "apigee.io",
-      "siiites.com",
-      "appspacehosted.com",
-      "appspaceusercontent.com",
-      "appudo.net",
-      "on-aptible.com",
-      "user.aseinet.ne.jp",
-      "gv.vc",
-      "d.gv.vc",
-      "user.party.eus",
-      "pimienta.org",
-      "poivron.org",
-      "potager.org",
-      "sweetpepper.org",
-      "myasustor.com",
-      "cdn.prod.atlassian-dev.net",
-      "translated.page",
-      "myfritz.net",
-      "onavstack.net",
-      "*.awdev.ca",
-      "*.advisor.ws",
-      "ecommerce-shop.pl",
-      "b-data.io",
-      "backplaneapp.io",
-      "balena-devices.com",
-      "rs.ba",
-      "*.banzai.cloud",
-      "app.banzaicloud.io",
-      "*.backyards.banzaicloud.io",
-      "base.ec",
-      "official.ec",
-      "buyshop.jp",
-      "fashionstore.jp",
-      "handcrafted.jp",
-      "kawaiishop.jp",
-      "supersale.jp",
-      "theshop.jp",
-      "shopselect.net",
-      "base.shop",
-      "*.beget.app",
-      "betainabox.com",
-      "bnr.la",
-      "bitbucket.io",
-      "blackbaudcdn.net",
-      "of.je",
-      "bluebite.io",
-      "boomla.net",
-      "boutir.com",
-      "boxfuse.io",
-      "square7.ch",
-      "bplaced.com",
-      "bplaced.de",
-      "square7.de",
-      "bplaced.net",
-      "square7.net",
-      "shop.brendly.rs",
-      "browsersafetymark.io",
-      "uk0.bigv.io",
-      "dh.bytemark.co.uk",
-      "vm.bytemark.co.uk",
-      "cafjs.com",
-      "mycd.eu",
-      "drr.ac",
-      "uwu.ai",
-      "carrd.co",
-      "crd.co",
-      "ju.mp",
-      "ae.org",
-      "br.com",
-      "cn.com",
-      "com.de",
-      "com.se",
-      "de.com",
-      "eu.com",
-      "gb.net",
-      "hu.net",
-      "jp.net",
-      "jpn.com",
-      "mex.com",
-      "ru.com",
-      "sa.com",
-      "se.net",
-      "uk.com",
-      "uk.net",
-      "us.com",
-      "za.bz",
-      "za.com",
-      "ar.com",
-      "hu.com",
-      "kr.com",
-      "no.com",
-      "qc.com",
-      "uy.com",
-      "africa.com",
-      "gr.com",
-      "in.net",
-      "web.in",
-      "us.org",
-      "co.com",
-      "aus.basketball",
-      "nz.basketball",
-      "radio.am",
-      "radio.fm",
-      "c.la",
-      "certmgr.org",
-      "cx.ua",
-      "discourse.group",
-      "discourse.team",
-      "cleverapps.io",
-      "clerk.app",
-      "clerkstage.app",
-      "*.lcl.dev",
-      "*.lclstage.dev",
-      "*.stg.dev",
-      "*.stgstage.dev",
-      "clickrising.net",
-      "c66.me",
-      "cloud66.ws",
-      "cloud66.zone",
-      "jdevcloud.com",
-      "wpdevcloud.com",
-      "cloudaccess.host",
-      "freesite.host",
-      "cloudaccess.net",
-      "cloudcontrolled.com",
-      "cloudcontrolapp.com",
-      "*.cloudera.site",
-      "pages.dev",
-      "trycloudflare.com",
-      "workers.dev",
-      "wnext.app",
-      "co.ca",
-      "*.otap.co",
-      "co.cz",
-      "c.cdn77.org",
-      "cdn77-ssl.net",
-      "r.cdn77.net",
-      "rsc.cdn77.org",
-      "ssl.origin.cdn77-secure.org",
-      "cloudns.asia",
-      "cloudns.biz",
-      "cloudns.club",
-      "cloudns.cc",
-      "cloudns.eu",
-      "cloudns.in",
-      "cloudns.info",
-      "cloudns.org",
-      "cloudns.pro",
-      "cloudns.pw",
-      "cloudns.us",
-      "cnpy.gdn",
-      "codeberg.page",
-      "co.nl",
-      "co.no",
-      "webhosting.be",
-      "hosting-cluster.nl",
-      "ac.ru",
-      "edu.ru",
-      "gov.ru",
-      "int.ru",
-      "mil.ru",
-      "test.ru",
-      "dyn.cosidns.de",
-      "dynamisches-dns.de",
-      "dnsupdater.de",
-      "internet-dns.de",
-      "l-o-g-i-n.de",
-      "dynamic-dns.info",
-      "feste-ip.net",
-      "knx-server.net",
-      "static-access.net",
-      "realm.cz",
-      "*.cryptonomic.net",
-      "cupcake.is",
-      "curv.dev",
-      "*.customer-oci.com",
-      "*.oci.customer-oci.com",
-      "*.ocp.customer-oci.com",
-      "*.ocs.customer-oci.com",
-      "cyon.link",
-      "cyon.site",
-      "fnwk.site",
-      "folionetwork.site",
-      "platform0.app",
-      "daplie.me",
-      "localhost.daplie.me",
-      "dattolocal.com",
-      "dattorelay.com",
-      "dattoweb.com",
-      "mydatto.com",
-      "dattolocal.net",
-      "mydatto.net",
-      "biz.dk",
-      "co.dk",
-      "firm.dk",
-      "reg.dk",
-      "store.dk",
-      "dyndns.dappnode.io",
-      "*.dapps.earth",
-      "*.bzz.dapps.earth",
-      "builtwithdark.com",
-      "demo.datadetect.com",
-      "instance.datadetect.com",
-      "edgestack.me",
-      "ddns5.com",
-      "debian.net",
-      "deno.dev",
-      "deno-staging.dev",
-      "dedyn.io",
-      "deta.app",
-      "deta.dev",
-      "*.rss.my.id",
-      "*.diher.solutions",
-      "discordsays.com",
-      "discordsez.com",
-      "jozi.biz",
-      "dnshome.de",
-      "online.th",
-      "shop.th",
-      "drayddns.com",
-      "shoparena.pl",
-      "dreamhosters.com",
-      "mydrobo.com",
-      "drud.io",
-      "drud.us",
-      "duckdns.org",
-      "bip.sh",
-      "bitbridge.net",
-      "dy.fi",
-      "tunk.org",
-      "dyndns-at-home.com",
-      "dyndns-at-work.com",
-      "dyndns-blog.com",
-      "dyndns-free.com",
-      "dyndns-home.com",
-      "dyndns-ip.com",
-      "dyndns-mail.com",
-      "dyndns-office.com",
-      "dyndns-pics.com",
-      "dyndns-remote.com",
-      "dyndns-server.com",
-      "dyndns-web.com",
-      "dyndns-wiki.com",
-      "dyndns-work.com",
-      "dyndns.biz",
-      "dyndns.info",
-      "dyndns.org",
-      "dyndns.tv",
-      "at-band-camp.net",
-      "ath.cx",
-      "barrel-of-knowledge.info",
-      "barrell-of-knowledge.info",
-      "better-than.tv",
-      "blogdns.com",
-      "blogdns.net",
-      "blogdns.org",
-      "blogsite.org",
-      "boldlygoingnowhere.org",
-      "broke-it.net",
-      "buyshouses.net",
-      "cechire.com",
-      "dnsalias.com",
-      "dnsalias.net",
-      "dnsalias.org",
-      "dnsdojo.com",
-      "dnsdojo.net",
-      "dnsdojo.org",
-      "does-it.net",
-      "doesntexist.com",
-      "doesntexist.org",
-      "dontexist.com",
-      "dontexist.net",
-      "dontexist.org",
-      "doomdns.com",
-      "doomdns.org",
-      "dvrdns.org",
-      "dyn-o-saur.com",
-      "dynalias.com",
-      "dynalias.net",
-      "dynalias.org",
-      "dynathome.net",
-      "dyndns.ws",
-      "endofinternet.net",
-      "endofinternet.org",
-      "endoftheinternet.org",
-      "est-a-la-maison.com",
-      "est-a-la-masion.com",
-      "est-le-patron.com",
-      "est-mon-blogueur.com",
-      "for-better.biz",
-      "for-more.biz",
-      "for-our.info",
-      "for-some.biz",
-      "for-the.biz",
-      "forgot.her.name",
-      "forgot.his.name",
-      "from-ak.com",
-      "from-al.com",
-      "from-ar.com",
-      "from-az.net",
-      "from-ca.com",
-      "from-co.net",
-      "from-ct.com",
-      "from-dc.com",
-      "from-de.com",
-      "from-fl.com",
-      "from-ga.com",
-      "from-hi.com",
-      "from-ia.com",
-      "from-id.com",
-      "from-il.com",
-      "from-in.com",
-      "from-ks.com",
-      "from-ky.com",
-      "from-la.net",
-      "from-ma.com",
-      "from-md.com",
-      "from-me.org",
-      "from-mi.com",
-      "from-mn.com",
-      "from-mo.com",
-      "from-ms.com",
-      "from-mt.com",
-      "from-nc.com",
-      "from-nd.com",
-      "from-ne.com",
-      "from-nh.com",
-      "from-nj.com",
-      "from-nm.com",
-      "from-nv.com",
-      "from-ny.net",
-      "from-oh.com",
-      "from-ok.com",
-      "from-or.com",
-      "from-pa.com",
-      "from-pr.com",
-      "from-ri.com",
-      "from-sc.com",
-      "from-sd.com",
-      "from-tn.com",
-      "from-tx.com",
-      "from-ut.com",
-      "from-va.com",
-      "from-vt.com",
-      "from-wa.com",
-      "from-wi.com",
-      "from-wv.com",
-      "from-wy.com",
-      "ftpaccess.cc",
-      "fuettertdasnetz.de",
-      "game-host.org",
-      "game-server.cc",
-      "getmyip.com",
-      "gets-it.net",
-      "go.dyndns.org",
-      "gotdns.com",
-      "gotdns.org",
-      "groks-the.info",
-      "groks-this.info",
-      "ham-radio-op.net",
-      "here-for-more.info",
-      "hobby-site.com",
-      "hobby-site.org",
-      "home.dyndns.org",
-      "homedns.org",
-      "homeftp.net",
-      "homeftp.org",
-      "homeip.net",
-      "homelinux.com",
-      "homelinux.net",
-      "homelinux.org",
-      "homeunix.com",
-      "homeunix.net",
-      "homeunix.org",
-      "iamallama.com",
-      "in-the-band.net",
-      "is-a-anarchist.com",
-      "is-a-blogger.com",
-      "is-a-bookkeeper.com",
-      "is-a-bruinsfan.org",
-      "is-a-bulls-fan.com",
-      "is-a-candidate.org",
-      "is-a-caterer.com",
-      "is-a-celticsfan.org",
-      "is-a-chef.com",
-      "is-a-chef.net",
-      "is-a-chef.org",
-      "is-a-conservative.com",
-      "is-a-cpa.com",
-      "is-a-cubicle-slave.com",
-      "is-a-democrat.com",
-      "is-a-designer.com",
-      "is-a-doctor.com",
-      "is-a-financialadvisor.com",
-      "is-a-geek.com",
-      "is-a-geek.net",
-      "is-a-geek.org",
-      "is-a-green.com",
-      "is-a-guru.com",
-      "is-a-hard-worker.com",
-      "is-a-hunter.com",
-      "is-a-knight.org",
-      "is-a-landscaper.com",
-      "is-a-lawyer.com",
-      "is-a-liberal.com",
-      "is-a-libertarian.com",
-      "is-a-linux-user.org",
-      "is-a-llama.com",
-      "is-a-musician.com",
-      "is-a-nascarfan.com",
-      "is-a-nurse.com",
-      "is-a-painter.com",
-      "is-a-patsfan.org",
-      "is-a-personaltrainer.com",
-      "is-a-photographer.com",
-      "is-a-player.com",
-      "is-a-republican.com",
-      "is-a-rockstar.com",
-      "is-a-socialist.com",
-      "is-a-soxfan.org",
-      "is-a-student.com",
-      "is-a-teacher.com",
-      "is-a-techie.com",
-      "is-a-therapist.com",
-      "is-an-accountant.com",
-      "is-an-actor.com",
-      "is-an-actress.com",
-      "is-an-anarchist.com",
-      "is-an-artist.com",
-      "is-an-engineer.com",
-      "is-an-entertainer.com",
-      "is-by.us",
-      "is-certified.com",
-      "is-found.org",
-      "is-gone.com",
-      "is-into-anime.com",
-      "is-into-cars.com",
-      "is-into-cartoons.com",
-      "is-into-games.com",
-      "is-leet.com",
-      "is-lost.org",
-      "is-not-certified.com",
-      "is-saved.org",
-      "is-slick.com",
-      "is-uberleet.com",
-      "is-very-bad.org",
-      "is-very-evil.org",
-      "is-very-good.org",
-      "is-very-nice.org",
-      "is-very-sweet.org",
-      "is-with-theband.com",
-      "isa-geek.com",
-      "isa-geek.net",
-      "isa-geek.org",
-      "isa-hockeynut.com",
-      "issmarterthanyou.com",
-      "isteingeek.de",
-      "istmein.de",
-      "kicks-ass.net",
-      "kicks-ass.org",
-      "knowsitall.info",
-      "land-4-sale.us",
-      "lebtimnetz.de",
-      "leitungsen.de",
-      "likes-pie.com",
-      "likescandy.com",
-      "merseine.nu",
-      "mine.nu",
-      "misconfused.org",
-      "mypets.ws",
-      "myphotos.cc",
-      "neat-url.com",
-      "office-on-the.net",
-      "on-the-web.tv",
-      "podzone.net",
-      "podzone.org",
-      "readmyblog.org",
-      "saves-the-whales.com",
-      "scrapper-site.net",
-      "scrapping.cc",
-      "selfip.biz",
-      "selfip.com",
-      "selfip.info",
-      "selfip.net",
-      "selfip.org",
-      "sells-for-less.com",
-      "sells-for-u.com",
-      "sells-it.net",
-      "sellsyourhome.org",
-      "servebbs.com",
-      "servebbs.net",
-      "servebbs.org",
-      "serveftp.net",
-      "serveftp.org",
-      "servegame.org",
-      "shacknet.nu",
-      "simple-url.com",
-      "space-to-rent.com",
-      "stuff-4-sale.org",
-      "stuff-4-sale.us",
-      "teaches-yoga.com",
-      "thruhere.net",
-      "traeumtgerade.de",
-      "webhop.biz",
-      "webhop.info",
-      "webhop.net",
-      "webhop.org",
-      "worse-than.tv",
-      "writesthisblog.com",
-      "ddnss.de",
-      "dyn.ddnss.de",
-      "dyndns.ddnss.de",
-      "dyndns1.de",
-      "dyn-ip24.de",
-      "home-webserver.de",
-      "dyn.home-webserver.de",
-      "myhome-server.de",
-      "ddnss.org",
-      "definima.net",
-      "definima.io",
-      "ondigitalocean.app",
-      "*.digitaloceanspaces.com",
-      "bci.dnstrace.pro",
-      "ddnsfree.com",
-      "ddnsgeek.com",
-      "giize.com",
-      "gleeze.com",
-      "kozow.com",
-      "loseyourip.com",
-      "ooguy.com",
-      "theworkpc.com",
-      "casacam.net",
-      "dynu.net",
-      "accesscam.org",
-      "camdvr.org",
-      "freeddns.org",
-      "mywire.org",
-      "webredirect.org",
-      "myddns.rocks",
-      "blogsite.xyz",
-      "dynv6.net",
-      "e4.cz",
-      "eero.online",
-      "eero-stage.online",
-      "elementor.cloud",
-      "elementor.cool",
-      "en-root.fr",
-      "mytuleap.com",
-      "tuleap-partners.com",
-      "encr.app",
-      "encoreapi.com",
-      "onred.one",
-      "staging.onred.one",
-      "eu.encoway.cloud",
-      "eu.org",
-      "al.eu.org",
-      "asso.eu.org",
-      "at.eu.org",
-      "au.eu.org",
-      "be.eu.org",
-      "bg.eu.org",
-      "ca.eu.org",
-      "cd.eu.org",
-      "ch.eu.org",
-      "cn.eu.org",
-      "cy.eu.org",
-      "cz.eu.org",
-      "de.eu.org",
-      "dk.eu.org",
-      "edu.eu.org",
-      "ee.eu.org",
-      "es.eu.org",
-      "fi.eu.org",
-      "fr.eu.org",
-      "gr.eu.org",
-      "hr.eu.org",
-      "hu.eu.org",
-      "ie.eu.org",
-      "il.eu.org",
-      "in.eu.org",
-      "int.eu.org",
-      "is.eu.org",
-      "it.eu.org",
-      "jp.eu.org",
-      "kr.eu.org",
-      "lt.eu.org",
-      "lu.eu.org",
-      "lv.eu.org",
-      "mc.eu.org",
-      "me.eu.org",
-      "mk.eu.org",
-      "mt.eu.org",
-      "my.eu.org",
-      "net.eu.org",
-      "ng.eu.org",
-      "nl.eu.org",
-      "no.eu.org",
-      "nz.eu.org",
-      "paris.eu.org",
-      "pl.eu.org",
-      "pt.eu.org",
-      "q-a.eu.org",
-      "ro.eu.org",
-      "ru.eu.org",
-      "se.eu.org",
-      "si.eu.org",
-      "sk.eu.org",
-      "tr.eu.org",
-      "uk.eu.org",
-      "us.eu.org",
-      "eurodir.ru",
-      "eu-1.evennode.com",
-      "eu-2.evennode.com",
-      "eu-3.evennode.com",
-      "eu-4.evennode.com",
-      "us-1.evennode.com",
-      "us-2.evennode.com",
-      "us-3.evennode.com",
-      "us-4.evennode.com",
-      "twmail.cc",
-      "twmail.net",
-      "twmail.org",
-      "mymailer.com.tw",
-      "url.tw",
-      "onfabrica.com",
-      "apps.fbsbx.com",
-      "ru.net",
-      "adygeya.ru",
-      "bashkiria.ru",
-      "bir.ru",
-      "cbg.ru",
-      "com.ru",
-      "dagestan.ru",
-      "grozny.ru",
-      "kalmykia.ru",
-      "kustanai.ru",
-      "marine.ru",
-      "mordovia.ru",
-      "msk.ru",
-      "mytis.ru",
-      "nalchik.ru",
-      "nov.ru",
-      "pyatigorsk.ru",
-      "spb.ru",
-      "vladikavkaz.ru",
-      "vladimir.ru",
-      "abkhazia.su",
-      "adygeya.su",
-      "aktyubinsk.su",
-      "arkhangelsk.su",
-      "armenia.su",
-      "ashgabad.su",
-      "azerbaijan.su",
-      "balashov.su",
-      "bashkiria.su",
-      "bryansk.su",
-      "bukhara.su",
-      "chimkent.su",
-      "dagestan.su",
-      "east-kazakhstan.su",
-      "exnet.su",
-      "georgia.su",
-      "grozny.su",
-      "ivanovo.su",
-      "jambyl.su",
-      "kalmykia.su",
-      "kaluga.su",
-      "karacol.su",
-      "karaganda.su",
-      "karelia.su",
-      "khakassia.su",
-      "krasnodar.su",
-      "kurgan.su",
-      "kustanai.su",
-      "lenug.su",
-      "mangyshlak.su",
-      "mordovia.su",
-      "msk.su",
-      "murmansk.su",
-      "nalchik.su",
-      "navoi.su",
-      "north-kazakhstan.su",
-      "nov.su",
-      "obninsk.su",
-      "penza.su",
-      "pokrovsk.su",
-      "sochi.su",
-      "spb.su",
-      "tashkent.su",
-      "termez.su",
-      "togliatti.su",
-      "troitsk.su",
-      "tselinograd.su",
-      "tula.su",
-      "tuva.su",
-      "vladikavkaz.su",
-      "vladimir.su",
-      "vologda.su",
-      "channelsdvr.net",
-      "u.channelsdvr.net",
-      "edgecompute.app",
-      "fastly-terrarium.com",
-      "fastlylb.net",
-      "map.fastlylb.net",
-      "freetls.fastly.net",
-      "map.fastly.net",
-      "a.prod.fastly.net",
-      "global.prod.fastly.net",
-      "a.ssl.fastly.net",
-      "b.ssl.fastly.net",
-      "global.ssl.fastly.net",
-      "fastvps-server.com",
-      "fastvps.host",
-      "myfast.host",
-      "fastvps.site",
-      "myfast.space",
-      "fedorainfracloud.org",
-      "fedorapeople.org",
-      "cloud.fedoraproject.org",
-      "app.os.fedoraproject.org",
-      "app.os.stg.fedoraproject.org",
-      "conn.uk",
-      "copro.uk",
-      "hosp.uk",
-      "mydobiss.com",
-      "fh-muenster.io",
-      "filegear.me",
-      "filegear-au.me",
-      "filegear-de.me",
-      "filegear-gb.me",
-      "filegear-ie.me",
-      "filegear-jp.me",
-      "filegear-sg.me",
-      "firebaseapp.com",
-      "fireweb.app",
-      "flap.id",
-      "onflashdrive.app",
-      "fldrv.com",
-      "fly.dev",
-      "edgeapp.net",
-      "shw.io",
-      "flynnhosting.net",
-      "forgeblocks.com",
-      "id.forgerock.io",
-      "framer.app",
-      "framercanvas.com",
-      "*.frusky.de",
-      "ravpage.co.il",
-      "0e.vc",
-      "freebox-os.com",
-      "freeboxos.com",
-      "fbx-os.fr",
-      "fbxos.fr",
-      "freebox-os.fr",
-      "freeboxos.fr",
-      "freedesktop.org",
-      "freemyip.com",
-      "wien.funkfeuer.at",
-      "*.futurecms.at",
-      "*.ex.futurecms.at",
-      "*.in.futurecms.at",
-      "futurehosting.at",
-      "futuremailing.at",
-      "*.ex.ortsinfo.at",
-      "*.kunden.ortsinfo.at",
-      "*.statics.cloud",
-      "independent-commission.uk",
-      "independent-inquest.uk",
-      "independent-inquiry.uk",
-      "independent-panel.uk",
-      "independent-review.uk",
-      "public-inquiry.uk",
-      "royal-commission.uk",
-      "campaign.gov.uk",
-      "service.gov.uk",
-      "api.gov.uk",
-      "gehirn.ne.jp",
-      "usercontent.jp",
-      "gentapps.com",
-      "gentlentapis.com",
-      "lab.ms",
-      "cdn-edges.net",
-      "ghost.io",
-      "gsj.bz",
-      "githubusercontent.com",
-      "githubpreview.dev",
-      "github.io",
-      "gitlab.io",
-      "gitapp.si",
-      "gitpage.si",
-      "glitch.me",
-      "nog.community",
-      "co.ro",
-      "shop.ro",
-      "lolipop.io",
-      "angry.jp",
-      "babyblue.jp",
-      "babymilk.jp",
-      "backdrop.jp",
-      "bambina.jp",
-      "bitter.jp",
-      "blush.jp",
-      "boo.jp",
-      "boy.jp",
-      "boyfriend.jp",
-      "but.jp",
-      "candypop.jp",
-      "capoo.jp",
-      "catfood.jp",
-      "cheap.jp",
-      "chicappa.jp",
-      "chillout.jp",
-      "chips.jp",
-      "chowder.jp",
-      "chu.jp",
-      "ciao.jp",
-      "cocotte.jp",
-      "coolblog.jp",
-      "cranky.jp",
-      "cutegirl.jp",
-      "daa.jp",
-      "deca.jp",
-      "deci.jp",
-      "digick.jp",
-      "egoism.jp",
-      "fakefur.jp",
-      "fem.jp",
-      "flier.jp",
-      "floppy.jp",
-      "fool.jp",
-      "frenchkiss.jp",
-      "girlfriend.jp",
-      "girly.jp",
-      "gloomy.jp",
-      "gonna.jp",
-      "greater.jp",
-      "hacca.jp",
-      "heavy.jp",
-      "her.jp",
-      "hiho.jp",
-      "hippy.jp",
-      "holy.jp",
-      "hungry.jp",
-      "icurus.jp",
-      "itigo.jp",
-      "jellybean.jp",
-      "kikirara.jp",
-      "kill.jp",
-      "kilo.jp",
-      "kuron.jp",
-      "littlestar.jp",
-      "lolipopmc.jp",
-      "lolitapunk.jp",
-      "lomo.jp",
-      "lovepop.jp",
-      "lovesick.jp",
-      "main.jp",
-      "mods.jp",
-      "mond.jp",
-      "mongolian.jp",
-      "moo.jp",
-      "namaste.jp",
-      "nikita.jp",
-      "nobushi.jp",
-      "noor.jp",
-      "oops.jp",
-      "parallel.jp",
-      "parasite.jp",
-      "pecori.jp",
-      "peewee.jp",
-      "penne.jp",
-      "pepper.jp",
-      "perma.jp",
-      "pigboat.jp",
-      "pinoko.jp",
-      "punyu.jp",
-      "pupu.jp",
-      "pussycat.jp",
-      "pya.jp",
-      "raindrop.jp",
-      "readymade.jp",
-      "sadist.jp",
-      "schoolbus.jp",
-      "secret.jp",
-      "staba.jp",
-      "stripper.jp",
-      "sub.jp",
-      "sunnyday.jp",
-      "thick.jp",
-      "tonkotsu.jp",
-      "under.jp",
-      "upper.jp",
-      "velvet.jp",
-      "verse.jp",
-      "versus.jp",
-      "vivian.jp",
-      "watson.jp",
-      "weblike.jp",
-      "whitesnow.jp",
-      "zombie.jp",
-      "heteml.net",
-      "cloudapps.digital",
-      "london.cloudapps.digital",
-      "pymnt.uk",
-      "homeoffice.gov.uk",
-      "ro.im",
-      "goip.de",
-      "run.app",
-      "a.run.app",
-      "web.app",
-      "*.0emm.com",
-      "appspot.com",
-      "*.r.appspot.com",
-      "codespot.com",
-      "googleapis.com",
-      "googlecode.com",
-      "pagespeedmobilizer.com",
-      "publishproxy.com",
-      "withgoogle.com",
-      "withyoutube.com",
-      "*.gateway.dev",
-      "cloud.goog",
-      "translate.goog",
-      "*.usercontent.goog",
-      "cloudfunctions.net",
-      "blogspot.ae",
-      "blogspot.al",
-      "blogspot.am",
-      "blogspot.ba",
-      "blogspot.be",
-      "blogspot.bg",
-      "blogspot.bj",
-      "blogspot.ca",
-      "blogspot.cf",
-      "blogspot.ch",
-      "blogspot.cl",
-      "blogspot.co.at",
-      "blogspot.co.id",
-      "blogspot.co.il",
-      "blogspot.co.ke",
-      "blogspot.co.nz",
-      "blogspot.co.uk",
-      "blogspot.co.za",
-      "blogspot.com",
-      "blogspot.com.ar",
-      "blogspot.com.au",
-      "blogspot.com.br",
-      "blogspot.com.by",
-      "blogspot.com.co",
-      "blogspot.com.cy",
-      "blogspot.com.ee",
-      "blogspot.com.eg",
-      "blogspot.com.es",
-      "blogspot.com.mt",
-      "blogspot.com.ng",
-      "blogspot.com.tr",
-      "blogspot.com.uy",
-      "blogspot.cv",
-      "blogspot.cz",
-      "blogspot.de",
-      "blogspot.dk",
-      "blogspot.fi",
-      "blogspot.fr",
-      "blogspot.gr",
-      "blogspot.hk",
-      "blogspot.hr",
-      "blogspot.hu",
-      "blogspot.ie",
-      "blogspot.in",
-      "blogspot.is",
-      "blogspot.it",
-      "blogspot.jp",
-      "blogspot.kr",
-      "blogspot.li",
-      "blogspot.lt",
-      "blogspot.lu",
-      "blogspot.md",
-      "blogspot.mk",
-      "blogspot.mr",
-      "blogspot.mx",
-      "blogspot.my",
-      "blogspot.nl",
-      "blogspot.no",
-      "blogspot.pe",
-      "blogspot.pt",
-      "blogspot.qa",
-      "blogspot.re",
-      "blogspot.ro",
-      "blogspot.rs",
-      "blogspot.ru",
-      "blogspot.se",
-      "blogspot.sg",
-      "blogspot.si",
-      "blogspot.sk",
-      "blogspot.sn",
-      "blogspot.td",
-      "blogspot.tw",
-      "blogspot.ug",
-      "blogspot.vn",
-      "goupile.fr",
-      "gov.nl",
-      "awsmppl.com",
-      "g\xFCnstigbestellen.de",
-      "g\xFCnstigliefern.de",
-      "fin.ci",
-      "free.hr",
-      "caa.li",
-      "ua.rs",
-      "conf.se",
-      "hs.zone",
-      "hs.run",
-      "hashbang.sh",
-      "hasura.app",
-      "hasura-app.io",
-      "pages.it.hs-heilbronn.de",
-      "hepforge.org",
-      "herokuapp.com",
-      "herokussl.com",
-      "ravendb.cloud",
-      "myravendb.com",
-      "ravendb.community",
-      "ravendb.me",
-      "development.run",
-      "ravendb.run",
-      "homesklep.pl",
-      "secaas.hk",
-      "hoplix.shop",
-      "orx.biz",
-      "biz.gl",
-      "col.ng",
-      "firm.ng",
-      "gen.ng",
-      "ltd.ng",
-      "ngo.ng",
-      "edu.scot",
-      "sch.so",
-      "hostyhosting.io",
-      "h\xE4kkinen.fi",
-      "*.moonscale.io",
-      "moonscale.net",
-      "iki.fi",
-      "ibxos.it",
-      "iliadboxos.it",
-      "impertrixcdn.com",
-      "impertrix.com",
-      "smushcdn.com",
-      "wphostedmail.com",
-      "wpmucdn.com",
-      "tempurl.host",
-      "wpmudev.host",
-      "dyn-berlin.de",
-      "in-berlin.de",
-      "in-brb.de",
-      "in-butter.de",
-      "in-dsl.de",
-      "in-dsl.net",
-      "in-dsl.org",
-      "in-vpn.de",
-      "in-vpn.net",
-      "in-vpn.org",
-      "biz.at",
-      "info.at",
-      "info.cx",
-      "ac.leg.br",
-      "al.leg.br",
-      "am.leg.br",
-      "ap.leg.br",
-      "ba.leg.br",
-      "ce.leg.br",
-      "df.leg.br",
-      "es.leg.br",
-      "go.leg.br",
-      "ma.leg.br",
-      "mg.leg.br",
-      "ms.leg.br",
-      "mt.leg.br",
-      "pa.leg.br",
-      "pb.leg.br",
-      "pe.leg.br",
-      "pi.leg.br",
-      "pr.leg.br",
-      "rj.leg.br",
-      "rn.leg.br",
-      "ro.leg.br",
-      "rr.leg.br",
-      "rs.leg.br",
-      "sc.leg.br",
-      "se.leg.br",
-      "sp.leg.br",
-      "to.leg.br",
-      "pixolino.com",
-      "na4u.ru",
-      "iopsys.se",
-      "ipifony.net",
-      "iservschule.de",
-      "mein-iserv.de",
-      "schulplattform.de",
-      "schulserver.de",
-      "test-iserv.de",
-      "iserv.dev",
-      "iobb.net",
-      "mel.cloudlets.com.au",
-      "cloud.interhostsolutions.be",
-      "users.scale.virtualcloud.com.br",
-      "mycloud.by",
-      "alp1.ae.flow.ch",
-      "appengine.flow.ch",
-      "es-1.axarnet.cloud",
-      "diadem.cloud",
-      "vip.jelastic.cloud",
-      "jele.cloud",
-      "it1.eur.aruba.jenv-aruba.cloud",
-      "it1.jenv-aruba.cloud",
-      "keliweb.cloud",
-      "cs.keliweb.cloud",
-      "oxa.cloud",
-      "tn.oxa.cloud",
-      "uk.oxa.cloud",
-      "primetel.cloud",
-      "uk.primetel.cloud",
-      "ca.reclaim.cloud",
-      "uk.reclaim.cloud",
-      "us.reclaim.cloud",
-      "ch.trendhosting.cloud",
-      "de.trendhosting.cloud",
-      "jele.club",
-      "amscompute.com",
-      "clicketcloud.com",
-      "dopaas.com",
-      "hidora.com",
-      "paas.hosted-by-previder.com",
-      "rag-cloud.hosteur.com",
-      "rag-cloud-ch.hosteur.com",
-      "jcloud.ik-server.com",
-      "jcloud-ver-jpc.ik-server.com",
-      "demo.jelastic.com",
-      "kilatiron.com",
-      "paas.massivegrid.com",
-      "jed.wafaicloud.com",
-      "lon.wafaicloud.com",
-      "ryd.wafaicloud.com",
-      "j.scaleforce.com.cy",
-      "jelastic.dogado.eu",
-      "fi.cloudplatform.fi",
-      "demo.datacenter.fi",
-      "paas.datacenter.fi",
-      "jele.host",
-      "mircloud.host",
-      "paas.beebyte.io",
-      "sekd1.beebyteapp.io",
-      "jele.io",
-      "cloud-fr1.unispace.io",
-      "jc.neen.it",
-      "cloud.jelastic.open.tim.it",
-      "jcloud.kz",
-      "upaas.kazteleport.kz",
-      "cloudjiffy.net",
-      "fra1-de.cloudjiffy.net",
-      "west1-us.cloudjiffy.net",
-      "jls-sto1.elastx.net",
-      "jls-sto2.elastx.net",
-      "jls-sto3.elastx.net",
-      "faststacks.net",
-      "fr-1.paas.massivegrid.net",
-      "lon-1.paas.massivegrid.net",
-      "lon-2.paas.massivegrid.net",
-      "ny-1.paas.massivegrid.net",
-      "ny-2.paas.massivegrid.net",
-      "sg-1.paas.massivegrid.net",
-      "jelastic.saveincloud.net",
-      "nordeste-idc.saveincloud.net",
-      "j.scaleforce.net",
-      "jelastic.tsukaeru.net",
-      "sdscloud.pl",
-      "unicloud.pl",
-      "mircloud.ru",
-      "jelastic.regruhosting.ru",
-      "enscaled.sg",
-      "jele.site",
-      "jelastic.team",
-      "orangecloud.tn",
-      "j.layershift.co.uk",
-      "phx.enscaled.us",
-      "mircloud.us",
-      "myjino.ru",
-      "*.hosting.myjino.ru",
-      "*.landing.myjino.ru",
-      "*.spectrum.myjino.ru",
-      "*.vps.myjino.ru",
-      "jotelulu.cloud",
-      "*.triton.zone",
-      "*.cns.joyent.com",
-      "js.org",
-      "kaas.gg",
-      "khplay.nl",
-      "ktistory.com",
-      "kapsi.fi",
-      "keymachine.de",
-      "kinghost.net",
-      "uni5.net",
-      "knightpoint.systems",
-      "koobin.events",
-      "oya.to",
-      "kuleuven.cloud",
-      "ezproxy.kuleuven.be",
-      "co.krd",
-      "edu.krd",
-      "krellian.net",
-      "webthings.io",
-      "git-repos.de",
-      "lcube-server.de",
-      "svn-repos.de",
-      "leadpages.co",
-      "lpages.co",
-      "lpusercontent.com",
-      "lelux.site",
-      "co.business",
-      "co.education",
-      "co.events",
-      "co.financial",
-      "co.network",
-      "co.place",
-      "co.technology",
-      "app.lmpm.com",
-      "linkyard.cloud",
-      "linkyard-cloud.ch",
-      "members.linode.com",
-      "*.nodebalancer.linode.com",
-      "*.linodeobjects.com",
-      "ip.linodeusercontent.com",
-      "we.bs",
-      "*.user.localcert.dev",
-      "localzone.xyz",
-      "loginline.app",
-      "loginline.dev",
-      "loginline.io",
-      "loginline.services",
-      "loginline.site",
-      "servers.run",
-      "lohmus.me",
-      "krasnik.pl",
-      "leczna.pl",
-      "lubartow.pl",
-      "lublin.pl",
-      "poniatowa.pl",
-      "swidnik.pl",
-      "glug.org.uk",
-      "lug.org.uk",
-      "lugs.org.uk",
-      "barsy.bg",
-      "barsy.co.uk",
-      "barsyonline.co.uk",
-      "barsycenter.com",
-      "barsyonline.com",
-      "barsy.club",
-      "barsy.de",
-      "barsy.eu",
-      "barsy.in",
-      "barsy.info",
-      "barsy.io",
-      "barsy.me",
-      "barsy.menu",
-      "barsy.mobi",
-      "barsy.net",
-      "barsy.online",
-      "barsy.org",
-      "barsy.pro",
-      "barsy.pub",
-      "barsy.ro",
-      "barsy.shop",
-      "barsy.site",
-      "barsy.support",
-      "barsy.uk",
-      "*.magentosite.cloud",
-      "mayfirst.info",
-      "mayfirst.org",
-      "hb.cldmail.ru",
-      "cn.vu",
-      "mazeplay.com",
-      "mcpe.me",
-      "mcdir.me",
-      "mcdir.ru",
-      "mcpre.ru",
-      "vps.mcdir.ru",
-      "mediatech.by",
-      "mediatech.dev",
-      "hra.health",
-      "miniserver.com",
-      "memset.net",
-      "messerli.app",
-      "*.cloud.metacentrum.cz",
-      "custom.metacentrum.cz",
-      "flt.cloud.muni.cz",
-      "usr.cloud.muni.cz",
-      "meteorapp.com",
-      "eu.meteorapp.com",
-      "co.pl",
-      "*.azurecontainer.io",
-      "azurewebsites.net",
-      "azure-mobile.net",
-      "cloudapp.net",
-      "azurestaticapps.net",
-      "1.azurestaticapps.net",
-      "centralus.azurestaticapps.net",
-      "eastasia.azurestaticapps.net",
-      "eastus2.azurestaticapps.net",
-      "westeurope.azurestaticapps.net",
-      "westus2.azurestaticapps.net",
-      "csx.cc",
-      "mintere.site",
-      "forte.id",
-      "mozilla-iot.org",
-      "bmoattachments.org",
-      "net.ru",
-      "org.ru",
-      "pp.ru",
-      "hostedpi.com",
-      "customer.mythic-beasts.com",
-      "caracal.mythic-beasts.com",
-      "fentiger.mythic-beasts.com",
-      "lynx.mythic-beasts.com",
-      "ocelot.mythic-beasts.com",
-      "oncilla.mythic-beasts.com",
-      "onza.mythic-beasts.com",
-      "sphinx.mythic-beasts.com",
-      "vs.mythic-beasts.com",
-      "x.mythic-beasts.com",
-      "yali.mythic-beasts.com",
-      "cust.retrosnub.co.uk",
-      "ui.nabu.casa",
-      "pony.club",
-      "of.fashion",
-      "in.london",
-      "of.london",
-      "from.marketing",
-      "with.marketing",
-      "for.men",
-      "repair.men",
-      "and.mom",
-      "for.mom",
-      "for.one",
-      "under.one",
-      "for.sale",
-      "that.win",
-      "from.work",
-      "to.work",
-      "cloud.nospamproxy.com",
-      "netlify.app",
-      "4u.com",
-      "ngrok.io",
-      "nh-serv.co.uk",
-      "nfshost.com",
-      "*.developer.app",
-      "noop.app",
-      "*.northflank.app",
-      "*.build.run",
-      "*.code.run",
-      "*.database.run",
-      "*.migration.run",
-      "noticeable.news",
-      "dnsking.ch",
-      "mypi.co",
-      "n4t.co",
-      "001www.com",
-      "ddnslive.com",
-      "myiphost.com",
-      "forumz.info",
-      "16-b.it",
-      "32-b.it",
-      "64-b.it",
-      "soundcast.me",
-      "tcp4.me",
-      "dnsup.net",
-      "hicam.net",
-      "now-dns.net",
-      "ownip.net",
-      "vpndns.net",
-      "dynserv.org",
-      "now-dns.org",
-      "x443.pw",
-      "now-dns.top",
-      "ntdll.top",
-      "freeddns.us",
-      "crafting.xyz",
-      "zapto.xyz",
-      "nsupdate.info",
-      "nerdpol.ovh",
-      "blogsyte.com",
-      "brasilia.me",
-      "cable-modem.org",
-      "ciscofreak.com",
-      "collegefan.org",
-      "couchpotatofries.org",
-      "damnserver.com",
-      "ddns.me",
-      "ditchyourip.com",
-      "dnsfor.me",
-      "dnsiskinky.com",
-      "dvrcam.info",
-      "dynns.com",
-      "eating-organic.net",
-      "fantasyleague.cc",
-      "geekgalaxy.com",
-      "golffan.us",
-      "health-carereform.com",
-      "homesecuritymac.com",
-      "homesecuritypc.com",
-      "hopto.me",
-      "ilovecollege.info",
-      "loginto.me",
-      "mlbfan.org",
-      "mmafan.biz",
-      "myactivedirectory.com",
-      "mydissent.net",
-      "myeffect.net",
-      "mymediapc.net",
-      "mypsx.net",
-      "mysecuritycamera.com",
-      "mysecuritycamera.net",
-      "mysecuritycamera.org",
-      "net-freaks.com",
-      "nflfan.org",
-      "nhlfan.net",
-      "no-ip.ca",
-      "no-ip.co.uk",
-      "no-ip.net",
-      "noip.us",
-      "onthewifi.com",
-      "pgafan.net",
-      "point2this.com",
-      "pointto.us",
-      "privatizehealthinsurance.net",
-      "quicksytes.com",
-      "read-books.org",
-      "securitytactics.com",
-      "serveexchange.com",
-      "servehumour.com",
-      "servep2p.com",
-      "servesarcasm.com",
-      "stufftoread.com",
-      "ufcfan.org",
-      "unusualperson.com",
-      "workisboring.com",
-      "3utilities.com",
-      "bounceme.net",
-      "ddns.net",
-      "ddnsking.com",
-      "gotdns.ch",
-      "hopto.org",
-      "myftp.biz",
-      "myftp.org",
-      "myvnc.com",
-      "no-ip.biz",
-      "no-ip.info",
-      "no-ip.org",
-      "noip.me",
-      "redirectme.net",
-      "servebeer.com",
-      "serveblog.net",
-      "servecounterstrike.com",
-      "serveftp.com",
-      "servegame.com",
-      "servehalflife.com",
-      "servehttp.com",
-      "serveirc.com",
-      "serveminecraft.net",
-      "servemp3.com",
-      "servepics.com",
-      "servequake.com",
-      "sytes.net",
-      "webhop.me",
-      "zapto.org",
-      "stage.nodeart.io",
-      "pcloud.host",
-      "nyc.mn",
-      "static.observableusercontent.com",
-      "cya.gg",
-      "omg.lol",
-      "cloudycluster.net",
-      "omniwe.site",
-      "service.one",
-      "nid.io",
-      "opensocial.site",
-      "opencraft.hosting",
-      "orsites.com",
-      "operaunite.com",
-      "tech.orange",
-      "authgear-staging.com",
-      "authgearapps.com",
-      "skygearapp.com",
-      "outsystemscloud.com",
-      "*.webpaas.ovh.net",
-      "*.hosting.ovh.net",
-      "ownprovider.com",
-      "own.pm",
-      "*.owo.codes",
-      "ox.rs",
-      "oy.lc",
-      "pgfog.com",
-      "pagefrontapp.com",
-      "pagexl.com",
-      "*.paywhirl.com",
-      "bar0.net",
-      "bar1.net",
-      "bar2.net",
-      "rdv.to",
-      "art.pl",
-      "gliwice.pl",
-      "krakow.pl",
-      "poznan.pl",
-      "wroc.pl",
-      "zakopane.pl",
-      "pantheonsite.io",
-      "gotpantheon.com",
-      "mypep.link",
-      "perspecta.cloud",
-      "lk3.ru",
-      "on-web.fr",
-      "bc.platform.sh",
-      "ent.platform.sh",
-      "eu.platform.sh",
-      "us.platform.sh",
-      "*.platformsh.site",
-      "*.tst.site",
-      "platter-app.com",
-      "platter-app.dev",
-      "platterp.us",
-      "pdns.page",
-      "plesk.page",
-      "pleskns.com",
-      "dyn53.io",
-      "onporter.run",
-      "co.bn",
-      "postman-echo.com",
-      "pstmn.io",
-      "mock.pstmn.io",
-      "httpbin.org",
-      "prequalifyme.today",
-      "xen.prgmr.com",
-      "priv.at",
-      "prvcy.page",
-      "*.dweb.link",
-      "protonet.io",
-      "chirurgiens-dentistes-en-france.fr",
-      "byen.site",
-      "pubtls.org",
-      "pythonanywhere.com",
-      "eu.pythonanywhere.com",
-      "qoto.io",
-      "qualifioapp.com",
-      "qbuser.com",
-      "cloudsite.builders",
-      "instances.spawn.cc",
-      "instantcloud.cn",
-      "ras.ru",
-      "qa2.com",
-      "qcx.io",
-      "*.sys.qcx.io",
-      "dev-myqnapcloud.com",
-      "alpha-myqnapcloud.com",
-      "myqnapcloud.com",
-      "*.quipelements.com",
-      "vapor.cloud",
-      "vaporcloud.io",
-      "rackmaze.com",
-      "rackmaze.net",
-      "g.vbrplsbx.io",
-      "*.on-k3s.io",
-      "*.on-rancher.cloud",
-      "*.on-rio.io",
-      "readthedocs.io",
-      "rhcloud.com",
-      "app.render.com",
-      "onrender.com",
-      "repl.co",
-      "id.repl.co",
-      "repl.run",
-      "resindevice.io",
-      "devices.resinstaging.io",
-      "hzc.io",
-      "wellbeingzone.eu",
-      "wellbeingzone.co.uk",
-      "adimo.co.uk",
-      "itcouldbewor.se",
-      "git-pages.rit.edu",
-      "rocky.page",
-      "\u0431\u0438\u0437.\u0440\u0443\u0441",
-      "\u043A\u043E\u043C.\u0440\u0443\u0441",
-      "\u043A\u0440\u044B\u043C.\u0440\u0443\u0441",
-      "\u043C\u0438\u0440.\u0440\u0443\u0441",
-      "\u043C\u0441\u043A.\u0440\u0443\u0441",
-      "\u043E\u0440\u0433.\u0440\u0443\u0441",
-      "\u0441\u0430\u043C\u0430\u0440\u0430.\u0440\u0443\u0441",
-      "\u0441\u043E\u0447\u0438.\u0440\u0443\u0441",
-      "\u0441\u043F\u0431.\u0440\u0443\u0441",
-      "\u044F.\u0440\u0443\u0441",
-      "*.builder.code.com",
-      "*.dev-builder.code.com",
-      "*.stg-builder.code.com",
-      "sandcats.io",
-      "logoip.de",
-      "logoip.com",
-      "fr-par-1.baremetal.scw.cloud",
-      "fr-par-2.baremetal.scw.cloud",
-      "nl-ams-1.baremetal.scw.cloud",
-      "fnc.fr-par.scw.cloud",
-      "functions.fnc.fr-par.scw.cloud",
-      "k8s.fr-par.scw.cloud",
-      "nodes.k8s.fr-par.scw.cloud",
-      "s3.fr-par.scw.cloud",
-      "s3-website.fr-par.scw.cloud",
-      "whm.fr-par.scw.cloud",
-      "priv.instances.scw.cloud",
-      "pub.instances.scw.cloud",
-      "k8s.scw.cloud",
-      "k8s.nl-ams.scw.cloud",
-      "nodes.k8s.nl-ams.scw.cloud",
-      "s3.nl-ams.scw.cloud",
-      "s3-website.nl-ams.scw.cloud",
-      "whm.nl-ams.scw.cloud",
-      "k8s.pl-waw.scw.cloud",
-      "nodes.k8s.pl-waw.scw.cloud",
-      "s3.pl-waw.scw.cloud",
-      "s3-website.pl-waw.scw.cloud",
-      "scalebook.scw.cloud",
-      "smartlabeling.scw.cloud",
-      "dedibox.fr",
-      "schokokeks.net",
-      "gov.scot",
-      "service.gov.scot",
-      "scrysec.com",
-      "firewall-gateway.com",
-      "firewall-gateway.de",
-      "my-gateway.de",
-      "my-router.de",
-      "spdns.de",
-      "spdns.eu",
-      "firewall-gateway.net",
-      "my-firewall.org",
-      "myfirewall.org",
-      "spdns.org",
-      "seidat.net",
-      "sellfy.store",
-      "senseering.net",
-      "minisite.ms",
-      "magnet.page",
-      "biz.ua",
-      "co.ua",
-      "pp.ua",
-      "shiftcrypto.dev",
-      "shiftcrypto.io",
-      "shiftedit.io",
-      "myshopblocks.com",
-      "myshopify.com",
-      "shopitsite.com",
-      "shopware.store",
-      "mo-siemens.io",
-      "1kapp.com",
-      "appchizi.com",
-      "applinzi.com",
-      "sinaapp.com",
-      "vipsinaapp.com",
-      "siteleaf.net",
-      "bounty-full.com",
-      "alpha.bounty-full.com",
-      "beta.bounty-full.com",
-      "small-web.org",
-      "vp4.me",
-      "try-snowplow.com",
-      "srht.site",
-      "stackhero-network.com",
-      "musician.io",
-      "novecore.site",
-      "static.land",
-      "dev.static.land",
-      "sites.static.land",
-      "storebase.store",
-      "vps-host.net",
-      "atl.jelastic.vps-host.net",
-      "njs.jelastic.vps-host.net",
-      "ric.jelastic.vps-host.net",
-      "playstation-cloud.com",
-      "apps.lair.io",
-      "*.stolos.io",
-      "spacekit.io",
-      "customer.speedpartner.de",
-      "myspreadshop.at",
-      "myspreadshop.com.au",
-      "myspreadshop.be",
-      "myspreadshop.ca",
-      "myspreadshop.ch",
-      "myspreadshop.com",
-      "myspreadshop.de",
-      "myspreadshop.dk",
-      "myspreadshop.es",
-      "myspreadshop.fi",
-      "myspreadshop.fr",
-      "myspreadshop.ie",
-      "myspreadshop.it",
-      "myspreadshop.net",
-      "myspreadshop.nl",
-      "myspreadshop.no",
-      "myspreadshop.pl",
-      "myspreadshop.se",
-      "myspreadshop.co.uk",
-      "api.stdlib.com",
-      "storj.farm",
-      "utwente.io",
-      "soc.srcf.net",
-      "user.srcf.net",
-      "temp-dns.com",
-      "supabase.co",
-      "supabase.in",
-      "supabase.net",
-      "su.paba.se",
-      "*.s5y.io",
-      "*.sensiosite.cloud",
-      "syncloud.it",
-      "dscloud.biz",
-      "direct.quickconnect.cn",
-      "dsmynas.com",
-      "familyds.com",
-      "diskstation.me",
-      "dscloud.me",
-      "i234.me",
-      "myds.me",
-      "synology.me",
-      "dscloud.mobi",
-      "dsmynas.net",
-      "familyds.net",
-      "dsmynas.org",
-      "familyds.org",
-      "vpnplus.to",
-      "direct.quickconnect.to",
-      "tabitorder.co.il",
-      "taifun-dns.de",
-      "beta.tailscale.net",
-      "ts.net",
-      "gda.pl",
-      "gdansk.pl",
-      "gdynia.pl",
-      "med.pl",
-      "sopot.pl",
-      "site.tb-hosting.com",
-      "edugit.io",
-      "s3.teckids.org",
-      "telebit.app",
-      "telebit.io",
-      "*.telebit.xyz",
-      "gwiddle.co.uk",
-      "*.firenet.ch",
-      "*.svc.firenet.ch",
-      "reservd.com",
-      "thingdustdata.com",
-      "cust.dev.thingdust.io",
-      "cust.disrec.thingdust.io",
-      "cust.prod.thingdust.io",
-      "cust.testing.thingdust.io",
-      "reservd.dev.thingdust.io",
-      "reservd.disrec.thingdust.io",
-      "reservd.testing.thingdust.io",
-      "tickets.io",
-      "arvo.network",
-      "azimuth.network",
-      "tlon.network",
-      "torproject.net",
-      "pages.torproject.net",
-      "bloxcms.com",
-      "townnews-staging.com",
-      "tbits.me",
-      "12hp.at",
-      "2ix.at",
-      "4lima.at",
-      "lima-city.at",
-      "12hp.ch",
-      "2ix.ch",
-      "4lima.ch",
-      "lima-city.ch",
-      "trafficplex.cloud",
-      "de.cool",
-      "12hp.de",
-      "2ix.de",
-      "4lima.de",
-      "lima-city.de",
-      "1337.pictures",
-      "clan.rip",
-      "lima-city.rocks",
-      "webspace.rocks",
-      "lima.zone",
-      "*.transurl.be",
-      "*.transurl.eu",
-      "*.transurl.nl",
-      "site.transip.me",
-      "tuxfamily.org",
-      "dd-dns.de",
-      "diskstation.eu",
-      "diskstation.org",
-      "dray-dns.de",
-      "draydns.de",
-      "dyn-vpn.de",
-      "dynvpn.de",
-      "mein-vigor.de",
-      "my-vigor.de",
-      "my-wan.de",
-      "syno-ds.de",
-      "synology-diskstation.de",
-      "synology-ds.de",
-      "typedream.app",
-      "pro.typeform.com",
-      "uber.space",
-      "*.uberspace.de",
-      "hk.com",
-      "hk.org",
-      "ltd.hk",
-      "inc.hk",
-      "name.pm",
-      "sch.tf",
-      "biz.wf",
-      "sch.wf",
-      "org.yt",
-      "virtualuser.de",
-      "virtual-user.de",
-      "upli.io",
-      "urown.cloud",
-      "dnsupdate.info",
-      "lib.de.us",
-      "2038.io",
-      "vercel.app",
-      "vercel.dev",
-      "now.sh",
-      "router.management",
-      "v-info.info",
-      "voorloper.cloud",
-      "neko.am",
-      "nyaa.am",
-      "be.ax",
-      "cat.ax",
-      "es.ax",
-      "eu.ax",
-      "gg.ax",
-      "mc.ax",
-      "us.ax",
-      "xy.ax",
-      "nl.ci",
-      "xx.gl",
-      "app.gp",
-      "blog.gt",
-      "de.gt",
-      "to.gt",
-      "be.gy",
-      "cc.hn",
-      "blog.kg",
-      "io.kg",
-      "jp.kg",
-      "tv.kg",
-      "uk.kg",
-      "us.kg",
-      "de.ls",
-      "at.md",
-      "de.md",
-      "jp.md",
-      "to.md",
-      "indie.porn",
-      "vxl.sh",
-      "ch.tc",
-      "me.tc",
-      "we.tc",
-      "nyan.to",
-      "at.vg",
-      "blog.vu",
-      "dev.vu",
-      "me.vu",
-      "v.ua",
-      "*.vultrobjects.com",
-      "wafflecell.com",
-      "*.webhare.dev",
-      "reserve-online.net",
-      "reserve-online.com",
-      "bookonline.app",
-      "hotelwithflight.com",
-      "wedeploy.io",
-      "wedeploy.me",
-      "wedeploy.sh",
-      "remotewd.com",
-      "pages.wiardweb.com",
-      "wmflabs.org",
-      "toolforge.org",
-      "wmcloud.org",
-      "panel.gg",
-      "daemon.panel.gg",
-      "messwithdns.com",
-      "woltlab-demo.com",
-      "myforum.community",
-      "community-pro.de",
-      "diskussionsbereich.de",
-      "community-pro.net",
-      "meinforum.net",
-      "affinitylottery.org.uk",
-      "raffleentry.org.uk",
-      "weeklylottery.org.uk",
-      "wpenginepowered.com",
-      "js.wpenginepowered.com",
-      "wixsite.com",
-      "editorx.io",
-      "half.host",
-      "xnbay.com",
-      "u2.xnbay.com",
-      "u2-local.xnbay.com",
-      "cistron.nl",
-      "demon.nl",
-      "xs4all.space",
-      "yandexcloud.net",
-      "storage.yandexcloud.net",
-      "website.yandexcloud.net",
-      "official.academy",
-      "yolasite.com",
-      "ybo.faith",
-      "yombo.me",
-      "homelink.one",
-      "ybo.party",
-      "ybo.review",
-      "ybo.science",
-      "ybo.trade",
-      "ynh.fr",
-      "nohost.me",
-      "noho.st",
-      "za.net",
-      "za.org",
-      "bss.design",
-      "basicserver.io",
-      "virtualserver.io",
-      "enterprisecloud.nu"
-    ];
-  }
-});
-
-// node_modules/psl/index.js
-var require_psl = __commonJS({
-  "node_modules/psl/index.js"(exports2) {
-    "use strict";
-    var Punycode = require("punycode");
-    var internals = {};
-    internals.rules = require_rules().map(function(rule) {
-      return {
-        rule,
-        suffix: rule.replace(/^(\*\.|\!)/, ""),
-        punySuffix: -1,
-        wildcard: rule.charAt(0) === "*",
-        exception: rule.charAt(0) === "!"
-      };
-    });
-    internals.endsWith = function(str, suffix) {
-      return str.indexOf(suffix, str.length - suffix.length) !== -1;
-    };
-    internals.findRule = function(domain) {
-      var punyDomain = Punycode.toASCII(domain);
-      return internals.rules.reduce(function(memo, rule) {
-        if (rule.punySuffix === -1) {
-          rule.punySuffix = Punycode.toASCII(rule.suffix);
-        }
-        if (!internals.endsWith(punyDomain, "." + rule.punySuffix) && punyDomain !== rule.punySuffix) {
-          return memo;
-        }
-        return rule;
-      }, null);
-    };
-    exports2.errorCodes = {
-      DOMAIN_TOO_SHORT: "Domain name too short.",
-      DOMAIN_TOO_LONG: "Domain name too long. It should be no more than 255 chars.",
-      LABEL_STARTS_WITH_DASH: "Domain name label can not start with a dash.",
-      LABEL_ENDS_WITH_DASH: "Domain name label can not end with a dash.",
-      LABEL_TOO_LONG: "Domain name label should be at most 63 chars long.",
-      LABEL_TOO_SHORT: "Domain name label should be at least 1 character long.",
-      LABEL_INVALID_CHARS: "Domain name label can only contain alphanumeric characters or dashes."
-    };
-    internals.validate = function(input) {
-      var ascii = Punycode.toASCII(input);
-      if (ascii.length < 1) {
-        return "DOMAIN_TOO_SHORT";
-      }
-      if (ascii.length > 255) {
-        return "DOMAIN_TOO_LONG";
-      }
-      var labels = ascii.split(".");
-      var label;
-      for (var i = 0; i < labels.length; ++i) {
-        label = labels[i];
-        if (!label.length) {
-          return "LABEL_TOO_SHORT";
-        }
-        if (label.length > 63) {
-          return "LABEL_TOO_LONG";
-        }
-        if (label.charAt(0) === "-") {
-          return "LABEL_STARTS_WITH_DASH";
-        }
-        if (label.charAt(label.length - 1) === "-") {
-          return "LABEL_ENDS_WITH_DASH";
-        }
-        if (!/^[a-z0-9\-]+$/.test(label)) {
-          return "LABEL_INVALID_CHARS";
-        }
-      }
-    };
-    exports2.parse = function(input) {
-      if (typeof input !== "string") {
-        throw new TypeError("Domain name must be a string.");
-      }
-      var domain = input.slice(0).toLowerCase();
-      if (domain.charAt(domain.length - 1) === ".") {
-        domain = domain.slice(0, domain.length - 1);
-      }
-      var error2 = internals.validate(domain);
-      if (error2) {
-        return {
-          input,
-          error: {
-            message: exports2.errorCodes[error2],
-            code: error2
-          }
-        };
-      }
-      var parsed = {
-        input,
-        tld: null,
-        sld: null,
-        domain: null,
-        subdomain: null,
-        listed: false
-      };
-      var domainParts = domain.split(".");
-      if (domainParts[domainParts.length - 1] === "local") {
-        return parsed;
-      }
-      var handlePunycode = function() {
-        if (!/xn--/.test(domain)) {
-          return parsed;
-        }
-        if (parsed.domain) {
-          parsed.domain = Punycode.toASCII(parsed.domain);
-        }
-        if (parsed.subdomain) {
-          parsed.subdomain = Punycode.toASCII(parsed.subdomain);
-        }
-        return parsed;
-      };
-      var rule = internals.findRule(domain);
-      if (!rule) {
-        if (domainParts.length < 2) {
-          return parsed;
-        }
-        parsed.tld = domainParts.pop();
-        parsed.sld = domainParts.pop();
-        parsed.domain = [parsed.sld, parsed.tld].join(".");
-        if (domainParts.length) {
-          parsed.subdomain = domainParts.pop();
-        }
-        return handlePunycode();
-      }
-      parsed.listed = true;
-      var tldParts = rule.suffix.split(".");
-      var privateParts = domainParts.slice(0, domainParts.length - tldParts.length);
-      if (rule.exception) {
-        privateParts.push(tldParts.shift());
-      }
-      parsed.tld = tldParts.join(".");
-      if (!privateParts.length) {
-        return handlePunycode();
-      }
-      if (rule.wildcard) {
-        tldParts.unshift(privateParts.pop());
-        parsed.tld = tldParts.join(".");
-      }
-      if (!privateParts.length) {
-        return handlePunycode();
-      }
-      parsed.sld = privateParts.pop();
-      parsed.domain = [parsed.sld, parsed.tld].join(".");
-      if (privateParts.length) {
-        parsed.subdomain = privateParts.join(".");
-      }
-      return handlePunycode();
-    };
-    exports2.get = function(domain) {
-      if (!domain) {
-        return null;
-      }
-      return exports2.parse(domain).domain || null;
-    };
-    exports2.isValid = function(domain) {
-      var parsed = exports2.parse(domain);
-      return Boolean(parsed.domain && parsed.listed);
-    };
-  }
-});
-
-// node_modules/@azure/core-http/node_modules/tough-cookie/lib/pubsuffix-psl.js
-var require_pubsuffix_psl = __commonJS({
-  "node_modules/@azure/core-http/node_modules/tough-cookie/lib/pubsuffix-psl.js"(exports2) {
-    "use strict";
-    var psl = require_psl();
-    var SPECIAL_USE_DOMAINS = [
-      "local",
-      "example",
-      "invalid",
-      "localhost",
-      "test"
-    ];
-    var SPECIAL_TREATMENT_DOMAINS = ["localhost", "invalid"];
-    function getPublicSuffix(domain, options = {}) {
-      const domainParts = domain.split(".");
-      const topLevelDomain = domainParts[domainParts.length - 1];
-      const allowSpecialUseDomain = !!options.allowSpecialUseDomain;
-      const ignoreError = !!options.ignoreError;
-      if (allowSpecialUseDomain && SPECIAL_USE_DOMAINS.includes(topLevelDomain)) {
-        if (domainParts.length > 1) {
-          const secondLevelDomain = domainParts[domainParts.length - 2];
-          return `${secondLevelDomain}.${topLevelDomain}`;
-        } else if (SPECIAL_TREATMENT_DOMAINS.includes(topLevelDomain)) {
-          return `${topLevelDomain}`;
-        }
-      }
-      if (!ignoreError && SPECIAL_USE_DOMAINS.includes(topLevelDomain)) {
-        throw new Error(
-          `Cookie has domain set to the public suffix "${topLevelDomain}" which is a special use domain. To allow this, configure your CookieJar with {allowSpecialUseDomain:true, rejectPublicSuffixes: false}.`
-        );
-      }
-      return psl.get(domain);
-    }
-    exports2.getPublicSuffix = getPublicSuffix;
-  }
-});
-
-// node_modules/@azure/core-http/node_modules/tough-cookie/lib/store.js
-var require_store = __commonJS({
-  "node_modules/@azure/core-http/node_modules/tough-cookie/lib/store.js"(exports2) {
-    "use strict";
-    var Store = class {
+    Object.defineProperty(exports2, "__esModule", { value: true });
+    var listenersMap = /* @__PURE__ */ new WeakMap();
+    var abortedMap = /* @__PURE__ */ new WeakMap();
+    var AbortSignal2 = class _AbortSignal {
       constructor() {
-        this.synchronous = false;
+        this.onabort = null;
+        listenersMap.set(this, []);
+        abortedMap.set(this, false);
       }
-      findCookie(domain, path13, key, cb) {
-        throw new Error("findCookie is not implemented");
+      /**
+       * Status of whether aborted or not.
+       *
+       * @readonly
+       */
+      get aborted() {
+        if (!abortedMap.has(this)) {
+          throw new TypeError("Expected `this` to be an instance of AbortSignal.");
+        }
+        return abortedMap.get(this);
       }
-      findCookies(domain, path13, allowSpecialUseDomain, cb) {
-        throw new Error("findCookies is not implemented");
+      /**
+       * Creates a new AbortSignal instance that will never be aborted.
+       *
+       * @readonly
+       */
+      static get none() {
+        return new _AbortSignal();
       }
-      putCookie(cookie, cb) {
-        throw new Error("putCookie is not implemented");
+      /**
+       * Added new "abort" event listener, only support "abort" event.
+       *
+       * @param _type - Only support "abort" event
+       * @param listener - The listener to be added
+       */
+      addEventListener(_type2, listener) {
+        if (!listenersMap.has(this)) {
+          throw new TypeError("Expected `this` to be an instance of AbortSignal.");
+        }
+        const listeners = listenersMap.get(this);
+        listeners.push(listener);
       }
-      updateCookie(oldCookie, newCookie, cb) {
-        throw new Error("updateCookie is not implemented");
+      /**
+       * Remove "abort" event listener, only support "abort" event.
+       *
+       * @param _type - Only support "abort" event
+       * @param listener - The listener to be removed
+       */
+      removeEventListener(_type2, listener) {
+        if (!listenersMap.has(this)) {
+          throw new TypeError("Expected `this` to be an instance of AbortSignal.");
+        }
+        const listeners = listenersMap.get(this);
+        const index = listeners.indexOf(listener);
+        if (index > -1) {
+          listeners.splice(index, 1);
+        }
       }
-      removeCookie(domain, path13, key, cb) {
-        throw new Error("removeCookie is not implemented");
-      }
-      removeCookies(domain, path13, cb) {
-        throw new Error("removeCookies is not implemented");
-      }
-      removeAllCookies(cb) {
-        throw new Error("removeAllCookies is not implemented");
-      }
-      getAllCookies(cb) {
-        throw new Error(
-          "getAllCookies is not implemented (therefore jar cannot be serialized)"
-        );
+      /**
+       * Dispatches a synthetic event to the AbortSignal.
+       */
+      dispatchEvent(_event) {
+        throw new Error("This is a stub dispatchEvent implementation that should not be used.  It only exists for type-checking purposes.");
       }
     };
-    exports2.Store = Store;
-  }
-});
-
-// node_modules/universalify/index.js
-var require_universalify = __commonJS({
-  "node_modules/universalify/index.js"(exports2) {
-    "use strict";
-    exports2.fromCallback = function(fn) {
-      return Object.defineProperty(function() {
-        if (typeof arguments[arguments.length - 1] === "function")
-          fn.apply(this, arguments);
-        else {
-          return new Promise((resolve, reject) => {
-            arguments[arguments.length] = (err, res) => {
-              if (err)
-                return reject(err);
-              resolve(res);
-            };
-            arguments.length++;
-            fn.apply(this, arguments);
-          });
-        }
-      }, "name", { value: fn.name });
-    };
-    exports2.fromPromise = function(fn) {
-      return Object.defineProperty(function() {
-        const cb = arguments[arguments.length - 1];
-        if (typeof cb !== "function")
-          return fn.apply(this, arguments);
-        else {
-          delete arguments[arguments.length - 1];
-          arguments.length--;
-          fn.apply(this, arguments).then((r) => cb(null, r), cb);
-        }
-      }, "name", { value: fn.name });
-    };
-  }
-});
-
-// node_modules/@azure/core-http/node_modules/tough-cookie/lib/permuteDomain.js
-var require_permuteDomain = __commonJS({
-  "node_modules/@azure/core-http/node_modules/tough-cookie/lib/permuteDomain.js"(exports2) {
-    "use strict";
-    var pubsuffix = require_pubsuffix_psl();
-    function permuteDomain(domain, allowSpecialUseDomain) {
-      const pubSuf = pubsuffix.getPublicSuffix(domain, {
-        allowSpecialUseDomain
-      });
-      if (!pubSuf) {
-        return null;
-      }
-      if (pubSuf == domain) {
-        return [domain];
-      }
-      if (domain.slice(-1) == ".") {
-        domain = domain.slice(0, -1);
-      }
-      const prefix = domain.slice(0, -(pubSuf.length + 1));
-      const parts = prefix.split(".").reverse();
-      let cur = pubSuf;
-      const permutations = [cur];
-      while (parts.length) {
-        cur = `${parts.shift()}.${cur}`;
-        permutations.push(cur);
-      }
-      return permutations;
-    }
-    exports2.permuteDomain = permuteDomain;
-  }
-});
-
-// node_modules/@azure/core-http/node_modules/tough-cookie/lib/pathMatch.js
-var require_pathMatch = __commonJS({
-  "node_modules/@azure/core-http/node_modules/tough-cookie/lib/pathMatch.js"(exports2) {
-    "use strict";
-    function pathMatch(reqPath, cookiePath) {
-      if (cookiePath === reqPath) {
-        return true;
-      }
-      const idx = reqPath.indexOf(cookiePath);
-      if (idx === 0) {
-        if (cookiePath.substr(-1) === "/") {
-          return true;
-        }
-        if (reqPath.substr(cookiePath.length, 1) === "/") {
-          return true;
-        }
-      }
-      return false;
-    }
-    exports2.pathMatch = pathMatch;
-  }
-});
-
-// node_modules/@azure/core-http/node_modules/tough-cookie/lib/utilHelper.js
-var require_utilHelper = __commonJS({
-  "node_modules/@azure/core-http/node_modules/tough-cookie/lib/utilHelper.js"(exports2) {
-    function requireUtil() {
-      try {
-        return require("util");
-      } catch (e) {
-        return null;
-      }
-    }
-    function lookupCustomInspectSymbol() {
-      return Symbol.for("nodejs.util.inspect.custom");
-    }
-    function tryReadingCustomSymbolFromUtilInspect(options) {
-      const _requireUtil = options.requireUtil || requireUtil;
-      const util = _requireUtil();
-      return util ? util.inspect.custom : null;
-    }
-    exports2.getUtilInspect = function getUtilInspect(fallback, options = {}) {
-      const _requireUtil = options.requireUtil || requireUtil;
-      const util = _requireUtil();
-      return function inspect(value, showHidden, depth) {
-        return util ? util.inspect(value, showHidden, depth) : fallback(value);
-      };
-    };
-    exports2.getCustomInspectSymbol = function getCustomInspectSymbol(options = {}) {
-      const _lookupCustomInspectSymbol = options.lookupCustomInspectSymbol || lookupCustomInspectSymbol;
-      return _lookupCustomInspectSymbol() || tryReadingCustomSymbolFromUtilInspect(options);
-    };
-  }
-});
-
-// node_modules/@azure/core-http/node_modules/tough-cookie/lib/memstore.js
-var require_memstore = __commonJS({
-  "node_modules/@azure/core-http/node_modules/tough-cookie/lib/memstore.js"(exports2) {
-    "use strict";
-    var { fromCallback } = require_universalify();
-    var Store = require_store().Store;
-    var permuteDomain = require_permuteDomain().permuteDomain;
-    var pathMatch = require_pathMatch().pathMatch;
-    var { getCustomInspectSymbol, getUtilInspect } = require_utilHelper();
-    var MemoryCookieStore = class extends Store {
-      constructor() {
-        super();
-        this.synchronous = true;
-        this.idx = {};
-        const customInspectSymbol = getCustomInspectSymbol();
-        if (customInspectSymbol) {
-          this[customInspectSymbol] = this.inspect;
-        }
-      }
-      inspect() {
-        const util = { inspect: getUtilInspect(inspectFallback) };
-        return `{ idx: ${util.inspect(this.idx, false, 2)} }`;
-      }
-      findCookie(domain, path13, key, cb) {
-        if (!this.idx[domain]) {
-          return cb(null, void 0);
-        }
-        if (!this.idx[domain][path13]) {
-          return cb(null, void 0);
-        }
-        return cb(null, this.idx[domain][path13][key] || null);
-      }
-      findCookies(domain, path13, allowSpecialUseDomain, cb) {
-        const results = [];
-        if (typeof allowSpecialUseDomain === "function") {
-          cb = allowSpecialUseDomain;
-          allowSpecialUseDomain = true;
-        }
-        if (!domain) {
-          return cb(null, []);
-        }
-        let pathMatcher;
-        if (!path13) {
-          pathMatcher = function matchAll(domainIndex) {
-            for (const curPath in domainIndex) {
-              const pathIndex = domainIndex[curPath];
-              for (const key in pathIndex) {
-                results.push(pathIndex[key]);
-              }
-            }
-          };
-        } else {
-          pathMatcher = function matchRFC(domainIndex) {
-            Object.keys(domainIndex).forEach((cookiePath) => {
-              if (pathMatch(path13, cookiePath)) {
-                const pathIndex = domainIndex[cookiePath];
-                for (const key in pathIndex) {
-                  results.push(pathIndex[key]);
-                }
-              }
-            });
-          };
-        }
-        const domains = permuteDomain(domain, allowSpecialUseDomain) || [domain];
-        const idx = this.idx;
-        domains.forEach((curDomain) => {
-          const domainIndex = idx[curDomain];
-          if (!domainIndex) {
-            return;
-          }
-          pathMatcher(domainIndex);
-        });
-        cb(null, results);
-      }
-      putCookie(cookie, cb) {
-        if (!this.idx[cookie.domain]) {
-          this.idx[cookie.domain] = {};
-        }
-        if (!this.idx[cookie.domain][cookie.path]) {
-          this.idx[cookie.domain][cookie.path] = {};
-        }
-        this.idx[cookie.domain][cookie.path][cookie.key] = cookie;
-        cb(null);
-      }
-      updateCookie(oldCookie, newCookie, cb) {
-        this.putCookie(newCookie, cb);
-      }
-      removeCookie(domain, path13, key, cb) {
-        if (this.idx[domain] && this.idx[domain][path13] && this.idx[domain][path13][key]) {
-          delete this.idx[domain][path13][key];
-        }
-        cb(null);
-      }
-      removeCookies(domain, path13, cb) {
-        if (this.idx[domain]) {
-          if (path13) {
-            delete this.idx[domain][path13];
-          } else {
-            delete this.idx[domain];
-          }
-        }
-        return cb(null);
-      }
-      removeAllCookies(cb) {
-        this.idx = {};
-        return cb(null);
-      }
-      getAllCookies(cb) {
-        const cookies = [];
-        const idx = this.idx;
-        const domains = Object.keys(idx);
-        domains.forEach((domain) => {
-          const paths = Object.keys(idx[domain]);
-          paths.forEach((path13) => {
-            const keys = Object.keys(idx[domain][path13]);
-            keys.forEach((key) => {
-              if (key !== null) {
-                cookies.push(idx[domain][path13][key]);
-              }
-            });
-          });
-        });
-        cookies.sort((a, b) => {
-          return (a.creationIndex || 0) - (b.creationIndex || 0);
-        });
-        cb(null, cookies);
-      }
-    };
-    [
-      "findCookie",
-      "findCookies",
-      "putCookie",
-      "updateCookie",
-      "removeCookie",
-      "removeCookies",
-      "removeAllCookies",
-      "getAllCookies"
-    ].forEach((name) => {
-      MemoryCookieStore.prototype[name] = fromCallback(
-        MemoryCookieStore.prototype[name]
-      );
-    });
-    exports2.MemoryCookieStore = MemoryCookieStore;
-    function inspectFallback(val) {
-      const domains = Object.keys(val);
-      if (domains.length === 0) {
-        return "{}";
-      }
-      let result = "{\n";
-      Object.keys(val).forEach((domain, i) => {
-        result += formatDomain(domain, val[domain]);
-        if (i < domains.length - 1) {
-          result += ",";
-        }
-        result += "\n";
-      });
-      result += "}";
-      return result;
-    }
-    function formatDomain(domainName, domainValue) {
-      const indent = "  ";
-      let result = `${indent}'${domainName}': {
-`;
-      Object.keys(domainValue).forEach((path13, i, paths) => {
-        result += formatPath(path13, domainValue[path13]);
-        if (i < paths.length - 1) {
-          result += ",";
-        }
-        result += "\n";
-      });
-      result += `${indent}}`;
-      return result;
-    }
-    function formatPath(pathName, pathValue) {
-      const indent = "    ";
-      let result = `${indent}'${pathName}': {
-`;
-      Object.keys(pathValue).forEach((cookieName, i, cookieNames) => {
-        const cookie = pathValue[cookieName];
-        result += `      ${cookieName}: ${cookie.inspect()}`;
-        if (i < cookieNames.length - 1) {
-          result += ",";
-        }
-        result += "\n";
-      });
-      result += `${indent}}`;
-      return result;
-    }
-    exports2.inspectFallback = inspectFallback;
-  }
-});
-
-// node_modules/@azure/core-http/node_modules/tough-cookie/lib/validators.js
-var require_validators = __commonJS({
-  "node_modules/@azure/core-http/node_modules/tough-cookie/lib/validators.js"(exports2) {
-    "use strict";
-    function isFunction(data) {
-      return typeof data === "function";
-    }
-    function isNonEmptyString(data) {
-      return isString(data) && data !== "";
-    }
-    function isDate(data) {
-      return isInstanceStrict(data, Date) && isInteger2(data.getTime());
-    }
-    function isEmptyString(data) {
-      return data === "" || data instanceof String && data.toString() === "";
-    }
-    function isString(data) {
-      return typeof data === "string" || data instanceof String;
-    }
-    function isObject(data) {
-      return toString.call(data) === "[object Object]";
-    }
-    function isInstanceStrict(data, prototype) {
-      try {
-        return data instanceof prototype;
-      } catch (error2) {
-        return false;
-      }
-    }
-    function isInteger2(data) {
-      return typeof data === "number" && data % 1 === 0;
-    }
-    function validate3(bool, cb, options) {
-      if (!isFunction(cb)) {
-        options = cb;
-        cb = null;
-      }
-      if (!isObject(options))
-        options = { Error: "Failed Check" };
-      if (!bool) {
-        if (cb) {
-          cb(new ParameterError(options));
-        } else {
-          throw new ParameterError(options);
-        }
-      }
-    }
-    var ParameterError = class extends Error {
-      constructor(...params) {
-        super(...params);
-      }
-    };
-    exports2.ParameterError = ParameterError;
-    exports2.isFunction = isFunction;
-    exports2.isNonEmptyString = isNonEmptyString;
-    exports2.isDate = isDate;
-    exports2.isEmptyString = isEmptyString;
-    exports2.isString = isString;
-    exports2.isObject = isObject;
-    exports2.validate = validate3;
-  }
-});
-
-// node_modules/@azure/core-http/node_modules/tough-cookie/lib/version.js
-var require_version = __commonJS({
-  "node_modules/@azure/core-http/node_modules/tough-cookie/lib/version.js"(exports2, module2) {
-    module2.exports = "4.1.2";
-  }
-});
-
-// node_modules/@azure/core-http/node_modules/tough-cookie/lib/cookie.js
-var require_cookie = __commonJS({
-  "node_modules/@azure/core-http/node_modules/tough-cookie/lib/cookie.js"(exports2) {
-    "use strict";
-    var punycode = require_punycode();
-    var urlParse = require_url_parse();
-    var pubsuffix = require_pubsuffix_psl();
-    var Store = require_store().Store;
-    var MemoryCookieStore = require_memstore().MemoryCookieStore;
-    var pathMatch = require_pathMatch().pathMatch;
-    var validators = require_validators();
-    var VERSION = require_version();
-    var { fromCallback } = require_universalify();
-    var { getCustomInspectSymbol } = require_utilHelper();
-    var COOKIE_OCTETS = /^[\x21\x23-\x2B\x2D-\x3A\x3C-\x5B\x5D-\x7E]+$/;
-    var CONTROL_CHARS = /[\x00-\x1F]/;
-    var TERMINATORS = ["\n", "\r", "\0"];
-    var PATH_VALUE = /[\x20-\x3A\x3C-\x7E]+/;
-    var DATE_DELIM = /[\x09\x20-\x2F\x3B-\x40\x5B-\x60\x7B-\x7E]/;
-    var MONTH_TO_NUM = {
-      jan: 0,
-      feb: 1,
-      mar: 2,
-      apr: 3,
-      may: 4,
-      jun: 5,
-      jul: 6,
-      aug: 7,
-      sep: 8,
-      oct: 9,
-      nov: 10,
-      dec: 11
-    };
-    var MAX_TIME = 2147483647e3;
-    var MIN_TIME = 0;
-    var SAME_SITE_CONTEXT_VAL_ERR = 'Invalid sameSiteContext option for getCookies(); expected one of "strict", "lax", or "none"';
-    function checkSameSiteContext(value) {
-      validators.validate(validators.isNonEmptyString(value), value);
-      const context = String(value).toLowerCase();
-      if (context === "none" || context === "lax" || context === "strict") {
-        return context;
-      } else {
-        return null;
-      }
-    }
-    var PrefixSecurityEnum = Object.freeze({
-      SILENT: "silent",
-      STRICT: "strict",
-      DISABLED: "unsafe-disabled"
-    });
-    var IP_REGEX_LOWERCASE = /(?:^(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}$)|(?:^(?:(?:[a-f\d]{1,4}:){7}(?:[a-f\d]{1,4}|:)|(?:[a-f\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|:[a-f\d]{1,4}|:)|(?:[a-f\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-f\d]{1,4}){1,2}|:)|(?:[a-f\d]{1,4}:){4}(?:(?::[a-f\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-f\d]{1,4}){1,3}|:)|(?:[a-f\d]{1,4}:){3}(?:(?::[a-f\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-f\d]{1,4}){1,4}|:)|(?:[a-f\d]{1,4}:){2}(?:(?::[a-f\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-f\d]{1,4}){1,5}|:)|(?:[a-f\d]{1,4}:){1}(?:(?::[a-f\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-f\d]{1,4}){1,6}|:)|(?::(?:(?::[a-f\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)(?:\.(?:25[0-5]|2[0-4]\d|1\d\d|[1-9]\d|\d)){3}|(?::[a-f\d]{1,4}){1,7}|:)))$)/;
-    var IP_V6_REGEX = `
-\\[?(?:
-(?:[a-fA-F\\d]{1,4}:){7}(?:[a-fA-F\\d]{1,4}|:)|
-(?:[a-fA-F\\d]{1,4}:){6}(?:(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)){3}|:[a-fA-F\\d]{1,4}|:)|
-(?:[a-fA-F\\d]{1,4}:){5}(?::(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)){3}|(?::[a-fA-F\\d]{1,4}){1,2}|:)|
-(?:[a-fA-F\\d]{1,4}:){4}(?:(?::[a-fA-F\\d]{1,4}){0,1}:(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)){3}|(?::[a-fA-F\\d]{1,4}){1,3}|:)|
-(?:[a-fA-F\\d]{1,4}:){3}(?:(?::[a-fA-F\\d]{1,4}){0,2}:(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)){3}|(?::[a-fA-F\\d]{1,4}){1,4}|:)|
-(?:[a-fA-F\\d]{1,4}:){2}(?:(?::[a-fA-F\\d]{1,4}){0,3}:(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)){3}|(?::[a-fA-F\\d]{1,4}){1,5}|:)|
-(?:[a-fA-F\\d]{1,4}:){1}(?:(?::[a-fA-F\\d]{1,4}){0,4}:(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)){3}|(?::[a-fA-F\\d]{1,4}){1,6}|:)|
-(?::(?:(?::[a-fA-F\\d]{1,4}){0,5}:(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)(?:\\.(?:25[0-5]|2[0-4]\\d|1\\d\\d|[1-9]\\d|\\d)){3}|(?::[a-fA-F\\d]{1,4}){1,7}|:))
-)(?:%[0-9a-zA-Z]{1,})?\\]?
-`.replace(/\s*\/\/.*$/gm, "").replace(/\n/g, "").trim();
-    var IP_V6_REGEX_OBJECT = new RegExp(`^${IP_V6_REGEX}$`);
-    function parseDigits(token, minDigits, maxDigits, trailingOK) {
-      let count = 0;
-      while (count < token.length) {
-        const c = token.charCodeAt(count);
-        if (c <= 47 || c >= 58) {
-          break;
-        }
-        count++;
-      }
-      if (count < minDigits || count > maxDigits) {
-        return null;
-      }
-      if (!trailingOK && count != token.length) {
-        return null;
-      }
-      return parseInt(token.substr(0, count), 10);
-    }
-    function parseTime(token) {
-      const parts = token.split(":");
-      const result = [0, 0, 0];
-      if (parts.length !== 3) {
-        return null;
-      }
-      for (let i = 0; i < 3; i++) {
-        const trailingOK = i == 2;
-        const num = parseDigits(parts[i], 1, 2, trailingOK);
-        if (num === null) {
-          return null;
-        }
-        result[i] = num;
-      }
-      return result;
-    }
-    function parseMonth(token) {
-      token = String(token).substr(0, 3).toLowerCase();
-      const num = MONTH_TO_NUM[token];
-      return num >= 0 ? num : null;
-    }
-    function parseDate(str) {
-      if (!str) {
+    function abortSignal(signal) {
+      if (signal.aborted) {
         return;
       }
-      const tokens = str.split(DATE_DELIM);
-      if (!tokens) {
-        return;
+      if (signal.onabort) {
+        signal.onabort.call(signal);
       }
-      let hour = null;
-      let minute = null;
-      let second = null;
-      let dayOfMonth = null;
-      let month = null;
-      let year = null;
-      for (let i = 0; i < tokens.length; i++) {
-        const token = tokens[i].trim();
-        if (!token.length) {
-          continue;
-        }
-        let result;
-        if (second === null) {
-          result = parseTime(token);
-          if (result) {
-            hour = result[0];
-            minute = result[1];
-            second = result[2];
-            continue;
-          }
-        }
-        if (dayOfMonth === null) {
-          result = parseDigits(token, 1, 2, true);
-          if (result !== null) {
-            dayOfMonth = result;
-            continue;
-          }
-        }
-        if (month === null) {
-          result = parseMonth(token);
-          if (result !== null) {
-            month = result;
-            continue;
-          }
-        }
-        if (year === null) {
-          result = parseDigits(token, 2, 4, true);
-          if (result !== null) {
-            year = result;
-            if (year >= 70 && year <= 99) {
-              year += 1900;
-            } else if (year >= 0 && year <= 69) {
-              year += 2e3;
-            }
-          }
-        }
+      const listeners = listenersMap.get(signal);
+      if (listeners) {
+        listeners.slice().forEach((listener) => {
+          listener.call(signal, { type: "abort" });
+        });
       }
-      if (dayOfMonth === null || month === null || year === null || second === null || dayOfMonth < 1 || dayOfMonth > 31 || year < 1601 || hour > 23 || minute > 59 || second > 59) {
-        return;
-      }
-      return new Date(Date.UTC(year, month, dayOfMonth, hour, minute, second));
+      abortedMap.set(signal, true);
     }
-    function formatDate(date) {
-      validators.validate(validators.isDate(date), date);
-      return date.toUTCString();
-    }
-    function canonicalDomain(str) {
-      if (str == null) {
-        return null;
+    var AbortError = class extends Error {
+      constructor(message) {
+        super(message);
+        this.name = "AbortError";
       }
-      str = str.trim().replace(/^\./, "");
-      if (IP_V6_REGEX_OBJECT.test(str)) {
-        str = str.replace("[", "").replace("]", "");
-      }
-      if (punycode && /[^\u0001-\u007f]/.test(str)) {
-        str = punycode.toASCII(str);
-      }
-      return str.toLowerCase();
-    }
-    function domainMatch(str, domStr, canonicalize) {
-      if (str == null || domStr == null) {
-        return null;
-      }
-      if (canonicalize !== false) {
-        str = canonicalDomain(str);
-        domStr = canonicalDomain(domStr);
-      }
-      if (str == domStr) {
-        return true;
-      }
-      const idx = str.lastIndexOf(domStr);
-      if (idx <= 0) {
-        return false;
-      }
-      if (str.length !== domStr.length + idx) {
-        return false;
-      }
-      if (str.substr(idx - 1, 1) !== ".") {
-        return false;
-      }
-      if (IP_REGEX_LOWERCASE.test(str)) {
-        return false;
-      }
-      return true;
-    }
-    function defaultPath(path13) {
-      if (!path13 || path13.substr(0, 1) !== "/") {
-        return "/";
-      }
-      if (path13 === "/") {
-        return path13;
-      }
-      const rightSlash = path13.lastIndexOf("/");
-      if (rightSlash === 0) {
-        return "/";
-      }
-      return path13.slice(0, rightSlash);
-    }
-    function trimTerminator(str) {
-      if (validators.isEmptyString(str))
-        return str;
-      for (let t = 0; t < TERMINATORS.length; t++) {
-        const terminatorIdx = str.indexOf(TERMINATORS[t]);
-        if (terminatorIdx !== -1) {
-          str = str.substr(0, terminatorIdx);
-        }
-      }
-      return str;
-    }
-    function parseCookiePair(cookiePair, looseMode) {
-      cookiePair = trimTerminator(cookiePair);
-      validators.validate(validators.isString(cookiePair), cookiePair);
-      let firstEq = cookiePair.indexOf("=");
-      if (looseMode) {
-        if (firstEq === 0) {
-          cookiePair = cookiePair.substr(1);
-          firstEq = cookiePair.indexOf("=");
-        }
-      } else {
-        if (firstEq <= 0) {
+    };
+    var AbortController2 = class {
+      // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+      constructor(parentSignals) {
+        this._signal = new AbortSignal2();
+        if (!parentSignals) {
           return;
         }
-      }
-      let cookieName, cookieValue;
-      if (firstEq <= 0) {
-        cookieName = "";
-        cookieValue = cookiePair.trim();
-      } else {
-        cookieName = cookiePair.substr(0, firstEq).trim();
-        cookieValue = cookiePair.substr(firstEq + 1).trim();
-      }
-      if (CONTROL_CHARS.test(cookieName) || CONTROL_CHARS.test(cookieValue)) {
-        return;
-      }
-      const c = new Cookie();
-      c.key = cookieName;
-      c.value = cookieValue;
-      return c;
-    }
-    function parse4(str, options) {
-      if (!options || typeof options !== "object") {
-        options = {};
-      }
-      if (validators.isEmptyString(str) || !validators.isString(str)) {
-        return null;
-      }
-      str = str.trim();
-      const firstSemi = str.indexOf(";");
-      const cookiePair = firstSemi === -1 ? str : str.substr(0, firstSemi);
-      const c = parseCookiePair(cookiePair, !!options.loose);
-      if (!c) {
-        return;
-      }
-      if (firstSemi === -1) {
-        return c;
-      }
-      const unparsed = str.slice(firstSemi + 1).trim();
-      if (unparsed.length === 0) {
-        return c;
-      }
-      const cookie_avs = unparsed.split(";");
-      while (cookie_avs.length) {
-        const av = cookie_avs.shift().trim();
-        if (av.length === 0) {
-          continue;
+        if (!Array.isArray(parentSignals)) {
+          parentSignals = arguments;
         }
-        const av_sep = av.indexOf("=");
-        let av_key, av_value;
-        if (av_sep === -1) {
-          av_key = av;
-          av_value = null;
-        } else {
-          av_key = av.substr(0, av_sep);
-          av_value = av.substr(av_sep + 1);
-        }
-        av_key = av_key.trim().toLowerCase();
-        if (av_value) {
-          av_value = av_value.trim();
-        }
-        switch (av_key) {
-          case "expires":
-            if (av_value) {
-              const exp = parseDate(av_value);
-              if (exp) {
-                c.expires = exp;
-              }
-            }
-            break;
-          case "max-age":
-            if (av_value) {
-              if (/^-?[0-9]+$/.test(av_value)) {
-                const delta = parseInt(av_value, 10);
-                c.setMaxAge(delta);
-              }
-            }
-            break;
-          case "domain":
-            if (av_value) {
-              const domain = av_value.trim().replace(/^\./, "");
-              if (domain) {
-                c.domain = domain.toLowerCase();
-              }
-            }
-            break;
-          case "path":
-            c.path = av_value && av_value[0] === "/" ? av_value : null;
-            break;
-          case "secure":
-            c.secure = true;
-            break;
-          case "httponly":
-            c.httpOnly = true;
-            break;
-          case "samesite":
-            const enforcement = av_value ? av_value.toLowerCase() : "";
-            switch (enforcement) {
-              case "strict":
-                c.sameSite = "strict";
-                break;
-              case "lax":
-                c.sameSite = "lax";
-                break;
-              case "none":
-                c.sameSite = "none";
-                break;
-              default:
-                c.sameSite = void 0;
-                break;
-            }
-            break;
-          default:
-            c.extensions = c.extensions || [];
-            c.extensions.push(av);
-            break;
-        }
-      }
-      return c;
-    }
-    function isSecurePrefixConditionMet(cookie) {
-      validators.validate(validators.isObject(cookie), cookie);
-      return !cookie.key.startsWith("__Secure-") || cookie.secure;
-    }
-    function isHostPrefixConditionMet(cookie) {
-      validators.validate(validators.isObject(cookie));
-      return !cookie.key.startsWith("__Host-") || cookie.secure && cookie.hostOnly && cookie.path != null && cookie.path === "/";
-    }
-    function jsonParse(str) {
-      let obj;
-      try {
-        obj = JSON.parse(str);
-      } catch (e) {
-        return e;
-      }
-      return obj;
-    }
-    function fromJSON(str) {
-      if (!str || validators.isEmptyString(str)) {
-        return null;
-      }
-      let obj;
-      if (typeof str === "string") {
-        obj = jsonParse(str);
-        if (obj instanceof Error) {
-          return null;
-        }
-      } else {
-        obj = str;
-      }
-      const c = new Cookie();
-      for (let i = 0; i < Cookie.serializableProperties.length; i++) {
-        const prop = Cookie.serializableProperties[i];
-        if (obj[prop] === void 0 || obj[prop] === cookieDefaults[prop]) {
-          continue;
-        }
-        if (prop === "expires" || prop === "creation" || prop === "lastAccessed") {
-          if (obj[prop] === null) {
-            c[prop] = null;
+        for (const parentSignal of parentSignals) {
+          if (parentSignal.aborted) {
+            this.abort();
           } else {
-            c[prop] = obj[prop] == "Infinity" ? "Infinity" : new Date(obj[prop]);
-          }
-        } else {
-          c[prop] = obj[prop];
-        }
-      }
-      return c;
-    }
-    function cookieCompare(a, b) {
-      validators.validate(validators.isObject(a), a);
-      validators.validate(validators.isObject(b), b);
-      let cmp = 0;
-      const aPathLen = a.path ? a.path.length : 0;
-      const bPathLen = b.path ? b.path.length : 0;
-      cmp = bPathLen - aPathLen;
-      if (cmp !== 0) {
-        return cmp;
-      }
-      const aTime = a.creation ? a.creation.getTime() : MAX_TIME;
-      const bTime = b.creation ? b.creation.getTime() : MAX_TIME;
-      cmp = aTime - bTime;
-      if (cmp !== 0) {
-        return cmp;
-      }
-      cmp = a.creationIndex - b.creationIndex;
-      return cmp;
-    }
-    function permutePath(path13) {
-      validators.validate(validators.isString(path13));
-      if (path13 === "/") {
-        return ["/"];
-      }
-      const permutations = [path13];
-      while (path13.length > 1) {
-        const lindex = path13.lastIndexOf("/");
-        if (lindex === 0) {
-          break;
-        }
-        path13 = path13.substr(0, lindex);
-        permutations.push(path13);
-      }
-      permutations.push("/");
-      return permutations;
-    }
-    function getCookieContext(url) {
-      if (url instanceof Object) {
-        return url;
-      }
-      try {
-        url = decodeURI(url);
-      } catch (err) {
-      }
-      return urlParse(url);
-    }
-    var cookieDefaults = {
-      // the order in which the RFC has them:
-      key: "",
-      value: "",
-      expires: "Infinity",
-      maxAge: null,
-      domain: null,
-      path: null,
-      secure: false,
-      httpOnly: false,
-      extensions: null,
-      // set by the CookieJar:
-      hostOnly: null,
-      pathIsDefault: null,
-      creation: null,
-      lastAccessed: null,
-      sameSite: void 0
-    };
-    var Cookie = class {
-      constructor(options = {}) {
-        const customInspectSymbol = getCustomInspectSymbol();
-        if (customInspectSymbol) {
-          this[customInspectSymbol] = this.inspect;
-        }
-        Object.assign(this, cookieDefaults, options);
-        this.creation = this.creation || /* @__PURE__ */ new Date();
-        Object.defineProperty(this, "creationIndex", {
-          configurable: false,
-          enumerable: false,
-          // important for assert.deepEqual checks
-          writable: true,
-          value: ++Cookie.cookiesCreated
-        });
-      }
-      inspect() {
-        const now = Date.now();
-        const hostOnly = this.hostOnly != null ? this.hostOnly : "?";
-        const createAge = this.creation ? `${now - this.creation.getTime()}ms` : "?";
-        const accessAge = this.lastAccessed ? `${now - this.lastAccessed.getTime()}ms` : "?";
-        return `Cookie="${this.toString()}; hostOnly=${hostOnly}; aAge=${accessAge}; cAge=${createAge}"`;
-      }
-      toJSON() {
-        const obj = {};
-        for (const prop of Cookie.serializableProperties) {
-          if (this[prop] === cookieDefaults[prop]) {
-            continue;
-          }
-          if (prop === "expires" || prop === "creation" || prop === "lastAccessed") {
-            if (this[prop] === null) {
-              obj[prop] = null;
-            } else {
-              obj[prop] = this[prop] == "Infinity" ? "Infinity" : this[prop].toISOString();
-            }
-          } else if (prop === "maxAge") {
-            if (this[prop] !== null) {
-              obj[prop] = this[prop] == Infinity || this[prop] == -Infinity ? this[prop].toString() : this[prop];
-            }
-          } else {
-            if (this[prop] !== cookieDefaults[prop]) {
-              obj[prop] = this[prop];
-            }
-          }
-        }
-        return obj;
-      }
-      clone() {
-        return fromJSON(this.toJSON());
-      }
-      validate() {
-        if (!COOKIE_OCTETS.test(this.value)) {
-          return false;
-        }
-        if (this.expires != Infinity && !(this.expires instanceof Date) && !parseDate(this.expires)) {
-          return false;
-        }
-        if (this.maxAge != null && this.maxAge <= 0) {
-          return false;
-        }
-        if (this.path != null && !PATH_VALUE.test(this.path)) {
-          return false;
-        }
-        const cdomain = this.cdomain();
-        if (cdomain) {
-          if (cdomain.match(/\.$/)) {
-            return false;
-          }
-          const suffix = pubsuffix.getPublicSuffix(cdomain);
-          if (suffix == null) {
-            return false;
-          }
-        }
-        return true;
-      }
-      setExpires(exp) {
-        if (exp instanceof Date) {
-          this.expires = exp;
-        } else {
-          this.expires = parseDate(exp) || "Infinity";
-        }
-      }
-      setMaxAge(age) {
-        if (age === Infinity || age === -Infinity) {
-          this.maxAge = age.toString();
-        } else {
-          this.maxAge = age;
-        }
-      }
-      cookieString() {
-        let val = this.value;
-        if (val == null) {
-          val = "";
-        }
-        if (this.key === "") {
-          return val;
-        }
-        return `${this.key}=${val}`;
-      }
-      // gives Set-Cookie header format
-      toString() {
-        let str = this.cookieString();
-        if (this.expires != Infinity) {
-          if (this.expires instanceof Date) {
-            str += `; Expires=${formatDate(this.expires)}`;
-          } else {
-            str += `; Expires=${this.expires}`;
-          }
-        }
-        if (this.maxAge != null && this.maxAge != Infinity) {
-          str += `; Max-Age=${this.maxAge}`;
-        }
-        if (this.domain && !this.hostOnly) {
-          str += `; Domain=${this.domain}`;
-        }
-        if (this.path) {
-          str += `; Path=${this.path}`;
-        }
-        if (this.secure) {
-          str += "; Secure";
-        }
-        if (this.httpOnly) {
-          str += "; HttpOnly";
-        }
-        if (this.sameSite && this.sameSite !== "none") {
-          const ssCanon = Cookie.sameSiteCanonical[this.sameSite.toLowerCase()];
-          str += `; SameSite=${ssCanon ? ssCanon : this.sameSite}`;
-        }
-        if (this.extensions) {
-          this.extensions.forEach((ext) => {
-            str += `; ${ext}`;
-          });
-        }
-        return str;
-      }
-      // TTL() partially replaces the "expiry-time" parts of S5.3 step 3 (setCookie()
-      // elsewhere)
-      // S5.3 says to give the "latest representable date" for which we use Infinity
-      // For "expired" we use 0
-      TTL(now) {
-        if (this.maxAge != null) {
-          return this.maxAge <= 0 ? 0 : this.maxAge * 1e3;
-        }
-        let expires = this.expires;
-        if (expires != Infinity) {
-          if (!(expires instanceof Date)) {
-            expires = parseDate(expires) || Infinity;
-          }
-          if (expires == Infinity) {
-            return Infinity;
-          }
-          return expires.getTime() - (now || Date.now());
-        }
-        return Infinity;
-      }
-      // expiryTime() replaces the "expiry-time" parts of S5.3 step 3 (setCookie()
-      // elsewhere)
-      expiryTime(now) {
-        if (this.maxAge != null) {
-          const relativeTo = now || this.creation || /* @__PURE__ */ new Date();
-          const age = this.maxAge <= 0 ? -Infinity : this.maxAge * 1e3;
-          return relativeTo.getTime() + age;
-        }
-        if (this.expires == Infinity) {
-          return Infinity;
-        }
-        return this.expires.getTime();
-      }
-      // expiryDate() replaces the "expiry-time" parts of S5.3 step 3 (setCookie()
-      // elsewhere), except it returns a Date
-      expiryDate(now) {
-        const millisec = this.expiryTime(now);
-        if (millisec == Infinity) {
-          return new Date(MAX_TIME);
-        } else if (millisec == -Infinity) {
-          return new Date(MIN_TIME);
-        } else {
-          return new Date(millisec);
-        }
-      }
-      // This replaces the "persistent-flag" parts of S5.3 step 3
-      isPersistent() {
-        return this.maxAge != null || this.expires != Infinity;
-      }
-      // Mostly S5.1.2 and S5.2.3:
-      canonicalizedDomain() {
-        if (this.domain == null) {
-          return null;
-        }
-        return canonicalDomain(this.domain);
-      }
-      cdomain() {
-        return this.canonicalizedDomain();
-      }
-    };
-    Cookie.cookiesCreated = 0;
-    Cookie.parse = parse4;
-    Cookie.fromJSON = fromJSON;
-    Cookie.serializableProperties = Object.keys(cookieDefaults);
-    Cookie.sameSiteLevel = {
-      strict: 3,
-      lax: 2,
-      none: 1
-    };
-    Cookie.sameSiteCanonical = {
-      strict: "Strict",
-      lax: "Lax"
-    };
-    function getNormalizedPrefixSecurity(prefixSecurity) {
-      if (prefixSecurity != null) {
-        const normalizedPrefixSecurity = prefixSecurity.toLowerCase();
-        switch (normalizedPrefixSecurity) {
-          case PrefixSecurityEnum.STRICT:
-          case PrefixSecurityEnum.SILENT:
-          case PrefixSecurityEnum.DISABLED:
-            return normalizedPrefixSecurity;
-        }
-      }
-      return PrefixSecurityEnum.SILENT;
-    }
-    var CookieJar = class {
-      constructor(store, options = { rejectPublicSuffixes: true }) {
-        if (typeof options === "boolean") {
-          options = { rejectPublicSuffixes: options };
-        }
-        validators.validate(validators.isObject(options), options);
-        this.rejectPublicSuffixes = options.rejectPublicSuffixes;
-        this.enableLooseMode = !!options.looseMode;
-        this.allowSpecialUseDomain = typeof options.allowSpecialUseDomain === "boolean" ? options.allowSpecialUseDomain : true;
-        this.store = store || new MemoryCookieStore();
-        this.prefixSecurity = getNormalizedPrefixSecurity(options.prefixSecurity);
-        this._cloneSync = syncWrap("clone");
-        this._importCookiesSync = syncWrap("_importCookies");
-        this.getCookiesSync = syncWrap("getCookies");
-        this.getCookieStringSync = syncWrap("getCookieString");
-        this.getSetCookieStringsSync = syncWrap("getSetCookieStrings");
-        this.removeAllCookiesSync = syncWrap("removeAllCookies");
-        this.setCookieSync = syncWrap("setCookie");
-        this.serializeSync = syncWrap("serialize");
-      }
-      setCookie(cookie, url, options, cb) {
-        validators.validate(validators.isNonEmptyString(url), cb, options);
-        let err;
-        if (validators.isFunction(url)) {
-          cb = url;
-          return cb(new Error("No URL was specified"));
-        }
-        const context = getCookieContext(url);
-        if (validators.isFunction(options)) {
-          cb = options;
-          options = {};
-        }
-        validators.validate(validators.isFunction(cb), cb);
-        if (!validators.isNonEmptyString(cookie) && !validators.isObject(cookie) && cookie instanceof String && cookie.length == 0) {
-          return cb(null);
-        }
-        const host = canonicalDomain(context.hostname);
-        const loose = options.loose || this.enableLooseMode;
-        let sameSiteContext = null;
-        if (options.sameSiteContext) {
-          sameSiteContext = checkSameSiteContext(options.sameSiteContext);
-          if (!sameSiteContext) {
-            return cb(new Error(SAME_SITE_CONTEXT_VAL_ERR));
-          }
-        }
-        if (typeof cookie === "string" || cookie instanceof String) {
-          cookie = Cookie.parse(cookie, { loose });
-          if (!cookie) {
-            err = new Error("Cookie failed to parse");
-            return cb(options.ignoreError ? null : err);
-          }
-        } else if (!(cookie instanceof Cookie)) {
-          err = new Error(
-            "First argument to setCookie must be a Cookie object or string"
-          );
-          return cb(options.ignoreError ? null : err);
-        }
-        const now = options.now || /* @__PURE__ */ new Date();
-        if (this.rejectPublicSuffixes && cookie.domain) {
-          const suffix = pubsuffix.getPublicSuffix(cookie.cdomain(), {
-            allowSpecialUseDomain: this.allowSpecialUseDomain,
-            ignoreError: options.ignoreError
-          });
-          if (suffix == null && !IP_V6_REGEX_OBJECT.test(cookie.domain)) {
-            err = new Error("Cookie has domain set to a public suffix");
-            return cb(options.ignoreError ? null : err);
-          }
-        }
-        if (cookie.domain) {
-          if (!domainMatch(host, cookie.cdomain(), false)) {
-            err = new Error(
-              `Cookie not in this host's domain. Cookie:${cookie.cdomain()} Request:${host}`
-            );
-            return cb(options.ignoreError ? null : err);
-          }
-          if (cookie.hostOnly == null) {
-            cookie.hostOnly = false;
-          }
-        } else {
-          cookie.hostOnly = true;
-          cookie.domain = host;
-        }
-        if (!cookie.path || cookie.path[0] !== "/") {
-          cookie.path = defaultPath(context.pathname);
-          cookie.pathIsDefault = true;
-        }
-        if (options.http === false && cookie.httpOnly) {
-          err = new Error("Cookie is HttpOnly and this isn't an HTTP API");
-          return cb(options.ignoreError ? null : err);
-        }
-        if (cookie.sameSite !== "none" && cookie.sameSite !== void 0 && sameSiteContext) {
-          if (sameSiteContext === "none") {
-            err = new Error(
-              "Cookie is SameSite but this is a cross-origin request"
-            );
-            return cb(options.ignoreError ? null : err);
-          }
-        }
-        const ignoreErrorForPrefixSecurity = this.prefixSecurity === PrefixSecurityEnum.SILENT;
-        const prefixSecurityDisabled = this.prefixSecurity === PrefixSecurityEnum.DISABLED;
-        if (!prefixSecurityDisabled) {
-          let errorFound = false;
-          let errorMsg;
-          if (!isSecurePrefixConditionMet(cookie)) {
-            errorFound = true;
-            errorMsg = "Cookie has __Secure prefix but Secure attribute is not set";
-          } else if (!isHostPrefixConditionMet(cookie)) {
-            errorFound = true;
-            errorMsg = "Cookie has __Host prefix but either Secure or HostOnly attribute is not set or Path is not '/'";
-          }
-          if (errorFound) {
-            return cb(
-              options.ignoreError || ignoreErrorForPrefixSecurity ? null : new Error(errorMsg)
-            );
-          }
-        }
-        const store = this.store;
-        if (!store.updateCookie) {
-          store.updateCookie = function(oldCookie, newCookie, cb2) {
-            this.putCookie(newCookie, cb2);
-          };
-        }
-        function withCookie(err2, oldCookie) {
-          if (err2) {
-            return cb(err2);
-          }
-          const next = function(err3) {
-            if (err3) {
-              return cb(err3);
-            } else {
-              cb(null, cookie);
-            }
-          };
-          if (oldCookie) {
-            if (options.http === false && oldCookie.httpOnly) {
-              err2 = new Error("old Cookie is HttpOnly and this isn't an HTTP API");
-              return cb(options.ignoreError ? null : err2);
-            }
-            cookie.creation = oldCookie.creation;
-            cookie.creationIndex = oldCookie.creationIndex;
-            cookie.lastAccessed = now;
-            store.updateCookie(oldCookie, cookie, next);
-          } else {
-            cookie.creation = cookie.lastAccessed = now;
-            store.putCookie(cookie, next);
-          }
-        }
-        store.findCookie(cookie.domain, cookie.path, cookie.key, withCookie);
-      }
-      // RFC6365 S5.4
-      getCookies(url, options, cb) {
-        validators.validate(validators.isNonEmptyString(url), cb, url);
-        const context = getCookieContext(url);
-        if (validators.isFunction(options)) {
-          cb = options;
-          options = {};
-        }
-        validators.validate(validators.isObject(options), cb, options);
-        validators.validate(validators.isFunction(cb), cb);
-        const host = canonicalDomain(context.hostname);
-        const path13 = context.pathname || "/";
-        let secure = options.secure;
-        if (secure == null && context.protocol && (context.protocol == "https:" || context.protocol == "wss:")) {
-          secure = true;
-        }
-        let sameSiteLevel = 0;
-        if (options.sameSiteContext) {
-          const sameSiteContext = checkSameSiteContext(options.sameSiteContext);
-          sameSiteLevel = Cookie.sameSiteLevel[sameSiteContext];
-          if (!sameSiteLevel) {
-            return cb(new Error(SAME_SITE_CONTEXT_VAL_ERR));
-          }
-        }
-        let http = options.http;
-        if (http == null) {
-          http = true;
-        }
-        const now = options.now || Date.now();
-        const expireCheck = options.expire !== false;
-        const allPaths = !!options.allPaths;
-        const store = this.store;
-        function matchingCookie(c) {
-          if (c.hostOnly) {
-            if (c.domain != host) {
-              return false;
-            }
-          } else {
-            if (!domainMatch(host, c.domain, false)) {
-              return false;
-            }
-          }
-          if (!allPaths && !pathMatch(path13, c.path)) {
-            return false;
-          }
-          if (c.secure && !secure) {
-            return false;
-          }
-          if (c.httpOnly && !http) {
-            return false;
-          }
-          if (sameSiteLevel) {
-            const cookieLevel = Cookie.sameSiteLevel[c.sameSite || "none"];
-            if (cookieLevel > sameSiteLevel) {
-              return false;
-            }
-          }
-          if (expireCheck && c.expiryTime() <= now) {
-            store.removeCookie(c.domain, c.path, c.key, () => {
+            parentSignal.addEventListener("abort", () => {
+              this.abort();
             });
-            return false;
           }
-          return true;
         }
-        store.findCookies(
-          host,
-          allPaths ? null : path13,
-          this.allowSpecialUseDomain,
-          (err, cookies) => {
-            if (err) {
-              return cb(err);
-            }
-            cookies = cookies.filter(matchingCookie);
-            if (options.sort !== false) {
-              cookies = cookies.sort(cookieCompare);
-            }
-            const now2 = /* @__PURE__ */ new Date();
-            for (const cookie of cookies) {
-              cookie.lastAccessed = now2;
-            }
-            cb(null, cookies);
-          }
-        );
       }
-      getCookieString(...args) {
-        const cb = args.pop();
-        validators.validate(validators.isFunction(cb), cb);
-        const next = function(err, cookies) {
-          if (err) {
-            cb(err);
-          } else {
-            cb(
-              null,
-              cookies.sort(cookieCompare).map((c) => c.cookieString()).join("; ")
-            );
-          }
-        };
-        args.push(next);
-        this.getCookies.apply(this, args);
+      /**
+       * The AbortSignal associated with this controller that will signal aborted
+       * when the abort method is called on this controller.
+       *
+       * @readonly
+       */
+      get signal() {
+        return this._signal;
       }
-      getSetCookieStrings(...args) {
-        const cb = args.pop();
-        validators.validate(validators.isFunction(cb), cb);
-        const next = function(err, cookies) {
-          if (err) {
-            cb(err);
-          } else {
-            cb(
-              null,
-              cookies.map((c) => {
-                return c.toString();
-              })
-            );
-          }
-        };
-        args.push(next);
-        this.getCookies.apply(this, args);
+      /**
+       * Signal that any operations passed this controller's associated abort signal
+       * to cancel any remaining work and throw an `AbortError`.
+       */
+      abort() {
+        abortSignal(this._signal);
       }
-      serialize(cb) {
-        validators.validate(validators.isFunction(cb), cb);
-        let type = this.store.constructor.name;
-        if (validators.isObject(type)) {
-          type = null;
+      /**
+       * Creates a new AbortSignal instance that will abort after the provided ms.
+       * @param ms - Elapsed time in milliseconds to trigger an abort.
+       */
+      static timeout(ms) {
+        const signal = new AbortSignal2();
+        const timer = setTimeout(abortSignal, ms, signal);
+        if (typeof timer.unref === "function") {
+          timer.unref();
         }
-        const serialized = {
-          // The version of tough-cookie that serialized this jar. Generally a good
-          // practice since future versions can make data import decisions based on
-          // known past behavior. When/if this matters, use `semver`.
-          version: `tough-cookie@${VERSION}`,
-          // add the store type, to make humans happy:
-          storeType: type,
-          // CookieJar configuration:
-          rejectPublicSuffixes: !!this.rejectPublicSuffixes,
-          enableLooseMode: !!this.enableLooseMode,
-          allowSpecialUseDomain: !!this.allowSpecialUseDomain,
-          prefixSecurity: getNormalizedPrefixSecurity(this.prefixSecurity),
-          // this gets filled from getAllCookies:
-          cookies: []
-        };
-        if (!(this.store.getAllCookies && typeof this.store.getAllCookies === "function")) {
-          return cb(
-            new Error(
-              "store does not support getAllCookies and cannot be serialized"
-            )
-          );
-        }
-        this.store.getAllCookies((err, cookies) => {
-          if (err) {
-            return cb(err);
-          }
-          serialized.cookies = cookies.map((cookie) => {
-            cookie = cookie instanceof Cookie ? cookie.toJSON() : cookie;
-            delete cookie.creationIndex;
-            return cookie;
-          });
-          return cb(null, serialized);
-        });
-      }
-      toJSON() {
-        return this.serializeSync();
-      }
-      // use the class method CookieJar.deserialize instead of calling this directly
-      _importCookies(serialized, cb) {
-        let cookies = serialized.cookies;
-        if (!cookies || !Array.isArray(cookies)) {
-          return cb(new Error("serialized jar has no cookies array"));
-        }
-        cookies = cookies.slice();
-        const putNext = (err) => {
-          if (err) {
-            return cb(err);
-          }
-          if (!cookies.length) {
-            return cb(err, this);
-          }
-          let cookie;
-          try {
-            cookie = fromJSON(cookies.shift());
-          } catch (e) {
-            return cb(e);
-          }
-          if (cookie === null) {
-            return putNext(null);
-          }
-          this.store.putCookie(cookie, putNext);
-        };
-        putNext();
-      }
-      clone(newStore, cb) {
-        if (arguments.length === 1) {
-          cb = newStore;
-          newStore = null;
-        }
-        this.serialize((err, serialized) => {
-          if (err) {
-            return cb(err);
-          }
-          CookieJar.deserialize(serialized, newStore, cb);
-        });
-      }
-      cloneSync(newStore) {
-        if (arguments.length === 0) {
-          return this._cloneSync();
-        }
-        if (!newStore.synchronous) {
-          throw new Error(
-            "CookieJar clone destination store is not synchronous; use async API instead."
-          );
-        }
-        return this._cloneSync(newStore);
-      }
-      removeAllCookies(cb) {
-        validators.validate(validators.isFunction(cb), cb);
-        const store = this.store;
-        if (typeof store.removeAllCookies === "function" && store.removeAllCookies !== Store.prototype.removeAllCookies) {
-          return store.removeAllCookies(cb);
-        }
-        store.getAllCookies((err, cookies) => {
-          if (err) {
-            return cb(err);
-          }
-          if (cookies.length === 0) {
-            return cb(null);
-          }
-          let completedCount = 0;
-          const removeErrors = [];
-          function removeCookieCb(removeErr) {
-            if (removeErr) {
-              removeErrors.push(removeErr);
-            }
-            completedCount++;
-            if (completedCount === cookies.length) {
-              return cb(removeErrors.length ? removeErrors[0] : null);
-            }
-          }
-          cookies.forEach((cookie) => {
-            store.removeCookie(
-              cookie.domain,
-              cookie.path,
-              cookie.key,
-              removeCookieCb
-            );
-          });
-        });
-      }
-      static deserialize(strOrObj, store, cb) {
-        if (arguments.length !== 3) {
-          cb = store;
-          store = null;
-        }
-        validators.validate(validators.isFunction(cb), cb);
-        let serialized;
-        if (typeof strOrObj === "string") {
-          serialized = jsonParse(strOrObj);
-          if (serialized instanceof Error) {
-            return cb(serialized);
-          }
-        } else {
-          serialized = strOrObj;
-        }
-        const jar = new CookieJar(store, {
-          rejectPublicSuffixes: serialized.rejectPublicSuffixes,
-          looseMode: serialized.enableLooseMode,
-          allowSpecialUseDomain: serialized.allowSpecialUseDomain,
-          prefixSecurity: serialized.prefixSecurity
-        });
-        jar._importCookies(serialized, (err) => {
-          if (err) {
-            return cb(err);
-          }
-          cb(null, jar);
-        });
-      }
-      static deserializeSync(strOrObj, store) {
-        const serialized = typeof strOrObj === "string" ? JSON.parse(strOrObj) : strOrObj;
-        const jar = new CookieJar(store, {
-          rejectPublicSuffixes: serialized.rejectPublicSuffixes,
-          looseMode: serialized.enableLooseMode
-        });
-        if (!jar.store.synchronous) {
-          throw new Error(
-            "CookieJar store is not synchronous; use async API instead."
-          );
-        }
-        jar._importCookiesSync(serialized);
-        return jar;
+        return signal;
       }
     };
-    CookieJar.fromJSON = CookieJar.deserializeSync;
-    [
-      "_importCookies",
-      "clone",
-      "getCookies",
-      "getCookieString",
-      "getSetCookieStrings",
-      "removeAllCookies",
-      "serialize",
-      "setCookie"
-    ].forEach((name) => {
-      CookieJar.prototype[name] = fromCallback(CookieJar.prototype[name]);
-    });
-    CookieJar.deserialize = fromCallback(CookieJar.deserialize);
-    function syncWrap(method) {
-      return function(...args) {
-        if (!this.store.synchronous) {
-          throw new Error(
-            "CookieJar store is not synchronous; use async API instead."
-          );
-        }
-        let syncErr, syncResult;
-        this[method](...args, (err, result) => {
-          syncErr = err;
-          syncResult = result;
-        });
-        if (syncErr) {
-          throw syncErr;
-        }
-        return syncResult;
-      };
-    }
-    exports2.version = VERSION;
-    exports2.CookieJar = CookieJar;
-    exports2.Cookie = Cookie;
-    exports2.Store = Store;
-    exports2.MemoryCookieStore = MemoryCookieStore;
-    exports2.parseDate = parseDate;
-    exports2.formatDate = formatDate;
-    exports2.parse = parse4;
-    exports2.fromJSON = fromJSON;
-    exports2.domainMatch = domainMatch;
-    exports2.defaultPath = defaultPath;
-    exports2.pathMatch = pathMatch;
-    exports2.getPublicSuffix = pubsuffix.getPublicSuffix;
-    exports2.cookieCompare = cookieCompare;
-    exports2.permuteDomain = require_permuteDomain().permuteDomain;
-    exports2.permutePath = permutePath;
-    exports2.canonicalDomain = canonicalDomain;
-    exports2.PrefixSecurityEnum = PrefixSecurityEnum;
-    exports2.ParameterError = validators.ParameterError;
+    exports2.AbortController = AbortController2;
+    exports2.AbortError = AbortError;
+    exports2.AbortSignal = AbortSignal2;
   }
 });
 
@@ -53454,7 +41748,7 @@ var require_lib4 = __commonJS({
     var Readable = Stream.Readable;
     var BUFFER = Symbol("buffer");
     var TYPE = Symbol("type");
-    var Blob2 = class {
+    var Blob2 = class _Blob {
       constructor() {
         this[TYPE] = "";
         const blobParts = arguments[0];
@@ -53473,7 +41767,7 @@ var require_lib4 = __commonJS({
               buffer = Buffer.from(element.buffer, element.byteOffset, element.byteLength);
             } else if (element instanceof ArrayBuffer) {
               buffer = Buffer.from(element);
-            } else if (element instanceof Blob2) {
+            } else if (element instanceof _Blob) {
               buffer = element[BUFFER];
             } else {
               buffer = Buffer.from(typeof element === "string" ? element : String(element));
@@ -53535,7 +41829,7 @@ var require_lib4 = __commonJS({
         const span = Math.max(relativeEnd - relativeStart, 0);
         const buffer = this[BUFFER];
         const slicedBuffer = buffer.slice(relativeStart, relativeStart + span);
-        const blob = new Blob2([], { type: arguments[2] });
+        const blob = new _Blob([], { type: arguments[2] });
         blob[BUFFER] = slicedBuffer;
         return blob;
       }
@@ -53912,7 +42206,7 @@ var require_lib4 = __commonJS({
       return void 0;
     }
     var MAP = Symbol("map");
-    var Headers = class {
+    var Headers = class _Headers {
       /**
        * Headers class
        *
@@ -53922,7 +42216,7 @@ var require_lib4 = __commonJS({
       constructor() {
         let init = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : void 0;
         this[MAP] = /* @__PURE__ */ Object.create(null);
-        if (init instanceof Headers) {
+        if (init instanceof _Headers) {
           const rawHeaders = init.raw();
           const headerNames = Object.keys(rawHeaders);
           for (const headerName of headerNames) {
@@ -54191,7 +42485,7 @@ var require_lib4 = __commonJS({
     }
     var INTERNALS$1 = Symbol("Response internals");
     var STATUS_CODES = http.STATUS_CODES;
-    var Response = class {
+    var Response = class _Response {
       constructor() {
         let body = arguments.length > 0 && arguments[0] !== void 0 ? arguments[0] : null;
         let opts = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
@@ -54239,7 +42533,7 @@ var require_lib4 = __commonJS({
        * @return  Response
        */
       clone() {
-        return new Response(clone(this), {
+        return new _Response(clone(this), {
           url: this.url,
           status: this.status,
           statusText: this.statusText,
@@ -54283,7 +42577,7 @@ var require_lib4 = __commonJS({
       const proto = signal && typeof signal === "object" && Object.getPrototypeOf(signal);
       return !!(proto && proto.constructor.name === "AbortSignal");
     }
-    var Request = class {
+    var Request = class _Request {
       constructor(input) {
         let init = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
         let parsedURL;
@@ -54353,7 +42647,7 @@ var require_lib4 = __commonJS({
        * @return  Request
        */
       clone() {
-        return new Request(this);
+        return new _Request(this);
       }
     };
     Body.mixIn(Request.prototype);
@@ -54686,12 +42980,12 @@ var require_platform = __commonJS({
 });
 
 // node_modules/@opentelemetry/api/build/src/version.js
-var require_version2 = __commonJS({
+var require_version = __commonJS({
   "node_modules/@opentelemetry/api/build/src/version.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.VERSION = void 0;
-    exports2.VERSION = "1.3.0";
+    exports2.VERSION = "1.7.0";
   }
 });
 
@@ -54701,7 +42995,7 @@ var require_semver2 = __commonJS({
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.isCompatible = exports2._makeCompatibilityCheck = void 0;
-    var version_1 = require_version2();
+    var version_1 = require_version();
     var re = /^(\d+)\.(\d+)\.(\d+)(-(.+))?$/;
     function _makeCompatibilityCheck(ownVersion) {
       const acceptedVersions = /* @__PURE__ */ new Set([ownVersion]);
@@ -54776,7 +43070,7 @@ var require_global_utils = __commonJS({
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.unregisterGlobal = exports2.getGlobal = exports2.registerGlobal = void 0;
     var platform_1 = require_platform();
-    var version_1 = require_version2();
+    var version_1 = require_version();
     var semver_1 = require_semver2();
     var major4 = version_1.VERSION.split(".")[0];
     var GLOBAL_OPENTELEMETRY_API_KEY = Symbol.for(`opentelemetry.js.api.${major4}`);
@@ -54792,7 +43086,7 @@ var require_global_utils = __commonJS({
         return false;
       }
       if (api.version !== version_1.VERSION) {
-        const err = new Error("@opentelemetry/api: All API registration versions must match");
+        const err = new Error(`@opentelemetry/api: Registration of version v${api.version} for ${type} does not match previously registered API v${version_1.VERSION}`);
         diag.error(err.stack || err.message);
         return false;
       }
@@ -54924,7 +43218,7 @@ var require_diag = __commonJS({
     var types_1 = require_types();
     var global_utils_1 = require_global_utils();
     var API_NAME = "diag";
-    var DiagAPI = class {
+    var DiagAPI = class _DiagAPI {
       /**
        * Private internal constructor
        * @private
@@ -54976,7 +43270,7 @@ var require_diag = __commonJS({
       /** Get the singleton instance of the DiagAPI API */
       static instance() {
         if (!this._instance) {
-          this._instance = new DiagAPI();
+          this._instance = new _DiagAPI();
         }
         return this._instance;
       }
@@ -54991,7 +43285,7 @@ var require_baggage_impl = __commonJS({
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     exports2.BaggageImpl = void 0;
-    var BaggageImpl = class {
+    var BaggageImpl = class _BaggageImpl {
       constructor(entries) {
         this._entries = entries ? new Map(entries) : /* @__PURE__ */ new Map();
       }
@@ -55006,24 +43300,24 @@ var require_baggage_impl = __commonJS({
         return Array.from(this._entries.entries()).map(([k, v]) => [k, v]);
       }
       setEntry(key, entry) {
-        const newBaggage = new BaggageImpl(this._entries);
+        const newBaggage = new _BaggageImpl(this._entries);
         newBaggage._entries.set(key, entry);
         return newBaggage;
       }
       removeEntry(key) {
-        const newBaggage = new BaggageImpl(this._entries);
+        const newBaggage = new _BaggageImpl(this._entries);
         newBaggage._entries.delete(key);
         return newBaggage;
       }
       removeEntries(...keys) {
-        const newBaggage = new BaggageImpl(this._entries);
+        const newBaggage = new _BaggageImpl(this._entries);
         for (const key of keys) {
           newBaggage._entries.delete(key);
         }
         return newBaggage;
       }
       clear() {
-        return new BaggageImpl();
+        return new _BaggageImpl();
       }
     };
     exports2.BaggageImpl = BaggageImpl;
@@ -55080,7 +43374,7 @@ var require_context = __commonJS({
       return Symbol.for(description);
     }
     exports2.createContextKey = createContextKey;
-    var BaseContext = class {
+    var BaseContext = class _BaseContext {
       /**
        * Construct a new context which inherits values from an optional parent context.
        *
@@ -55091,12 +43385,12 @@ var require_context = __commonJS({
         self2._currentContext = parentContext ? new Map(parentContext) : /* @__PURE__ */ new Map();
         self2.getValue = (key) => self2._currentContext.get(key);
         self2.setValue = (key, value) => {
-          const context = new BaseContext(self2._currentContext);
+          const context = new _BaseContext(self2._currentContext);
           context._currentContext.set(key, value);
           return context;
         };
         self2.deleteValue = (key) => {
-          const context = new BaseContext(self2._currentContext);
+          const context = new _BaseContext(self2._currentContext);
           context._currentContext.delete(key);
           return context;
         };
@@ -55332,14 +43626,14 @@ var require_context2 = __commonJS({
     var diag_1 = require_diag();
     var API_NAME = "context";
     var NOOP_CONTEXT_MANAGER = new NoopContextManager_1.NoopContextManager();
-    var ContextAPI = class {
+    var ContextAPI = class _ContextAPI {
       /** Empty private constructor prevents end users from constructing a new instance of the API */
       constructor() {
       }
       /** Get the singleton instance of the Context API */
       static getInstance() {
         if (!this._instance) {
-          this._instance = new ContextAPI();
+          this._instance = new _ContextAPI();
         }
         return this._instance;
       }
@@ -55551,7 +43845,7 @@ var require_NoopTracer = __commonJS({
     var contextApi = context_1.ContextAPI.getInstance();
     var NoopTracer = class {
       // startSpan starts a noop span.
-      startSpan(name, options, context) {
+      startSpan(name, options, context = contextApi.active()) {
         const root = Boolean(options === null || options === void 0 ? void 0 : options.root);
         if (root) {
           return new NonRecordingSpan_1.NonRecordingSpan();
@@ -55767,7 +44061,7 @@ var require_tracestate_impl = __commonJS({
     var MAX_TRACE_STATE_LEN = 512;
     var LIST_MEMBERS_SEPARATOR = ",";
     var LIST_MEMBER_KEY_VALUE_SPLITTER = "=";
-    var TraceStateImpl = class {
+    var TraceStateImpl = class _TraceStateImpl {
       constructor(rawTraceState) {
         this._internalState = /* @__PURE__ */ new Map();
         if (rawTraceState)
@@ -55819,7 +44113,7 @@ var require_tracestate_impl = __commonJS({
         return Array.from(this._internalState.keys()).reverse();
       }
       _clone() {
-        const traceState = new TraceStateImpl();
+        const traceState = new _TraceStateImpl();
         traceState._internalState = new Map(this._internalState);
         return traceState;
       }
@@ -55891,14 +44185,14 @@ var require_metrics = __commonJS({
     var global_utils_1 = require_global_utils();
     var diag_1 = require_diag();
     var API_NAME = "metrics";
-    var MetricsAPI = class {
+    var MetricsAPI = class _MetricsAPI {
       /** Empty private constructor prevents end users from constructing a new instance of the API */
       constructor() {
       }
       /** Get the singleton instance of the Metrics API */
       static getInstance() {
         if (!this._instance) {
-          this._instance = new MetricsAPI();
+          this._instance = new _MetricsAPI();
         }
         return this._instance;
       }
@@ -55968,13 +44262,18 @@ var require_context_helpers = __commonJS({
   "node_modules/@opentelemetry/api/build/src/baggage/context-helpers.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
-    exports2.deleteBaggage = exports2.setBaggage = exports2.getBaggage = void 0;
-    var context_1 = require_context();
-    var BAGGAGE_KEY = (0, context_1.createContextKey)("OpenTelemetry Baggage Key");
+    exports2.deleteBaggage = exports2.setBaggage = exports2.getActiveBaggage = exports2.getBaggage = void 0;
+    var context_1 = require_context2();
+    var context_2 = require_context();
+    var BAGGAGE_KEY = (0, context_2.createContextKey)("OpenTelemetry Baggage Key");
     function getBaggage(context) {
       return context.getValue(BAGGAGE_KEY) || void 0;
     }
     exports2.getBaggage = getBaggage;
+    function getActiveBaggage() {
+      return getBaggage(context_1.ContextAPI.getInstance().active());
+    }
+    exports2.getActiveBaggage = getActiveBaggage;
     function setBaggage(context, baggage) {
       return context.setValue(BAGGAGE_KEY, baggage);
     }
@@ -56000,18 +44299,19 @@ var require_propagation = __commonJS({
     var diag_1 = require_diag();
     var API_NAME = "propagation";
     var NOOP_TEXT_MAP_PROPAGATOR = new NoopTextMapPropagator_1.NoopTextMapPropagator();
-    var PropagationAPI = class {
+    var PropagationAPI = class _PropagationAPI {
       /** Empty private constructor prevents end users from constructing a new instance of the API */
       constructor() {
         this.createBaggage = utils_1.createBaggage;
         this.getBaggage = context_helpers_1.getBaggage;
+        this.getActiveBaggage = context_helpers_1.getActiveBaggage;
         this.setBaggage = context_helpers_1.setBaggage;
         this.deleteBaggage = context_helpers_1.deleteBaggage;
       }
       /** Get the singleton instance of the Propagator API */
       static getInstance() {
         if (!this._instance) {
-          this._instance = new PropagationAPI();
+          this._instance = new _PropagationAPI();
         }
         return this._instance;
       }
@@ -56084,7 +44384,7 @@ var require_trace = __commonJS({
     var context_utils_1 = require_context_utils();
     var diag_1 = require_diag();
     var API_NAME = "trace";
-    var TraceAPI = class {
+    var TraceAPI = class _TraceAPI {
       /** Empty private constructor prevents end users from constructing a new instance of the API */
       constructor() {
         this._proxyTracerProvider = new ProxyTracerProvider_1.ProxyTracerProvider();
@@ -56100,7 +44400,7 @@ var require_trace = __commonJS({
       /** Get the singleton instance of the Trace API */
       static getInstance() {
         if (!this._instance) {
-          this._instance = new TraceAPI();
+          this._instance = new _TraceAPI();
         }
         return this._instance;
       }
@@ -56268,7 +44568,7 @@ var require_src = __commonJS({
 });
 
 // node_modules/@azure/core-tracing/dist/index.js
-var require_dist5 = __commonJS({
+var require_dist6 = __commonJS({
   "node_modules/@azure/core-tracing/dist/index.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -56390,7 +44690,7 @@ var require_dist5 = __commonJS({
 });
 
 // node_modules/@azure/core-http/dist/index.js
-var require_dist6 = __commonJS({
+var require_dist7 = __commonJS({
   "node_modules/@azure/core-http/dist/index.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -56404,13 +44704,12 @@ var require_dist6 = __commonJS({
     var os7 = require("os");
     var http = require("http");
     var https = require("https");
-    var tough = require_cookie();
-    var abortController = require_dist();
+    var abortController = require_dist5();
     var tunnel = require_tunnel2();
     var stream = require("stream");
     var FormData = require_form_data();
     var node_fetch = require_lib4();
-    var coreTracing = require_dist5();
+    var coreTracing = require_dist6();
     function _interopDefaultLegacy(e) {
       return e && typeof e === "object" && "default" in e ? e : { "default": e };
     }
@@ -56438,7 +44737,6 @@ var require_dist6 = __commonJS({
     var os__namespace = /* @__PURE__ */ _interopNamespace(os7);
     var http__namespace = /* @__PURE__ */ _interopNamespace(http);
     var https__namespace = /* @__PURE__ */ _interopNamespace(https);
-    var tough__namespace = /* @__PURE__ */ _interopNamespace(tough);
     var tunnel__namespace = /* @__PURE__ */ _interopNamespace(tunnel);
     var FormData__default = /* @__PURE__ */ _interopDefaultLegacy(FormData);
     var node_fetch__default = /* @__PURE__ */ _interopDefaultLegacy(node_fetch);
@@ -56454,7 +44752,7 @@ var require_dist6 = __commonJS({
       }
       return false;
     }
-    var HttpHeaders = class {
+    var HttpHeaders = class _HttpHeaders {
       constructor(rawHeaders) {
         this._headersMap = {};
         if (rawHeaders) {
@@ -56472,7 +44770,7 @@ var require_dist6 = __commonJS({
       set(headerName, headerValue) {
         this._headersMap[getHeaderKey(headerName)] = {
           name: headerName,
-          value: headerValue.toString()
+          value: headerValue.toString().trim()
         };
       }
       /**
@@ -56571,7 +44869,7 @@ var require_dist6 = __commonJS({
           const header = this._headersMap[headerKey];
           resultPreservingCasing[header.name] = header.value;
         }
-        return new HttpHeaders(resultPreservingCasing);
+        return new _HttpHeaders(resultPreservingCasing);
       }
     };
     function encodeString(value) {
@@ -56588,7 +44886,7 @@ var require_dist6 = __commonJS({
       /**
        * The core-http version
        */
-      coreHttpVersion: "2.3.1",
+      coreHttpVersion: "3.0.4",
       /**
        * Specifies HTTP.
        */
@@ -56655,7 +44953,6 @@ var require_dist6 = __commonJS({
     var XML_ATTRKEY = "$";
     var XML_CHARKEY = "_";
     var validUuidRegex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/i;
-    var isNode = typeof process !== "undefined" && !!process.version && !!process.versions && !!process.versions.node;
     function encodeUri(uri) {
       return encodeURIComponent(uri).replace(/!/g, "%21").replace(/"/g, "%27").replace(/\(/g, "%28").replace(/\)/g, "%29").replace(/\*/g, "%2A");
     }
@@ -57310,9 +45607,11 @@ var require_dist6 = __commonJS({
               const wrapped = responseBody[xmlName];
               const elementList = (_b = wrapped === null || wrapped === void 0 ? void 0 : wrapped[xmlElementName]) !== null && _b !== void 0 ? _b : [];
               instance[key] = serializer.deserialize(propertyMapper, elementList, propertyObjectName, options);
+              handledPropertyNames.push(xmlName);
             } else {
               const property = responseBody[propertyName];
               instance[key] = serializer.deserialize(propertyMapper, property, propertyObjectName, options);
+              handledPropertyNames.push(propertyName);
             }
           }
         } else {
@@ -57482,7 +45781,7 @@ var require_dist6 = __commonJS({
       }
       return false;
     }
-    var WebResource = class {
+    var WebResource = class _WebResource {
       constructor(url, method, body, query, headers, streamResponseBody, withCredentials, abortSignal, timeout, onUploadProgress, onDownloadProgress, proxySettings, keepAlive, decompressResponse, streamResponseStatusCodes) {
         this.streamResponseBody = streamResponseBody;
         this.streamResponseStatusCodes = streamResponseStatusCodes;
@@ -57666,7 +45965,7 @@ var require_dist6 = __commonJS({
        * @returns The clone of this WebResource HTTP request object.
        */
       clone() {
-        const result = new WebResource(this.url, this.method, this.body, this.query, this.headers && this.headers.clone(), this.streamResponseBody, this.withCredentials, this.abortSignal, this.timeout, this.onUploadProgress, this.onDownloadProgress, this.proxySettings, this.keepAlive, this.decompressResponse, this.streamResponseStatusCodes);
+        const result = new _WebResource(this.url, this.method, this.body, this.query, this.headers && this.headers.clone(), this.streamResponseBody, this.withCredentials, this.abortSignal, this.timeout, this.onUploadProgress, this.onDownloadProgress, this.proxySettings, this.keepAlive, this.decompressResponse, this.streamResponseStatusCodes);
         if (this.formData) {
           result.formData = this.formData;
         }
@@ -57682,7 +45981,7 @@ var require_dist6 = __commonJS({
         return result;
       }
     };
-    var URLQuery = class {
+    var URLQuery = class _URLQuery {
       constructor() {
         this._rawQuery = {};
       }
@@ -57747,7 +46046,7 @@ var require_dist6 = __commonJS({
        * Parse a URLQuery from the provided text.
        */
       static parse(text) {
-        const result = new URLQuery();
+        const result = new _URLQuery();
         if (text) {
           if (text.startsWith("?")) {
             text = text.substring(1);
@@ -57796,7 +46095,7 @@ var require_dist6 = __commonJS({
         return result;
       }
     };
-    var URLBuilder = class {
+    var URLBuilder = class _URLBuilder {
       /**
        * Set the scheme/protocol for this URL. If the provided scheme contains other parts of a URL
        * (such as a host, port, path, or query), those parts will be added to this URL as well.
@@ -58003,30 +46302,30 @@ var require_dist6 = __commonJS({
        * Parses a given string URL into a new {@link URLBuilder}.
        */
       static parse(text) {
-        const result = new URLBuilder();
+        const result = new _URLBuilder();
         result.set(text, "SCHEME_OR_HOST");
         return result;
       }
     };
-    var URLToken = class {
+    var URLToken = class _URLToken {
       constructor(text, type) {
         this.text = text;
         this.type = type;
       }
       static scheme(text) {
-        return new URLToken(text, "SCHEME");
+        return new _URLToken(text, "SCHEME");
       }
       static host(text) {
-        return new URLToken(text, "HOST");
+        return new _URLToken(text, "HOST");
       }
       static port(text) {
-        return new URLToken(text, "PORT");
+        return new _URLToken(text, "PORT");
       }
       static path(text) {
-        return new URLToken(text, "PATH");
+        return new _URLToken(text, "PATH");
       }
       static query(text) {
-        return new URLToken(text, "QUERY");
+        return new _URLToken(text, "QUERY");
       }
     };
     function isAlphaNumericCharacter(character) {
@@ -58370,7 +46669,7 @@ var require_dist6 = __commonJS({
     };
     var custom = util.inspect.custom;
     var errorSanitizer = new Sanitizer();
-    var RestError = class extends Error {
+    var RestError = class _RestError extends Error {
       constructor(message, code, statusCode, request, response) {
         super(message);
         this.name = "RestError";
@@ -58378,7 +46677,7 @@ var require_dist6 = __commonJS({
         this.statusCode = statusCode;
         this.request = request;
         this.response = response;
-        Object.setPrototypeOf(this, RestError.prototype);
+        Object.setPrototypeOf(this, _RestError.prototype);
       }
       /**
        * Logging method for util.inspect in Node
@@ -58431,7 +46730,6 @@ var require_dist6 = __commonJS({
       constructor() {
         this.proxyAgentMap = /* @__PURE__ */ new Map();
         this.keepAliveAgents = {};
-        this.cookieJar = new tough__namespace.CookieJar(void 0, { looseMode: true });
       }
       /**
        * Provides minimum viable error handling and the logic that executes the abstract methods.
@@ -58623,40 +46921,14 @@ var require_dist6 = __commonJS({
        */
       async prepareRequest(httpRequest) {
         const requestInit = {};
-        if (this.cookieJar && !httpRequest.headers.get("Cookie")) {
-          const cookieString = await new Promise((resolve, reject) => {
-            this.cookieJar.getCookieString(httpRequest.url, (err, cookie) => {
-              if (err) {
-                reject(err);
-              } else {
-                resolve(cookie);
-              }
-            });
-          });
-          httpRequest.headers.set("Cookie", cookieString);
-        }
         requestInit.agent = this.getOrCreateAgent(httpRequest);
         requestInit.compress = httpRequest.decompressResponse;
         return requestInit;
       }
       /**
-       * Process an HTTP response. Handles persisting a cookie for subsequent requests if the response has a "Set-Cookie" header.
+       * Process an HTTP response.
        */
-      async processRequest(operationResponse) {
-        if (this.cookieJar) {
-          const setCookieHeader = operationResponse.headers.get("Set-Cookie");
-          if (setCookieHeader !== void 0) {
-            await new Promise((resolve, reject) => {
-              this.cookieJar.setCookie(setCookieHeader, operationResponse.request.url, { ignoreError: true }, (err) => {
-                if (err) {
-                  reject(err);
-                } else {
-                  resolve();
-                }
-              });
-            });
-          }
-        }
+      async processRequest(_operationResponse) {
       }
     };
     exports2.HttpPipelineLogLevel = void 0;
@@ -59779,7 +48051,7 @@ var require_dist6 = __commonJS({
       };
     }
     var StandardAbortMessage = "The operation was aborted.";
-    var ThrottlingRetryPolicy = class extends BaseRequestPolicy {
+    var ThrottlingRetryPolicy = class _ThrottlingRetryPolicy extends BaseRequestPolicy {
       constructor(nextPolicy, options, _handleResponse) {
         super(nextPolicy, options);
         this.numberOfRetries = 0;
@@ -59797,7 +48069,7 @@ var require_dist6 = __commonJS({
         var _a;
         const retryAfterHeader = httpResponse.headers.get(Constants.HeaderConstants.RETRY_AFTER);
         if (retryAfterHeader) {
-          const delayInMs = ThrottlingRetryPolicy.parseRetryAfterHeader(retryAfterHeader);
+          const delayInMs = _ThrottlingRetryPolicy.parseRetryAfterHeader(retryAfterHeader);
           if (delayInMs) {
             this.numberOfRetries += 1;
             await coreUtil.delay(delayInMs, {
@@ -59819,7 +48091,7 @@ var require_dist6 = __commonJS({
       static parseRetryAfterHeader(headerValue) {
         const retryAfterInSeconds = Number(headerValue);
         if (Number.isNaN(retryAfterInSeconds)) {
-          return ThrottlingRetryPolicy.parseDateRetryAfterHeader(headerValue);
+          return _ThrottlingRetryPolicy.parseDateRetryAfterHeader(headerValue);
         } else {
           return retryAfterInSeconds * 1e3;
         }
@@ -60269,7 +48541,7 @@ var require_dist6 = __commonJS({
         factories.push(throttlingRetryPolicy());
       }
       factories.push(deserializationPolicy(options.deserializationContentTypes));
-      if (isNode) {
+      if (coreUtil.isNode) {
         factories.push(proxyPolicy(options.proxySettings));
       }
       factories.push(logPolicy({ logger: logger.info }));
@@ -60293,7 +48565,7 @@ var require_dist6 = __commonJS({
       const keepAliveOptions = Object.assign(Object.assign({}, DefaultKeepAliveOptions), pipelineOptions.keepAliveOptions);
       const retryOptions = Object.assign(Object.assign({}, DefaultRetryOptions), pipelineOptions.retryOptions);
       const redirectOptions = Object.assign(Object.assign({}, DefaultRedirectOptions), pipelineOptions.redirectOptions);
-      if (isNode) {
+      if (coreUtil.isNode) {
         requestPolicyFactories.push(proxyPolicy(pipelineOptions.proxyOptions));
       }
       const deserializationOptions = Object.assign(Object.assign({}, DefaultDeserializationOptions), pipelineOptions.deserializationOptions);
@@ -60306,7 +48578,7 @@ var require_dist6 = __commonJS({
         requestPolicyFactories.push(authPolicyFactory);
       }
       requestPolicyFactories.push(logPolicy(loggingOptions));
-      if (isNode && pipelineOptions.decompressResponse === false) {
+      if (coreUtil.isNode && pipelineOptions.decompressResponse === false) {
         requestPolicyFactories.push(disableResponseDecompressionPolicy());
       }
       return {
@@ -60420,8 +48692,7 @@ var require_dist6 = __commonJS({
     }
     function getCredentialScopes(options, baseUri) {
       if (options === null || options === void 0 ? void 0 : options.credentialScopes) {
-        const scopes = options.credentialScopes;
-        return Array.isArray(scopes) ? scopes.map((scope) => new URL(scope).toString()) : new URL(scopes).toString();
+        return options.credentialScopes;
       }
       if (baseUri) {
         return `${baseUri}/.default`;
@@ -60602,6 +48873,12 @@ var require_dist6 = __commonJS({
         return coreUtil.delay;
       }
     });
+    Object.defineProperty(exports2, "isNode", {
+      enumerable: true,
+      get: function() {
+        return coreUtil.isNode;
+      }
+    });
     Object.defineProperty(exports2, "isTokenCredential", {
       enumerable: true,
       get: function() {
@@ -60643,7 +48920,6 @@ var require_dist6 = __commonJS({
     exports2.getDefaultProxySettings = getDefaultProxySettings;
     exports2.getDefaultUserAgentValue = getDefaultUserAgentValue;
     exports2.isDuration = isDuration;
-    exports2.isNode = isNode;
     exports2.isValidUuid = isValidUuid;
     exports2.keepAlivePolicy = keepAlivePolicy;
     exports2.logPolicy = logPolicy;
@@ -60666,7 +48942,7 @@ var require_dist6 = __commonJS({
 });
 
 // node_modules/@azure/core-paging/dist/index.js
-var require_dist7 = __commonJS({
+var require_dist8 = __commonJS({
   "node_modules/@azure/core-paging/dist/index.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
@@ -60762,12 +49038,12 @@ var require_dist7 = __commonJS({
 });
 
 // node_modules/@azure/core-lro/dist/index.js
-var require_dist8 = __commonJS({
+var require_dist9 = __commonJS({
   "node_modules/@azure/core-lro/dist/index.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
     var logger$1 = require_dist3();
-    var abortController = require_dist();
+    var coreUtil = require_dist2();
     var logger = logger$1.createClientLogger("core-lro");
     var POLL_INTERVAL_IN_MS = 2e3;
     var terminalStates = ["succeeded", "canceled", "failed"];
@@ -60779,23 +49055,54 @@ var require_dist8 = __commonJS({
       }
     }
     function setStateError(inputs) {
-      const { state, stateProxy } = inputs;
+      const { state, stateProxy, isOperationError: isOperationError2 } = inputs;
       return (error2) => {
-        stateProxy.setError(state, error2);
-        stateProxy.setFailed(state);
+        if (isOperationError2(error2)) {
+          stateProxy.setError(state, error2);
+          stateProxy.setFailed(state);
+        }
         throw error2;
       };
     }
+    function appendReadableErrorMessage(currentMessage, innerMessage) {
+      let message = currentMessage;
+      if (message.slice(-1) !== ".") {
+        message = message + ".";
+      }
+      return message + " " + innerMessage;
+    }
+    function simplifyError(err) {
+      let message = err.message;
+      let code = err.code;
+      let curErr = err;
+      while (curErr.innererror) {
+        curErr = curErr.innererror;
+        code = curErr.code;
+        message = appendReadableErrorMessage(message, curErr.message);
+      }
+      return {
+        code,
+        message
+      };
+    }
     function processOperationStatus(result) {
-      const { state, stateProxy, status, isDone, processResult, response, setErrorAsResult } = result;
+      const { state, stateProxy, status, isDone, processResult, getError, response, setErrorAsResult } = result;
       switch (status) {
         case "succeeded": {
           stateProxy.setSucceeded(state);
           break;
         }
         case "failed": {
-          stateProxy.setError(state, new Error(`The long-running operation has failed`));
+          const err = getError === null || getError === void 0 ? void 0 : getError(response);
+          let postfix = "";
+          if (err) {
+            const { code, message } = simplifyError(err);
+            postfix = `. ${code}. ${message}`;
+          }
+          const errStr = `The long-running operation has failed${postfix}`;
+          stateProxy.setError(state, new Error(errStr));
           stateProxy.setFailed(state);
+          logger.warning(errStr);
           break;
         }
         case "canceled": {
@@ -60832,10 +49139,11 @@ var require_dist8 = __commonJS({
       return state;
     }
     async function pollOperationHelper(inputs) {
-      const { poll, state, stateProxy, operationLocation, getOperationStatus: getOperationStatus2, getResourceLocation: getResourceLocation2, options } = inputs;
+      const { poll, state, stateProxy, operationLocation, getOperationStatus: getOperationStatus2, getResourceLocation: getResourceLocation2, isOperationError: isOperationError2, options } = inputs;
       const response = await poll(operationLocation, options).catch(setStateError({
         state,
-        stateProxy
+        stateProxy,
+        isOperationError: isOperationError2
       }));
       const status = getOperationStatus2(response, state);
       logger.verbose(`LRO: Status:
@@ -60846,7 +49154,7 @@ var require_dist8 = __commonJS({
         const resourceLocation = getResourceLocation2(response, state);
         if (resourceLocation !== void 0) {
           return {
-            response: await poll(resourceLocation).catch(setStateError({ state, stateProxy })),
+            response: await poll(resourceLocation).catch(setStateError({ state, stateProxy, isOperationError: isOperationError2 })),
             status
           };
         }
@@ -60854,7 +49162,7 @@ var require_dist8 = __commonJS({
       return { response, status };
     }
     async function pollOperation(inputs) {
-      const { poll, state, stateProxy, options, getOperationStatus: getOperationStatus2, getResourceLocation: getResourceLocation2, getOperationLocation: getOperationLocation2, withOperationLocation, getPollingInterval, processResult, updateState, setDelay, isDone, setErrorAsResult } = inputs;
+      const { poll, state, stateProxy, options, getOperationStatus: getOperationStatus2, getResourceLocation: getResourceLocation2, getOperationLocation: getOperationLocation2, isOperationError: isOperationError2, withOperationLocation, getPollingInterval, processResult, getError, updateState, setDelay, isDone, setErrorAsResult } = inputs;
       const { operationLocation } = state.config;
       if (operationLocation !== void 0) {
         const { response, status } = await pollOperationHelper({
@@ -60864,6 +49172,7 @@ var require_dist8 = __commonJS({
           stateProxy,
           operationLocation,
           getResourceLocation: getResourceLocation2,
+          isOperationError: isOperationError2,
           options
         });
         processOperationStatus({
@@ -60873,6 +49182,7 @@ var require_dist8 = __commonJS({
           stateProxy,
           isDone,
           processResult,
+          getError,
           setErrorAsResult
         });
         if (!terminalStates.includes(status)) {
@@ -60904,6 +49214,7 @@ var require_dist8 = __commonJS({
       return rawResponse.headers["azure-asyncoperation"];
     }
     function findResourceLocation(inputs) {
+      var _a;
       const { location, requestMethod, requestPath, resourceLocationConfig } = inputs;
       switch (requestMethod) {
         case "PUT": {
@@ -60912,18 +49223,24 @@ var require_dist8 = __commonJS({
         case "DELETE": {
           return void 0;
         }
+        case "PATCH": {
+          return (_a = getDefault()) !== null && _a !== void 0 ? _a : requestPath;
+        }
         default: {
-          switch (resourceLocationConfig) {
-            case "azure-async-operation": {
-              return void 0;
-            }
-            case "original-uri": {
-              return requestPath;
-            }
-            case "location":
-            default: {
-              return location;
-            }
+          return getDefault();
+        }
+      }
+      function getDefault() {
+        switch (resourceLocationConfig) {
+          case "azure-async-operation": {
+            return void 0;
+          }
+          case "original-uri": {
+            return requestPath;
+          }
+          case "location":
+          default: {
+            return location;
           }
         }
       }
@@ -60982,7 +49299,7 @@ var require_dist8 = __commonJS({
         case "cancelled":
           return "canceled";
         default: {
-          logger.warning(`LRO: unrecognized operation status: ${status}`);
+          logger.verbose(`LRO: unrecognized operation status: ${status}`);
           return status;
         }
       }
@@ -61014,6 +49331,18 @@ var require_dist8 = __commonJS({
         return isNaN(retryAfterInSeconds) ? calculatePollingIntervalFromDate(new Date(retryAfter)) : retryAfterInSeconds * 1e3;
       }
       return void 0;
+    }
+    function getErrorFromResponse(response) {
+      const error2 = accessBodyProperty(response, "error");
+      if (!error2) {
+        logger.warning(`The long-running operation failed but there is no error property in the response's body`);
+        return;
+      }
+      if (!error2.code || !error2.message) {
+        logger.warning(`The long-running operation failed but the error property in the response's body doesn't contain code or message`);
+        return;
+      }
+      return error2;
     }
     function calculatePollingIntervalFromDate(retryAfterDate) {
       const timeNow = Math.floor((/* @__PURE__ */ new Date()).getTime());
@@ -61095,14 +49424,19 @@ var require_dist8 = __commonJS({
           throw new Error(`Internal error: Unexpected operation mode: ${mode}`);
       }
     }
-    function getResourceLocation({ flatResponse }, state) {
-      if (typeof flatResponse === "object") {
-        const resourceLocation = flatResponse.resourceLocation;
-        if (resourceLocation !== void 0) {
-          state.config.resourceLocation = resourceLocation;
-        }
+    function accessBodyProperty({ flatResponse, rawResponse }, prop) {
+      var _a, _b;
+      return (_a = flatResponse === null || flatResponse === void 0 ? void 0 : flatResponse[prop]) !== null && _a !== void 0 ? _a : (_b = rawResponse.body) === null || _b === void 0 ? void 0 : _b[prop];
+    }
+    function getResourceLocation(res, state) {
+      const loc = accessBodyProperty(res, "resourceLocation");
+      if (loc && typeof loc === "string") {
+        state.config.resourceLocation = loc;
       }
       return state.config.resourceLocation;
+    }
+    function isOperationError(e) {
+      return e.name === "RestError";
     }
     async function pollHttpOperation(inputs) {
       const { lro, stateProxy, options, processResult, updateState, setDelay, state, setErrorAsResult } = inputs;
@@ -61111,10 +49445,12 @@ var require_dist8 = __commonJS({
         stateProxy,
         setDelay,
         processResult: processResult ? ({ flatResponse }, inputState) => processResult(flatResponse, inputState) : ({ flatResponse }) => flatResponse,
+        getError: getErrorFromResponse,
         updateState,
         getPollingInterval: parseRetryAfter,
         getOperationLocation,
         getOperationStatus,
+        isOperationError,
         getResourceLocation,
         options,
         /**
@@ -61123,29 +49459,6 @@ var require_dist8 = __commonJS({
          */
         poll: async (location, inputOptions) => lro.sendPollRequest(location, inputOptions),
         setErrorAsResult
-      });
-    }
-    var maybemap = (value, f) => value === void 0 ? void 0 : f(value);
-    var INTERRUPTED = new Error("The poller is already stopped");
-    function delayMs(ms) {
-      let aborted = false;
-      let toReject;
-      return Object.assign(new Promise((resolve, reject) => {
-        let token;
-        toReject = () => {
-          maybemap(token, clearTimeout);
-          reject(INTERRUPTED);
-        };
-        if (aborted) {
-          toReject();
-        } else {
-          token = setTimeout(resolve, ms);
-        }
-      }), {
-        cancel: () => {
-          aborted = true;
-          toReject === null || toReject === void 0 ? void 0 : toReject();
-        }
       });
     }
     var createStateProxy$1 = () => ({
@@ -61169,11 +49482,11 @@ var require_dist8 = __commonJS({
       isSucceeded: (state) => state.status === "succeeded"
     });
     function buildCreatePoller(inputs) {
-      const { getOperationLocation: getOperationLocation2, getStatusFromInitialResponse: getStatusFromInitialResponse2, getStatusFromPollResponse, getResourceLocation: getResourceLocation2, getPollingInterval, resolveOnUnsuccessful } = inputs;
+      const { getOperationLocation: getOperationLocation2, getStatusFromInitialResponse: getStatusFromInitialResponse2, getStatusFromPollResponse, isOperationError: isOperationError2, getResourceLocation: getResourceLocation2, getPollingInterval, getError, resolveOnUnsuccessful } = inputs;
       return async ({ init, poll }, options) => {
         const { processResult, updateState, withOperationLocation: withOperationLocationCallback, intervalInMs = POLL_INTERVAL_IN_MS, restoreFrom } = options || {};
         const stateProxy = createStateProxy$1();
-        const withOperationLocation = withOperationLocationCallback ? (() => {
+        const withOperationLocation = withOperationLocationCallback ? /* @__PURE__ */ (() => {
           let called = false;
           return (operationLocation, isUpdated) => {
             if (isUpdated)
@@ -61192,10 +49505,10 @@ var require_dist8 = __commonJS({
           setErrorAsResult: !resolveOnUnsuccessful
         });
         let resultPromise;
-        let cancelJob;
-        const abortController$1 = new abortController.AbortController();
+        const abortController = new AbortController();
         const handlers = /* @__PURE__ */ new Map();
         const handleProgressEvents = async () => handlers.forEach((h) => h(state));
+        const cancelErrMsg = "Operation was canceled";
         let currentPollIntervalInMs = intervalInMs;
         const poller = {
           getOperationState: () => state,
@@ -61203,8 +49516,7 @@ var require_dist8 = __commonJS({
           isDone: () => ["succeeded", "failed", "canceled"].includes(state.status),
           isStopped: () => resultPromise === void 0,
           stopPolling: () => {
-            abortController$1.abort();
-            cancelJob === null || cancelJob === void 0 ? void 0 : cancelJob();
+            abortController.abort();
           },
           toString: () => JSON.stringify({
             state
@@ -61216,49 +49528,70 @@ var require_dist8 = __commonJS({
           },
           pollUntilDone: (pollOptions) => resultPromise !== null && resultPromise !== void 0 ? resultPromise : resultPromise = (async () => {
             const { abortSignal: inputAbortSignal } = pollOptions || {};
-            const { signal: abortSignal } = inputAbortSignal ? new abortController.AbortController([inputAbortSignal, abortController$1.signal]) : abortController$1;
-            if (!poller.isDone()) {
-              await poller.poll({ abortSignal });
-              while (!poller.isDone()) {
-                const delay = delayMs(currentPollIntervalInMs);
-                cancelJob = delay.cancel;
-                await delay;
-                await poller.poll({ abortSignal });
-              }
+            function abortListener() {
+              abortController.abort();
             }
-            switch (state.status) {
-              case "succeeded": {
-                return poller.getResult();
+            const abortSignal = abortController.signal;
+            if (inputAbortSignal === null || inputAbortSignal === void 0 ? void 0 : inputAbortSignal.aborted) {
+              abortController.abort();
+            } else if (!abortSignal.aborted) {
+              inputAbortSignal === null || inputAbortSignal === void 0 ? void 0 : inputAbortSignal.addEventListener("abort", abortListener, { once: true });
+            }
+            try {
+              if (!poller.isDone()) {
+                await poller.poll({ abortSignal });
+                while (!poller.isDone()) {
+                  await coreUtil.delay(currentPollIntervalInMs, { abortSignal });
+                  await poller.poll({ abortSignal });
+                }
               }
-              case "canceled": {
-                if (!resolveOnUnsuccessful)
-                  throw new Error("Operation was canceled");
-                return poller.getResult();
-              }
-              case "failed": {
-                if (!resolveOnUnsuccessful)
+            } finally {
+              inputAbortSignal === null || inputAbortSignal === void 0 ? void 0 : inputAbortSignal.removeEventListener("abort", abortListener);
+            }
+            if (resolveOnUnsuccessful) {
+              return poller.getResult();
+            } else {
+              switch (state.status) {
+                case "succeeded":
+                  return poller.getResult();
+                case "canceled":
+                  throw new Error(cancelErrMsg);
+                case "failed":
                   throw state.error;
-                return poller.getResult();
-              }
-              case "notStarted":
-              case "running": {
-                throw new Error(`polling completed without succeeding or failing`);
+                case "notStarted":
+                case "running":
+                  throw new Error(`Polling completed without succeeding or failing`);
               }
             }
           })().finally(() => {
             resultPromise = void 0;
           }),
           async poll(pollOptions) {
+            if (resolveOnUnsuccessful) {
+              if (poller.isDone())
+                return;
+            } else {
+              switch (state.status) {
+                case "succeeded":
+                  return;
+                case "canceled":
+                  throw new Error(cancelErrMsg);
+                case "failed":
+                  throw state.error;
+              }
+            }
             await pollOperation({
               poll,
               state,
               stateProxy,
               getOperationLocation: getOperationLocation2,
+              isOperationError: isOperationError2,
               withOperationLocation,
               getPollingInterval,
               getOperationStatus: getStatusFromPollResponse,
               getResourceLocation: getResourceLocation2,
               processResult,
+              getError,
               updateState,
               options: pollOptions,
               setDelay: (pollIntervalInMs) => {
@@ -61267,11 +49600,13 @@ var require_dist8 = __commonJS({
               setErrorAsResult: !resolveOnUnsuccessful
             });
             await handleProgressEvents();
-            if (state.status === "canceled" && !resolveOnUnsuccessful) {
-              throw new Error("Operation was canceled");
-            }
-            if (state.status === "failed" && !resolveOnUnsuccessful) {
-              throw state.error;
+            if (!resolveOnUnsuccessful) {
+              switch (state.status) {
+                case "canceled":
+                  throw new Error(cancelErrMsg);
+                case "failed":
+                  throw state.error;
+              }
             }
           }
         };
@@ -61283,9 +49618,11 @@ var require_dist8 = __commonJS({
       return buildCreatePoller({
         getStatusFromInitialResponse,
         getStatusFromPollResponse: getOperationStatus,
+        isOperationError,
         getOperationLocation,
         getResourceLocation,
         getPollingInterval: parseRetryAfter,
+        getError: getErrorFromResponse,
         resolveOnUnsuccessful
       })({
         init: async () => {
@@ -61381,18 +49718,18 @@ var require_dist8 = __commonJS({
         });
       }
     };
-    var PollerStoppedError = class extends Error {
+    var PollerStoppedError = class _PollerStoppedError extends Error {
       constructor(message) {
         super(message);
         this.name = "PollerStoppedError";
-        Object.setPrototypeOf(this, PollerStoppedError.prototype);
+        Object.setPrototypeOf(this, _PollerStoppedError.prototype);
       }
     };
-    var PollerCancelledError = class extends Error {
+    var PollerCancelledError = class _PollerCancelledError extends Error {
       constructor(message) {
         super(message);
         this.name = "PollerCancelledError";
-        Object.setPrototypeOf(this, PollerCancelledError.prototype);
+        Object.setPrototypeOf(this, _PollerCancelledError.prototype);
       }
     };
     var Poller = class {
@@ -61718,20 +50055,20 @@ var require_dist8 = __commonJS({
 });
 
 // node_modules/@azure/storage-blob/dist/index.js
-var require_dist9 = __commonJS({
+var require_dist10 = __commonJS({
   "node_modules/@azure/storage-blob/dist/index.js"(exports2) {
     "use strict";
     Object.defineProperty(exports2, "__esModule", { value: true });
-    var coreHttp = require_dist6();
+    var coreHttp = require_dist7();
     var tslib = (init_tslib_es6(), __toCommonJS(tslib_es6_exports));
-    var coreTracing = require_dist5();
+    var coreTracing = require_dist6();
     var logger$1 = require_dist3();
-    var abortController = require_dist();
+    var abortController = require_dist5();
     var os7 = require("os");
     var crypto7 = require("crypto");
     var stream = require("stream");
-    require_dist7();
-    var coreLro = require_dist8();
+    require_dist8();
+    var coreLro = require_dist9();
     var events = require("events");
     var fs7 = require("fs");
     var util = require("util");
@@ -62801,6 +51138,7 @@ var require_dist9 = __commonJS({
           content: {
             serializedName: "content",
             xmlName: "content",
+            xmlIsMsText: true,
             type: {
               name: "String"
             }
@@ -63029,7 +51367,8 @@ var require_dist9 = __commonJS({
                 "P80",
                 "Hot",
                 "Cool",
-                "Archive"
+                "Archive",
+                "Cold"
               ]
             }
           },
@@ -63047,7 +51386,8 @@ var require_dist9 = __commonJS({
               name: "Enum",
               allowedValues: [
                 "rehydrate-pending-to-hot",
-                "rehydrate-pending-to-cool"
+                "rehydrate-pending-to-cool",
+                "rehydrate-pending-to-cold"
               ]
             }
           },
@@ -65524,6 +53864,13 @@ var require_dist9 = __commonJS({
           lastModified: {
             serializedName: "last-modified",
             xmlName: "last-modified",
+            type: {
+              name: "DateTimeRfc1123"
+            }
+          },
+          createdOn: {
+            serializedName: "x-ms-creation-time",
+            xmlName: "x-ms-creation-time",
             type: {
               name: "DateTimeRfc1123"
             }
@@ -70201,7 +58548,7 @@ var require_dist9 = __commonJS({
     var version3 = {
       parameterPath: "version",
       mapper: {
-        defaultValue: "2021-10-04",
+        defaultValue: "2023-11-03",
         isConstant: true,
         serializedName: "x-ms-version",
         type: {
@@ -71066,7 +59413,8 @@ var require_dist9 = __commonJS({
             "P80",
             "Hot",
             "Cool",
-            "Archive"
+            "Archive",
+            "Cold"
           ]
         }
       }
@@ -71293,7 +59641,8 @@ var require_dist9 = __commonJS({
             "P80",
             "Hot",
             "Cool",
-            "Archive"
+            "Archive",
+            "Cold"
           ]
         }
       }
@@ -74778,6 +63127,7 @@ var require_dist9 = __commonJS({
         blobTagsString,
         legalHold1,
         transactionalContentMD5,
+        transactionalContentCrc64,
         contentType1,
         accept2,
         blobType2
@@ -74997,8 +63347,8 @@ var require_dist9 = __commonJS({
       serializer: xmlSerializer
     };
     var logger = logger$1.createClientLogger("storage-blob");
-    var SDK_VERSION = "12.12.0";
-    var SERVICE_VERSION = "2021-10-04";
+    var SDK_VERSION = "12.17.0";
+    var SERVICE_VERSION = "2023-11-03";
     var BLOCK_BLOB_MAX_UPLOAD_BLOB_BYTES = 256 * 1024 * 1024;
     var BLOCK_BLOB_MAX_STAGE_BLOCK_BYTES = 4e3 * 1024 * 1024;
     var BLOCK_BLOB_MAX_BLOCKS = 5e4;
@@ -75282,7 +63632,10 @@ var require_dist9 = __commonJS({
         };
       } else {
         const accountSas = getValueInConnString(connectionString, "SharedAccessSignature");
-        const accountName = getAccountNameFromUrl(blobEndpoint);
+        let accountName = getValueInConnString(connectionString, "AccountName");
+        if (!accountName) {
+          accountName = getAccountNameFromUrl(blobEndpoint);
+        }
         if (!blobEndpoint) {
           throw new Error("Invalid BlobEndpoint in the provided SAS Connection String");
         } else if (!accountSas) {
@@ -75299,7 +63652,8 @@ var require_dist9 = __commonJS({
       let path13 = urlParsed.getPath();
       path13 = path13 ? path13.endsWith("/") ? `${path13}${name}` : `${path13}/${name}` : name;
       urlParsed.setPath(path13);
-      return urlParsed.toString();
+      const normalizedUrl = new URL(urlParsed.toString());
+      return normalizedUrl.toString();
     }
     function setURLParameter(url2, name, value) {
       const urlParsed = coreHttp.URLBuilder.parse(url2);
@@ -75446,7 +63800,7 @@ var require_dist9 = __commonJS({
         return false;
       }
       const host = parsedUrl.getHost() + (parsedUrl.getPort() === void 0 ? "" : ":" + parsedUrl.getPort());
-      return /^.*:.*:.*$|^localhost(:[0-9]+)?$|^(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])(\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])){3}(:[0-9]+)?$/.test(host) || parsedUrl.getPort() !== void 0 && PathStylePorts.includes(parsedUrl.getPort());
+      return /^.*:.*:.*$|^(localhost|host.docker.internal)(:[0-9]+)?$|^(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])(\.(\d|[1-9]\d|1\d\d|2[0-4]\d|25[0-5])){3}(:[0-9]+)?$/.test(host) || parsedUrl.getPort() !== void 0 && PathStylePorts.includes(parsedUrl.getPort());
     }
     function toBlobTagsString(tags2) {
       if (tags2 === void 0) {
@@ -75591,9 +63945,7 @@ var require_dist9 = __commonJS({
       var _a;
       return Object.assign(Object.assign({}, internalResponse), { segment: {
         blobPrefixes: (_a = internalResponse.segment.blobPrefixes) === null || _a === void 0 ? void 0 : _a.map((blobPrefixInternal) => {
-          const blobPrefix = {
-            name: BlobNameToString(blobPrefixInternal.name)
-          };
+          const blobPrefix = Object.assign(Object.assign({}, blobPrefixInternal), { name: BlobNameToString(blobPrefixInternal.name) });
           return blobPrefix;
         }),
         blobItems: internalResponse.segment.blobItems.map((blobItemInteral) => {
@@ -75601,289 +63953,6 @@ var require_dist9 = __commonJS({
           return blobItem;
         })
       } });
-    }
-    function decodeBase64String(value) {
-      if (coreHttp.isNode) {
-        return Buffer.from(value, "base64");
-      } else {
-        const byteString = atob(value);
-        const arr = new Uint8Array(byteString.length);
-        for (let i = 0; i < byteString.length; i++) {
-          arr[i] = byteString.charCodeAt(i);
-        }
-        return arr;
-      }
-    }
-    function ParseBoolean(content) {
-      if (content === void 0)
-        return void 0;
-      if (content === "true")
-        return true;
-      if (content === "false")
-        return false;
-      return void 0;
-    }
-    function ParseBlobName(blobNameInXML) {
-      if (blobNameInXML["$"] !== void 0 && blobNameInXML["#"] !== void 0) {
-        return {
-          encoded: ParseBoolean(blobNameInXML["$"]["Encoded"]),
-          content: blobNameInXML["#"]
-        };
-      } else {
-        return {
-          encoded: false,
-          content: blobNameInXML
-        };
-      }
-    }
-    function ParseBlobProperties(blobPropertiesInXML) {
-      const blobProperties = blobPropertiesInXML;
-      if (blobPropertiesInXML["Creation-Time"]) {
-        blobProperties.createdOn = new Date(blobPropertiesInXML["Creation-Time"]);
-        delete blobProperties["Creation-Time"];
-      }
-      if (blobPropertiesInXML["Last-Modified"]) {
-        blobProperties.lastModified = new Date(blobPropertiesInXML["Last-Modified"]);
-        delete blobProperties["Last-Modified"];
-      }
-      if (blobPropertiesInXML["Etag"]) {
-        blobProperties.etag = blobPropertiesInXML["Etag"];
-        delete blobProperties["Etag"];
-      }
-      if (blobPropertiesInXML["Content-Length"]) {
-        blobProperties.contentLength = parseFloat(blobPropertiesInXML["Content-Length"]);
-        delete blobProperties["Content-Length"];
-      }
-      if (blobPropertiesInXML["Content-Type"]) {
-        blobProperties.contentType = blobPropertiesInXML["Content-Type"];
-        delete blobProperties["Content-Type"];
-      }
-      if (blobPropertiesInXML["Content-Encoding"]) {
-        blobProperties.contentEncoding = blobPropertiesInXML["Content-Encoding"];
-        delete blobProperties["Content-Encoding"];
-      }
-      if (blobPropertiesInXML["Content-Language"]) {
-        blobProperties.contentLanguage = blobPropertiesInXML["Content-Language"];
-        delete blobProperties["Content-Language"];
-      }
-      if (blobPropertiesInXML["Content-MD5"]) {
-        blobProperties.contentMD5 = decodeBase64String(blobPropertiesInXML["Content-MD5"]);
-        delete blobProperties["Content-MD5"];
-      }
-      if (blobPropertiesInXML["Content-Disposition"]) {
-        blobProperties.contentDisposition = blobPropertiesInXML["Content-Disposition"];
-        delete blobProperties["Content-Disposition"];
-      }
-      if (blobPropertiesInXML["Cache-Control"]) {
-        blobProperties.cacheControl = blobPropertiesInXML["Cache-Control"];
-        delete blobProperties["Cache-Control"];
-      }
-      if (blobPropertiesInXML["x-ms-blob-sequence-number"]) {
-        blobProperties.blobSequenceNumber = parseFloat(blobPropertiesInXML["x-ms-blob-sequence-number"]);
-        delete blobProperties["x-ms-blob-sequence-number"];
-      }
-      if (blobPropertiesInXML["BlobType"]) {
-        blobProperties.blobType = blobPropertiesInXML["BlobType"];
-        delete blobProperties["BlobType"];
-      }
-      if (blobPropertiesInXML["LeaseStatus"]) {
-        blobProperties.leaseStatus = blobPropertiesInXML["LeaseStatus"];
-        delete blobProperties["LeaseStatus"];
-      }
-      if (blobPropertiesInXML["LeaseState"]) {
-        blobProperties.leaseState = blobPropertiesInXML["LeaseState"];
-        delete blobProperties["LeaseState"];
-      }
-      if (blobPropertiesInXML["LeaseDuration"]) {
-        blobProperties.leaseDuration = blobPropertiesInXML["LeaseDuration"];
-        delete blobProperties["LeaseDuration"];
-      }
-      if (blobPropertiesInXML["CopyId"]) {
-        blobProperties.copyId = blobPropertiesInXML["CopyId"];
-        delete blobProperties["CopyId"];
-      }
-      if (blobPropertiesInXML["CopyStatus"]) {
-        blobProperties.copyStatus = blobPropertiesInXML["CopyStatus"];
-        delete blobProperties["CopyStatus"];
-      }
-      if (blobPropertiesInXML["CopySource"]) {
-        blobProperties.copySource = blobPropertiesInXML["CopySource"];
-        delete blobProperties["CopySource"];
-      }
-      if (blobPropertiesInXML["CopyProgress"]) {
-        blobProperties.copyProgress = blobPropertiesInXML["CopyProgress"];
-        delete blobProperties["CopyProgress"];
-      }
-      if (blobPropertiesInXML["CopyCompletionTime"]) {
-        blobProperties.copyCompletedOn = new Date(blobPropertiesInXML["CopyCompletionTime"]);
-        delete blobProperties["CopyCompletionTime"];
-      }
-      if (blobPropertiesInXML["CopyStatusDescription"]) {
-        blobProperties.copyStatusDescription = blobPropertiesInXML["CopyStatusDescription"];
-        delete blobProperties["CopyStatusDescription"];
-      }
-      if (blobPropertiesInXML["ServerEncrypted"]) {
-        blobProperties.serverEncrypted = ParseBoolean(blobPropertiesInXML["ServerEncrypted"]);
-        delete blobProperties["ServerEncrypted"];
-      }
-      if (blobPropertiesInXML["IncrementalCopy"]) {
-        blobProperties.incrementalCopy = ParseBoolean(blobPropertiesInXML["IncrementalCopy"]);
-        delete blobProperties["IncrementalCopy"];
-      }
-      if (blobPropertiesInXML["DestinationSnapshot"]) {
-        blobProperties.destinationSnapshot = blobPropertiesInXML["DestinationSnapshot"];
-        delete blobProperties["DestinationSnapshot"];
-      }
-      if (blobPropertiesInXML["DeletedTime"]) {
-        blobProperties.deletedOn = new Date(blobPropertiesInXML["DeletedTime"]);
-        delete blobProperties["DeletedTime"];
-      }
-      if (blobPropertiesInXML["RemainingRetentionDays"]) {
-        blobProperties.remainingRetentionDays = parseFloat(blobPropertiesInXML["RemainingRetentionDays"]);
-        delete blobProperties["RemainingRetentionDays"];
-      }
-      if (blobPropertiesInXML["AccessTier"]) {
-        blobProperties.accessTier = blobPropertiesInXML["AccessTier"];
-        delete blobProperties["AccessTier"];
-      }
-      if (blobPropertiesInXML["AccessTierInferred"]) {
-        blobProperties.accessTierInferred = ParseBoolean(blobPropertiesInXML["AccessTierInferred"]);
-        delete blobProperties["AccessTierInferred"];
-      }
-      if (blobPropertiesInXML["ArchiveStatus"]) {
-        blobProperties.archiveStatus = blobPropertiesInXML["ArchiveStatus"];
-        delete blobProperties["ArchiveStatus"];
-      }
-      if (blobPropertiesInXML["CustomerProvidedKeySha256"]) {
-        blobProperties.customerProvidedKeySha256 = blobPropertiesInXML["CustomerProvidedKeySha256"];
-        delete blobProperties["CustomerProvidedKeySha256"];
-      }
-      if (blobPropertiesInXML["EncryptionScope"]) {
-        blobProperties.encryptionScope = blobPropertiesInXML["EncryptionScope"];
-        delete blobProperties["EncryptionScope"];
-      }
-      if (blobPropertiesInXML["AccessTierChangeTime"]) {
-        blobProperties.accessTierChangedOn = new Date(blobPropertiesInXML["AccessTierChangeTime"]);
-        delete blobProperties["AccessTierChangeTime"];
-      }
-      if (blobPropertiesInXML["TagCount"]) {
-        blobProperties.tagCount = parseFloat(blobPropertiesInXML["TagCount"]);
-        delete blobProperties["TagCount"];
-      }
-      if (blobPropertiesInXML["Expiry-Time"]) {
-        blobProperties.expiresOn = new Date(blobPropertiesInXML["Expiry-Time"]);
-        delete blobProperties["Expiry-Time"];
-      }
-      if (blobPropertiesInXML["Sealed"]) {
-        blobProperties.isSealed = ParseBoolean(blobPropertiesInXML["Sealed"]);
-        delete blobProperties["Sealed"];
-      }
-      if (blobPropertiesInXML["RehydratePriority"]) {
-        blobProperties.rehydratePriority = blobPropertiesInXML["RehydratePriority"];
-        delete blobProperties["RehydratePriority"];
-      }
-      if (blobPropertiesInXML["LastAccessTime"]) {
-        blobProperties.lastAccessedOn = new Date(blobPropertiesInXML["LastAccessTime"]);
-        delete blobProperties["LastAccessTime"];
-      }
-      if (blobPropertiesInXML["ImmutabilityPolicyUntilDate"]) {
-        blobProperties.immutabilityPolicyExpiresOn = new Date(blobPropertiesInXML["ImmutabilityPolicyUntilDate"]);
-        delete blobProperties["ImmutabilityPolicyUntilDate"];
-      }
-      if (blobPropertiesInXML["ImmutabilityPolicyMode"]) {
-        blobProperties.immutabilityPolicyMode = blobPropertiesInXML["ImmutabilityPolicyMode"];
-        delete blobProperties["ImmutabilityPolicyMode"];
-      }
-      if (blobPropertiesInXML["LegalHold"]) {
-        blobProperties.legalHold = ParseBoolean(blobPropertiesInXML["LegalHold"]);
-        delete blobProperties["LegalHold"];
-      }
-      return blobProperties;
-    }
-    function ParseBlobItem(blobInXML) {
-      const blobItem = blobInXML;
-      blobItem.properties = ParseBlobProperties(blobInXML["Properties"]);
-      delete blobItem["Properties"];
-      blobItem.name = ParseBlobName(blobInXML["Name"]);
-      delete blobItem["Name"];
-      blobItem.deleted = ParseBoolean(blobInXML["Deleted"]);
-      delete blobItem["Deleted"];
-      if (blobInXML["Snapshot"]) {
-        blobItem.snapshot = blobInXML["Snapshot"];
-        delete blobItem["Snapshot"];
-      }
-      if (blobInXML["VersionId"]) {
-        blobItem.versionId = blobInXML["VersionId"];
-        delete blobItem["VersionId"];
-      }
-      if (blobInXML["IsCurrentVersion"]) {
-        blobItem.isCurrentVersion = ParseBoolean(blobInXML["IsCurrentVersion"]);
-        delete blobItem["IsCurrentVersion"];
-      }
-      if (blobInXML["Metadata"]) {
-        blobItem.metadata = blobInXML["Metadata"];
-        delete blobItem["Metadata"];
-      }
-      if (blobInXML["Tags"]) {
-        blobItem.blobTags = ParseBlobTags(blobInXML["Tags"]);
-        delete blobItem["Tags"];
-      }
-      if (blobInXML["OrMetadata"]) {
-        blobItem.objectReplicationMetadata = blobInXML["OrMetadata"];
-        delete blobItem["OrMetadata"];
-      }
-      if (blobInXML["HasVersionsOnly"]) {
-        blobItem.hasVersionsOnly = ParseBoolean(blobInXML["HasVersionsOnly"]);
-        delete blobItem["HasVersionsOnly"];
-      }
-      return blobItem;
-    }
-    function ParseBlobPrefix(blobPrefixInXML) {
-      return {
-        name: ParseBlobName(blobPrefixInXML["Name"])
-      };
-    }
-    function ParseBlobTag(blobTagInXML) {
-      return {
-        key: blobTagInXML["Key"],
-        value: blobTagInXML["Value"]
-      };
-    }
-    function ParseBlobTags(blobTagsInXML) {
-      if (blobTagsInXML === void 0 || blobTagsInXML["TagSet"] === void 0 || blobTagsInXML["TagSet"]["Tag"] === void 0) {
-        return void 0;
-      }
-      const blobTagSet = [];
-      if (blobTagsInXML["TagSet"]["Tag"] instanceof Array) {
-        blobTagsInXML["TagSet"]["Tag"].forEach((blobTagInXML) => {
-          blobTagSet.push(ParseBlobTag(blobTagInXML));
-        });
-      } else {
-        blobTagSet.push(ParseBlobTag(blobTagsInXML["TagSet"]["Tag"]));
-      }
-      return { blobTagSet };
-    }
-    function ProcessBlobItems(blobArrayInXML) {
-      const blobItems = [];
-      if (blobArrayInXML instanceof Array) {
-        blobArrayInXML.forEach((blobInXML) => {
-          blobItems.push(ParseBlobItem(blobInXML));
-        });
-      } else {
-        blobItems.push(ParseBlobItem(blobArrayInXML));
-      }
-      return blobItems;
-    }
-    function ProcessBlobPrefixes(blobPrefixesInXML) {
-      const blobPrefixes = [];
-      if (blobPrefixesInXML instanceof Array) {
-        blobPrefixesInXML.forEach((blobPrefixInXML) => {
-          blobPrefixes.push(ParseBlobPrefix(blobPrefixInXML));
-        });
-      } else {
-        blobPrefixes.push(ParseBlobPrefix(blobPrefixesInXML));
-      }
-      return blobPrefixes;
     }
     function* ExtractPageRangeInfoItems(getPageRangesSegment) {
       let pageRange = [];
@@ -76635,7 +64704,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
       }
     };
     var packageName = "azure-storage-blob";
-    var packageVersion = "12.12.0";
+    var packageVersion = "12.17.0";
     var StorageClientContext = class extends coreHttp__namespace.ServiceClient {
       /**
        * Initializes a new instance of the StorageClientContext class.
@@ -76658,7 +64727,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         this.requestContentType = "application/json; charset=utf-8";
         this.baseUri = options.endpoint || "{url}";
         this.url = url2;
-        this.version = options.version || "2021-10-04";
+        this.version = options.version || "2023-11-03";
       }
     };
     var StorageClient = class {
@@ -76697,7 +64766,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         tracingContext: (_b = options === null || options === void 0 ? void 0 : options.tracingOptions) === null || _b === void 0 ? void 0 : _b.tracingContext
       };
     }
-    var BlobSASPermissions = class {
+    var BlobSASPermissions = class _BlobSASPermissions {
       constructor() {
         this.read = false;
         this.add = false;
@@ -76718,7 +64787,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
        * @param permissions -
        */
       static parse(permissions) {
-        const blobSASPermissions = new BlobSASPermissions();
+        const blobSASPermissions = new _BlobSASPermissions();
         for (const char of permissions) {
           switch (char) {
             case "r":
@@ -76767,7 +64836,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
        * @param permissionLike -
        */
       static from(permissionLike) {
-        const blobSASPermissions = new BlobSASPermissions();
+        const blobSASPermissions = new _BlobSASPermissions();
         if (permissionLike.read) {
           blobSASPermissions.read = true;
         }
@@ -76847,7 +64916,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         return permissions.join("");
       }
     };
-    var ContainerSASPermissions = class {
+    var ContainerSASPermissions = class _ContainerSASPermissions {
       constructor() {
         this.read = false;
         this.add = false;
@@ -76870,7 +64939,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
        * @param permissions -
        */
       static parse(permissions) {
-        const containerSASPermissions = new ContainerSASPermissions();
+        const containerSASPermissions = new _ContainerSASPermissions();
         for (const char of permissions) {
           switch (char) {
             case "r":
@@ -76925,7 +64994,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
        * @param permissionLike -
        */
       static from(permissionLike) {
-        const containerSASPermissions = new ContainerSASPermissions();
+        const containerSASPermissions = new _ContainerSASPermissions();
         if (permissionLike.read) {
           containerSASPermissions.read = true;
         }
@@ -78177,6 +66246,14 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         return this.originalResponse.lastAccessed;
       }
       /**
+       * Returns the date and time the blob was created.
+       *
+       * @readonly
+       */
+      get createdOn() {
+        return this.originalResponse.createdOn;
+      }
+      /**
        * A name-value pair
        * to associate with a file storage object.
        *
@@ -78325,7 +66402,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
     var AVRO_INIT_BYTES = new Uint8Array([79, 98, 106, 1]);
     var AVRO_CODEC_KEY = "avro.codec";
     var AVRO_SCHEMA_KEY = "avro.schema";
-    var AvroParser = class {
+    var AvroParser = class _AvroParser {
       /**
        * Reads a fixed number of bytes from the stream.
        *
@@ -78347,7 +66424,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
        * @param options -
        */
       static async readByte(stream2, options = {}) {
-        const buf = await AvroParser.readFixedBytes(stream2, 1, options);
+        const buf = await _AvroParser.readFixedBytes(stream2, 1, options);
         return buf[0];
       }
       // int and long are stored in variable-length zig-zag coding.
@@ -78358,7 +66435,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         let significanceInBit = 0;
         let byte, haveMoreByte, significanceInFloat;
         do {
-          byte = await AvroParser.readByte(stream2, options);
+          byte = await _AvroParser.readByte(stream2, options);
           haveMoreByte = byte & 128;
           zigZagEncoded |= (byte & 127) << significanceInBit;
           significanceInBit += 7;
@@ -78367,7 +66444,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
           zigZagEncoded = zigZagEncoded;
           significanceInFloat = 268435456;
           do {
-            byte = await AvroParser.readByte(stream2, options);
+            byte = await _AvroParser.readByte(stream2, options);
             zigZagEncoded += (byte & 127) * significanceInFloat;
             significanceInFloat *= 128;
           } while (byte & 128);
@@ -78380,16 +66457,16 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         return zigZagEncoded >> 1 ^ -(zigZagEncoded & 1);
       }
       static async readLong(stream2, options = {}) {
-        return AvroParser.readZigZagLong(stream2, options);
+        return _AvroParser.readZigZagLong(stream2, options);
       }
       static async readInt(stream2, options = {}) {
-        return AvroParser.readZigZagLong(stream2, options);
+        return _AvroParser.readZigZagLong(stream2, options);
       }
       static async readNull() {
         return null;
       }
       static async readBoolean(stream2, options = {}) {
-        const b = await AvroParser.readByte(stream2, options);
+        const b = await _AvroParser.readByte(stream2, options);
         if (b === 1) {
           return true;
         } else if (b === 0) {
@@ -78399,37 +66476,37 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         }
       }
       static async readFloat(stream2, options = {}) {
-        const u8arr = await AvroParser.readFixedBytes(stream2, 4, options);
+        const u8arr = await _AvroParser.readFixedBytes(stream2, 4, options);
         const view = new DataView(u8arr.buffer, u8arr.byteOffset, u8arr.byteLength);
         return view.getFloat32(0, true);
       }
       static async readDouble(stream2, options = {}) {
-        const u8arr = await AvroParser.readFixedBytes(stream2, 8, options);
+        const u8arr = await _AvroParser.readFixedBytes(stream2, 8, options);
         const view = new DataView(u8arr.buffer, u8arr.byteOffset, u8arr.byteLength);
         return view.getFloat64(0, true);
       }
       static async readBytes(stream2, options = {}) {
-        const size = await AvroParser.readLong(stream2, options);
+        const size = await _AvroParser.readLong(stream2, options);
         if (size < 0) {
           throw new Error("Bytes size was negative.");
         }
         return stream2.read(size, { abortSignal: options.abortSignal });
       }
       static async readString(stream2, options = {}) {
-        const u8arr = await AvroParser.readBytes(stream2, options);
+        const u8arr = await _AvroParser.readBytes(stream2, options);
         const utf8decoder = new TextDecoder();
         return utf8decoder.decode(u8arr);
       }
       static async readMapPair(stream2, readItemMethod, options = {}) {
-        const key = await AvroParser.readString(stream2, options);
+        const key = await _AvroParser.readString(stream2, options);
         const value = await readItemMethod(stream2, options);
         return { key, value };
       }
       static async readMap(stream2, readItemMethod, options = {}) {
         const readPairMethod = (s, opts = {}) => {
-          return AvroParser.readMapPair(s, readItemMethod, opts);
+          return _AvroParser.readMapPair(s, readItemMethod, opts);
         };
-        const pairs = await AvroParser.readArray(stream2, readPairMethod, options);
+        const pairs = await _AvroParser.readArray(stream2, readPairMethod, options);
         const dict = {};
         for (const pair of pairs) {
           dict[pair.key] = pair.value;
@@ -78438,9 +66515,9 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
       }
       static async readArray(stream2, readItemMethod, options = {}) {
         const items = [];
-        for (let count = await AvroParser.readLong(stream2, options); count !== 0; count = await AvroParser.readLong(stream2, options)) {
+        for (let count = await _AvroParser.readLong(stream2, options); count !== 0; count = await _AvroParser.readLong(stream2, options)) {
           if (count < 0) {
-            await AvroParser.readLong(stream2, options);
+            await _AvroParser.readLong(stream2, options);
             count = -count;
           }
           while (count--) {
@@ -78471,17 +66548,17 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
       AvroPrimitive2["BYTES"] = "bytes";
       AvroPrimitive2["STRING"] = "string";
     })(AvroPrimitive || (AvroPrimitive = {}));
-    var AvroType = class {
+    var AvroType = class _AvroType {
       /**
        * Determines the AvroType from the Avro Schema.
        */
       static fromSchema(schema) {
         if (typeof schema === "string") {
-          return AvroType.fromStringSchema(schema);
+          return _AvroType.fromStringSchema(schema);
         } else if (Array.isArray(schema)) {
-          return AvroType.fromArraySchema(schema);
+          return _AvroType.fromArraySchema(schema);
         } else {
-          return AvroType.fromObjectSchema(schema);
+          return _AvroType.fromObjectSchema(schema);
         }
       }
       static fromStringSchema(schema) {
@@ -78500,12 +66577,12 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         }
       }
       static fromArraySchema(schema) {
-        return new AvroUnionType(schema.map(AvroType.fromSchema));
+        return new AvroUnionType(schema.map(_AvroType.fromSchema));
       }
       static fromObjectSchema(schema) {
         const type = schema.type;
         try {
-          return AvroType.fromStringSchema(type);
+          return _AvroType.fromStringSchema(type);
         } catch (err) {
         }
         switch (type) {
@@ -78521,7 +66598,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
               throw new Error(`Required attribute 'fields' doesn't exist on schema: ${schema}`);
             }
             for (const field of schema.fields) {
-              fields[field.name] = AvroType.fromSchema(field.type);
+              fields[field.name] = _AvroType.fromSchema(field.type);
             }
             return new AvroRecordType(fields, schema.name);
           case AvroComplex.ENUM:
@@ -78536,7 +66613,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
             if (!schema.values) {
               throw new Error(`Required attribute 'values' doesn't exist on schema: ${schema}`);
             }
-            return new AvroMapType(AvroType.fromSchema(schema.values));
+            return new AvroMapType(_AvroType.fromSchema(schema.values));
           case AvroComplex.ARRAY:
           case AvroComplex.FIXED:
           default:
@@ -79257,6 +67334,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
     (function(BlockBlobTier) {
       BlockBlobTier["Hot"] = "Hot";
       BlockBlobTier["Cool"] = "Cool";
+      BlockBlobTier["Cold"] = "Cold";
       BlockBlobTier["Archive"] = "Archive";
     })(exports2.BlockBlobTier || (exports2.BlockBlobTier = {}));
     exports2.PremiumPageBlobTier = void 0;
@@ -79292,6 +67370,9 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
       StorageBlobAudience["StorageOAuthScopes"] = "https://storage.azure.com/.default";
       StorageBlobAudience["DiskComputeOAuthScopes"] = "https://disk.compute.azure.com/.default";
     })(exports2.StorageBlobAudience || (exports2.StorageBlobAudience = {}));
+    function getBlobServiceAccountAudience(storageAccountName) {
+      return `https://${storageAccountName}.blob.core.windows.net/.default`;
+    }
     function rangeResponseFromModel(response) {
       const pageRange = (response._response.parsedBody.pageRange || []).map((x) => ({
         offset: x.start,
@@ -79383,7 +67464,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
       }
       return makeBlobBeginCopyFromURLPollOperation(state);
     };
-    var toString2 = function toString3() {
+    var toString = function toString2() {
       return JSON.stringify({ state: this.state }, (key, value) => {
         if (key === "blobClient") {
           return void 0;
@@ -79395,7 +67476,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
       return {
         state: Object.assign({}, state),
         cancel,
-        toString: toString2,
+        toString,
         update
       };
     }
@@ -79888,7 +67969,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
     }
     var fsStat = util__namespace.promisify(fs__namespace.stat);
     var fsCreateReadStream = fs__namespace.createReadStream;
-    var BlobClient = class extends StorageClient {
+    var BlobClient = class _BlobClient extends StorageClient {
       constructor(urlOrConnectionString, credentialOrPipelineOrContainerName, blobNameOrOptions, options) {
         options = options || {};
         let pipeline;
@@ -79902,6 +67983,9 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
           pipeline = newPipeline(credentialOrPipelineOrContainerName, options);
         } else if (!credentialOrPipelineOrContainerName && typeof credentialOrPipelineOrContainerName !== "string") {
           url2 = urlOrConnectionString;
+          if (blobNameOrOptions && typeof blobNameOrOptions !== "string") {
+            options = blobNameOrOptions;
+          }
           pipeline = newPipeline(new AnonymousCredential(), options);
         } else if (credentialOrPipelineOrContainerName && typeof credentialOrPipelineOrContainerName === "string" && blobNameOrOptions && typeof blobNameOrOptions === "string") {
           const containerName = credentialOrPipelineOrContainerName;
@@ -79953,7 +68037,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
        * @returns A new BlobClient object identical to the source but with the specified snapshot timestamp
        */
       withSnapshot(snapshot2) {
-        return new BlobClient(setURLParameter(this.url, URLConstants.Parameters.SNAPSHOT, snapshot2.length === 0 ? void 0 : snapshot2), this.pipeline);
+        return new _BlobClient(setURLParameter(this.url, URLConstants.Parameters.SNAPSHOT, snapshot2.length === 0 ? void 0 : snapshot2), this.pipeline);
       }
       /**
        * Creates a new BlobClient object pointing to a version of this blob.
@@ -79963,7 +68047,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
        * @returns A new BlobClient object pointing to the version of this blob.
        */
       withVersion(versionId2) {
-        return new BlobClient(setURLParameter(this.url, URLConstants.Parameters.VERSIONID, versionId2.length === 0 ? void 0 : versionId2), this.pipeline);
+        return new _BlobClient(setURLParameter(this.url, URLConstants.Parameters.VERSIONID, versionId2.length === 0 ? void 0 : versionId2), this.pipeline);
       }
       /**
        * Creates a AppendBlobClient object.
@@ -80516,7 +68600,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
             sourceIfModifiedSince: options.sourceConditions.ifModifiedSince,
             sourceIfNoneMatch: options.sourceConditions.ifNoneMatch,
             sourceIfUnmodifiedSince: options.sourceConditions.ifUnmodifiedSince
-          }, sourceContentMD5: options.sourceContentMD5, copySourceAuthorization: httpAuthorizationToString(options.sourceAuthorization), blobTagsString: toBlobTagsString(options.tags), immutabilityPolicyExpiry: (_b = options.immutabilityPolicy) === null || _b === void 0 ? void 0 : _b.expiriesOn, immutabilityPolicyMode: (_c = options.immutabilityPolicy) === null || _c === void 0 ? void 0 : _c.policyMode, legalHold: options.legalHold, encryptionScope: options.encryptionScope, copySourceTags: options.copySourceTags }, convertTracingToRequestOptionsBase(updatedOptions)));
+          }, sourceContentMD5: options.sourceContentMD5, copySourceAuthorization: httpAuthorizationToString(options.sourceAuthorization), tier: toAccessTier(options.tier), blobTagsString: toBlobTagsString(options.tags), immutabilityPolicyExpiry: (_b = options.immutabilityPolicy) === null || _b === void 0 ? void 0 : _b.expiriesOn, immutabilityPolicyMode: (_c = options.immutabilityPolicy) === null || _c === void 0 ? void 0 : _c.policyMode, legalHold: options.legalHold, encryptionScope: options.encryptionScope, copySourceTags: options.copySourceTags }, convertTracingToRequestOptionsBase(updatedOptions)));
         } catch (e) {
           span.setStatus({
             code: coreTracing.SpanStatusCode.ERROR,
@@ -80817,7 +68901,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         }
       }
     };
-    var AppendBlobClient = class extends BlobClient {
+    var AppendBlobClient = class _AppendBlobClient extends BlobClient {
       constructor(urlOrConnectionString, credentialOrPipelineOrContainerName, blobNameOrOptions, options) {
         let pipeline;
         let url2;
@@ -80868,7 +68952,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
        * @returns A new AppendBlobClient object identical to the source but with the specified snapshot timestamp.
        */
       withSnapshot(snapshot2) {
-        return new AppendBlobClient(setURLParameter(this.url, URLConstants.Parameters.SNAPSHOT, snapshot2.length === 0 ? void 0 : snapshot2), this.pipeline);
+        return new _AppendBlobClient(setURLParameter(this.url, URLConstants.Parameters.SNAPSHOT, snapshot2.length === 0 ? void 0 : snapshot2), this.pipeline);
       }
       /**
        * Creates a 0-length append blob. Call AppendBlock to append data to an append blob.
@@ -81034,7 +69118,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         }
       }
     };
-    var BlockBlobClient = class extends BlobClient {
+    var BlockBlobClient = class _BlockBlobClient extends BlobClient {
       constructor(urlOrConnectionString, credentialOrPipelineOrContainerName, blobNameOrOptions, options) {
         let pipeline;
         let url2;
@@ -81048,6 +69132,9 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
           pipeline = newPipeline(credentialOrPipelineOrContainerName, options);
         } else if (!credentialOrPipelineOrContainerName && typeof credentialOrPipelineOrContainerName !== "string") {
           url2 = urlOrConnectionString;
+          if (blobNameOrOptions && typeof blobNameOrOptions !== "string") {
+            options = blobNameOrOptions;
+          }
           pipeline = newPipeline(new AnonymousCredential(), options);
         } else if (credentialOrPipelineOrContainerName && typeof credentialOrPipelineOrContainerName === "string" && blobNameOrOptions && typeof blobNameOrOptions === "string") {
           const containerName = credentialOrPipelineOrContainerName;
@@ -81086,7 +69173,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
        * @returns A new BlockBlobClient object identical to the source but with the specified snapshot timestamp.
        */
       withSnapshot(snapshot2) {
-        return new BlockBlobClient(setURLParameter(this.url, URLConstants.Parameters.SNAPSHOT, snapshot2.length === 0 ? void 0 : snapshot2), this.pipeline);
+        return new _BlockBlobClient(setURLParameter(this.url, URLConstants.Parameters.SNAPSHOT, snapshot2.length === 0 ? void 0 : snapshot2), this.pipeline);
       }
       /**
        * ONLY AVAILABLE IN NODE.JS RUNTIME.
@@ -81629,7 +69716,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         }
       }
     };
-    var PageBlobClient = class extends BlobClient {
+    var PageBlobClient = class _PageBlobClient extends BlobClient {
       constructor(urlOrConnectionString, credentialOrPipelineOrContainerName, blobNameOrOptions, options) {
         let pipeline;
         let url2;
@@ -81680,7 +69767,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
        * @returns A new PageBlobClient object identical to the source but with the specified snapshot timestamp.
        */
       withSnapshot(snapshot2) {
-        return new PageBlobClient(setURLParameter(this.url, URLConstants.Parameters.SNAPSHOT, snapshot2.length === 0 ? void 0 : snapshot2), this.pipeline);
+        return new _PageBlobClient(setURLParameter(this.url, URLConstants.Parameters.SNAPSHOT, snapshot2.length === 0 ? void 0 : snapshot2), this.pipeline);
       }
       /**
        * Creates a page blob of the specified length. Call uploadPages to upload data
@@ -82905,6 +70992,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
        * Creates a new container under the specified account. If the container with
        * the same name already exists, the operation fails.
        * @see https://docs.microsoft.com/en-us/rest/api/storageservices/create-container
+       * Naming rules: @see https://learn.microsoft.com/rest/api/storageservices/naming-and-referencing-containers--blobs--and-metadata
        *
        * @param options - Options to Container Create operation.
        *
@@ -82935,6 +71023,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
        * Creates a new container under the specified account. If the container with
        * the same name already exists, it is not changed.
        * @see https://docs.microsoft.com/en-us/rest/api/storageservices/create-container
+       * Naming rules: @see https://learn.microsoft.com/rest/api/storageservices/naming-and-referencing-containers--blobs--and-metadata
        *
        * @param options -
        */
@@ -83348,10 +71437,6 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         const { span, updatedOptions } = createSpan("ContainerClient-listBlobFlatSegment", options);
         try {
           const response = await this.containerContext.listBlobFlatSegment(Object.assign(Object.assign({ marker: marker2 }, options), convertTracingToRequestOptionsBase(updatedOptions)));
-          response.segment.blobItems = [];
-          if (response.segment["Blob"] !== void 0) {
-            response.segment.blobItems = ProcessBlobItems(response.segment["Blob"]);
-          }
           const wrappedResponse = Object.assign(Object.assign({}, response), { _response: Object.assign(Object.assign({}, response._response), { parsedBody: ConvertInternalResponseOfListBlobFlat(response._response.parsedBody) }), segment: Object.assign(Object.assign({}, response.segment), { blobItems: response.segment.blobItems.map((blobItemInteral) => {
             const blobItem = Object.assign(Object.assign({}, blobItemInteral), { name: BlobNameToString(blobItemInteral.name), tags: toTags(blobItemInteral.blobTags), objectReplicationSourceProperties: parseObjectReplicationRecord(blobItemInteral.objectReplicationMetadata) });
             return blobItem;
@@ -83383,21 +71468,11 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         const { span, updatedOptions } = createSpan("ContainerClient-listBlobHierarchySegment", options);
         try {
           const response = await this.containerContext.listBlobHierarchySegment(delimiter2, Object.assign(Object.assign({ marker: marker2 }, options), convertTracingToRequestOptionsBase(updatedOptions)));
-          response.segment.blobItems = [];
-          if (response.segment["Blob"] !== void 0) {
-            response.segment.blobItems = ProcessBlobItems(response.segment["Blob"]);
-          }
-          response.segment.blobPrefixes = [];
-          if (response.segment["BlobPrefix"] !== void 0) {
-            response.segment.blobPrefixes = ProcessBlobPrefixes(response.segment["BlobPrefix"]);
-          }
           const wrappedResponse = Object.assign(Object.assign({}, response), { _response: Object.assign(Object.assign({}, response._response), { parsedBody: ConvertInternalResponseOfListBlobHierarchy(response._response.parsedBody) }), segment: Object.assign(Object.assign({}, response.segment), { blobItems: response.segment.blobItems.map((blobItemInteral) => {
             const blobItem = Object.assign(Object.assign({}, blobItemInteral), { name: BlobNameToString(blobItemInteral.name), tags: toTags(blobItemInteral.blobTags), objectReplicationSourceProperties: parseObjectReplicationRecord(blobItemInteral.objectReplicationMetadata) });
             return blobItem;
           }), blobPrefixes: (_a = response.segment.blobPrefixes) === null || _a === void 0 ? void 0 : _a.map((blobPrefixInternal) => {
-            const blobPrefix = {
-              name: BlobNameToString(blobPrefixInternal.name)
-            };
+            const blobPrefix = Object.assign(Object.assign({}, blobPrefixInternal), { name: BlobNameToString(blobPrefixInternal.name) });
             return blobPrefix;
           }) }) });
           return wrappedResponse;
@@ -84042,7 +72117,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         return new BlobBatchClient(this.url, this.pipeline);
       }
     };
-    var AccountSASPermissions = class {
+    var AccountSASPermissions = class _AccountSASPermissions {
       constructor() {
         this.read = false;
         this.write = false;
@@ -84064,7 +72139,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
        * @param permissions -
        */
       static parse(permissions) {
-        const accountSASPermissions = new AccountSASPermissions();
+        const accountSASPermissions = new _AccountSASPermissions();
         for (const c of permissions) {
           switch (c) {
             case "r":
@@ -84119,7 +72194,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
        * @param permissionLike -
        */
       static from(permissionLike) {
-        const accountSASPermissions = new AccountSASPermissions();
+        const accountSASPermissions = new _AccountSASPermissions();
         if (permissionLike.read) {
           accountSASPermissions.read = true;
         }
@@ -84215,7 +72290,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         return permissions.join("");
       }
     };
-    var AccountSASResourceTypes = class {
+    var AccountSASResourceTypes = class _AccountSASResourceTypes {
       constructor() {
         this.service = false;
         this.container = false;
@@ -84228,7 +72303,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
        * @param resourceTypes -
        */
       static parse(resourceTypes) {
-        const accountSASResourceTypes = new AccountSASResourceTypes();
+        const accountSASResourceTypes = new _AccountSASResourceTypes();
         for (const c of resourceTypes) {
           switch (c) {
             case "s":
@@ -84266,7 +72341,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         return resourceTypes.join("");
       }
     };
-    var AccountSASServices = class {
+    var AccountSASServices = class _AccountSASServices {
       constructor() {
         this.blob = false;
         this.file = false;
@@ -84280,7 +72355,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
        * @param services -
        */
       static parse(services) {
-        const accountSASServices = new AccountSASServices();
+        const accountSASServices = new _AccountSASServices();
         for (const c of services) {
           switch (c) {
             case "b":
@@ -84379,7 +72454,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
       const signature = sharedKeyCredential.computeHMACSHA256(stringToSign);
       return new SASQueryParameters(version4, signature, parsedPermissions.toString(), parsedServices, parsedResourceTypes, accountSASSignatureValues.protocol, accountSASSignatureValues.startsOn, accountSASSignatureValues.expiresOn, accountSASSignatureValues.ipRange, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, accountSASSignatureValues.encryptionScope);
     }
-    var BlobServiceClient = class extends StorageClient {
+    var BlobServiceClient = class _BlobServiceClient extends StorageClient {
       constructor(url2, credentialOrPipeline, options) {
         let pipeline;
         if (isPipelineLike(credentialOrPipeline)) {
@@ -84414,13 +72489,13 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
               options.proxyOptions = coreHttp.getDefaultProxySettings(extractedCreds.proxyUri);
             }
             const pipeline = newPipeline(sharedKeyCredential, options);
-            return new BlobServiceClient(extractedCreds.url, pipeline);
+            return new _BlobServiceClient(extractedCreds.url, pipeline);
           } else {
             throw new Error("Account connection string is only supported in Node.js environment");
           }
         } else if (extractedCreds.kind === "SASConnString") {
           const pipeline = newPipeline(new AnonymousCredential(), options);
-          return new BlobServiceClient(extractedCreds.url + "?" + extractedCreds.accountSas, pipeline);
+          return new _BlobServiceClient(extractedCreds.url + "?" + extractedCreds.accountSas, pipeline);
         } else {
           throw new Error("Connection string must be either an Account connection string or a SAS connection string");
         }
@@ -84441,7 +72516,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         return new ContainerClient(appendToURLPath(this.url, encodeURIComponent(containerName)), this.pipeline);
       }
       /**
-       * Create a Blob container.
+       * Create a Blob container. @see https://docs.microsoft.com/en-us/rest/api/storageservices/create-container
        *
        * @param containerName - Name of the container to create.
        * @param options - Options to configure Container Create operation.
@@ -85111,6 +73186,10 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
         return appendToURLQuery(this.url, sas);
       }
     };
+    exports2.KnownEncryptionAlgorithmType = void 0;
+    (function(KnownEncryptionAlgorithmType) {
+      KnownEncryptionAlgorithmType["AES256"] = "AES256";
+    })(exports2.KnownEncryptionAlgorithmType || (exports2.KnownEncryptionAlgorithmType = {}));
     Object.defineProperty(exports2, "BaseRequestPolicy", {
       enumerable: true,
       get: function() {
@@ -85176,6 +73255,7 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
     exports2.StorageSharedKeyCredentialPolicy = StorageSharedKeyCredentialPolicy;
     exports2.generateAccountSASQueryParameters = generateAccountSASQueryParameters;
     exports2.generateBlobSASQueryParameters = generateBlobSASQueryParameters;
+    exports2.getBlobServiceAccountAudience = getBlobServiceAccountAudience;
     exports2.isPipelineLike = isPipelineLike;
     exports2.logger = logger;
     exports2.newPipeline = newPipeline;
@@ -85186,6 +73266,38 @@ ${key}:${decodeURIComponent(lowercaseQueries[key])}`;
 var require_requestUtils = __commonJS({
   "node_modules/@actions/cache/lib/internal/requestUtils.js"(exports2) {
     "use strict";
+    var __createBinding2 = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+      if (k2 === void 0)
+        k2 = k;
+      var desc = Object.getOwnPropertyDescriptor(m, k);
+      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+        desc = { enumerable: true, get: function() {
+          return m[k];
+        } };
+      }
+      Object.defineProperty(o, k2, desc);
+    } : function(o, m, k, k2) {
+      if (k2 === void 0)
+        k2 = k;
+      o[k2] = m[k];
+    });
+    var __setModuleDefault2 = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+      Object.defineProperty(o, "default", { enumerable: true, value: v });
+    } : function(o, v) {
+      o["default"] = v;
+    });
+    var __importStar2 = exports2 && exports2.__importStar || function(mod) {
+      if (mod && mod.__esModule)
+        return mod;
+      var result = {};
+      if (mod != null) {
+        for (var k in mod)
+          if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
+            __createBinding2(result, mod, k);
+      }
+      __setModuleDefault2(result, mod);
+      return result;
+    };
     var __awaiter2 = exports2 && exports2.__awaiter || function(thisArg, _arguments, P, generator) {
       function adopt(value) {
         return value instanceof P ? value : new P(function(resolve) {
@@ -85213,19 +73325,8 @@ var require_requestUtils = __commonJS({
         step((generator = generator.apply(thisArg, _arguments || [])).next());
       });
     };
-    var __importStar2 = exports2 && exports2.__importStar || function(mod) {
-      if (mod && mod.__esModule)
-        return mod;
-      var result = {};
-      if (mod != null) {
-        for (var k in mod)
-          if (Object.hasOwnProperty.call(mod, k))
-            result[k] = mod[k];
-      }
-      result["default"] = mod;
-      return result;
-    };
     Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.retryHttpClientResponse = exports2.retryTypedResponse = exports2.retry = exports2.isRetryableStatusCode = exports2.isServerErrorStatusCode = exports2.isSuccessStatusCode = void 0;
     var core17 = __importStar2(require_core());
     var http_client_1 = require_lib();
     var constants_1 = require_constants5();
@@ -85338,6 +73439,38 @@ var require_requestUtils = __commonJS({
 var require_downloadUtils = __commonJS({
   "node_modules/@actions/cache/lib/internal/downloadUtils.js"(exports2) {
     "use strict";
+    var __createBinding2 = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+      if (k2 === void 0)
+        k2 = k;
+      var desc = Object.getOwnPropertyDescriptor(m, k);
+      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+        desc = { enumerable: true, get: function() {
+          return m[k];
+        } };
+      }
+      Object.defineProperty(o, k2, desc);
+    } : function(o, m, k, k2) {
+      if (k2 === void 0)
+        k2 = k;
+      o[k2] = m[k];
+    });
+    var __setModuleDefault2 = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+      Object.defineProperty(o, "default", { enumerable: true, value: v });
+    } : function(o, v) {
+      o["default"] = v;
+    });
+    var __importStar2 = exports2 && exports2.__importStar || function(mod) {
+      if (mod && mod.__esModule)
+        return mod;
+      var result = {};
+      if (mod != null) {
+        for (var k in mod)
+          if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
+            __createBinding2(result, mod, k);
+      }
+      __setModuleDefault2(result, mod);
+      return result;
+    };
     var __awaiter2 = exports2 && exports2.__awaiter || function(thisArg, _arguments, P, generator) {
       function adopt(value) {
         return value instanceof P ? value : new P(function(resolve) {
@@ -85365,22 +73498,11 @@ var require_downloadUtils = __commonJS({
         step((generator = generator.apply(thisArg, _arguments || [])).next());
       });
     };
-    var __importStar2 = exports2 && exports2.__importStar || function(mod) {
-      if (mod && mod.__esModule)
-        return mod;
-      var result = {};
-      if (mod != null) {
-        for (var k in mod)
-          if (Object.hasOwnProperty.call(mod, k))
-            result[k] = mod[k];
-      }
-      result["default"] = mod;
-      return result;
-    };
     Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.downloadCacheStorageSDK = exports2.downloadCacheHttpClientConcurrent = exports2.downloadCacheHttpClient = exports2.DownloadProgress = void 0;
     var core17 = __importStar2(require_core());
     var http_client_1 = require_lib();
-    var storage_blob_1 = require_dist9();
+    var storage_blob_1 = require_dist10();
     var buffer = __importStar2(require("buffer"));
     var fs7 = __importStar2(require("fs"));
     var stream = __importStar2(require("stream"));
@@ -85388,7 +73510,7 @@ var require_downloadUtils = __commonJS({
     var utils2 = __importStar2(require_cacheUtils());
     var constants_1 = require_constants5();
     var requestUtils_1 = require_requestUtils();
-    var abort_controller_1 = require_dist();
+    var abort_controller_1 = require_dist5();
     function pipeResponseToStream(response, output) {
       return __awaiter2(this, void 0, void 0, function* () {
         const pipeline = util.promisify(stream.pipeline);
@@ -85495,7 +73617,7 @@ var require_downloadUtils = __commonJS({
       return __awaiter2(this, void 0, void 0, function* () {
         const writeStream = fs7.createWriteStream(archivePath);
         const httpClient = new http_client_1.HttpClient("actions/cache");
-        const downloadResponse = yield requestUtils_1.retryHttpClientResponse("downloadCache", () => __awaiter2(this, void 0, void 0, function* () {
+        const downloadResponse = yield (0, requestUtils_1.retryHttpClientResponse)("downloadCache", () => __awaiter2(this, void 0, void 0, function* () {
           return httpClient.get(archiveLocation);
         }));
         downloadResponse.message.socket.setTimeout(constants_1.SocketTimeout, () => {
@@ -85516,6 +73638,108 @@ var require_downloadUtils = __commonJS({
       });
     }
     exports2.downloadCacheHttpClient = downloadCacheHttpClient;
+    function downloadCacheHttpClientConcurrent(archiveLocation, archivePath, options) {
+      var _a;
+      return __awaiter2(this, void 0, void 0, function* () {
+        const archiveDescriptor = yield fs7.promises.open(archivePath, "w");
+        const httpClient = new http_client_1.HttpClient("actions/cache", void 0, {
+          socketTimeout: options.timeoutInMs,
+          keepAlive: true
+        });
+        try {
+          const res = yield (0, requestUtils_1.retryHttpClientResponse)("downloadCacheMetadata", () => __awaiter2(this, void 0, void 0, function* () {
+            return yield httpClient.request("HEAD", archiveLocation, null, {});
+          }));
+          const lengthHeader = res.message.headers["content-length"];
+          if (lengthHeader === void 0 || lengthHeader === null) {
+            throw new Error("Content-Length not found on blob response");
+          }
+          const length = parseInt(lengthHeader);
+          if (Number.isNaN(length)) {
+            throw new Error(`Could not interpret Content-Length: ${length}`);
+          }
+          const downloads = [];
+          const blockSize = 4 * 1024 * 1024;
+          for (let offset = 0; offset < length; offset += blockSize) {
+            const count = Math.min(blockSize, length - offset);
+            downloads.push({
+              offset,
+              promiseGetter: () => __awaiter2(this, void 0, void 0, function* () {
+                return yield downloadSegmentRetry(httpClient, archiveLocation, offset, count);
+              })
+            });
+          }
+          downloads.reverse();
+          let actives = 0;
+          let bytesDownloaded = 0;
+          const progress = new DownloadProgress(length);
+          progress.startDisplayTimer();
+          const progressFn = progress.onProgress();
+          const activeDownloads = [];
+          let nextDownload;
+          const waitAndWrite = () => __awaiter2(this, void 0, void 0, function* () {
+            const segment = yield Promise.race(Object.values(activeDownloads));
+            yield archiveDescriptor.write(segment.buffer, 0, segment.count, segment.offset);
+            actives--;
+            delete activeDownloads[segment.offset];
+            bytesDownloaded += segment.count;
+            progressFn({ loadedBytes: bytesDownloaded });
+          });
+          while (nextDownload = downloads.pop()) {
+            activeDownloads[nextDownload.offset] = nextDownload.promiseGetter();
+            actives++;
+            if (actives >= ((_a = options.downloadConcurrency) !== null && _a !== void 0 ? _a : 10)) {
+              yield waitAndWrite();
+            }
+          }
+          while (actives > 0) {
+            yield waitAndWrite();
+          }
+        } finally {
+          httpClient.dispose();
+          yield archiveDescriptor.close();
+        }
+      });
+    }
+    exports2.downloadCacheHttpClientConcurrent = downloadCacheHttpClientConcurrent;
+    function downloadSegmentRetry(httpClient, archiveLocation, offset, count) {
+      return __awaiter2(this, void 0, void 0, function* () {
+        const retries = 5;
+        let failures = 0;
+        while (true) {
+          try {
+            const timeout = 3e4;
+            const result = yield promiseWithTimeout(timeout, downloadSegment(httpClient, archiveLocation, offset, count));
+            if (typeof result === "string") {
+              throw new Error("downloadSegmentRetry failed due to timeout");
+            }
+            return result;
+          } catch (err) {
+            if (failures >= retries) {
+              throw err;
+            }
+            failures++;
+          }
+        }
+      });
+    }
+    function downloadSegment(httpClient, archiveLocation, offset, count) {
+      return __awaiter2(this, void 0, void 0, function* () {
+        const partRes = yield (0, requestUtils_1.retryHttpClientResponse)("downloadCachePart", () => __awaiter2(this, void 0, void 0, function* () {
+          return yield httpClient.get(archiveLocation, {
+            Range: `bytes=${offset}-${offset + count - 1}`
+          });
+        }));
+        if (!partRes.readBodyBuffer) {
+          throw new Error("Expected HttpClientResponse to implement readBodyBuffer");
+        }
+        return {
+          offset,
+          count,
+          buffer: yield partRes.readBodyBuffer()
+        };
+      });
+    }
     function downloadCacheStorageSDK(archiveLocation, archivePath, options) {
       var _a;
       return __awaiter2(this, void 0, void 0, function* () {
@@ -85532,7 +73756,7 @@ var require_downloadUtils = __commonJS({
           core17.debug("Unable to determine content length, downloading file with http-client...");
           yield downloadCacheHttpClient(archiveLocation, archivePath);
         } else {
-          const maxSegmentSize = Math.min(2147483647, buffer.constants.MAX_LENGTH);
+          const maxSegmentSize = Math.min(134217728, buffer.constants.MAX_LENGTH);
           const downloadProgress = new DownloadProgress(contentLength);
           const fd = fs7.openSync(archivePath, "w");
           try {
@@ -85580,19 +73804,40 @@ var require_downloadUtils = __commonJS({
 var require_options = __commonJS({
   "node_modules/@actions/cache/lib/options.js"(exports2) {
     "use strict";
+    var __createBinding2 = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+      if (k2 === void 0)
+        k2 = k;
+      var desc = Object.getOwnPropertyDescriptor(m, k);
+      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+        desc = { enumerable: true, get: function() {
+          return m[k];
+        } };
+      }
+      Object.defineProperty(o, k2, desc);
+    } : function(o, m, k, k2) {
+      if (k2 === void 0)
+        k2 = k;
+      o[k2] = m[k];
+    });
+    var __setModuleDefault2 = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+      Object.defineProperty(o, "default", { enumerable: true, value: v });
+    } : function(o, v) {
+      o["default"] = v;
+    });
     var __importStar2 = exports2 && exports2.__importStar || function(mod) {
       if (mod && mod.__esModule)
         return mod;
       var result = {};
       if (mod != null) {
         for (var k in mod)
-          if (Object.hasOwnProperty.call(mod, k))
-            result[k] = mod[k];
+          if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
+            __createBinding2(result, mod, k);
       }
-      result["default"] = mod;
+      __setModuleDefault2(result, mod);
       return result;
     };
     Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.getDownloadOptions = exports2.getUploadOptions = void 0;
     var core17 = __importStar2(require_core());
     function getUploadOptions(copy) {
       const result = {
@@ -85614,14 +73859,19 @@ var require_options = __commonJS({
     exports2.getUploadOptions = getUploadOptions;
     function getDownloadOptions(copy) {
       const result = {
-        useAzureSdk: true,
+        useAzureSdk: false,
+        concurrentBlobDownloads: true,
         downloadConcurrency: 8,
         timeoutInMs: 3e4,
-        segmentTimeoutInMs: 36e5
+        segmentTimeoutInMs: 6e5,
+        lookupOnly: false
       };
       if (copy) {
         if (typeof copy.useAzureSdk === "boolean") {
           result.useAzureSdk = copy.useAzureSdk;
+        }
+        if (typeof copy.concurrentBlobDownloads === "boolean") {
+          result.concurrentBlobDownloads = copy.concurrentBlobDownloads;
         }
         if (typeof copy.downloadConcurrency === "number") {
           result.downloadConcurrency = copy.downloadConcurrency;
@@ -85631,6 +73881,9 @@ var require_options = __commonJS({
         }
         if (typeof copy.segmentTimeoutInMs === "number") {
           result.segmentTimeoutInMs = copy.segmentTimeoutInMs;
+        }
+        if (typeof copy.lookupOnly === "boolean") {
+          result.lookupOnly = copy.lookupOnly;
         }
       }
       const segmentDownloadTimeoutMins = process.env["SEGMENT_DOWNLOAD_TIMEOUT_MINS"];
@@ -85642,6 +73895,7 @@ var require_options = __commonJS({
       core17.debug(`Request timeout (ms): ${result.timeoutInMs}`);
       core17.debug(`Cache segment download timeout mins env var: ${process.env["SEGMENT_DOWNLOAD_TIMEOUT_MINS"]}`);
       core17.debug(`Segment download timeout (ms): ${result.segmentTimeoutInMs}`);
+      core17.debug(`Lookup only: ${result.lookupOnly}`);
       return result;
     }
     exports2.getDownloadOptions = getDownloadOptions;
@@ -85652,6 +73906,38 @@ var require_options = __commonJS({
 var require_cacheHttpClient = __commonJS({
   "node_modules/@actions/cache/lib/internal/cacheHttpClient.js"(exports2) {
     "use strict";
+    var __createBinding2 = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+      if (k2 === void 0)
+        k2 = k;
+      var desc = Object.getOwnPropertyDescriptor(m, k);
+      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+        desc = { enumerable: true, get: function() {
+          return m[k];
+        } };
+      }
+      Object.defineProperty(o, k2, desc);
+    } : function(o, m, k, k2) {
+      if (k2 === void 0)
+        k2 = k;
+      o[k2] = m[k];
+    });
+    var __setModuleDefault2 = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+      Object.defineProperty(o, "default", { enumerable: true, value: v });
+    } : function(o, v) {
+      o["default"] = v;
+    });
+    var __importStar2 = exports2 && exports2.__importStar || function(mod) {
+      if (mod && mod.__esModule)
+        return mod;
+      var result = {};
+      if (mod != null) {
+        for (var k in mod)
+          if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
+            __createBinding2(result, mod, k);
+      }
+      __setModuleDefault2(result, mod);
+      return result;
+    };
     var __awaiter2 = exports2 && exports2.__awaiter || function(thisArg, _arguments, P, generator) {
       function adopt(value) {
         return value instanceof P ? value : new P(function(resolve) {
@@ -85679,19 +73965,8 @@ var require_cacheHttpClient = __commonJS({
         step((generator = generator.apply(thisArg, _arguments || [])).next());
       });
     };
-    var __importStar2 = exports2 && exports2.__importStar || function(mod) {
-      if (mod && mod.__esModule)
-        return mod;
-      var result = {};
-      if (mod != null) {
-        for (var k in mod)
-          if (Object.hasOwnProperty.call(mod, k))
-            result[k] = mod[k];
-      }
-      result["default"] = mod;
-      return result;
-    };
     Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.saveCache = exports2.reserveCache = exports2.downloadCache = exports2.getCacheEntry = exports2.getCacheVersion = void 0;
     var core17 = __importStar2(require_core());
     var http_client_1 = require_lib();
     var auth_1 = require_auth();
@@ -85699,7 +73974,6 @@ var require_cacheHttpClient = __commonJS({
     var fs7 = __importStar2(require("fs"));
     var url_1 = require("url");
     var utils2 = __importStar2(require_cacheUtils());
-    var constants_1 = require_constants5();
     var downloadUtils_1 = require_downloadUtils();
     var options_1 = require_options();
     var requestUtils_1 = require_requestUtils();
@@ -85729,8 +74003,14 @@ var require_cacheHttpClient = __commonJS({
       const bearerCredentialHandler = new auth_1.BearerCredentialHandler(token);
       return new http_client_1.HttpClient("actions/cache", [bearerCredentialHandler], getRequestOptions());
     }
-    function getCacheVersion(paths, compressionMethod) {
-      const components = paths.concat(!compressionMethod || compressionMethod === constants_1.CompressionMethod.Gzip ? [] : [compressionMethod]);
+    function getCacheVersion(paths, compressionMethod, enableCrossOsArchive = false) {
+      const components = paths.slice();
+      if (compressionMethod) {
+        components.push(compressionMethod);
+      }
+      if (process.platform === "win32" && !enableCrossOsArchive) {
+        components.push("windows-only");
+      }
       components.push(versionSalt);
       return crypto7.createHash("sha256").update(components.join("|")).digest("hex");
     }
@@ -85738,15 +74018,18 @@ var require_cacheHttpClient = __commonJS({
     function getCacheEntry(keys, paths, options) {
       return __awaiter2(this, void 0, void 0, function* () {
         const httpClient = createHttpClient();
-        const version3 = getCacheVersion(paths, options === null || options === void 0 ? void 0 : options.compressionMethod);
+        const version3 = getCacheVersion(paths, options === null || options === void 0 ? void 0 : options.compressionMethod, options === null || options === void 0 ? void 0 : options.enableCrossOsArchive);
         const resource = `cache?keys=${encodeURIComponent(keys.join(","))}&version=${version3}`;
-        const response = yield requestUtils_1.retryTypedResponse("getCacheEntry", () => __awaiter2(this, void 0, void 0, function* () {
+        const response = yield (0, requestUtils_1.retryTypedResponse)("getCacheEntry", () => __awaiter2(this, void 0, void 0, function* () {
           return httpClient.getJson(getCacheApiUrl(resource));
         }));
         if (response.statusCode === 204) {
+          if (core17.isDebug()) {
+            yield printCachesListForDiagnostics(keys[0], httpClient, version3);
+          }
           return null;
         }
-        if (!requestUtils_1.isSuccessStatusCode(response.statusCode)) {
+        if (!(0, requestUtils_1.isSuccessStatusCode)(response.statusCode)) {
           throw new Error(`Cache service responded with ${response.statusCode}`);
         }
         const cacheResult = response.result;
@@ -85761,14 +74044,39 @@ var require_cacheHttpClient = __commonJS({
       });
     }
     exports2.getCacheEntry = getCacheEntry;
+    function printCachesListForDiagnostics(key, httpClient, version3) {
+      return __awaiter2(this, void 0, void 0, function* () {
+        const resource = `caches?key=${encodeURIComponent(key)}`;
+        const response = yield (0, requestUtils_1.retryTypedResponse)("listCache", () => __awaiter2(this, void 0, void 0, function* () {
+          return httpClient.getJson(getCacheApiUrl(resource));
+        }));
+        if (response.statusCode === 200) {
+          const cacheListResult = response.result;
+          const totalCount = cacheListResult === null || cacheListResult === void 0 ? void 0 : cacheListResult.totalCount;
+          if (totalCount && totalCount > 0) {
+            core17.debug(`No matching cache found for cache key '${key}', version '${version3} and scope ${process.env["GITHUB_REF"]}. There exist one or more cache(s) with similar key but they have different version or scope. See more info on cache matching here: https://docs.github.com/en/actions/using-workflows/caching-dependencies-to-speed-up-workflows#matching-a-cache-key 
+Other caches with similar key:`);
+            for (const cacheEntry of (cacheListResult === null || cacheListResult === void 0 ? void 0 : cacheListResult.artifactCaches) || []) {
+              core17.debug(`Cache Key: ${cacheEntry === null || cacheEntry === void 0 ? void 0 : cacheEntry.cacheKey}, Cache Version: ${cacheEntry === null || cacheEntry === void 0 ? void 0 : cacheEntry.cacheVersion}, Cache Scope: ${cacheEntry === null || cacheEntry === void 0 ? void 0 : cacheEntry.scope}, Cache Created: ${cacheEntry === null || cacheEntry === void 0 ? void 0 : cacheEntry.creationTime}`);
+            }
+          }
+        }
+      });
+    }
     function downloadCache(archiveLocation, archivePath, options) {
       return __awaiter2(this, void 0, void 0, function* () {
         const archiveUrl = new url_1.URL(archiveLocation);
-        const downloadOptions = options_1.getDownloadOptions(options);
-        if (downloadOptions.useAzureSdk && archiveUrl.hostname.endsWith(".blob.core.windows.net")) {
-          yield downloadUtils_1.downloadCacheStorageSDK(archiveLocation, archivePath, downloadOptions);
+        const downloadOptions = (0, options_1.getDownloadOptions)(options);
+        if (archiveUrl.hostname.endsWith(".blob.core.windows.net")) {
+          if (downloadOptions.useAzureSdk) {
+            yield (0, downloadUtils_1.downloadCacheStorageSDK)(archiveLocation, archivePath, downloadOptions);
+          } else if (downloadOptions.concurrentBlobDownloads) {
+            yield (0, downloadUtils_1.downloadCacheHttpClientConcurrent)(archiveLocation, archivePath, downloadOptions);
+          } else {
+            yield (0, downloadUtils_1.downloadCacheHttpClient)(archiveLocation, archivePath);
+          }
         } else {
-          yield downloadUtils_1.downloadCacheHttpClient(archiveLocation, archivePath);
+          yield (0, downloadUtils_1.downloadCacheHttpClient)(archiveLocation, archivePath);
         }
       });
     }
@@ -85776,13 +74084,13 @@ var require_cacheHttpClient = __commonJS({
     function reserveCache(key, paths, options) {
       return __awaiter2(this, void 0, void 0, function* () {
         const httpClient = createHttpClient();
-        const version3 = getCacheVersion(paths, options === null || options === void 0 ? void 0 : options.compressionMethod);
+        const version3 = getCacheVersion(paths, options === null || options === void 0 ? void 0 : options.compressionMethod, options === null || options === void 0 ? void 0 : options.enableCrossOsArchive);
         const reserveCacheRequest = {
           key,
           version: version3,
           cacheSize: options === null || options === void 0 ? void 0 : options.cacheSize
         };
-        const response = yield requestUtils_1.retryTypedResponse("reserveCache", () => __awaiter2(this, void 0, void 0, function* () {
+        const response = yield (0, requestUtils_1.retryTypedResponse)("reserveCache", () => __awaiter2(this, void 0, void 0, function* () {
           return httpClient.postJson(getCacheApiUrl("caches"), reserveCacheRequest);
         }));
         return response;
@@ -85799,10 +74107,10 @@ var require_cacheHttpClient = __commonJS({
           "Content-Type": "application/octet-stream",
           "Content-Range": getContentRange(start, end)
         };
-        const uploadChunkResponse = yield requestUtils_1.retryHttpClientResponse(`uploadChunk (start: ${start}, end: ${end})`, () => __awaiter2(this, void 0, void 0, function* () {
+        const uploadChunkResponse = yield (0, requestUtils_1.retryHttpClientResponse)(`uploadChunk (start: ${start}, end: ${end})`, () => __awaiter2(this, void 0, void 0, function* () {
           return httpClient.sendStream("PATCH", resourceUrl, openStream(), additionalHeaders);
         }));
-        if (!requestUtils_1.isSuccessStatusCode(uploadChunkResponse.message.statusCode)) {
+        if (!(0, requestUtils_1.isSuccessStatusCode)(uploadChunkResponse.message.statusCode)) {
           throw new Error(`Cache service responded with ${uploadChunkResponse.message.statusCode} during upload chunk.`);
         }
       });
@@ -85812,7 +74120,7 @@ var require_cacheHttpClient = __commonJS({
         const fileSize = utils2.getArchiveFileSizeInBytes(archivePath);
         const resourceUrl = getCacheApiUrl(`caches/${cacheId.toString()}`);
         const fd = fs7.openSync(archivePath, "r");
-        const uploadOptions = options_1.getUploadOptions(options);
+        const uploadOptions = (0, options_1.getUploadOptions)(options);
         const concurrency = utils2.assertDefined("uploadConcurrency", uploadOptions.uploadConcurrency);
         const maxChunkSize = utils2.assertDefined("uploadChunkSize", uploadOptions.uploadChunkSize);
         const parallelUploads = [...new Array(concurrency).keys()];
@@ -85844,7 +74152,7 @@ var require_cacheHttpClient = __commonJS({
     function commitCache(httpClient, cacheId, filesize) {
       return __awaiter2(this, void 0, void 0, function* () {
         const commitCacheRequest = { size: filesize };
-        return yield requestUtils_1.retryTypedResponse("commitCache", () => __awaiter2(this, void 0, void 0, function* () {
+        return yield (0, requestUtils_1.retryTypedResponse)("commitCache", () => __awaiter2(this, void 0, void 0, function* () {
           return httpClient.postJson(getCacheApiUrl(`caches/${cacheId.toString()}`), commitCacheRequest);
         }));
       });
@@ -85858,7 +74166,7 @@ var require_cacheHttpClient = __commonJS({
         const cacheSize = utils2.getArchiveFileSizeInBytes(archivePath);
         core17.info(`Cache Size: ~${Math.round(cacheSize / (1024 * 1024))} MB (${cacheSize} B)`);
         const commitCacheResponse = yield commitCache(httpClient, cacheId, cacheSize);
-        if (!requestUtils_1.isSuccessStatusCode(commitCacheResponse.statusCode)) {
+        if (!(0, requestUtils_1.isSuccessStatusCode)(commitCacheResponse.statusCode)) {
           throw new Error(`Cache service responded with ${commitCacheResponse.statusCode} during commit cache.`);
         }
         core17.info("Cache saved successfully");
@@ -85872,6 +74180,38 @@ var require_cacheHttpClient = __commonJS({
 var require_tar = __commonJS({
   "node_modules/@actions/cache/lib/internal/tar.js"(exports2) {
     "use strict";
+    var __createBinding2 = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+      if (k2 === void 0)
+        k2 = k;
+      var desc = Object.getOwnPropertyDescriptor(m, k);
+      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+        desc = { enumerable: true, get: function() {
+          return m[k];
+        } };
+      }
+      Object.defineProperty(o, k2, desc);
+    } : function(o, m, k, k2) {
+      if (k2 === void 0)
+        k2 = k;
+      o[k2] = m[k];
+    });
+    var __setModuleDefault2 = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+      Object.defineProperty(o, "default", { enumerable: true, value: v });
+    } : function(o, v) {
+      o["default"] = v;
+    });
+    var __importStar2 = exports2 && exports2.__importStar || function(mod) {
+      if (mod && mod.__esModule)
+        return mod;
+      var result = {};
+      if (mod != null) {
+        for (var k in mod)
+          if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
+            __createBinding2(result, mod, k);
+      }
+      __setModuleDefault2(result, mod);
+      return result;
+    };
     var __awaiter2 = exports2 && exports2.__awaiter || function(thisArg, _arguments, P, generator) {
       function adopt(value) {
         return value instanceof P ? value : new P(function(resolve) {
@@ -85899,19 +74239,8 @@ var require_tar = __commonJS({
         step((generator = generator.apply(thisArg, _arguments || [])).next());
       });
     };
-    var __importStar2 = exports2 && exports2.__importStar || function(mod) {
-      if (mod && mod.__esModule)
-        return mod;
-      var result = {};
-      if (mod != null) {
-        for (var k in mod)
-          if (Object.hasOwnProperty.call(mod, k))
-            result[k] = mod[k];
-      }
-      result["default"] = mod;
-      return result;
-    };
     Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.createTar = exports2.extractTar = exports2.listTar = void 0;
     var exec_1 = require_exec();
     var io4 = __importStar2(require_io());
     var fs_1 = require("fs");
@@ -85919,69 +74248,159 @@ var require_tar = __commonJS({
     var utils2 = __importStar2(require_cacheUtils());
     var constants_1 = require_constants5();
     var IS_WINDOWS3 = process.platform === "win32";
-    function getTarPath(args, compressionMethod) {
+    function getTarPath() {
       return __awaiter2(this, void 0, void 0, function* () {
         switch (process.platform) {
           case "win32": {
-            const systemTar = `${process.env["windir"]}\\System32\\tar.exe`;
-            if (compressionMethod !== constants_1.CompressionMethod.Gzip) {
-              args.push("--force-local");
-            } else if (fs_1.existsSync(systemTar)) {
-              return systemTar;
-            } else if (yield utils2.isGnuTarInstalled()) {
-              args.push("--force-local");
+            const gnuTar = yield utils2.getGnuTarPathOnWindows();
+            const systemTar = constants_1.SystemTarPathOnWindows;
+            if (gnuTar) {
+              return { path: gnuTar, type: constants_1.ArchiveToolType.GNU };
+            } else if ((0, fs_1.existsSync)(systemTar)) {
+              return { path: systemTar, type: constants_1.ArchiveToolType.BSD };
             }
             break;
           }
           case "darwin": {
             const gnuTar = yield io4.which("gtar", false);
             if (gnuTar) {
-              args.push("--delay-directory-restore");
-              return gnuTar;
+              return { path: gnuTar, type: constants_1.ArchiveToolType.GNU };
+            } else {
+              return {
+                path: yield io4.which("tar", true),
+                type: constants_1.ArchiveToolType.BSD
+              };
             }
-            break;
           }
           default:
             break;
         }
-        return yield io4.which("tar", true);
+        return {
+          path: yield io4.which("tar", true),
+          type: constants_1.ArchiveToolType.GNU
+        };
       });
     }
-    function execTar(args, compressionMethod, cwd) {
+    function getTarArgs(tarPath, compressionMethod, type, archivePath = "") {
       return __awaiter2(this, void 0, void 0, function* () {
-        try {
-          yield exec_1.exec(`"${yield getTarPath(args, compressionMethod)}"`, args, { cwd });
-        } catch (error2) {
-          throw new Error(`Tar failed with error: ${error2 === null || error2 === void 0 ? void 0 : error2.message}`);
+        const args = [`"${tarPath.path}"`];
+        const cacheFileName = utils2.getCacheFileName(compressionMethod);
+        const tarFile = "cache.tar";
+        const workingDirectory = getWorkingDirectory();
+        const BSD_TAR_ZSTD = tarPath.type === constants_1.ArchiveToolType.BSD && compressionMethod !== constants_1.CompressionMethod.Gzip && IS_WINDOWS3;
+        switch (type) {
+          case "create":
+            args.push("--posix", "-cf", BSD_TAR_ZSTD ? tarFile : cacheFileName.replace(new RegExp(`\\${path13.sep}`, "g"), "/"), "--exclude", BSD_TAR_ZSTD ? tarFile : cacheFileName.replace(new RegExp(`\\${path13.sep}`, "g"), "/"), "-P", "-C", workingDirectory.replace(new RegExp(`\\${path13.sep}`, "g"), "/"), "--files-from", constants_1.ManifestFilename);
+            break;
+          case "extract":
+            args.push("-xf", BSD_TAR_ZSTD ? tarFile : archivePath.replace(new RegExp(`\\${path13.sep}`, "g"), "/"), "-P", "-C", workingDirectory.replace(new RegExp(`\\${path13.sep}`, "g"), "/"));
+            break;
+          case "list":
+            args.push("-tf", BSD_TAR_ZSTD ? tarFile : archivePath.replace(new RegExp(`\\${path13.sep}`, "g"), "/"), "-P");
+            break;
         }
+        if (tarPath.type === constants_1.ArchiveToolType.GNU) {
+          switch (process.platform) {
+            case "win32":
+              args.push("--force-local");
+              break;
+            case "darwin":
+              args.push("--delay-directory-restore");
+              break;
+          }
+        }
+        return args;
+      });
+    }
+    function getCommands(compressionMethod, type, archivePath = "") {
+      return __awaiter2(this, void 0, void 0, function* () {
+        let args;
+        const tarPath = yield getTarPath();
+        const tarArgs = yield getTarArgs(tarPath, compressionMethod, type, archivePath);
+        const compressionArgs = type !== "create" ? yield getDecompressionProgram(tarPath, compressionMethod, archivePath) : yield getCompressionProgram(tarPath, compressionMethod);
+        const BSD_TAR_ZSTD = tarPath.type === constants_1.ArchiveToolType.BSD && compressionMethod !== constants_1.CompressionMethod.Gzip && IS_WINDOWS3;
+        if (BSD_TAR_ZSTD && type !== "create") {
+          args = [[...compressionArgs].join(" "), [...tarArgs].join(" ")];
+        } else {
+          args = [[...tarArgs].join(" "), [...compressionArgs].join(" ")];
+        }
+        if (BSD_TAR_ZSTD) {
+          return args;
+        }
+        return [args.join(" ")];
       });
     }
     function getWorkingDirectory() {
       var _a;
       return (_a = process.env["GITHUB_WORKSPACE"]) !== null && _a !== void 0 ? _a : process.cwd();
     }
-    function getCompressionProgram(compressionMethod) {
-      switch (compressionMethod) {
-        case constants_1.CompressionMethod.Zstd:
-          return [
-            "--use-compress-program",
-            IS_WINDOWS3 ? "zstd -d --long=30" : "unzstd --long=30"
-          ];
-        case constants_1.CompressionMethod.ZstdWithoutLong:
-          return ["--use-compress-program", IS_WINDOWS3 ? "zstd -d" : "unzstd"];
-        default:
-          return ["-z"];
-      }
+    function getDecompressionProgram(tarPath, compressionMethod, archivePath) {
+      return __awaiter2(this, void 0, void 0, function* () {
+        const BSD_TAR_ZSTD = tarPath.type === constants_1.ArchiveToolType.BSD && compressionMethod !== constants_1.CompressionMethod.Gzip && IS_WINDOWS3;
+        switch (compressionMethod) {
+          case constants_1.CompressionMethod.Zstd:
+            return BSD_TAR_ZSTD ? [
+              "zstd -d --long=30 --force -o",
+              constants_1.TarFilename,
+              archivePath.replace(new RegExp(`\\${path13.sep}`, "g"), "/")
+            ] : [
+              "--use-compress-program",
+              IS_WINDOWS3 ? '"zstd -d --long=30"' : "unzstd --long=30"
+            ];
+          case constants_1.CompressionMethod.ZstdWithoutLong:
+            return BSD_TAR_ZSTD ? [
+              "zstd -d --force -o",
+              constants_1.TarFilename,
+              archivePath.replace(new RegExp(`\\${path13.sep}`, "g"), "/")
+            ] : ["--use-compress-program", IS_WINDOWS3 ? '"zstd -d"' : "unzstd"];
+          default:
+            return ["-z"];
+        }
+      });
+    }
+    function getCompressionProgram(tarPath, compressionMethod) {
+      return __awaiter2(this, void 0, void 0, function* () {
+        const cacheFileName = utils2.getCacheFileName(compressionMethod);
+        const BSD_TAR_ZSTD = tarPath.type === constants_1.ArchiveToolType.BSD && compressionMethod !== constants_1.CompressionMethod.Gzip && IS_WINDOWS3;
+        switch (compressionMethod) {
+          case constants_1.CompressionMethod.Zstd:
+            return BSD_TAR_ZSTD ? [
+              "zstd -T0 --long=30 --force -o",
+              cacheFileName.replace(new RegExp(`\\${path13.sep}`, "g"), "/"),
+              constants_1.TarFilename
+            ] : [
+              "--use-compress-program",
+              IS_WINDOWS3 ? '"zstd -T0 --long=30"' : "zstdmt --long=30"
+            ];
+          case constants_1.CompressionMethod.ZstdWithoutLong:
+            return BSD_TAR_ZSTD ? [
+              "zstd -T0 --force -o",
+              cacheFileName.replace(new RegExp(`\\${path13.sep}`, "g"), "/"),
+              constants_1.TarFilename
+            ] : ["--use-compress-program", IS_WINDOWS3 ? '"zstd -T0"' : "zstdmt"];
+          default:
+            return ["-z"];
+        }
+      });
+    }
+    function execCommands(commands, cwd) {
+      return __awaiter2(this, void 0, void 0, function* () {
+        for (const command of commands) {
+          try {
+            yield (0, exec_1.exec)(command, void 0, {
+              cwd,
+              env: Object.assign(Object.assign({}, process.env), { MSYS: "winsymlinks:nativestrict" })
+            });
+          } catch (error2) {
+            throw new Error(`${command.split(" ")[0]} failed with error: ${error2 === null || error2 === void 0 ? void 0 : error2.message}`);
+          }
+        }
+      });
     }
     function listTar(archivePath, compressionMethod) {
       return __awaiter2(this, void 0, void 0, function* () {
-        const args = [
-          ...getCompressionProgram(compressionMethod),
-          "-tf",
-          archivePath.replace(new RegExp(`\\${path13.sep}`, "g"), "/"),
-          "-P"
-        ];
-        yield execTar(args, compressionMethod);
+        const commands = yield getCommands(compressionMethod, "list", archivePath);
+        yield execCommands(commands);
       });
     }
     exports2.listTar = listTar;
@@ -85989,51 +74408,16 @@ var require_tar = __commonJS({
       return __awaiter2(this, void 0, void 0, function* () {
         const workingDirectory = getWorkingDirectory();
         yield io4.mkdirP(workingDirectory);
-        const args = [
-          ...getCompressionProgram(compressionMethod),
-          "-xf",
-          archivePath.replace(new RegExp(`\\${path13.sep}`, "g"), "/"),
-          "-P",
-          "-C",
-          workingDirectory.replace(new RegExp(`\\${path13.sep}`, "g"), "/")
-        ];
-        yield execTar(args, compressionMethod);
+        const commands = yield getCommands(compressionMethod, "extract", archivePath);
+        yield execCommands(commands);
       });
     }
     exports2.extractTar = extractTar4;
     function createTar(archiveFolder, sourceDirectories, compressionMethod) {
       return __awaiter2(this, void 0, void 0, function* () {
-        const manifestFilename = "manifest.txt";
-        const cacheFileName = utils2.getCacheFileName(compressionMethod);
-        fs_1.writeFileSync(path13.join(archiveFolder, manifestFilename), sourceDirectories.join("\n"));
-        const workingDirectory = getWorkingDirectory();
-        function getCompressionProgram2() {
-          switch (compressionMethod) {
-            case constants_1.CompressionMethod.Zstd:
-              return [
-                "--use-compress-program",
-                IS_WINDOWS3 ? "zstd -T0 --long=30" : "zstdmt --long=30"
-              ];
-            case constants_1.CompressionMethod.ZstdWithoutLong:
-              return ["--use-compress-program", IS_WINDOWS3 ? "zstd -T0" : "zstdmt"];
-            default:
-              return ["-z"];
-          }
-        }
-        const args = [
-          "--posix",
-          ...getCompressionProgram2(),
-          "-cf",
-          cacheFileName.replace(new RegExp(`\\${path13.sep}`, "g"), "/"),
-          "--exclude",
-          cacheFileName.replace(new RegExp(`\\${path13.sep}`, "g"), "/"),
-          "-P",
-          "-C",
-          workingDirectory.replace(new RegExp(`\\${path13.sep}`, "g"), "/"),
-          "--files-from",
-          manifestFilename
-        ];
-        yield execTar(args, compressionMethod, archiveFolder);
+        (0, fs_1.writeFileSync)(path13.join(archiveFolder, constants_1.ManifestFilename), sourceDirectories.join("\n"));
+        const commands = yield getCommands(compressionMethod, "create");
+        yield execCommands(commands, archiveFolder);
       });
     }
     exports2.createTar = createTar;
@@ -86044,6 +74428,38 @@ var require_tar = __commonJS({
 var require_cache2 = __commonJS({
   "node_modules/@actions/cache/lib/cache.js"(exports2) {
     "use strict";
+    var __createBinding2 = exports2 && exports2.__createBinding || (Object.create ? function(o, m, k, k2) {
+      if (k2 === void 0)
+        k2 = k;
+      var desc = Object.getOwnPropertyDescriptor(m, k);
+      if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+        desc = { enumerable: true, get: function() {
+          return m[k];
+        } };
+      }
+      Object.defineProperty(o, k2, desc);
+    } : function(o, m, k, k2) {
+      if (k2 === void 0)
+        k2 = k;
+      o[k2] = m[k];
+    });
+    var __setModuleDefault2 = exports2 && exports2.__setModuleDefault || (Object.create ? function(o, v) {
+      Object.defineProperty(o, "default", { enumerable: true, value: v });
+    } : function(o, v) {
+      o["default"] = v;
+    });
+    var __importStar2 = exports2 && exports2.__importStar || function(mod) {
+      if (mod && mod.__esModule)
+        return mod;
+      var result = {};
+      if (mod != null) {
+        for (var k in mod)
+          if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k))
+            __createBinding2(result, mod, k);
+      }
+      __setModuleDefault2(result, mod);
+      return result;
+    };
     var __awaiter2 = exports2 && exports2.__awaiter || function(thisArg, _arguments, P, generator) {
       function adopt(value) {
         return value instanceof P ? value : new P(function(resolve) {
@@ -86071,37 +74487,26 @@ var require_cache2 = __commonJS({
         step((generator = generator.apply(thisArg, _arguments || [])).next());
       });
     };
-    var __importStar2 = exports2 && exports2.__importStar || function(mod) {
-      if (mod && mod.__esModule)
-        return mod;
-      var result = {};
-      if (mod != null) {
-        for (var k in mod)
-          if (Object.hasOwnProperty.call(mod, k))
-            result[k] = mod[k];
-      }
-      result["default"] = mod;
-      return result;
-    };
     Object.defineProperty(exports2, "__esModule", { value: true });
+    exports2.saveCache = exports2.restoreCache = exports2.isFeatureAvailable = exports2.ReserveCacheError = exports2.ValidationError = void 0;
     var core17 = __importStar2(require_core());
     var path13 = __importStar2(require("path"));
     var utils2 = __importStar2(require_cacheUtils());
     var cacheHttpClient = __importStar2(require_cacheHttpClient());
     var tar_1 = require_tar();
-    var ValidationError = class extends Error {
+    var ValidationError = class _ValidationError extends Error {
       constructor(message) {
         super(message);
         this.name = "ValidationError";
-        Object.setPrototypeOf(this, ValidationError.prototype);
+        Object.setPrototypeOf(this, _ValidationError.prototype);
       }
     };
     exports2.ValidationError = ValidationError;
-    var ReserveCacheError = class extends Error {
+    var ReserveCacheError = class _ReserveCacheError extends Error {
       constructor(message) {
         super(message);
         this.name = "ReserveCacheError";
-        Object.setPrototypeOf(this, ReserveCacheError.prototype);
+        Object.setPrototypeOf(this, _ReserveCacheError.prototype);
       }
     };
     exports2.ReserveCacheError = ReserveCacheError;
@@ -86123,7 +74528,7 @@ var require_cache2 = __commonJS({
       return !!process.env["ACTIONS_CACHE_URL"];
     }
     exports2.isFeatureAvailable = isFeatureAvailable2;
-    function restoreCache3(paths, primaryKey, restoreKeys, options) {
+    function restoreCache3(paths, primaryKey, restoreKeys, options, enableCrossOsArchive = false) {
       return __awaiter2(this, void 0, void 0, function* () {
         checkPaths(paths);
         restoreKeys = restoreKeys || [];
@@ -86140,20 +74545,25 @@ var require_cache2 = __commonJS({
         let archivePath = "";
         try {
           const cacheEntry = yield cacheHttpClient.getCacheEntry(keys, paths, {
-            compressionMethod
+            compressionMethod,
+            enableCrossOsArchive
           });
           if (!(cacheEntry === null || cacheEntry === void 0 ? void 0 : cacheEntry.archiveLocation)) {
             return void 0;
+          }
+          if (options === null || options === void 0 ? void 0 : options.lookupOnly) {
+            core17.info("Lookup only - skipping download");
+            return cacheEntry.cacheKey;
           }
           archivePath = path13.join(yield utils2.createTempDirectory(), utils2.getCacheFileName(compressionMethod));
           core17.debug(`Archive Path: ${archivePath}`);
           yield cacheHttpClient.downloadCache(cacheEntry.archiveLocation, archivePath, options);
           if (core17.isDebug()) {
-            yield tar_1.listTar(archivePath, compressionMethod);
+            yield (0, tar_1.listTar)(archivePath, compressionMethod);
           }
           const archiveFileSize = utils2.getArchiveFileSizeInBytes(archivePath);
           core17.info(`Cache Size: ~${Math.round(archiveFileSize / (1024 * 1024))} MB (${archiveFileSize} B)`);
-          yield tar_1.extractTar(archivePath, compressionMethod);
+          yield (0, tar_1.extractTar)(archivePath, compressionMethod);
           core17.info("Cache restored successfully");
           return cacheEntry.cacheKey;
         } catch (error2) {
@@ -86174,7 +74584,7 @@ var require_cache2 = __commonJS({
       });
     }
     exports2.restoreCache = restoreCache3;
-    function saveCache(paths, key, options) {
+    function saveCache(paths, key, options, enableCrossOsArchive = false) {
       var _a, _b, _c, _d, _e;
       return __awaiter2(this, void 0, void 0, function* () {
         checkPaths(paths);
@@ -86191,9 +74601,9 @@ var require_cache2 = __commonJS({
         const archivePath = path13.join(archiveFolder, utils2.getCacheFileName(compressionMethod));
         core17.debug(`Archive Path: ${archivePath}`);
         try {
-          yield tar_1.createTar(archiveFolder, cachePaths, compressionMethod);
+          yield (0, tar_1.createTar)(archiveFolder, cachePaths, compressionMethod);
           if (core17.isDebug()) {
-            yield tar_1.listTar(archivePath, compressionMethod);
+            yield (0, tar_1.listTar)(archivePath, compressionMethod);
           }
           const fileSizeLimit = 10 * 1024 * 1024 * 1024;
           const archiveFileSize = utils2.getArchiveFileSizeInBytes(archivePath);
@@ -86204,6 +74614,7 @@ var require_cache2 = __commonJS({
           core17.debug("Reserving Cache");
           const reserveCacheResponse = yield cacheHttpClient.reserveCache(key, paths, {
             compressionMethod,
+            enableCrossOsArchive,
             cacheSize: archiveFileSize
           });
           if ((_a = reserveCacheResponse === null || reserveCacheResponse === void 0 ? void 0 : reserveCacheResponse.result) === null || _a === void 0 ? void 0 : _a.cacheId) {
@@ -86410,10 +74821,10 @@ var require_semver3 = __commonJS({
     var { safeRe: re, t } = require_re();
     var parseOptions = require_parse_options();
     var { compareIdentifiers } = require_identifiers();
-    var SemVer = class {
+    var SemVer = class _SemVer {
       constructor(version3, options) {
         options = parseOptions(options);
-        if (version3 instanceof SemVer) {
+        if (version3 instanceof _SemVer) {
           if (version3.loose === !!options.loose && version3.includePrerelease === !!options.includePrerelease) {
             return version3;
           } else {
@@ -86476,11 +74887,11 @@ var require_semver3 = __commonJS({
       }
       compare(other) {
         debug10("SemVer.compare", this.version, this.options, other);
-        if (!(other instanceof SemVer)) {
+        if (!(other instanceof _SemVer)) {
           if (typeof other === "string" && other === this.version) {
             return 0;
           }
-          other = new SemVer(other, this.options);
+          other = new _SemVer(other, this.options);
         }
         if (other.version === this.version) {
           return 0;
@@ -86488,14 +74899,14 @@ var require_semver3 = __commonJS({
         return this.compareMain(other) || this.comparePre(other);
       }
       compareMain(other) {
-        if (!(other instanceof SemVer)) {
-          other = new SemVer(other, this.options);
+        if (!(other instanceof _SemVer)) {
+          other = new _SemVer(other, this.options);
         }
         return compareIdentifiers(this.major, other.major) || compareIdentifiers(this.minor, other.minor) || compareIdentifiers(this.patch, other.patch);
       }
       comparePre(other) {
-        if (!(other instanceof SemVer)) {
-          other = new SemVer(other, this.options);
+        if (!(other instanceof _SemVer)) {
+          other = new _SemVer(other, this.options);
         }
         if (this.prerelease.length && !other.prerelease.length) {
           return -1;
@@ -86523,8 +74934,8 @@ var require_semver3 = __commonJS({
         } while (++i);
       }
       compareBuild(other) {
-        if (!(other instanceof SemVer)) {
-          other = new SemVer(other, this.options);
+        if (!(other instanceof _SemVer)) {
+          other = new _SemVer(other, this.options);
         }
         let i = 0;
         do {
@@ -87657,14 +76068,14 @@ var require_lru_cache = __commonJS({
 // node_modules/setup-python/node_modules/semver/classes/range.js
 var require_range = __commonJS({
   "node_modules/setup-python/node_modules/semver/classes/range.js"(exports2, module2) {
-    var Range = class {
+    var Range = class _Range {
       constructor(range, options) {
         options = parseOptions(options);
-        if (range instanceof Range) {
+        if (range instanceof _Range) {
           if (range.loose === !!options.loose && range.includePrerelease === !!options.includePrerelease) {
             return range;
           } else {
-            return new Range(range.raw, options);
+            return new _Range(range.raw, options);
           }
         }
         if (range instanceof Comparator) {
@@ -87745,7 +76156,7 @@ var require_range = __commonJS({
         return result;
       }
       intersects(range, options) {
-        if (!(range instanceof Range)) {
+        if (!(range instanceof _Range)) {
           throw new TypeError("a Range is required");
         }
         return this.set.some((thisComparators) => {
@@ -88015,13 +76426,13 @@ var require_range = __commonJS({
 var require_comparator = __commonJS({
   "node_modules/setup-python/node_modules/semver/classes/comparator.js"(exports2, module2) {
     var ANY = Symbol("SemVer ANY");
-    var Comparator = class {
+    var Comparator = class _Comparator {
       static get ANY() {
         return ANY;
       }
       constructor(comp, options) {
         options = parseOptions(options);
-        if (comp instanceof Comparator) {
+        if (comp instanceof _Comparator) {
           if (comp.loose === !!options.loose) {
             return comp;
           } else {
@@ -88074,7 +76485,7 @@ var require_comparator = __commonJS({
         return cmp(version3, this.operator, this.semver, this.options);
       }
       intersects(comp, options) {
-        if (!(comp instanceof Comparator)) {
+        if (!(comp instanceof _Comparator)) {
           throw new TypeError("a Comparator is required");
         }
         if (this.operator === "") {
@@ -88684,14 +77095,14 @@ var require_parser2 = __commonJS({
   "node_modules/@iarna/toml/lib/parser.js"(exports2, module2) {
     "use strict";
     var ParserEND = 1114112;
-    var ParserError = class extends Error {
+    var ParserError = class _ParserError extends Error {
       /* istanbul ignore next */
       constructor(msg, filename, linenumber) {
         super("[ParserError] " + msg, filename, linenumber);
         this.name = "ParserError";
         this.code = "ParserError";
         if (Error.captureStackTrace)
-          Error.captureStackTrace(this, ParserError);
+          Error.captureStackTrace(this, _ParserError);
       }
     };
     var State2 = class {
@@ -88923,12 +77334,12 @@ var require_toml_parser = __commonJS({
     "use strict";
     module.exports = makeParserClass(require_parser2());
     module.exports.makeParserClass = makeParserClass;
-    var TomlError = class extends Error {
+    var TomlError = class _TomlError extends Error {
       constructor(msg) {
         super(msg);
         this.name = "TomlError";
         if (Error.captureStackTrace)
-          Error.captureStackTrace(this, TomlError);
+          Error.captureStackTrace(this, _TomlError);
         this.fromTOML = true;
         this.wrapped = null;
       }
@@ -91035,7 +79446,7 @@ var require_tool_cache = __commonJS({
     var mm = __importStar2(require_manifest());
     var os7 = __importStar2(require("os"));
     var path13 = __importStar2(require("path"));
-    var httpm3 = __importStar2(require_lib());
+    var httpm4 = __importStar2(require_lib());
     var semver7 = __importStar2(require_semver());
     var stream = __importStar2(require("stream"));
     var util = __importStar2(require("util"));
@@ -91082,7 +79493,7 @@ var require_tool_cache = __commonJS({
         if (fs7.existsSync(dest)) {
           throw new Error(`Destination file path ${dest} already exists`);
         }
-        const http = new httpm3.HttpClient(userAgent, [], {
+        const http = new httpm4.HttpClient(userAgent, [], {
           allowRetries: false
         });
         if (auth) {
@@ -91392,11 +79803,11 @@ var require_tool_cache = __commonJS({
       return versions;
     }
     exports2.findAllVersions = findAllVersions;
-    function getManifestFromRepo2(owner, repo, auth, branch = "master") {
+    function getManifestFromRepo3(owner, repo, auth, branch = "master") {
       return __awaiter2(this, void 0, void 0, function* () {
         let releases = [];
         const treeUrl = `https://api.github.com/repos/${owner}/${repo}/git/trees/${branch}`;
-        const http = new httpm3.HttpClient("tool-cache");
+        const http = new httpm4.HttpClient("tool-cache");
         const headers = {};
         if (auth) {
           core17.debug("set auth");
@@ -91426,7 +79837,7 @@ var require_tool_cache = __commonJS({
         return releases;
       });
     }
-    exports2.getManifestFromRepo = getManifestFromRepo2;
+    exports2.getManifestFromRepo = getManifestFromRepo3;
     function findFromManifest2(versionSpec, stable, manifest, archFilter = os7.arch()) {
       return __awaiter2(this, void 0, void 0, function* () {
         const match = yield mm._findMatch(versionSpec, stable, manifest, archFilter);
@@ -91966,7 +80377,7 @@ var require_internal_pattern2 = __commonJS({
     var internal_match_kind_1 = require_internal_match_kind2();
     var internal_path_1 = require_internal_path2();
     var IS_WINDOWS3 = process.platform === "win32";
-    var Pattern = class {
+    var Pattern = class _Pattern {
       constructor(patternOrNegate, isImplicitPattern = false, segments, homedir2) {
         this.negate = false;
         let pattern;
@@ -91975,7 +80386,7 @@ var require_internal_pattern2 = __commonJS({
         } else {
           segments = segments || [];
           assert_1.default(segments.length, `Parameter 'segments' must not empty`);
-          const root = Pattern.getLiteral(segments[0]);
+          const root = _Pattern.getLiteral(segments[0]);
           assert_1.default(root && pathHelper.hasAbsoluteRoot(root), `Parameter 'segments' first element must be a root path`);
           pattern = new internal_path_1.Path(segments).toString().trim();
           if (patternOrNegate) {
@@ -91986,14 +80397,14 @@ var require_internal_pattern2 = __commonJS({
           this.negate = !this.negate;
           pattern = pattern.substr(1).trim();
         }
-        pattern = Pattern.fixupPattern(pattern, homedir2);
+        pattern = _Pattern.fixupPattern(pattern, homedir2);
         this.segments = new internal_path_1.Path(pattern).segments;
         this.trailingSeparator = pathHelper.normalizeSeparators(pattern).endsWith(path13.sep);
         pattern = pathHelper.safeTrimTrailingSeparator(pattern);
         let foundGlob = false;
-        const searchSegments = this.segments.map((x) => Pattern.getLiteral(x)).filter((x) => !foundGlob && !(foundGlob = x === ""));
+        const searchSegments = this.segments.map((x) => _Pattern.getLiteral(x)).filter((x) => !foundGlob && !(foundGlob = x === ""));
         this.searchPath = new internal_path_1.Path(searchSegments).toString();
-        this.rootRegExp = new RegExp(Pattern.regExpEscape(searchSegments[0]), IS_WINDOWS3 ? "i" : "");
+        this.rootRegExp = new RegExp(_Pattern.regExpEscape(searchSegments[0]), IS_WINDOWS3 ? "i" : "");
         this.isImplicitPattern = isImplicitPattern;
         const minimatchOptions = {
           dot: true,
@@ -92044,31 +80455,31 @@ var require_internal_pattern2 = __commonJS({
        */
       static fixupPattern(pattern, homedir2) {
         assert_1.default(pattern, "pattern cannot be empty");
-        const literalSegments = new internal_path_1.Path(pattern).segments.map((x) => Pattern.getLiteral(x));
+        const literalSegments = new internal_path_1.Path(pattern).segments.map((x) => _Pattern.getLiteral(x));
         assert_1.default(literalSegments.every((x, i) => (x !== "." || i === 0) && x !== ".."), `Invalid pattern '${pattern}'. Relative pathing '.' and '..' is not allowed.`);
         assert_1.default(!pathHelper.hasRoot(pattern) || literalSegments[0], `Invalid pattern '${pattern}'. Root segment must not contain globs.`);
         pattern = pathHelper.normalizeSeparators(pattern);
         if (pattern === "." || pattern.startsWith(`.${path13.sep}`)) {
-          pattern = Pattern.globEscape(process.cwd()) + pattern.substr(1);
+          pattern = _Pattern.globEscape(process.cwd()) + pattern.substr(1);
         } else if (pattern === "~" || pattern.startsWith(`~${path13.sep}`)) {
           homedir2 = homedir2 || os7.homedir();
           assert_1.default(homedir2, "Unable to determine HOME directory");
           assert_1.default(pathHelper.hasAbsoluteRoot(homedir2), `Expected HOME directory to be a rooted path. Actual '${homedir2}'`);
-          pattern = Pattern.globEscape(homedir2) + pattern.substr(1);
+          pattern = _Pattern.globEscape(homedir2) + pattern.substr(1);
         } else if (IS_WINDOWS3 && (pattern.match(/^[A-Z]:$/i) || pattern.match(/^[A-Z]:[^\\]/i))) {
           let root = pathHelper.ensureAbsoluteRoot("C:\\dummy-root", pattern.substr(0, 2));
           if (pattern.length > 2 && !root.endsWith("\\")) {
             root += "\\";
           }
-          pattern = Pattern.globEscape(root) + pattern.substr(2);
+          pattern = _Pattern.globEscape(root) + pattern.substr(2);
         } else if (IS_WINDOWS3 && (pattern === "\\" || pattern.match(/^\\[^\\]/))) {
           let root = pathHelper.ensureAbsoluteRoot("C:\\dummy-root", "\\");
           if (!root.endsWith("\\")) {
             root += "\\";
           }
-          pattern = Pattern.globEscape(root) + pattern.substr(1);
+          pattern = _Pattern.globEscape(root) + pattern.substr(1);
         } else {
-          pattern = pathHelper.ensureAbsoluteRoot(Pattern.globEscape(process.cwd()), pattern);
+          pattern = pathHelper.ensureAbsoluteRoot(_Pattern.globEscape(process.cwd()), pattern);
         }
         return pathHelper.normalizeSeparators(pattern);
       }
@@ -92272,7 +80683,7 @@ var require_internal_globber2 = __commonJS({
     var internal_pattern_1 = require_internal_pattern2();
     var internal_search_state_1 = require_internal_search_state2();
     var IS_WINDOWS3 = process.platform === "win32";
-    var DefaultGlobber = class {
+    var DefaultGlobber = class _DefaultGlobber {
       constructor(options) {
         this.patterns = [];
         this.searchPaths = [];
@@ -92336,7 +80747,7 @@ var require_internal_globber2 = __commonJS({
               continue;
             }
             const stats = yield __await2(
-              DefaultGlobber.stat(item, options, traversalChain)
+              _DefaultGlobber.stat(item, options, traversalChain)
               // Broken symlink, or symlink cycle detected, or no longer exists
             );
             if (!stats) {
@@ -92362,7 +80773,7 @@ var require_internal_globber2 = __commonJS({
        */
       static create(patterns, options) {
         return __awaiter2(this, void 0, void 0, function* () {
-          const result = new DefaultGlobber(options);
+          const result = new _DefaultGlobber(options);
           if (IS_WINDOWS3) {
             patterns = patterns.replace(/\r\n/g, "\n");
             patterns = patterns.replace(/\r/g, "\n");
@@ -92620,29 +81031,27 @@ var core16 = __toESM(require_core());
 // src/poetry/install.ts
 var core = __toESM(require_core());
 var exec = __toESM(require_exec());
-function installDependencies(option) {
-  return __async(this, null, function* () {
-    let args = [];
-    if (option.allExtras == "true")
-      args.push("--all-extras");
-    if (option.extras && option.allExtras != "true")
-      args.push("--extras", option.extras);
-    if (option.noRoot == "true")
-      args.push("--no-root");
-    if (option.only)
-      args.push("--only", option.only);
-    if (option.with && !option.only)
-      args.push("--with", option.with);
-    if (option.without && !option.only)
-      args.push("--without", option.with);
-    if (option.onlyRoot == "true")
-      args = ["--only-root"];
-    if (option.additionalArgs)
-      args.push(option.additionalArgs);
-    const exitCode = yield exec.exec("poetry", ["install"].concat(args));
-    if (exitCode)
-      core.warning("Maybe, failed to install python dependencies.");
-  });
+async function installDependencies(option) {
+  let args = [];
+  if (option.allExtras == "true")
+    args.push("--all-extras");
+  if (option.extras && option.allExtras != "true")
+    args.push("--extras", option.extras);
+  if (option.noRoot == "true")
+    args.push("--no-root");
+  if (option.only)
+    args.push("--only", option.only);
+  if (option.with && !option.only)
+    args.push("--with", option.with);
+  if (option.without && !option.only)
+    args.push("--without", option.with);
+  if (option.onlyRoot == "true")
+    args = ["--only-root"];
+  if (option.additionalArgs)
+    args.push(option.additionalArgs);
+  const exitCode = await exec.exec("poetry", ["install"].concat(args));
+  if (exitCode)
+    core.warning("Maybe, failed to install python dependencies.");
 }
 
 // src/poetry/setup.ts
@@ -92651,30 +81060,26 @@ var io = __toESM(require_io());
 
 // src/poetry/config.ts
 var exec3 = __toESM(require_exec());
-function setSetting(setting, value) {
-  return __async(this, null, function* () {
-    const exitCode = yield exec3.exec("poetry", ["config", setting, value]);
-    if (exitCode)
-      throw new Error(`Could not run "poetry config ${setting}" ${value}.`);
-  });
+async function setSetting(setting, value) {
+  const exitCode = await exec3.exec("poetry", ["config", setting, value]);
+  if (exitCode)
+    throw new Error(`Could not run "poetry config ${setting}" ${value}.`);
 }
-function configurePoetry(config) {
-  return __async(this, null, function* () {
-    if (config["cacheDir"])
-      yield setSetting("cache-dir", config["cacheDir"]);
-    if (config.installerMaxWorkers)
-      yield setSetting("installer.max-workers", config.installerMaxWorkers);
-    if (config.installerParallel == "false")
-      yield setSetting("installer.parallel", "false");
-    if (config.pypiToken == "false")
-      setSetting("pypi-token", config.pypiToken);
-    if (config.virtualenvsCreate == "false")
-      yield setSetting("virtualenvs.in-project", "false");
-    if (config.virtualenvsInProject == "true")
-      yield setSetting("virtualenvs.in-project", "true");
-    if (config.virtualenvsPath)
-      yield setSetting("virtualenvs.path", config.virtualenvsPath);
-  });
+async function configurePoetry(config) {
+  if (config["cacheDir"])
+    await setSetting("cache-dir", config["cacheDir"]);
+  if (config.installerMaxWorkers)
+    await setSetting("installer.max-workers", config.installerMaxWorkers);
+  if (config.installerParallel == "false")
+    await setSetting("installer.parallel", "false");
+  if (config.pypiToken == "false")
+    setSetting("pypi-token", config.pypiToken);
+  if (config.virtualenvsCreate == "false")
+    await setSetting("virtualenvs.in-project", "false");
+  if (config.virtualenvsInProject == "true")
+    await setSetting("virtualenvs.in-project", "true");
+  if (config.virtualenvsPath)
+    await setSetting("virtualenvs.path", config.virtualenvsPath);
 }
 
 // src/poetry/restore.ts
@@ -92693,62 +81098,52 @@ function setInput(name, value) {
 }
 
 // src/poetry/restore.ts
-function getPythonVersion() {
-  return __async(this, null, function* () {
-    const { stdout, stderr, exitCode } = yield exec5.getExecOutput("python3", [
-      "--version"
-    ]);
-    if (exitCode && stderr)
-      throw new Error("Could not get python version");
-    return stdout.replace("Python ", "").replace(import_node_os.EOL, "");
-  });
+async function getPythonVersion() {
+  const { stdout, stderr, exitCode } = await exec5.getExecOutput("python3", [
+    "--version"
+  ]);
+  if (exitCode && stderr)
+    throw new Error("Could not get python version");
+  return stdout.replace("Python ", "").replace(import_node_os.EOL, "");
 }
-function getPipxVersion() {
-  return __async(this, null, function* () {
-    const { stdout, stderr, exitCode } = yield exec5.getExecOutput("pipx", [
-      "--version"
-    ]);
-    if (exitCode && stderr)
-      throw new Error("Could not get pipx version");
-    return stdout.replace(import_node_os.EOL, "");
-  });
+async function getPipxVersion() {
+  const { stdout, stderr, exitCode } = await exec5.getExecOutput("pipx", [
+    "--version"
+  ]);
+  if (exitCode && stderr)
+    throw new Error("Could not get pipx version");
+  return stdout.replace(import_node_os.EOL, "");
 }
-function createCacheSearchKey(poetryVersion) {
-  return __async(this, null, function* () {
-    const pythonVersion = yield getPythonVersion();
-    const pipxVersion = yield getPipxVersion();
-    return `setup-poetry-env-${process.env["RUNNER_OS"]}-system-python-${pythonVersion}-pipx-${pipxVersion}-poetry-${poetryVersion}`;
-  });
+async function createCacheSearchKey(poetryVersion) {
+  const pythonVersion = await getPythonVersion();
+  const pipxVersion = await getPipxVersion();
+  return `setup-poetry-env-${process.env["RUNNER_OS"]}-system-python-${pythonVersion}-pipx-${pipxVersion}-poetry-${poetryVersion}`;
 }
-function getPipxVariables() {
-  return __async(this, null, function* () {
-    const { stdout, stderr, exitCode } = yield exec5.getExecOutput("pipx", [
-      "environment"
-    ]);
-    if (exitCode && stderr)
-      throw new Error(
-        "Could not get a list of variables used in pipx.constants."
-      );
-    const lines = stdout.trim().split(import_node_os.EOL);
-    lines.splice(-2, 2);
-    const variables = {};
-    for (const line of lines) {
-      const [key, value] = line.split("=");
-      variables[key] = value;
-    }
-    return variables;
-  });
+async function getPipxVariables() {
+  const { stdout, stderr, exitCode } = await exec5.getExecOutput("pipx", [
+    "environment"
+  ]);
+  if (exitCode && stderr)
+    throw new Error(
+      "Could not get a list of variables used in pipx.constants."
+    );
+  const lines = stdout.trim().split(import_node_os.EOL);
+  lines.splice(-2, 2);
+  const variables = {};
+  for (const line of lines) {
+    const [key, value] = line.split("=");
+    variables[key] = value;
+  }
+  return variables;
 }
-function getCacheDirectories() {
-  return __async(this, null, function* () {
-    const pipxVariables = yield getPipxVariables();
-    const poetryBinFile = IS_WINDOWS ? `${pipxVariables["PIPX_BIN_DIR"]}\\poetry.exe` : `${pipxVariables["PIPX_BIN_DIR"]}/poetry`;
-    const poetryVenvDir = `${pipxVariables["PIPX_LOCAL_VENVS"]}/poetry`;
-    return {
-      POETRY_BIN_FILE: core2.toPlatformPath(poetryBinFile),
-      POETRY_VENV_DIR: core2.toPlatformPath(poetryVenvDir)
-    };
-  });
+async function getCacheDirectories() {
+  const pipxVariables = await getPipxVariables();
+  const poetryBinFile = IS_WINDOWS ? `${pipxVariables["PIPX_BIN_DIR"]}\\poetry.exe` : `${pipxVariables["PIPX_BIN_DIR"]}/poetry`;
+  const poetryVenvDir = `${pipxVariables["PIPX_LOCAL_VENVS"]}/poetry`;
+  return {
+    POETRY_BIN_FILE: core2.toPlatformPath(poetryBinFile),
+    POETRY_VENV_DIR: core2.toPlatformPath(poetryVenvDir)
+  };
 }
 function recreatePoetrySymlink(poetryBinFile, poetryVenvDir) {
   fs.unlinkSync(poetryBinFile);
@@ -92764,41 +81159,35 @@ function handleMatchResult(matchedKey, searchKey) {
   }
   core2.setOutput("poetry-cache-hit", matchedKey === searchKey);
 }
-function tryRestoringCache(poetryVersion) {
-  return __async(this, null, function* () {
-    core2.info("Skip to restore Poetry install on Windows.");
-    const searchKey = yield createCacheSearchKey(poetryVersion);
-    const { POETRY_BIN_FILE, POETRY_VENV_DIR } = yield getCacheDirectories();
-    const cachePath = [POETRY_BIN_FILE, POETRY_VENV_DIR];
-    core2.saveState("poetry-cache-paths" /* CACHE_PATHS */, cachePath);
-    core2.saveState("poetry-cache-search-key" /* CACHE_SEARCH_KEY */, searchKey);
-    const matchedKey = yield cache.restoreCache(cachePath, searchKey);
-    if (matchedKey && IS_WINDOWS)
-      recreatePoetrySymlink(POETRY_BIN_FILE, POETRY_VENV_DIR);
-    handleMatchResult(matchedKey, searchKey);
-    return matchedKey ? true : false;
-  });
+async function tryRestoringCache(poetryVersion) {
+  core2.info("Skip to restore Poetry install on Windows.");
+  const searchKey = await createCacheSearchKey(poetryVersion);
+  const { POETRY_BIN_FILE, POETRY_VENV_DIR } = await getCacheDirectories();
+  const cachePath = [POETRY_BIN_FILE, POETRY_VENV_DIR];
+  core2.saveState("poetry-cache-paths" /* CACHE_PATHS */, cachePath);
+  core2.saveState("poetry-cache-search-key" /* CACHE_SEARCH_KEY */, searchKey);
+  const matchedKey = await cache.restoreCache(cachePath, searchKey);
+  if (matchedKey && IS_WINDOWS)
+    recreatePoetrySymlink(POETRY_BIN_FILE, POETRY_VENV_DIR);
+  handleMatchResult(matchedKey, searchKey);
+  return matchedKey ? true : false;
 }
 
 // src/poetry/setup.ts
-function installPoetry(version3) {
-  return __async(this, null, function* () {
-    const pythonLocation = yield io.which("python3", true);
-    const { exitCode, stderr } = yield exec6.getExecOutput(
-      "pipx",
-      pythonLocation ? ["install", `poetry==${version3}`, "--python", pythonLocation] : ["install", `poetry==${version3}`]
-    );
-    if (exitCode && stderr)
-      throw new Error(`Failed to install poetry v(${version3}): ${stderr}`);
-  });
+async function installPoetry(version3) {
+  const pythonLocation = await io.which("python3", true);
+  const { exitCode, stderr } = await exec6.getExecOutput(
+    "pipx",
+    pythonLocation ? ["install", `poetry==${version3}`, "--python", pythonLocation] : ["install", `poetry==${version3}`]
+  );
+  if (exitCode && stderr)
+    throw new Error(`Failed to install poetry v(${version3}): ${stderr}`);
 }
-function setupPoetry(version3, config) {
-  return __async(this, null, function* () {
-    const success = yield tryRestoringCache(version3);
-    if (!success)
-      yield installPoetry(version3);
-    yield configurePoetry(config);
-  });
+async function setupPoetry(version3, config) {
+  const success = await tryRestoringCache(version3);
+  if (!success)
+    await installPoetry(version3);
+  await configurePoetry(config);
 }
 
 // src/setup-python.ts
@@ -93017,6 +81406,7 @@ var path2 = __toESM(require("path"));
 var core4 = __toESM(require_core());
 var tc = __toESM(require_tool_cache());
 var exec8 = __toESM(require_exec());
+var httpm = __toESM(require_lib());
 var TOKEN = core4.getInput("token");
 var AUTH = !TOKEN ? void 0 : `token ${TOKEN}`;
 var MANIFEST_REPO_OWNER = "actions";
@@ -93035,7 +81425,18 @@ async function findReleaseFromManifest(semanticVersionSpec, architecture, manife
   );
   return foundRelease;
 }
-function getManifest() {
+async function getManifest() {
+  try {
+    return await getManifestFromRepo2();
+  } catch (err) {
+    core4.debug("Fetching the manifest via the API failed.");
+    if (err instanceof Error) {
+      core4.debug(err.message);
+    }
+  }
+  return await getManifestFromURL();
+}
+function getManifestFromRepo2() {
   core4.debug(
     `Getting manifest from ${MANIFEST_REPO_OWNER}/${MANIFEST_REPO_NAME}@${MANIFEST_REPO_BRANCH}`
   );
@@ -93045,6 +81446,15 @@ function getManifest() {
     AUTH,
     MANIFEST_REPO_BRANCH
   );
+}
+async function getManifestFromURL() {
+  core4.debug("Falling back to fetching the manifest using raw URL.");
+  const http = new httpm.HttpClient("tool-cache");
+  const response = await http.getJson(MANIFEST_URL);
+  if (!response.result) {
+    throw new Error(`Unable to get manifest from ${MANIFEST_URL}`);
+  }
+  return response.result;
 }
 async function installPython(workingDirectory) {
   const options = {
@@ -93233,7 +81643,7 @@ var path4 = __toESM(require("path"));
 var core6 = __toESM(require_core());
 var tc3 = __toESM(require_tool_cache());
 var semver3 = __toESM(require_semver4());
-var httpm = __toESM(require_lib());
+var httpm2 = __toESM(require_lib());
 var exec10 = __toESM(require_exec());
 var import_fs2 = __toESM(require("fs"));
 async function installPyPy(pypyVersion, pythonVersion, architecture, allowPreReleases, releases) {
@@ -93314,7 +81724,7 @@ async function installPyPy(pypyVersion, pythonVersion, architecture, allowPreRel
 }
 async function getAvailablePyPyVersions() {
   const url = "https://downloads.python.org/pypy/versions.json";
-  const http = new httpm.HttpClient("tool-cache");
+  const http = new httpm2.HttpClient("tool-cache");
   const response = await http.getJson(url);
   if (!response.result) {
     throw new Error(
@@ -93569,7 +81979,7 @@ var path6 = __toESM(require("path"));
 var core8 = __toESM(require_core());
 var tc5 = __toESM(require_tool_cache());
 var semver5 = __toESM(require_semver4());
-var httpm2 = __toESM(require_lib());
+var httpm3 = __toESM(require_lib());
 var exec12 = __toESM(require_exec());
 var import_fs3 = __toESM(require("fs"));
 var TOKEN2 = core8.getInput("token");
@@ -93634,7 +82044,7 @@ async function installGraalPy(graalpyVersion, architecture, allowPreReleases, re
   }
 }
 async function getAvailableGraalPyVersions() {
-  const http = new httpm2.HttpClient("tool-cache");
+  const http = new httpm3.HttpClient("tool-cache");
   const headers = {};
   if (AUTH2) {
     headers.authorization = AUTH2;
@@ -93883,8 +82293,8 @@ var CacheDistributor = class {
   constructor(packageManager, cacheDependencyPath) {
     this.packageManager = packageManager;
     this.cacheDependencyPath = cacheDependencyPath;
-    this.CACHE_KEY_PREFIX = "setup-python";
   }
+  CACHE_KEY_PREFIX = "setup-python";
   async handleLoadedCache() {
   }
   async restoreCache() {
@@ -93927,8 +82337,8 @@ var PipCache = class extends cache_distributor_default {
   constructor(pythonVersion, cacheDependencyPath = "**/requirements.txt") {
     super("pip", cacheDependencyPath);
     this.pythonVersion = pythonVersion;
-    this.cacheDependencyBackupPath = CACHE_DEPENDENCY_BACKUP_PATH;
   }
+  cacheDependencyBackupPath = CACHE_DEPENDENCY_BACKUP_PATH;
   async getCacheGlobalDirectories() {
     let exitCode = 1;
     let stdout = "";
@@ -94240,37 +82650,34 @@ async function run() {
 }
 
 // src/setup-python.ts
-function createHackDependencyFile(option, additionalKey) {
-  return __async(this, null, function* () {
-    var _a;
-    let key = "";
-    if (option.allExtras == "true")
-      key += option.allExtras;
-    if (option.extras && option.allExtras != "true")
-      key += option.extras;
-    if (option.noRoot == "true")
-      key += option.noRoot;
-    if (option.only)
-      key += option.only;
-    if (option.with && !option.only)
-      key += option.with;
-    if (option.without && !option.only)
-      key += option.without;
-    if (option.onlyRoot == "true")
-      key = option.onlyRoot;
-    if (additionalKey)
-      key += additionalKey;
-    if (key) {
-      const githubWorkspace = (_a = process.env["GITHUB_WORKSPACE"]) != null ? _a : process.cwd();
-      const tempDir = core15.toPlatformPath(`${githubWorkspace}/.setup-poetry-env`);
-      yield io3.mkdirP(tempDir);
-      const keyPath = core15.toPlatformPath(`${tempDir}/temp-key.txt`);
-      import_node_fs.default.writeFileSync(keyPath, key);
-      return keyPath;
-    } else {
-      return "";
-    }
-  });
+async function createHackDependencyFile(option, additionalKey) {
+  let key = "";
+  if (option.allExtras == "true")
+    key += option.allExtras;
+  if (option.extras && option.allExtras != "true")
+    key += option.extras;
+  if (option.noRoot == "true")
+    key += option.noRoot;
+  if (option.only)
+    key += option.only;
+  if (option.with && !option.only)
+    key += option.with;
+  if (option.without && !option.only)
+    key += option.without;
+  if (option.onlyRoot == "true")
+    key = option.onlyRoot;
+  if (additionalKey)
+    key += additionalKey;
+  if (key) {
+    const githubWorkspace = process.env["GITHUB_WORKSPACE"] ?? process.cwd();
+    const tempDir = core15.toPlatformPath(`${githubWorkspace}/.setup-poetry-env`);
+    await io3.mkdirP(tempDir);
+    const keyPath = core15.toPlatformPath(`${tempDir}/temp-key.txt`);
+    import_node_fs.default.writeFileSync(keyPath, key);
+    return keyPath;
+  } else {
+    return "";
+  }
 }
 function overrideInput(inputs, hackPath) {
   let cacheDependencyPath = "**/poetry.lock";
@@ -94286,79 +82693,73 @@ function overrideInput(inputs, hackPath) {
   setInput("version", inputs.version);
   setInput("version-file", inputs.versionFile);
 }
-function hackActionSetupPython(option, inputs, additionalCacheKey) {
-  return __async(this, null, function* () {
-    const hackDependencyPath = yield createHackDependencyFile(
-      option,
-      additionalCacheKey
-    );
-    overrideInput(inputs, hackDependencyPath);
-    return hackDependencyPath;
-  });
+async function hackActionSetupPython(option, inputs, additionalCacheKey) {
+  const hackDependencyPath = await createHackDependencyFile(
+    option,
+    additionalCacheKey
+  );
+  overrideInput(inputs, hackDependencyPath);
+  return hackDependencyPath;
 }
-function setupPython(poetryInstallOption, additionalCacheKey, inputs) {
-  return __async(this, null, function* () {
-    const hackFile = yield hackActionSetupPython(
-      poetryInstallOption,
-      inputs,
-      additionalCacheKey
-    );
-    yield run();
-    if (hackFile) {
-      import_node_fs.default.unlinkSync(hackFile);
-      import_node_fs.default.rmdirSync(import_node_path.default.dirname(hackFile));
-    }
-  });
+async function setupPython(poetryInstallOption, additionalCacheKey, inputs) {
+  const hackFile = await hackActionSetupPython(
+    poetryInstallOption,
+    inputs,
+    additionalCacheKey
+  );
+  await run();
+  if (hackFile) {
+    import_node_fs.default.unlinkSync(hackFile);
+    import_node_fs.default.rmdirSync(import_node_path.default.dirname(hackFile));
+  }
 }
 
 // src/main.ts
-function run2() {
-  return __async(this, null, function* () {
-    try {
-      core16.info("----Setup Poetry----");
-      yield setupPoetry(core16.getInput("poetry-version"), {
-        cacheDir: core16.getInput("poetry-cash-dir"),
-        installerMaxWorkers: core16.getInput("poetry-installer-max-workers"),
-        installerParallel: core16.getInput("poetry-installer-parallel"),
-        pypiToken: core16.getInput("poetry-pypi-token"),
-        virtualenvsCreate: core16.getInput("poetry-virtualenvs-create"),
-        virtualenvsInProject: core16.getInput("poetry-virtualenvs-in-project"),
-        virtualenvsPath: core16.getInput("poetry-virtualenvs-path")
-      });
-      const poetryInstallOption = {
-        additionalArgs: core16.getInput("poetry-install-additional-args"),
-        allExtras: core16.getInput("poetry-install--all-extras"),
-        extras: core16.getInput("poetry-install--extras"),
-        noRoot: core16.getInput("poetry-install--no-root"),
-        only: core16.getInput("poetry-install--only"),
-        onlyRoot: core16.getInput("poetry-install--only-root"),
-        with: core16.getInput("poetry-install--with"),
-        without: core16.getInput("poetry-install--without")
-      };
-      core16.info("----Run actions/setup-python----");
-      yield setupPython(
-        poetryInstallOption,
-        core16.getInput("additional-dependency-cache-key"),
-        {
-          architecture: core16.getInput("python-architecture"),
-          cache: core16.getInput("cache-dependencies") == "true" ? "poetry" : "",
-          cacheDependencyPath: core16.getInput("python-cache-dependency-path"),
-          checkLatest: core16.getInput("python-check-latest"),
-          token: core16.getInput("token"),
-          updateEnvironment: core16.getInput("python-update-environment"),
-          version: core16.getInput("python-version"),
-          versionFile: core16.getInput("python-version-file")
-        }
-      );
-      if (core16.getInput("poetry-install-dependencies") == "true") {
-        core16.info("----Installing dependencies----");
-        yield installDependencies(poetryInstallOption);
+async function run2() {
+  try {
+    core16.info("----Setup Poetry----");
+    await setupPoetry(core16.getInput("poetry-version"), {
+      cacheDir: core16.getInput("poetry-cash-dir"),
+      installerMaxWorkers: core16.getInput("poetry-installer-max-workers"),
+      installerParallel: core16.getInput("poetry-installer-parallel"),
+      pypiToken: core16.getInput("poetry-pypi-token"),
+      virtualenvsCreate: core16.getInput("poetry-virtualenvs-create"),
+      virtualenvsInProject: core16.getInput("poetry-virtualenvs-in-project"),
+      virtualenvsPath: core16.getInput("poetry-virtualenvs-path")
+    });
+    const poetryInstallOption = {
+      additionalArgs: core16.getInput("poetry-install-additional-args"),
+      allExtras: core16.getInput("poetry-install--all-extras"),
+      extras: core16.getInput("poetry-install--extras"),
+      noRoot: core16.getInput("poetry-install--no-root"),
+      only: core16.getInput("poetry-install--only"),
+      onlyRoot: core16.getInput("poetry-install--only-root"),
+      with: core16.getInput("poetry-install--with"),
+      without: core16.getInput("poetry-install--without")
+    };
+    core16.info("----Run actions/setup-python----");
+    await setupPython(
+      poetryInstallOption,
+      core16.getInput("additional-dependency-cache-key"),
+      {
+        architecture: core16.getInput("python-architecture"),
+        cache: core16.getInput("cache-dependencies") == "true" ? "poetry" : "",
+        cacheDependencyPath: core16.getInput("python-cache-dependency-path"),
+        checkLatest: core16.getInput("python-check-latest"),
+        token: core16.getInput("token"),
+        updateEnvironment: core16.getInput("python-update-environment"),
+        version: core16.getInput("python-version"),
+        versionFile: core16.getInput("python-version-file")
       }
-    } catch (error2) {
-      if (error2 instanceof Error)
-        core16.setFailed(error2.message);
+    );
+    if (core16.getInput("poetry-install-dependencies") == "true") {
+      core16.info("----Installing dependencies----");
+      await installDependencies(poetryInstallOption);
     }
-  });
+  } catch (error2) {
+    if (error2 instanceof Error)
+      core16.setFailed(error2.message);
+  }
 }
 run2();
 /*! Bundled license information:
@@ -94371,198 +82772,6 @@ undici/lib/websocket/frame.js:
 
 sax/lib/sax.js:
   (*! http://mths.be/fromcodepoint v0.1.0 by @mathias *)
-
-tough-cookie/lib/pubsuffix-psl.js:
-  (*!
-   * Copyright (c) 2018, Salesforce.com, Inc.
-   * All rights reserved.
-   *
-   * Redistribution and use in source and binary forms, with or without
-   * modification, are permitted provided that the following conditions are met:
-   *
-   * 1. Redistributions of source code must retain the above copyright notice,
-   * this list of conditions and the following disclaimer.
-   *
-   * 2. Redistributions in binary form must reproduce the above copyright notice,
-   * this list of conditions and the following disclaimer in the documentation
-   * and/or other materials provided with the distribution.
-   *
-   * 3. Neither the name of Salesforce.com nor the names of its contributors may
-   * be used to endorse or promote products derived from this software without
-   * specific prior written permission.
-   *
-   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-   * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-   * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-   * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-   * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-   * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-   * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-   * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-   * POSSIBILITY OF SUCH DAMAGE.
-   *)
-
-tough-cookie/lib/store.js:
-  (*!
-   * Copyright (c) 2015, Salesforce.com, Inc.
-   * All rights reserved.
-   *
-   * Redistribution and use in source and binary forms, with or without
-   * modification, are permitted provided that the following conditions are met:
-   *
-   * 1. Redistributions of source code must retain the above copyright notice,
-   * this list of conditions and the following disclaimer.
-   *
-   * 2. Redistributions in binary form must reproduce the above copyright notice,
-   * this list of conditions and the following disclaimer in the documentation
-   * and/or other materials provided with the distribution.
-   *
-   * 3. Neither the name of Salesforce.com nor the names of its contributors may
-   * be used to endorse or promote products derived from this software without
-   * specific prior written permission.
-   *
-   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-   * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-   * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-   * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-   * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-   * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-   * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-   * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-   * POSSIBILITY OF SUCH DAMAGE.
-   *)
-
-tough-cookie/lib/permuteDomain.js:
-  (*!
-   * Copyright (c) 2015, Salesforce.com, Inc.
-   * All rights reserved.
-   *
-   * Redistribution and use in source and binary forms, with or without
-   * modification, are permitted provided that the following conditions are met:
-   *
-   * 1. Redistributions of source code must retain the above copyright notice,
-   * this list of conditions and the following disclaimer.
-   *
-   * 2. Redistributions in binary form must reproduce the above copyright notice,
-   * this list of conditions and the following disclaimer in the documentation
-   * and/or other materials provided with the distribution.
-   *
-   * 3. Neither the name of Salesforce.com nor the names of its contributors may
-   * be used to endorse or promote products derived from this software without
-   * specific prior written permission.
-   *
-   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-   * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-   * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-   * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-   * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-   * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-   * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-   * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-   * POSSIBILITY OF SUCH DAMAGE.
-   *)
-
-tough-cookie/lib/pathMatch.js:
-  (*!
-   * Copyright (c) 2015, Salesforce.com, Inc.
-   * All rights reserved.
-   *
-   * Redistribution and use in source and binary forms, with or without
-   * modification, are permitted provided that the following conditions are met:
-   *
-   * 1. Redistributions of source code must retain the above copyright notice,
-   * this list of conditions and the following disclaimer.
-   *
-   * 2. Redistributions in binary form must reproduce the above copyright notice,
-   * this list of conditions and the following disclaimer in the documentation
-   * and/or other materials provided with the distribution.
-   *
-   * 3. Neither the name of Salesforce.com nor the names of its contributors may
-   * be used to endorse or promote products derived from this software without
-   * specific prior written permission.
-   *
-   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-   * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-   * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-   * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-   * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-   * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-   * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-   * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-   * POSSIBILITY OF SUCH DAMAGE.
-   *)
-
-tough-cookie/lib/memstore.js:
-  (*!
-   * Copyright (c) 2015, Salesforce.com, Inc.
-   * All rights reserved.
-   *
-   * Redistribution and use in source and binary forms, with or without
-   * modification, are permitted provided that the following conditions are met:
-   *
-   * 1. Redistributions of source code must retain the above copyright notice,
-   * this list of conditions and the following disclaimer.
-   *
-   * 2. Redistributions in binary form must reproduce the above copyright notice,
-   * this list of conditions and the following disclaimer in the documentation
-   * and/or other materials provided with the distribution.
-   *
-   * 3. Neither the name of Salesforce.com nor the names of its contributors may
-   * be used to endorse or promote products derived from this software without
-   * specific prior written permission.
-   *
-   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-   * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-   * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-   * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-   * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-   * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-   * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-   * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-   * POSSIBILITY OF SUCH DAMAGE.
-   *)
-
-tough-cookie/lib/cookie.js:
-  (*!
-   * Copyright (c) 2015-2020, Salesforce.com, Inc.
-   * All rights reserved.
-   *
-   * Redistribution and use in source and binary forms, with or without
-   * modification, are permitted provided that the following conditions are met:
-   *
-   * 1. Redistributions of source code must retain the above copyright notice,
-   * this list of conditions and the following disclaimer.
-   *
-   * 2. Redistributions in binary form must reproduce the above copyright notice,
-   * this list of conditions and the following disclaimer in the documentation
-   * and/or other materials provided with the distribution.
-   *
-   * 3. Neither the name of Salesforce.com nor the names of its contributors may
-   * be used to endorse or promote products derived from this software without
-   * specific prior written permission.
-   *
-   * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-   * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-   * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-   * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-   * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-   * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-   * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-   * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-   * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-   * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-   * POSSIBILITY OF SUCH DAMAGE.
-   *)
 
 mime-db/index.js:
   (*!
