@@ -34,17 +34,18 @@ async function run(): Promise<void> {
       core.getInput("additional-dependency-cache-key"),
       {
         architecture: core.getInput("python-architecture"),
-        cache: core.getInput("cache-dependencies") == "true" ? "poetry" : "",
+        cache: core.getInput("cache-dependencies").toLowerCase() == "true" ? "poetry" : "",
         cacheDependencyPath: core.getInput("python-cache-dependency-path"),
-        checkLatest: core.getInput("python-check-latest"),
+        checkLatest: core.getInput("python-check-latest").toLowerCase() == "true",
         token: core.getInput("token"),
-        updateEnvironment: core.getInput("python-update-environment"),
+        updateEnvironment: core.getInput("python-update-environment").toLowerCase() == "true",
         version: core.getInput("python-version"),
         versionFile: core.getInput("python-version-file"),
+        allowPrereleases: core.getInput("python-allow-prereleases").toLowerCase() == "true",
       }
     );
 
-    if (core.getInput("poetry-install-dependencies") == "true") {
+    if (core.getInput("poetry-install-dependencies").toLowerCase() == "true") {
       core.info("----Installing dependencies----");
       await installDependencies(poetryInstallOption);
     }

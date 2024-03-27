@@ -81094,7 +81094,7 @@ var IS_WINDOWS = process.platform === "win32";
 var IS_LINUX = process.platform === "linux";
 var IS_MAC = process.platform === "darwin";
 function setInput(name, value) {
-  process.env[`INPUT_${name.replace(/ /g, "_").toUpperCase()}`] = value;
+  process.env[`INPUT_${name.replace(/[- ]/g, "_").toUpperCase()}`] = value;
 }
 
 // src/poetry/restore.ts
@@ -82688,10 +82688,11 @@ function overrideInput(inputs, hackPath) {
   setInput("architecture", inputs.architecture);
   setInput("cache", inputs.cache);
   setInput("cache-dependency-path", cacheDependencyPath);
-  setInput("check-latest", inputs.checkLatest);
-  setInput("update-environment", inputs.updateEnvironment);
+  setInput("check-latest", inputs.checkLatest.toLowerCase() == "true");
+  setInput("update-environment", inputs.updateEnvironment.toLowerCase() == "true");
   setInput("version", inputs.version);
   setInput("version-file", inputs.versionFile);
+  setInput("allow-prereleases", inputs.allowPrereleases.toLowerCase() == "true");
 }
 async function hackActionSetupPython(option, inputs, additionalCacheKey) {
   const hackDependencyPath = await createHackDependencyFile(
@@ -82743,16 +82744,17 @@ async function run2() {
       core16.getInput("additional-dependency-cache-key"),
       {
         architecture: core16.getInput("python-architecture"),
-        cache: core16.getInput("cache-dependencies") == "true" ? "poetry" : "",
+        cache: core16.getInput("cache-dependencies").toLowerCase() == "true" ? "poetry" : "",
         cacheDependencyPath: core16.getInput("python-cache-dependency-path"),
-        checkLatest: core16.getInput("python-check-latest"),
+        checkLatest: core16.getInput("python-check-latest").toLowerCase() == "true",
         token: core16.getInput("token"),
-        updateEnvironment: core16.getInput("python-update-environment"),
+        updateEnvironment: core16.getInput("python-update-environment").toLowerCase() == "true",
         version: core16.getInput("python-version"),
-        versionFile: core16.getInput("python-version-file")
+        versionFile: core16.getInput("python-version-file"),
+        allowPrereleases: core16.getInput("python-allow-prereleases").toLowerCase() == "true"
       }
     );
-    if (core16.getInput("poetry-install-dependencies") == "true") {
+    if (core16.getInput("poetry-install-dependencies").toLowerCase() == "true") {
       core16.info("----Installing dependencies----");
       await installDependencies(poetryInstallOption);
     }
