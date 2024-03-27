@@ -16,6 +16,7 @@ interface Inputs {
   readonly updateEnvironment: string;
   readonly version: string;
   readonly versionFile: string;
+  readonly allowPrereleases: string;
 }
 
 async function createHackDependencyFile(
@@ -58,6 +59,7 @@ function overrideInput(inputs: Inputs, hackPath: string): void {
   setInput("update-environment", inputs.updateEnvironment);
   setInput("version", inputs.version);
   setInput("version-file", inputs.versionFile);
+  setInput("allow-prereleases", inputs.allowPrereleases);
 }
 
 async function hackActionSetupPython(
