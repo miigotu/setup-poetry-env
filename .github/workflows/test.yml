@@ -65,7 +65,6 @@ jobs:
       - name: Move test app to cwd
         run: |
           mv ./__tests__/data/pyproject.toml .
-          mv ./__tests__/data/poetry.lock .
           mv ./__tests__/data/test_python_app .
       - name: Setup Poetry env
         uses: ./

@@ -2,7 +2,7 @@
 name: 'Setup Poetry environment (fixed)'
 description: >-
   This action allows setup Python/Poetry, installing dependencies,
-  and caching dependencies and Poetry installation all at once. Original by 5yutan5
+  and caching dependencies and Poetry installation all at once.
 author: 'Dustyn Gibson'
 branding:
   icon: 'code'
@@ -97,7 +97,7 @@ outputs:
       'Wrapper around `python-version` output of actions/setup-python.'
 
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/setup/index.js'
   post: 'dist/cache-save/index.js'
   post-if: success()
