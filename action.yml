@@ -1,12 +1,12 @@
 ---
-name: 'Setup Poetry environment'
+name: 'Setup Poetry environment (fixed)'
 description: >-
   This action allows setup Python/Poetry, installing dependencies,
-  and caching dependencies and Poetry installation all at once.
-author: 'Yunosuke Ohsugi'
+  and caching dependencies and Poetry installation all at once. Original by 5yutan5
+author: 'Dustyn Gibson'
 branding:
   icon: 'code'
-  color: 'green'
+  color: 'blue'
 
 inputs:
   cache-dependencies:
