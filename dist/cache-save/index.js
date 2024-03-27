@@ -74756,7 +74756,7 @@ var IS_WINDOWS = process.platform === "win32";
 var IS_LINUX = process.platform === "linux";
 var IS_MAC = process.platform === "darwin";
 function setInput(name, value) {
-  process.env[`INPUT_${name.replace(/[- ]/g, "_").toUpperCase()}`] = value;
+  process.env[`INPUT_${name.replace(/ /g, "_").toUpperCase()}`] = value;
 }
 
 // src/cache-save.ts
