@@ -46,6 +46,8 @@ inputs:
     description: 'Wrapper around `version-file` input of actions/setup-python.'
   python-allow-prereleases:
     description: 'Wrapper around `allow-prereleases` input of actions/setup-python.'
+    default: 'false'
+  
   # Wrapper around `poetry config` command.
   poetry-cache-dir:
     description: 'Wrapper around Poetry setting `cache-dir`'
