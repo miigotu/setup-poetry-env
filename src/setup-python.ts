@@ -55,11 +55,11 @@ function overrideInput(inputs: Inputs, hackPath: string): void {
   setInput("architecture", inputs.architecture);
   setInput("cache", inputs.cache);
   setInput("cache-dependency-path", cacheDependencyPath);
-  setInput("check-latest", inputs.checkLatest);
-  setInput("update-environment", inputs.updateEnvironment);
+  setInput("check-latest", inputs.checkLatest == "true");
+  setInput("update-environment", inputs.updateEnvironment == "true");
   setInput("version", inputs.version);
   setInput("version-file", inputs.versionFile);
-  setInput("allow-prereleases", inputs.allowPrereleases);
+  setInput("allow-prereleases", inputs.allowPrereleases == "true");
 }
 
 async function hackActionSetupPython(
