@@ -81094,7 +81094,7 @@ var IS_WINDOWS = process.platform === "win32";
 var IS_LINUX = process.platform === "linux";
 var IS_MAC = process.platform === "darwin";
 function setInput(name, value) {
-  process.env[`INPUT_${name.replace(/ /g, "_").toUpperCase()}`] = value;
+  process.env[`INPUT_${name.replace(/[- ]/g, "_").toUpperCase()}`] = value;
 }
 
 // src/poetry/restore.ts
@@ -82692,6 +82692,7 @@ function overrideInput(inputs, hackPath) {
   setInput("update-environment", inputs.updateEnvironment);
   setInput("version", inputs.version);
   setInput("version-file", inputs.versionFile);
+  setInput("allow-prereleases", inputs.allowPrereleases);
 }
 async function hackActionSetupPython(option, inputs, additionalCacheKey) {
   const hackDependencyPath = await createHackDependencyFile(
@@ -82749,7 +82750,8 @@ async function run2() {
         token: core16.getInput("token"),
         updateEnvironment: core16.getInput("python-update-environment"),
         version: core16.getInput("python-version"),
-        versionFile: core16.getInput("python-version-file")
+        versionFile: core16.getInput("python-version-file"),
+        allowPrereleases: core16.getInput("python-allow-prereleases")
       }
     );
     if (core16.getInput("poetry-install-dependencies") == "true") {
