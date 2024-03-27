@@ -9,14 +9,14 @@ import { setInput } from "./util";
 
 interface Inputs {
   readonly architecture: string;
-  readonly cache: boolean;
+  readonly cache: string;
   readonly cacheDependencyPath: string;
-  readonly checkLatest: boolean;
+  readonly checkLatest: string;
   readonly token: string;
-  readonly updateEnvironment: boolean;
+  readonly updateEnvironment: string;
   readonly version: string;
   readonly versionFile: string;
-  readonly allowPrereleases: boolean;
+  readonly allowPrereleases: string;
 }
 
 async function createHackDependencyFile(
